@@ -22,6 +22,8 @@ Replay Parser Ragnarok is a frontend web application for exploring Ragnarok Onli
    ```
 3. Open the local Vite URL in your browser and use the app to explore replay data.
 
+> Note: This project requires certain files to be placed in the public/ folder. The contents of public/external are expected to include RagnarokReplayExample.exe, which will be run through a separate service such as a Node.js app using npm and Wine. The YAML files are Ragnarok-related database files, such as mob lists, skill lists, item lists, and similar data.
+
 ## Development
 
 Useful commands:
@@ -36,7 +38,7 @@ npm run lint
 ## Project Structure
 
 - `src/` - React components, frontend logic, and app UI
-- `public/` - static assets served by the app
+- `public/` - static assets served by the app, including required external and YAML files
 - `src/assets/` - images and other local assets
 - `README.md` - project documentation
 

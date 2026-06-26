@@ -23,3 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 replace-parser-ragnarok.code-workspace
+
+public/json/*
+public/external/*
+public/yaml/*
