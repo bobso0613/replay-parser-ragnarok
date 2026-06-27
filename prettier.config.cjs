@@ -1,24 +1,24 @@
+// eslint-disable-next-line no-undef
 module.exports = {
+  semi: true,
 
-    semi: true,
+  singleQuote: false,
 
-    singleQuote: false,
+  trailingComma: 'all',
 
-    trailingComma: "all",
+  printWidth: 100,
 
-    printWidth: 100,
+  tabWidth: 4,
 
-    tabWidth: 4,
+  useTabs: false,
 
-    useTabs: false,
+  bracketSpacing: true,
 
-    bracketSpacing: true,
+  bracketSameLine: false,
 
-    bracketSameLine: false,
+  arrowParens: 'always',
 
-    arrowParens: "always",
+  endOfLine: 'lf',
 
-    endOfLine: "lf",
-
-    jsxSingleQuote: false
+  jsxSingleQuote: false,
 };

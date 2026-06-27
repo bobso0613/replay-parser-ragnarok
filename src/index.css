@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --text: #6b6375;
@@ -16,7 +16,7 @@
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 12px/145% var(--sans);
+  font: 14px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
@@ -29,13 +29,27 @@
   @media (max-width: 1024px) {
     font-size: 16px;
   }
+
+  min-height: 100vh;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./assets/base-background.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#root::before {
+  filter: blur(8px);
+  transform: scale(1.08);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
     --text-h: #f3f4f6;
-    --bg: #16171d;
+    --bg: #001632;
     --border: #2e303a;
     --code-bg: #1f2028;
     --accent: #c084fc;
@@ -55,7 +69,7 @@ body {
 }
 
 #root {
-  width: 95%;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   text-align: left;
@@ -109,126 +123,3 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
-
-/* Table utilities */
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  background: transparent;
-  font-size: 14px;
-}
-
-.table thead {
-  background: rgba(0,0,0,0.02);
-}
-
-.table th,
-.table td {
-  padding: 10px 12px;
-  border: 1px solid var(--border);
-  text-align: left;
-  vertical-align: middle;
-}
-
-.table th {
-  font-weight: 600;
-  color: var(--text-h);
-  background: var(--social-bg);
-}
-
-.table tbody tr:hover td {
-  background: rgba(0,0,0,0.02);
-}
-
-.table .muted {
-  color: var(--text);
-}
-
-/* Custom select styles */
-.select-object {
-  display: inline-block;
-  position: relative;
-  font-family: var(--sans);
-}
-
-.select-object select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: var(--bg);
-  color: var(--text-h);
-  border: 1px solid var(--border);
-  padding: 8px 36px 8px 12px;
-  border-radius: 8px;
-  font-size: 14px;
-  line-height: 1;
-  min-width: 160px;
-  outline: none;
-  transition: box-shadow 0.15s ease, border-color 0.15s ease;
-}
-
-.select-object:where(:focus-within) select {
-  box-shadow: var(--shadow);
-  border-color: var(--accent-border);
-}
-
-.select-object::after {
-  content: '';
-  position: absolute;
-  pointer-events: none;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid var(--text-h);
-  border-bottom: 2px solid var(--text-h);
-  transform-origin: center;
-  transform: translateY(-50%) rotate(45deg);
-  opacity: 0.9;
-}
-
-.select-object select:disabled {
-  background: var(--social-bg);
-  color: var(--text);
-  cursor: not-allowed;
-  opacity: 0.9;
-}
-
-/* small helper variant */
-.select-object--sm select {
-  padding: 6px 34px 6px 10px;
-  font-size: 13px;
-  border-radius: 6px;
-}
-
-@media (max-width: 1024px) {
-  .select-object select { min-width: 100%; }
-}
-
-@media print {
-  /* When printing, simplify table and hide the first column */
-  .table {
-    width: 100%;
-    background: transparent;
-    box-shadow: none;
-    color: #000;
-    -webkit-print-color-adjust: exact;
-    font-size:xx-small;
-    vertical-align: top;
-  }
-
-  /* hide first column (both header and cells) */
-  .table th.dont-print,
-  .table td.dont-print {
-    display: none;
-  }
-
-  /* remove borders for cleaner print */
-  .table th,
-  .table td {
-    padding: 1px 1px;
-  }
-}
-
