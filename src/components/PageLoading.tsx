@@ -3,7 +3,7 @@ import React from 'react';
 
 const PageLoading: React.FC<PageLoadingProps> = ({ message = 'Loading...' }) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white/80 dark:bg-gray-900/80">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white/50 dark:bg-gray-900/50">
       <div className="flex flex-col items-center space-y-4">
         <svg
           className="h-12 w-12 animate-spin text-blue-300"
