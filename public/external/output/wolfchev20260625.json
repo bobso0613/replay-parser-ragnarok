@@ -1,0 +1,4578 @@
+{
+  "players": [
+    {
+      "AID": "2110668",
+      "name": "Dmitriy Zakharov",
+      "jobId": 4016,
+      "totalDamageDealt": 834,
+      "totalDamageTaken": 22125,
+      "totalSkillUsageCount": 55,
+      "totalItemUsageCount": 38,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "0",
+            "skillDamageDealt": 763,
+            "skillUsageCount": 3
+          },
+          {
+            "skillId": "156",
+            "skillDamageDealt": 71,
+            "skillUsageCount": 34
+          }
+        ],
+        "support": [
+          {
+            "skillId": "401",
+            "skillUsageCount": 9
+          },
+          {
+            "skillId": "270",
+            "skillUsageCount": 6
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 2
+          },
+          {
+            "skillId": "268",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "579",
+          "itemUsageCount": 36
+        },
+        {
+          "itemId": "505",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12320",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "1420167962",
+      "name": "Dmitriy Zakharov",
+      "jobId": 981991558,
+      "totalDamageDealt": 0,
+      "totalDamageTaken": 0,
+      "totalSkillUsageCount": 0,
+      "totalItemUsageCount": 0,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+        ],
+        "support": [
+        ]
+      },
+      "itemInfo": [
+      ]
+    },
+    {
+      "AID": "2112290",
+      "name": "Ensla",
+      "jobId": 4019,
+      "totalDamageDealt": 4446390,
+      "totalDamageTaken": 0,
+      "totalSkillUsageCount": 94,
+      "totalItemUsageCount": 3,
+      "MVPCount": 1,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "490",
+            "skillDamageDealt": 4446390,
+            "skillUsageCount": 87
+          }
+        ],
+        "support": [
+          {
+            "skillId": "155",
+            "skillUsageCount": 4
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 2
+          },
+          {
+            "skillId": "479",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "657",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12065",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12077",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2113552",
+      "name": "Evang",
+      "jobId": 4009,
+      "totalDamageDealt": 219,
+      "totalDamageTaken": 0,
+      "totalSkillUsageCount": 172,
+      "totalItemUsageCount": 0,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "0",
+            "skillDamageDealt": 219,
+            "skillUsageCount": 3
+          }
+        ],
+        "support": [
+          {
+            "skillId": "361",
+            "skillUsageCount": 58
+          },
+          {
+            "skillId": "28",
+            "skillUsageCount": 52
+          },
+          {
+            "skillId": "78",
+            "skillUsageCount": 23
+          },
+          {
+            "skillId": "29",
+            "skillUsageCount": 15
+          },
+          {
+            "skillId": "34",
+            "skillUsageCount": 14
+          },
+          {
+            "skillId": "68",
+            "skillUsageCount": 5
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 2
+          }
+        ]
+      },
+      "itemInfo": [
+      ]
+    },
+    {
+      "AID": "2110881",
+      "name": "Himmelblau",
+      "jobId": 4012,
+      "totalDamageDealt": 19796006,
+      "totalDamageTaken": 5313,
+      "totalSkillUsageCount": 536,
+      "totalItemUsageCount": 2,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "382",
+            "skillDamageDealt": 19796006,
+            "skillUsageCount": 520
+          }
+        ],
+        "support": [
+          {
+            "skillId": "380",
+            "skillUsageCount": 12
+          },
+          {
+            "skillId": "45",
+            "skillUsageCount": 2
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 2
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "12016",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12575",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2110602",
+      "name": "Kandice",
+      "jobId": 4009,
+      "totalDamageDealt": 5168,
+      "totalDamageTaken": 6960,
+      "totalSkillUsageCount": 209,
+      "totalItemUsageCount": 0,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "70",
+            "skillDamageDealt": 5168,
+            "skillUsageCount": 10
+          }
+        ],
+        "support": [
+          {
+            "skillId": "78",
+            "skillUsageCount": 130
+          },
+          {
+            "skillId": "361",
+            "skillUsageCount": 23
+          },
+          {
+            "skillId": "28",
+            "skillUsageCount": 21
+          },
+          {
+            "skillId": "29",
+            "skillUsageCount": 10
+          },
+          {
+            "skillId": "34",
+            "skillUsageCount": 10
+          },
+          {
+            "skillId": "66",
+            "skillUsageCount": 3
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 2
+          }
+        ]
+      },
+      "itemInfo": [
+      ]
+    },
+    {
+      "AID": "2116194",
+      "name": "Mihayu",
+      "jobId": 4013,
+      "totalDamageDealt": 1310897,
+      "totalDamageTaken": 0,
+      "totalSkillUsageCount": 440,
+      "totalItemUsageCount": 12,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "137",
+            "skillDamageDealt": 1262803,
+            "skillUsageCount": 323
+          },
+          {
+            "skillId": "0",
+            "skillDamageDealt": 48057,
+            "skillUsageCount": 82
+          },
+          {
+            "skillId": "673",
+            "skillDamageDealt": 37,
+            "skillUsageCount": 1
+          }
+        ],
+        "support": [
+          {
+            "skillId": "51",
+            "skillUsageCount": 25
+          },
+          {
+            "skillId": "135",
+            "skillUsageCount": 5
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 2
+          },
+          {
+            "skillId": "378",
+            "skillUsageCount": 2
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "526",
+          "itemUsageCount": 12
+        }
+      ]
+    },
+    {
+      "AID": "2118822",
+      "name": "MimoriChan",
+      "jobId": 4021,
+      "totalDamageDealt": 96,
+      "totalDamageTaken": 0,
+      "totalSkillUsageCount": 85,
+      "totalItemUsageCount": 0,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "0",
+            "skillDamageDealt": 96,
+            "skillUsageCount": 2
+          }
+        ],
+        "support": [
+          {
+            "skillId": "330",
+            "skillUsageCount": 37
+          },
+          {
+            "skillId": "329",
+            "skillUsageCount": 26
+          },
+          {
+            "skillId": "309",
+            "skillUsageCount": 18
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 2
+          }
+        ]
+      },
+      "itemInfo": [
+      ]
+    },
+    {
+      "AID": "2112136",
+      "name": "Myung Soo",
+      "jobId": 4020,
+      "totalDamageDealt": 403,
+      "totalDamageTaken": 0,
+      "totalSkillUsageCount": 114,
+      "totalItemUsageCount": 0,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "0",
+            "skillDamageDealt": 403,
+            "skillUsageCount": 2
+          }
+        ],
+        "support": [
+          {
+            "skillId": "321",
+            "skillUsageCount": 43
+          },
+          {
+            "skillId": "322",
+            "skillUsageCount": 23
+          },
+          {
+            "skillId": "309",
+            "skillUsageCount": 18
+          },
+          {
+            "skillId": "320",
+            "skillUsageCount": 14
+          },
+          {
+            "skillId": "319",
+            "skillUsageCount": 9
+          },
+          {
+            "skillId": "45",
+            "skillUsageCount": 4
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+      ]
+    },
+    {
+      "AID": "2120044",
+      "name": "Si Hyun",
+      "jobId": 24,
+      "totalDamageDealt": 1322829,
+      "totalDamageTaken": 4372,
+      "totalSkillUsageCount": 510,
+      "totalItemUsageCount": 7,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "520",
+            "skillDamageDealt": 1200103,
+            "skillUsageCount": 109
+          },
+          {
+            "skillId": "519",
+            "skillDamageDealt": 121582,
+            "skillUsageCount": 246
+          },
+          {
+            "skillId": "0",
+            "skillDamageDealt": 1144,
+            "skillUsageCount": 2
+          }
+        ],
+        "support": [
+          {
+            "skillId": "500",
+            "skillUsageCount": 92
+          },
+          {
+            "skillId": "506",
+            "skillUsageCount": 27
+          },
+          {
+            "skillId": "504",
+            "skillUsageCount": 18
+          },
+          {
+            "skillId": "5077",
+            "skillUsageCount": 14
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 2
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "12151",
+          "itemUsageCount": 6
+        },
+        {
+          "itemId": "657",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2116846",
+      "name": "Zinca",
+      "jobId": 4017,
+      "totalDamageDealt": 1294,
+      "totalDamageTaken": 17079,
+      "totalSkillUsageCount": 102,
+      "totalItemUsageCount": 0,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "21",
+            "skillDamageDealt": 1292,
+            "skillUsageCount": 15
+          },
+          {
+            "skillId": "0",
+            "skillDamageDealt": 2,
+            "skillUsageCount": 2
+          }
+        ],
+        "support": [
+          {
+            "skillId": "373",
+            "skillUsageCount": 47
+          },
+          {
+            "skillId": "374",
+            "skillUsageCount": 29
+          },
+          {
+            "skillId": "289",
+            "skillUsageCount": 6
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 2
+          },
+          {
+            "skillId": "157",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+      ]
+    }
+  ],
+  "monsters": [
+    {
+      "monsterId": "2239",
+      "monsterName": "Stalker Gertie",
+      "battleStartTime": 343842,
+      "battleEndTime": 360146,
+      "battleDuration": 16304,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 90580
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 3940230,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 77,
+              "damageDealt": 3940230
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 70758,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 51,
+              "damageDealt": 70758
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 763,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 3,
+              "damageDealt": 763
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 17031,
+      "battleEndTime": 66079,
+      "battleDuration": 49048,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 550143,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 109,
+              "damageDealt": 550143
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 1544,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 2,
+              "damageDealt": 1144
+            },
+            {
+              "skillId": "519",
+              "skillCount": 20,
+              "damageDealt": 400
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 1517,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 41,
+              "damageDealt": 1517
+            }
+          ]
+        },
+        {
+          "playerId": "2110602",
+          "playerName": "Kandice",
+          "damageDealt": 969,
+          "skills": [
+            {
+              "skillId": "70",
+              "skillCount": 3,
+              "damageDealt": 969
+            }
+          ]
+        },
+        {
+          "playerId": "2112136",
+          "playerName": "Myung Soo",
+          "damageDealt": 371,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 371
+            }
+          ]
+        },
+        {
+          "playerId": "2118822",
+          "playerName": "MimoriChan",
+          "damageDealt": 32,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 32
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 13175,
+      "battleEndTime": 66695,
+      "battleDuration": 53520,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 550229,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 101,
+              "damageDealt": 550229
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 1628,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 44,
+              "damageDealt": 1628
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 114,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 114
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 16074,
+      "battleEndTime": 72245,
+      "battleDuration": 56171,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 553107,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 122,
+              "damageDealt": 553107
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 1776,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 48,
+              "damageDealt": 1776
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 13175,
+      "battleEndTime": 78113,
+      "battleDuration": 64938,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 13342
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 549727,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 126,
+              "damageDealt": 549727
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 3011,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 73,
+              "damageDealt": 3011
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 83,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 83
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 16,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 1,
+              "damageDealt": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 12090,
+      "battleEndTime": 81641,
+      "battleDuration": 69551,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 11024
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 551774,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 106,
+              "damageDealt": 551774
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 1813,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 49,
+              "damageDealt": 1813
+            }
+          ]
+        },
+        {
+          "playerId": "2110602",
+          "playerName": "Kandice",
+          "damageDealt": 969,
+          "skills": [
+            {
+              "skillId": "70",
+              "skillCount": 3,
+              "damageDealt": 969
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 78,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 2,
+              "damageDealt": 78
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 12090,
+      "battleEndTime": 81981,
+      "battleDuration": 69891,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 13342
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 551090,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 108,
+              "damageDealt": 551090
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 1776,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 47,
+              "damageDealt": 1776
+            }
+          ]
+        },
+        {
+          "playerId": "2110602",
+          "playerName": "Kandice",
+          "damageDealt": 646,
+          "skills": [
+            {
+              "skillId": "70",
+              "skillCount": 2,
+              "damageDealt": 646
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 430,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 16,
+              "damageDealt": 352
+            },
+            {
+              "skillId": "520",
+              "skillCount": 2,
+              "damageDealt": 78
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 2,
+              "damageDealt": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 12090,
+      "battleEndTime": 85824,
+      "battleDuration": 73734,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 17792
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 562129,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 117,
+              "damageDealt": 562129
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 1776,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 48,
+              "damageDealt": 1776
+            }
+          ]
+        },
+        {
+          "playerId": "2110602",
+          "playerName": "Kandice",
+          "damageDealt": 646,
+          "skills": [
+            {
+              "skillId": "70",
+              "skillCount": 1,
+              "damageDealt": 646
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 78,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 2,
+              "damageDealt": 78
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 22337,
+      "battleEndTime": 97443,
+      "battleDuration": 75106,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 8896
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 553611,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 131,
+              "damageDealt": 553611
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 3663,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 99,
+              "damageDealt": 3663
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 4,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 17003,
+      "battleEndTime": 98302,
+      "battleDuration": 81299,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 17792
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 554485,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 119,
+              "damageDealt": 554485
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 3293,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 88,
+              "damageDealt": 3293
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 39,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 1,
+              "damageDealt": 39
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 18033,
+      "battleEndTime": 107618,
+      "battleDuration": 89585,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 21864
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 549885,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 123,
+              "damageDealt": 549885
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 3108,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 84,
+              "damageDealt": 3108
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 468,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 12,
+              "damageDealt": 468
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 14707,
+      "battleEndTime": 108820,
+      "battleDuration": 94113,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 21864
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 538090,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 134,
+              "damageDealt": 538090
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 22774,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 27,
+              "damageDealt": 19437
+            },
+            {
+              "skillId": "137",
+              "skillCount": 81,
+              "damageDealt": 3337
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 273,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 7,
+              "damageDealt": 273
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 2,
+              "damageDealt": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 175115,
+      "battleEndTime": 207069,
+      "battleDuration": 31954,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 552940,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 82,
+              "damageDealt": 552940
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 1924,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 52,
+              "damageDealt": 1924
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 1550,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 50,
+              "damageDealt": 1550
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 162171,
+      "battleEndTime": 208827,
+      "battleDuration": 46656,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 548676,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 79,
+              "damageDealt": 548676
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 2035,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 55,
+              "damageDealt": 2035
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 1581,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 51,
+              "damageDealt": 1581
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 101,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 101
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 162171,
+      "battleEndTime": 209633,
+      "battleDuration": 47462,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 549234,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 80,
+              "damageDealt": 549234
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 2108,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 50,
+              "damageDealt": 1550
+            },
+            {
+              "skillId": "519",
+              "skillCount": 18,
+              "damageDealt": 558
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 2035,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 55,
+              "damageDealt": 2035
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 58,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 58
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 161365,
+      "battleEndTime": 210554,
+      "battleDuration": 49189,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 557761,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 85,
+              "damageDealt": 557761
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 1776,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 48,
+              "damageDealt": 1776
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 1488,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 48,
+              "damageDealt": 1488
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 48,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 48
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 172280,
+      "battleEndTime": 223970,
+      "battleDuration": 51690,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 21864
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 552558,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 69,
+              "damageDealt": 552558
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 2364,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 76,
+              "damageDealt": 2364
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 333,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 9,
+              "damageDealt": 333
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 3,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 161441,
+      "battleEndTime": 227834,
+      "battleDuration": 66393,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 21864
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 553117,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 77,
+              "damageDealt": 553117
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 2422,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 82,
+              "damageDealt": 2422
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 333,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 9,
+              "damageDealt": 333
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 87,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 87
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 162928,
+      "battleEndTime": 228401,
+      "battleDuration": 65473,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 550709,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 78,
+              "damageDealt": 550709
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 2518,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 79,
+              "damageDealt": 2329
+            },
+            {
+              "skillId": "519",
+              "skillCount": 7,
+              "damageDealt": 189
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 370,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 10,
+              "damageDealt": 370
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 160682,
+      "battleEndTime": 231001,
+      "battleDuration": 70319,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 13342
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 549415,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 78,
+              "damageDealt": 549415
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 2271,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 77,
+              "damageDealt": 2271
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 2145,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 6,
+              "damageDealt": 1812
+            },
+            {
+              "skillId": "137",
+              "skillCount": 9,
+              "damageDealt": 333
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 58,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 58
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 162171,
+      "battleEndTime": 233074,
+      "battleDuration": 70903,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 13342
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 534232,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 87,
+              "damageDealt": 534232
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 17220,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 36,
+              "damageDealt": 16813
+            },
+            {
+              "skillId": "137",
+              "skillCount": 10,
+              "damageDealt": 370
+            },
+            {
+              "skillId": "673",
+              "skillCount": 1,
+              "damageDealt": 37
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 2349,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 61,
+              "damageDealt": 1863
+            },
+            {
+              "skillId": "519",
+              "skillCount": 18,
+              "damageDealt": 486
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 70,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 70
+            }
+          ]
+        },
+        {
+          "playerId": "2118822",
+          "playerName": "MimoriChan",
+          "damageDealt": 64,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 64
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 164537,
+      "battleEndTime": 234276,
+      "battleDuration": 69739,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 42180
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 509200,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 62,
+              "damageDealt": 509200
+            }
+          ]
+        },
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 42180,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 1,
+              "damageDealt": 42180
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 125,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 125
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 74,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 2,
+              "damageDealt": 74
+            }
+          ]
+        },
+        {
+          "playerId": "2112136",
+          "playerName": "Myung Soo",
+          "damageDealt": 32,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 32
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 19,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 2,
+              "damageDealt": 19
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 8,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 1,
+              "damageDealt": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 251767,
+      "battleEndTime": 281024,
+      "battleDuration": 29257,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 84360
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 463980,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 9,
+              "damageDealt": 463980
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 78679,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 15,
+              "damageDealt": 78679
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 9056,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 42,
+              "damageDealt": 8870
+            },
+            {
+              "skillId": "520",
+              "skillCount": 6,
+              "damageDealt": 186
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 3064,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 40,
+              "damageDealt": 3064
+            }
+          ]
+        },
+        {
+          "playerId": "2110602",
+          "playerName": "Kandice",
+          "damageDealt": 1938,
+          "skills": [
+            {
+              "skillId": "70",
+              "skillCount": 3,
+              "damageDealt": 1938
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 92,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 92
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 251766,
+      "battleEndTime": 309980,
+      "battleDuration": 58214,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 22932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 553274,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 60,
+              "damageDealt": 553274
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 3996,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 69,
+              "damageDealt": 3996
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 1204,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 19,
+              "damageDealt": 613
+            },
+            {
+              "skillId": "520",
+              "skillCount": 17,
+              "damageDealt": 591
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 125,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 125
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 8,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 250388,
+      "battleEndTime": 313079,
+      "battleDuration": 62691,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 22932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 564738,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 57,
+              "damageDealt": 564738
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 3550,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 57,
+              "damageDealt": 3550
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 817,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 14,
+              "damageDealt": 498
+            },
+            {
+              "skillId": "519",
+              "skillCount": 9,
+              "damageDealt": 319
+            }
+          ]
+        },
+        {
+          "playerId": "2113552",
+          "playerName": "Evang",
+          "damageDealt": 219,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 3,
+              "damageDealt": 219
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 3,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 3,
+              "damageDealt": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 252571,
+      "battleEndTime": 315092,
+      "battleDuration": 62521,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 22932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 548722,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 60,
+              "damageDealt": 548722
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 3588,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 59,
+              "damageDealt": 3588
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 786,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 13,
+              "damageDealt": 507
+            },
+            {
+              "skillId": "520",
+              "skillCount": 9,
+              "damageDealt": 279
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 184,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 2,
+              "damageDealt": 184
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 9,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 2,
+              "damageDealt": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 251767,
+      "battleEndTime": 320900,
+      "battleDuration": 69133,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 22932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 537488,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 72,
+              "damageDealt": 537488
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 13510,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 13,
+              "damageDealt": 9995
+            },
+            {
+              "skillId": "137",
+              "skillCount": 56,
+              "damageDealt": 3515
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 615,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 9,
+              "damageDealt": 429
+            },
+            {
+              "skillId": "520",
+              "skillCount": 6,
+              "damageDealt": 186
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 123,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 2,
+              "damageDealt": 123
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 161776,
+      "battleEndTime": 194420,
+      "battleDuration": 32644,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 220162,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 220162
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44378,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44378
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 18028,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 18028
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 170068,
+      "battleEndTime": 194420,
+      "battleDuration": 24352,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 218138,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 218138
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44374,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44374
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 18006,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 18006
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 164772,
+      "battleEndTime": 194420,
+      "battleDuration": 29648,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 219295,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 219295
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44095,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44095
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 18001,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 18001
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 163871,
+      "battleEndTime": 194420,
+      "battleDuration": 30549,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 217295,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 217295
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44334,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44334
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 18051,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 18051
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 165563,
+      "battleEndTime": 194420,
+      "battleDuration": 28857,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 215979,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 215979
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44350,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44350
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 18031,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 18031
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 162171,
+      "battleEndTime": 194420,
+      "battleDuration": 32249,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 216421,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 216421
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44337,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44337
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 17985,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 17985
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 166868,
+      "battleEndTime": 194420,
+      "battleDuration": 27552,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 216283,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 216283
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44228,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44228
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 18057,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 18057
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 166569,
+      "battleEndTime": 194420,
+      "battleDuration": 27851,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 215457,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 215457
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44350,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44350
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 18047,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 18047
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 162171,
+      "battleEndTime": 194420,
+      "battleDuration": 32249,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 221272,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 221272
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44437,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44437
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 18009,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 18009
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 163066,
+      "battleEndTime": 194420,
+      "battleDuration": 31354,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 221246,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 221246
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44094,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44094
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 18006,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 18006
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 162171,
+      "battleEndTime": 194420,
+      "battleDuration": 32249,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 215703,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 215703
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44495,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44495
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 18031,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 18031
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 162171,
+      "battleEndTime": 194420,
+      "battleDuration": 32249,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 216504,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 216504
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44636,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44636
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 18017,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 18017
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 164772,
+      "battleEndTime": 194420,
+      "battleDuration": 29648,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 219809,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 219809
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44597,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44597
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 17983,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 17983
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 164772,
+      "battleEndTime": 194420,
+      "battleDuration": 29648,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 218106,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 218106
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44312,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44312
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 18059,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 18059
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 164772,
+      "battleEndTime": 194420,
+      "battleDuration": 29648,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 221325,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 221325
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44307,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44307
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 18076,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 18076
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 163066,
+      "battleEndTime": 194420,
+      "battleDuration": 31354,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 219895,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 219895
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44128,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44128
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 17992,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 17992
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 164772,
+      "battleEndTime": 194420,
+      "battleDuration": 29648,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 221277,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 221277
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44468,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44468
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 17955,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 17955
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 162170,
+      "battleEndTime": 194452,
+      "battleDuration": 32282,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 213959,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 213959
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44338,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44338
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 18015,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 18015
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 163065,
+      "battleEndTime": 194452,
+      "battleDuration": 31387,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 215277,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 215277
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 44207,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 20,
+              "damageDealt": 44207
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 18035,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 21,
+              "damageDealt": 18035
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 169875,
+      "battleEndTime": 194591,
+      "battleDuration": 24716,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 228139,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 27,
+              "damageDealt": 228139
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 46458,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 21,
+              "damageDealt": 46458
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 174631,
+      "battleEndTime": 194591,
+      "battleDuration": 19960,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 230096,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 27,
+              "damageDealt": 230096
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 46636,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 21,
+              "damageDealt": 46636
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 175717,
+      "battleEndTime": 194591,
+      "battleDuration": 18874,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 236814,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 28,
+              "damageDealt": 236814
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 48838,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 22,
+              "damageDealt": 48838
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 170954,
+      "battleEndTime": 194591,
+      "battleDuration": 23637,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 236227,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 28,
+              "damageDealt": 236227
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 48718,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 22,
+              "damageDealt": 48718
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 168919,
+      "battleEndTime": 194591,
+      "battleDuration": 25672,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 237820,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 28,
+              "damageDealt": 237820
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 48780,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 22,
+              "damageDealt": 48780
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 163725,
+      "battleEndTime": 194633,
+      "battleDuration": 30908,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 10932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 231754,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 28,
+              "damageDealt": 231754
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 48996,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 22,
+              "damageDealt": 48996
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 251766,
+      "battleEndTime": 290076,
+      "battleDuration": 38310,
+      "taker": {
+        "playerId": "2116194",
+        "playerName": "Mihayu"
+      },
+      "highestDamageInfo": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun",
+        "skillId": "519",
+        "damage": 18799
+      },
+      "battleInfo": [
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 162482,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 58,
+              "damageDealt": 162482
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 77882,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 10,
+              "damageDealt": 77882
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 48748,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 2,
+              "damageDealt": 37297
+            },
+            {
+              "skillId": "520",
+              "skillCount": 6,
+              "damageDealt": 11451
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 252835,
+      "battleEndTime": 290603,
+      "battleDuration": 37768,
+      "taker": {
+        "playerId": "2116194",
+        "playerName": "Mihayu"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 11466
+      },
+      "battleInfo": [
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 178724,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 63,
+              "damageDealt": 178724
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 89348,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 11,
+              "damageDealt": 89348
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 8998,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 5,
+              "damageDealt": 8998
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 2,
+              "damageDealt": 2
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 251138,
+      "battleEndTime": 290603,
+      "battleDuration": 39465,
+      "taker": {
+        "playerId": "2116194",
+        "playerName": "Mihayu"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 11466
+      },
+      "battleInfo": [
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 178434,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 63,
+              "damageDealt": 178434
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 89348,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 11,
+              "damageDealt": 89348
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 9067,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 5,
+              "damageDealt": 9067
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 251884,
+      "battleEndTime": 290603,
+      "battleDuration": 38719,
+      "taker": {
+        "playerId": "2116194",
+        "playerName": "Mihayu"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 11466
+      },
+      "battleInfo": [
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 178189,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 63,
+              "damageDealt": 178189
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 89348,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 11,
+              "damageDealt": 89348
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 8891,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 5,
+              "damageDealt": 8891
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 251766,
+      "battleEndTime": 291113,
+      "battleDuration": 39347,
+      "taker": {
+        "playerId": "2116194",
+        "playerName": "Mihayu"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 11466
+      },
+      "battleInfo": [
+        {
+          "playerId": "2116194",
+          "playerName": "Mihayu",
+          "damageDealt": 168596,
+          "skills": [
+            {
+              "skillId": "137",
+              "skillCount": 60,
+              "damageDealt": 168596
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 100814,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 12,
+              "damageDealt": 100814
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 11413,
+          "skills": [
+            {
+              "skillId": "520",
+              "skillCount": 6,
+              "damageDealt": 11413
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
