@@ -8,19 +8,16 @@ const InputUpload: React.FC<InputUploadProps> = ({
   multiple,
   onChange,
   label = 'Select file',
+  selectedFiles,
 }) => {
-  const [selectedFiles, setSelectedFiles] = React.useState<string[]>([]);
-
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files ?? []);
-    setSelectedFiles(files.map((file) => file.name));
     onChange?.(event);
   };
 
   const previewText =
     selectedFiles.length > 0
       ? selectedFiles.length === 1
-        ? selectedFiles[0]
+        ? selectedFiles[0].name
         : `${selectedFiles.length} files selected`
       : 'Click to upload or drag and drop';
 

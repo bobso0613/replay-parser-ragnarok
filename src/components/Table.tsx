@@ -1,12 +1,12 @@
+import type { TableProps } from '@/types';
 import React from 'react';
 
-type TableProps = {
-  headers?: string[] | Array<React.ReactNode>;
-  rows: Array<Array<React.ReactNode>>;
-  className?: string;
-};
-
-const Table: React.FC<TableProps> = ({ headers = [], rows, className = '' }) => {
+const Table: React.FC<TableProps> = ({
+  headers = [],
+  rowClassNames = [],
+  rows,
+  className = '',
+}) => {
   const maxCols = Math.max(headers.length, ...rows.map((row) => row.length), 0);
 
   return (
@@ -33,9 +33,9 @@ const Table: React.FC<TableProps> = ({ headers = [], rows, className = '' }) => 
         )}
         <tbody className="divide-y divide-slate-50/50">
           {rows.map((row, rowIndex) => (
-            <tr key={rowIndex} className="text-slate-50 hover:bg-slate-50/20">
+            <tr key={rowIndex} className={`text-slate-50 hover:bg-slate-50/20`}>
               {row.map((cell, cellIndex) => (
-                <td key={cellIndex} className="px-4 py-3">
+                <td key={cellIndex} className={`${rowClassNames[cellIndex] ?? ''} px-4 py-3`}>
                   {cell}
                 </td>
               ))}

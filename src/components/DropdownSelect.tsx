@@ -11,7 +11,7 @@ const DropdownSelect: React.FC<DropdownSelectProps> = ({
 }) => {
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     if (onChange) {
-      onChange(event.target.value);
+      onChange(event);
     }
   };
 
@@ -21,7 +21,7 @@ const DropdownSelect: React.FC<DropdownSelectProps> = ({
       key={key}
       value={select}
       onChange={handleChange}
-      className="rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-700 shadow-sm outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200 m-5"
+      className="rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-700 shadow-sm outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200"
     >
       <option value="" disabled className="bg-white text-slate-500">
         {placeholder}

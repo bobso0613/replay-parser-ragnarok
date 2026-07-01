@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // 1. Swap static imports for dynamic lazy imports
 const Home = lazy(() => import('@/pages/Home'));
 
-function AppRouter() {
+const AppRouter = () => {
   return (
     <Router>
       {/* 2. Wrap your routes in Suspense to show a fallback UI while downloading */}
@@ -19,6 +19,6 @@ function AppRouter() {
       </Suspense>
     </Router>
   );
-}
+};
 
 export default AppRouter;

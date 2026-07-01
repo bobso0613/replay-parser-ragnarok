@@ -5,3 +5,6 @@ export * from './Header';
 export * from './InputUpload';
 export * from './Table';
 export * from './PlaceholderDetails';
+export * from './Spinner';
+export * from './SectionLoading';
+export * from './ReplayBreakdown';
