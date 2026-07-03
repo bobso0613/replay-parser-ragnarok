@@ -1,16 +1,20 @@
-# Replay Parser Ragnarok
+# 🎮 Replay Parser Ragnarok
 
 Replay Parser Ragnarok is a React + Vite frontend application for exploring Ragnarok Online replay data in the browser. The project has been organized into feature-oriented folders so the UI, routing, services, hooks, and shared types are easier to maintain.
 
-## Features
+## ✨ Features
 
-- Browse replay-related data through a modern web interface
-- Organize UI into reusable components, layouts, and pages
-- Use route-based navigation through the app shell
-- Keep shared logic in hooks, services, utilities, and constants
-- Prepare the frontend for future replay parsing and visualization features
+- 🔍 Browse and parse Ragnarok Online replay data through a modern, interactive web interface
+- 📤 Upload and process replay JSON files from the RagnarokReplayExample tool
+- 📊 View detailed replay breakdowns with formatted data tables and sections
+- 🧩 Reusable components for data display: tables, dropdowns, loading states, and skeleton loaders
+- 📁 File upload with parsing and validation for replay data
+- 🧭 Route-based navigation through the app shell
+- ⚡ Lazy-loaded background images for optimized performance
+- 🔧 Keep shared logic in hooks, services, utilities, and constants
+- 🔗 Dynamic API response field mapping for flexible data handling
 
-## Getting Started
+## 🚀 Getting Started
 
 1. Install dependencies:
    ```bash
@@ -25,7 +29,7 @@ Replay Parser Ragnarok is a React + Vite frontend application for exploring Ragn
 
 > Note: This project requires certain files to be placed in the public/ folder. The contents of public/external are expected to include RagnarokReplayExample.exe, which will be run through a separate service such as a Node.js app using npm and Wine. The YAML files are Ragnarok-related database files, such as mob lists, skill lists, item lists, and similar data.
 
-## Development
+## 🛠️ Development
 
 Useful commands:
 
@@ -36,26 +40,51 @@ npm run preview
 npm run lint
 ```
 
-## Project Structure
+## 📁 Project Structure
 
-- `src/` - main application source code
-- `src/components/` - reusable UI components
-- `src/layouts/` - shared page/layout structures
-- `src/pages/` - route-level pages
-- `src/routes/` - router configuration and route entry points
-- `src/hooks/` - custom hooks
-- `src/services/` - API or data service logic
-- `src/types/` - shared TypeScript types
-- `src/utils/` - helper functions and utilities
-- `src/constants/` - shared constants and config values
-- `src/assets/` - local static assets
-- `public/` - public static files, including required external and YAML assets
-- `README.md` - project documentation
+- 📦 `src/` - main application source code
+- 🧩 `src/components/` - reusable UI components:
+  - 🎯 `Header.tsx` - top navigation header
+  - 📈 `ReplayBreakdown.tsx` - main replay data display component
+  - 📊 `Table.tsx` - data table component for structured data display
+  - 📝 `DropdownSelect.tsx` - dropdown selection component
+  - 📤 `InputUpload.tsx` - file upload component for replay JSON files
+  - ⏳ `Spinner.tsx`, `Spinner.tsx`, `SectionLoading.tsx`, `PageLoading.tsx` - loading state components
+  - 🦴 `SkeletonLoader.tsx` - skeleton loader for content placeholders
+  - 🚫 `PlaceholderDetails.tsx` - placeholder component for empty states
+- 🎨 `src/layouts/` - shared page/layout structures (`BaseLayout.tsx`)
+- 📄 `src/pages/` - route-level pages (`Home.tsx`)
+- 🗺️ `src/routes/` - router configuration and route entry points
+- 🎣 `src/hooks/` - custom React hooks
+- 🔌 `src/services/` - API or data service logic
+- 📚 `src/types/` - shared TypeScript type definitions:
+  - 🎮 `parsed-replay.ts` - replay data types
+  - 🌐 `replay-api.ts` - API response types
+  - 👹 `mob-db.ts` - mob database types
+  - ⚔️ `skill-db.ts` - skill database types
+- 🛠️ `src/utils/` - helper functions and utilities:
+  - 🔄 `parse-replay-json.ts` - replay file parsing logic
+- ⚙️ `src/constants/` - shared constants and config values
+- 🎨 `src/assets/` - local static assets (SVG icons, etc.)
+- 📂 `public/` - public static files:
+  - 🎮 `public/external/` - external replay tools and generated JSON output files
+  - 📋 `public/yaml/` - Ragnarok database files (mob_db.yml, skill_db.yml)
+- 📖 `README.md` - project documentation
 
-## Usage
+## 📖 Usage
 
-Use the interface to explore replay data and extend the app by adding new pages, components, hooks, or services as the project grows.
+1. 🚀 Start the development server with `npm run dev`
+2. 🌐 Open the application in your browser
+3. 📤 Use the file upload component to select a replay JSON file (generated from RagnarokReplayExample.exe)
+4. 📊 The application will parse the replay data and display:
+   - 📋 Structured replay breakdown with key information
+   - 📈 Formatted data tables for detailed statistics
+   - 👹⚔️ Mob and skill database information mapped to the replay data
+5. 🎯 Use dropdown selectors to filter or navigate through replay sections
+6. ⏳ The interface provides loading states and placeholders during data processing
 
-## License
+For development, extend the app by adding new pages, components, hooks, or services as the project grows.
+
+## 📜 License
 
 This project is open source. Modify and use it according to your needs.
