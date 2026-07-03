@@ -46,17 +46,32 @@ export const parseReplayOutput = (
     if (existingPlayer) {
       player.skillInfo.offensive.forEach((skillUsage) => {
         const skillInfo = skillDb?.find((s: ISkill) => s.Id === Number(skillUsage.skillId));
+        const monsterFromMobDb = mobDb?.find(
+          (m: IMob) => m.Id === Number(skillUsage.maxDamageMonsterId)
+        );
+        const mobIsMvp = Boolean(monsterFromMobDb?.Modes?.Mvp) || false;
         existingPlayer.skillDamages.push({
           skillId: skillUsage.skillId,
           skillInfo: skillInfo?.Description ?? '',
           damage: skillUsage.skillDamageDealt ?? 0,
           noOfHits: skillUsage.skillUsageCount ?? 0,
           noOfHitsUnique: skillUsage.skillUsageCount ?? 0,
-          highestDamage: 0,
-          highestMonsterName: '',
-          highestIsMvp: false,
-          highestMonsterId: '',
+          highestDamage: skillUsage.maxDamageDealt ?? 0,
+          highestMonsterName: monsterFromMobDb?.Name ?? skillUsage.maxDamageMonsterName ?? '',
+          highestIsMvp: mobIsMvp ?? false,
+          highestMonsterId: skillUsage.maxDamageMonsterId ?? '',
         });
+
+        if (existingPlayer.highestDamage.damage < (skillUsage.maxDamageDealt ?? 0)) {
+          existingPlayer.highestDamage = {
+            monsterId: skillUsage.maxDamageMonsterId ?? '',
+            monsterName: monsterFromMobDb?.Name ?? skillUsage.maxDamageMonsterName ?? '',
+            isMvp: mobIsMvp ?? false,
+            skillId: skillUsage.skillId,
+            skillName: skillInfo?.Description ?? '',
+            damage: skillUsage.maxDamageDealt ?? 0,
+          };
+        }
       });
     }
   });
@@ -104,7 +119,7 @@ export const parseReplayOutput = (
           playerName: highestDamageInfo.playerName,
           jobName: highestDamageInfoJob,
           skillName: highestDamageInfoSkillName ?? '',
-          damage: highestDamageInfo.damage,
+          damage: highestDamageInfo.damage ?? 0,
           playerId: highestDamageInfo.playerId,
           jobId: highestDamageInfoJobId ?? 0,
           skillId: highestDamageInfo.skillId,
@@ -129,6 +144,18 @@ export const parseReplayOutput = (
 
     if (battleEndTime >= existing.fightDuration.to) {
       existing.fightDuration.to = battleEndTime;
+    }
+
+    if (existing.highestDamage.damage < (highestDamageInfo.damage ?? 0)) {
+      existing.highestDamage = {
+        playerName: highestDamageInfo.playerName,
+        jobName: highestDamageInfoJob,
+        skillName: highestDamageInfoSkillName ?? '',
+        damage: highestDamageInfo.damage ?? 0,
+        playerId: highestDamageInfo.playerId,
+        jobId: highestDamageInfoJobId ?? 0,
+        skillId: highestDamageInfo.skillId,
+      };
     }
 
     // playerDamages
@@ -173,53 +200,16 @@ export const parseReplayOutput = (
         existingPlayer.skillInfo =
           skillDb?.find((s) => s.Id === Number(existingPlayer.skillId))?.Description ?? '';
 
-        existingPlayer.highestDamage = battleInfoEntry.skills.reduce(
-          (max, skillEntry) =>
-            skillEntry.damageDealt > max.damage
-              ? {
-                  skillName:
-                    skillDb?.find((s) => s.Id === Number(skillEntry.skillId))?.Description ?? '',
-                  damage: skillEntry.damageDealt,
-                  skillId: skillEntry.skillId,
-                }
-              : max,
-          { skillName: '', damage: 0, skillId: '' }
-        );
-
-        const existingPlayerBreakdown = finalOutput.breakdownPerPlayer.find(
-          (p: IPlayerBreakdown) => p.playerId === existingPlayer.playerId
-        );
-        if (existingPlayerBreakdown) {
-          // breakdownPerPlayer.highestDamage
-          if (
-            existing.highestDamage.damage > existingPlayerBreakdown.highestDamage.damage &&
-            existing.highestDamage.playerId === existingPlayerBreakdown.playerId
-          ) {
-            existingPlayerBreakdown.highestDamage = {
-              monsterId: existing.monsterId,
-              monsterName: existing.name,
-              isMvp: existing.isMvp,
-              skillId: existing.highestDamage.skillId,
-              skillName: existing.highestDamage.skillName,
-              damage: existing.highestDamage.damage,
-            };
-          }
-
-          // breakdownPerPlayer.skillDamages
-          const existingSkillDamage = existingPlayerBreakdown.skillDamages.find(
-            (s: ISkillDamage) => s.skillId === existingPlayer.highestDamage.skillId
-          );
-          if (existingSkillDamage) {
-            if (
-              existing.highestDamage.damage > existingSkillDamage.highestDamage &&
-              existing.highestDamage.playerId === existingPlayerBreakdown.playerId
-            ) {
-              existingSkillDamage.highestMonsterId = existing.monsterId;
-              existingSkillDamage.highestDamage = existing.highestDamage.damage;
-              existingSkillDamage.highestMonsterName = existing.name;
-              existingSkillDamage.highestIsMvp = existing.isMvp;
-            }
-          }
+        if (
+          existingPlayer.highestDamage.damage < (battleInfoEntry.highestDamageInfo.damageDealt ?? 0)
+        ) {
+          existingPlayer.highestDamage = {
+            skillName:
+              skillDb?.find((s) => s.Id === Number(battleInfoEntry.highestDamageInfo.skillId))
+                ?.Description ?? '',
+            damage: battleInfoEntry.highestDamageInfo.damageDealt ?? 0,
+            skillId: battleInfoEntry.highestDamageInfo.skillId ?? '',
+          };
         }
       }
 

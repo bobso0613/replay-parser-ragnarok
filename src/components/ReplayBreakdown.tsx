@@ -122,6 +122,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                 src={`https://talontales.com/panel/data/monsters/${monster.monsterId}.gif`}
                 alt={monster.name}
                 className="mx-auto"
+                loading="lazy"
               />,
               `${monster.name} ${monster.isMvp ? '(MVP)' : ''} x ${monster.amount}`,
               commaNumber(monster.damage),

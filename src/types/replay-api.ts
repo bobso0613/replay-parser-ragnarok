@@ -2,6 +2,9 @@ export interface ISkillUsage {
   skillId: string;
   skillDamageDealt?: number;
   skillUsageCount: number;
+  maxDamageDealt?: number;
+  maxDamageMonsterId?: string;
+  maxDamageMonsterName?: string;
 }
 
 export interface ISkillInfo {
@@ -35,12 +38,14 @@ export interface IPlayerRef {
 
 export interface IDamageInfo extends IPlayerRef {
   skillId: string;
-  damage: number;
+  damage?: number;
+  damageDealt?: number;
 }
 
 export interface IBattleInfo extends IPlayerRef {
   damageDealt: number;
   skills: IPlayerSkillMonsterInfo[];
+  highestDamageInfo: IDamageInfo;
 }
 
 export interface IPlayerSkillMonsterInfo {
