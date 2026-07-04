@@ -50,6 +50,8 @@ export interface IPlayerDamage {
   skillId: string;
   skillInfo: string;
   playerName: string;
+  jobId: number;
+  jobName: string;
   noOfHits: number;
   noOfHitsUnique: number;
   damage: number;
@@ -84,7 +86,30 @@ export interface IFightDuration {
   to: number;
 }
 
+export interface ISkillUsageBreakdown {
+  skillId: string;
+  skillInfo: string;
+  skillUsageCount: number;
+
+  highestSkillUsageCount: number;
+  highestSkillUsagePlayerId: string;
+  highestSkillUsagePlayerName: string;
+  highestSkillUsagePlayerJobId: number;
+  highestSkillUsagePlayerJobName: string;
+
+  playerSkills: IPlayerSkillUsage[];
+}
+
+export interface IPlayerSkillUsage {
+  playerId: string;
+  playerName: string;
+  jobId: number;
+  jobName: string;
+  skillUsageCount: number;
+}
+
 export interface IParsedReplay {
   breakdownPerMonsterUnique: IMonsterBreakdown[];
   breakdownPerPlayer: IPlayerBreakdown[];
+  skillUsage: ISkillUsageBreakdown[];
 }

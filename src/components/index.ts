@@ -9,3 +9,5 @@ export * from './Spinner';
 export * from './SectionLoading';
 export * from './ReplayBreakdown';
 export * from './HorizontalTabs';
+export * from './TextImage';
+export * from './Tooltip';

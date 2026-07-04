@@ -82,3 +82,18 @@ export interface HorizontalTabsProps {
   extraContent?: ReactNode;
   className?: string;
 }
+
+export interface TextImageProps {
+  textBefore?: ReactNode;
+  variant?: string;
+  keyId: number | string;
+  keyInfo: string;
+  title?: string;
+}
+
+export type TooltipProps = {
+  content: React.ReactNode;
+  children: React.ReactNode;
+  className?: string;
+  placement?: string;
+};

@@ -10,6 +10,7 @@ import type {
   IReplayData,
   ISkill,
   ISkillDamage,
+  ISkillUsageBreakdown,
 } from '@/types';
 
 export const parseReplayOutput = (
@@ -20,6 +21,7 @@ export const parseReplayOutput = (
   const finalOutput: IParsedReplay = {
     breakdownPerMonsterUnique: [] as IMonsterBreakdown[],
     breakdownPerPlayer: [] as IPlayerBreakdown[],
+    skillUsage: [] as ISkillUsageBreakdown[],
   };
 
   apiResponse?.players.forEach((player: IPlayer) => {
@@ -74,6 +76,50 @@ export const parseReplayOutput = (
         }
       });
     }
+
+    player.skillInfo.support?.forEach((skillUsage) => {
+      const skillInfo = skillDb?.find((s: ISkill) => s.Id === Number(skillUsage.skillId));
+
+      if (
+        !finalOutput.skillUsage.find((s: ISkillUsageBreakdown) => s.skillId === skillUsage.skillId)
+      ) {
+        finalOutput.skillUsage.push({
+          skillId: skillUsage.skillId,
+          skillInfo: skillInfo?.Description ?? '',
+          skillUsageCount: 0,
+          highestSkillUsageCount: 0,
+          highestSkillUsagePlayerId: '',
+          highestSkillUsagePlayerName: '',
+          highestSkillUsagePlayerJobId: 0,
+          highestSkillUsagePlayerJobName: '',
+          playerSkills: [],
+        });
+      }
+
+      const existingSkill = finalOutput.skillUsage.find(
+        (s: ISkillUsageBreakdown) => s.skillId === skillUsage.skillId
+      );
+
+      if (existingSkill) {
+        existingSkill.skillUsageCount += skillUsage.skillUsageCount;
+
+        existingSkill.playerSkills.push({
+          playerId: player.AID,
+          playerName: player.name,
+          jobId: player.jobId,
+          jobName: JOB_LIST[player.jobId],
+          skillUsageCount: skillUsage.skillUsageCount,
+        });
+
+        if (existingSkill.highestSkillUsageCount < skillUsage.skillUsageCount) {
+          existingSkill.highestSkillUsageCount = skillUsage.skillUsageCount;
+          existingSkill.highestSkillUsagePlayerId = player.AID;
+          existingSkill.highestSkillUsagePlayerName = player.name;
+          existingSkill.highestSkillUsagePlayerJobId = player.jobId;
+          existingSkill.highestSkillUsagePlayerJobName = JOB_LIST[player.jobId];
+        }
+      }
+    });
   });
 
   apiResponse?.monsters.forEach((monster: IMonster) => {
@@ -160,6 +206,11 @@ export const parseReplayOutput = (
 
     // playerDamages
     battleInfo.forEach((battleInfoEntry) => {
+      const jobId = apiResponse?.players?.find(
+        (p: IPlayer) => p.AID === battleInfoEntry.playerId
+      )?.jobId;
+      const jobName = JOB_LIST[jobId ?? 0];
+
       if (
         !existing.playerDamages.find((p: IPlayerDamage) => p.playerId === battleInfoEntry.playerId)
       ) {
@@ -176,6 +227,8 @@ export const parseReplayOutput = (
             damage: 0,
             skillId: '',
           },
+          jobId: jobId ?? 0,
+          jobName: jobName,
         });
       }
 
@@ -242,6 +295,9 @@ export const parseReplayOutput = (
     monster.playerDamages.sort((a, b) => b.damage - a.damage);
     monster.skillDamages.sort((a, b) => b.damage - a.damage);
   });
-
+  finalOutput.skillUsage.sort((a, b) => a.skillInfo.localeCompare(b.skillInfo));
+  finalOutput.skillUsage.forEach((skill) => {
+    skill.playerSkills.sort((a, b) => b.skillUsageCount - a.skillUsageCount);
+  });
   return finalOutput;
 };

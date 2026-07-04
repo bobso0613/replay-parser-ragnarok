@@ -4,6 +4,21 @@ export const ENV = {
   APPLICATION_NAME: import.meta.env.VITE_APPLICATION_NAME,
 };
 
+export const SKILL_IMAGE_URL = import.meta.env.VITE_SKILL_IMAGE_URL;
+export const JOB_IMAGE_URL = import.meta.env.VITE_JOB_IMAGE_URL;
+export const MONSTER_IMAGE_URL = import.meta.env.VITE_MONSTER_IMAGE_URL;
+export const TEXT_IMAGE_VARIANTS = {
+  SKILL: 'skill',
+  JOB: 'job',
+};
+
+export const TOOLTIP_POSITION = {
+  TOP: 'top',
+  BOTTOM: 'bottom',
+  LEFT: 'left',
+  RIGHT: 'right',
+};
+
 export const JOB_LIST: JobListType = {
   0: 'Novice',
   1: 'Swordman',
