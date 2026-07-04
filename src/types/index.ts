@@ -2,6 +2,7 @@ import type { RouteObject } from 'react-router-dom';
 import type { IReplayData } from './replay-api';
 import type { ISkill } from './skill-db';
 import type { IMob } from './mob-db';
+import type { ReactNode } from 'react';
 
 export * from './replay-api';
 export * from './skill-db';
@@ -59,6 +60,7 @@ export type ReplayBreakdownProps = {
   apiResponse: IReplayData;
   skillDb: ISkill[] | null;
   mobDb: IMob[] | null;
+  fileName?: string;
 };
 
 export type TableProps = {
@@ -67,3 +69,16 @@ export type TableProps = {
   rows: Array<Array<React.ReactNode>>;
   className?: string;
 };
+
+export interface TabItem {
+  id: string;
+  label: string | ReactNode;
+  content: ReactNode;
+}
+
+export interface HorizontalTabsProps {
+  tabs: TabItem[];
+  defaultTabId?: string;
+  extraContent?: ReactNode;
+  className?: string;
+}

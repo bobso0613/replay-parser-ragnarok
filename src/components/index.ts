@@ -8,3 +8,4 @@ export * from './PlaceholderDetails';
 export * from './Spinner';
 export * from './SectionLoading';
 export * from './ReplayBreakdown';
+export * from './HorizontalTabs';

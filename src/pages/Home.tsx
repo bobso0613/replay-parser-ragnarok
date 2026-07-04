@@ -90,7 +90,12 @@ export const Home = () => {
       </div>
       {replayIsParsing && <SectionLoading label="Parsing your replay. Please wait." />}
       {parsedReplay && !replayIsParsing && (
-        <ReplayBreakdown apiResponse={parsedReplay} skillDb={skillDb} mobDb={mobDb} />
+        <ReplayBreakdown
+          apiResponse={parsedReplay}
+          skillDb={skillDb}
+          mobDb={mobDb}
+          fileName={selectedFiles[0].name}
+        />
       )}
       {!!!parsedReplay && !replayIsParsing && <PlaceholderDetails />}
     </>

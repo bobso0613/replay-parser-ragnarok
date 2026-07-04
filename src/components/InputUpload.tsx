@@ -30,8 +30,8 @@ const InputUpload: React.FC<InputUploadProps> = ({
         <div className="flex items-center gap-3">
           <img src={FileUploadIcon} alt="Upload Icon" />
           <div className="text-left">
-            <div className="text-md font-medium text-gray-900">{label}</div>
-            <div className="text-sm text-gray-500">{previewText}</div>
+            <div className="text-md font-medium text-gray-600">{label}</div>
+            <div className="text-sm text-gray-900">{previewText}</div>
           </div>
         </div>
         <div className="text-lg text-indigo-950 group-hover:underline">Browse</div>

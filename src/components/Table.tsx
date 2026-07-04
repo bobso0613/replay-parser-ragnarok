@@ -32,18 +32,26 @@ const Table: React.FC<TableProps> = ({
           </thead>
         )}
         <tbody className="divide-y divide-slate-50/50">
-          {rows.map((row, rowIndex) => (
-            <tr key={rowIndex} className={`text-slate-50 hover:bg-slate-50/20`}>
-              {row.map((cell, cellIndex) => (
-                <td key={cellIndex} className={`${rowClassNames[cellIndex] ?? ''} px-4 py-3`}>
-                  {cell}
-                </td>
-              ))}
-              {Array.from({ length: maxCols - row.length }).map((_, index) => (
-                <td key={`pad-${index}`} className="px-4 py-3" />
-              ))}
+          {rows.length === 0 ? (
+            <tr>
+              <td colSpan={maxCols} className="px-4 py-8 text-center text-slate-400">
+                No records found
+              </td>
             </tr>
-          ))}
+          ) : (
+            rows.map((row, rowIndex) => (
+              <tr key={rowIndex} className={`text-slate-50 hover:bg-slate-50/20`}>
+                {row.map((cell, cellIndex) => (
+                  <td key={cellIndex} className={`${rowClassNames[cellIndex] ?? ''} px-4 py-3`}>
+                    {cell}
+                  </td>
+                ))}
+                {Array.from({ length: maxCols - row.length }).map((_, index) => (
+                  <td key={`pad-${index}`} className="px-4 py-3" />
+                ))}
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
     </div>
