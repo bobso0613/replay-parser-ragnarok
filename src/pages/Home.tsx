@@ -27,6 +27,15 @@ export const Home = () => {
     setSelectedFiles(files);
   };
 
+  const normalizeReplayPath = () => {
+    const canonicalReplayPath = `${import.meta.env.BASE_URL}replay-parser`;
+    const normalizedPath = `${canonicalReplayPath}${window.location.hash}`;
+
+    if (`${window.location.pathname}${window.location.hash}` !== normalizedPath) {
+      window.history.replaceState({}, document.title, normalizedPath);
+    }
+  };
+
   const parseReplayFile = async (file: File, controller: AbortController) => {
     setReplayIsParsing(true);
     setIsError(false);
@@ -41,13 +50,7 @@ export const Home = () => {
       setParsedReplay(null);
       setIsError(true);
     } finally {
-      const canonicalReplayPath = '/replay-parser';
-      const normalizedPath = `${canonicalReplayPath}${window.location.hash}`;
-
-      if (`${window.location.pathname}${window.location.hash}` !== normalizedPath) {
-        window.history.replaceState({}, document.title, normalizedPath);
-      }
-
+      normalizeReplayPath();
       setReplayIsParsing(false);
     }
   };
@@ -67,6 +70,7 @@ export const Home = () => {
       setParsedReplay(null);
       setIsError(true);
     } finally {
+      normalizeReplayPath();
       setReplayOutputId(null);
       setReplayIsParsing(false);
     }

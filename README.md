@@ -10,6 +10,7 @@ Replay Parser Ragnarok is a React + Vite frontend application for exploring Ragn
 - 🧩 Reusable components for data display: tables, dropdowns, loading states, and skeleton loaders
 - 📁 File upload with parsing and validation for replay data
 - 🧭 Route-based navigation through the app shell
+- 🧭 Base-path aware routing for subpath deployments via `VITE_BASE_PATH`
 - ⚡ Lazy-loaded background images for optimized performance
 - 🔧 Keep shared logic in hooks, services, utilities, and constants
 - 🔗 Dynamic API response field mapping for flexible data handling
@@ -24,10 +25,12 @@ Replay Parser Ragnarok is a React + Vite frontend application for exploring Ragn
 
 ```dotenv
 VITE_APPLICATION_NAME="Ragnarok Replay Parser"
+VITE_BASE_PATH=/
 VITE_PARSER_URL=https://your-api-host/parse
 VITE_SKILL_IMAGE_URL=https://static.divine-pride.net/images/skill/PLACEHOLDER_TEXT.png
 VITE_JOB_IMAGE_URL=https://static.divine-pride.net/images/jobs/icon_jobs_PLACEHOLDER_TEXT.png
 VITE_MONSTER_IMAGE_URL=https://talontales.com/panel/data/monsters/PLACEHOLDER_TEXT.gif
+VITE_REPLAY_URL_SHARE=/replay-parser/ID_HERE
 ```
 
 3. Start the development server:
@@ -36,7 +39,7 @@ VITE_MONSTER_IMAGE_URL=https://talontales.com/panel/data/monsters/PLACEHOLDER_TE
    ```
 4. Open the local Vite URL in your browser to use the app.
 
-> Note: This project reads YAML lookup data from `public/yaml/`. Replay parsing is handled by your API configured in `VITE_PARSER_URL`.
+> Note: This project reads YAML lookup data from `public/yaml/`. Replay parsing is handled by your API configured in `VITE_PARSER_URL`. When deploying under a subpath, set `VITE_BASE_PATH` to that path so the router and Vite asset paths stay aligned. If your host does not support SPA rewrites on refresh, the bundled `404.html` fallback will route missing deep links back into the app.
 
 ## 🛠️ Development
 

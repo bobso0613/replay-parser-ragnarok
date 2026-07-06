@@ -1,4 +1,4 @@
-import { PARSER_URL } from '@/constants';
+import { BASE_PATH, PARSER_URL } from '@/constants';
 import type { IMob, IReplayData, ISkill } from '@/types';
 import * as yaml from 'js-yaml';
 
@@ -199,17 +199,17 @@ export const fetchReplayApi = async (
 };
 
 export const fetchSkillDb = async (controller: AbortController) => {
-  const skillDbYML = await fetch('/yaml/skill_db.yml', { signal: controller.signal }).then((res) =>
-    res.text()
-  );
+  const skillDbYML = await fetch(`${BASE_PATH}yaml/skill_db.yml`, {
+    signal: controller.signal,
+  }).then((res) => res.text());
   const skillDb = (yaml.load(skillDbYML) as { Body: ISkill[] }).Body;
 
   return skillDb;
 };
 
 export const fetchMobDb = async (controller: AbortController) => {
-  const mobDbYML = await fetch('/yaml/mob_db.yml', { signal: controller.signal }).then((res) =>
-    res.text()
+  const mobDbYML = await fetch(`${BASE_PATH}yaml/mob_db.yml`, { signal: controller.signal }).then(
+    (res) => res.text()
   );
   const mobDb = (yaml.load(mobDbYML) as { Body: IMob[] }).Body;
 

@@ -37,6 +37,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
   const [replayToDisplay, setReplayToDisplay] = React.useState<IParsedReplay | null>(null);
   const hasRun = React.useRef(false);
   const [mobMode, setMobMode] = React.useState<number>(0);
+  const [virtualTableHeight, setVirtualTableHeight] = React.useState<number>(780);
   const replaySharePath = `${import.meta.env.VITE_REPLAY_URL_SHARE}`.replace(
     'ID_HERE',
     apiResponse?.outputId ?? ''
@@ -57,6 +58,20 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
       setIsLinkCopied(false);
     }
   };
+
+  useEffect(() => {
+    const updateVirtualTableHeight = () => {
+      const nextHeight = Math.max(320, Math.floor(window.innerHeight - 220));
+      setVirtualTableHeight(nextHeight);
+    };
+
+    updateVirtualTableHeight();
+    window.addEventListener('resize', updateVirtualTableHeight);
+
+    return () => {
+      window.removeEventListener('resize', updateVirtualTableHeight);
+    };
+  }, []);
 
   useEffect(() => {
     if (!hasRun.current && replayToDisplay === null && apiResponse) {
@@ -98,7 +113,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
             label: 'Breakdown per Player',
             content: (
               <TabContentWithSticky>
-                <h2>Breakdown Per Player</h2>
+                <h2 className="text-slate-200">Breakdown Per Player</h2>
                 <Table
                   headers={[
                     'Player Name',
@@ -110,7 +125,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                   enableVirtualization
                   virtualColumnWeights={[1, 1, 1, 1, 4]}
                   virtualRowHeight={220}
-                  virtualTableHeight={780}
+                  virtualTableHeight={virtualTableHeight}
                   sortableColumns={[0, 1, 2]}
                   sortValues={replayToDisplay.breakdownPerPlayer.map((player) => [
                     player.playerName,
@@ -176,7 +191,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
             label: 'Breakdown per Monster',
             content: (
               <TabContentWithSticky>
-                <h2>Breakdown Per Monster</h2>
+                <h2 className="text-slate-200">Breakdown Per Monster</h2>
                 <DropdownSelect
                   select={mobMode.toString()}
                   options={[
@@ -199,11 +214,12 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                   enableVirtualization
                   virtualColumnWeights={[1, 2, 2, 4, 3]}
                   virtualRowHeight={260}
-                  virtualTableHeight={780}
-                  sortableColumns={[1]}
+                  virtualTableHeight={virtualTableHeight}
+                  sortableColumns={[1, 2]}
                   sortValues={replayToDisplay.breakdownPerMonsterUnique.map((monster) => [
                     null,
                     getMonsterName(monster.name, monster.isMvp),
+                    monster.highestDamage.damage,
                   ])}
                   rowClassNames={[
                     'align-middle',
@@ -318,7 +334,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
             label: 'Support Skill Usage',
             content: (
               <TabContentWithSticky>
-                <h2>Support Skill Usage</h2>
+                <h2 className="text-slate-200">Support Skill Usage</h2>
                 <Table
                   headers={[
                     'Skill Name',
@@ -329,7 +345,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                   enableVirtualization
                   virtualColumnWeights={[1, 1, 1, 4]}
                   virtualRowHeight={180}
-                  virtualTableHeight={780}
+                  virtualTableHeight={virtualTableHeight}
                   sortableColumns={[0, 1]}
                   sortValues={replayToDisplay.skillUsage.map((skill) => [
                     skill.skillInfo,

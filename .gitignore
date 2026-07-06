@@ -28,4 +28,4 @@ public/json/*
 public/yaml/*
 
 .env
-.env-production
+.env.production

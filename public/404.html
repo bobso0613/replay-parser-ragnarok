@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ragnarok Replay Parser</title>
+    <script>
+      (function () {
+        var pathname = window.location.pathname || '/';
+        var search = window.location.search || '';
+        var hash = window.location.hash || '';
+        var routeKey = '/replay-parser';
+        var routeIndex = pathname.indexOf(routeKey);
+
+        if (routeIndex === -1) {
+          return;
+        }
+
+        var basePath = pathname.slice(0, routeIndex);
+        if (!basePath.endsWith('/')) {
+          basePath += '/';
+        }
+
+        var redirectPath = pathname.slice(routeIndex) + search + hash;
+        var targetUrl = `${window.location.origin}${basePath}?redirect=${encodeURIComponent(
+          redirectPath
+        )}`;
+
+        window.location.replace(targetUrl);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

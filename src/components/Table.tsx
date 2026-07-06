@@ -13,6 +13,7 @@ const DEFAULT_VIRTUAL_TABLE_HEIGHT = 520;
 const DEFAULT_VIRTUAL_OVERSCAN = 12;
 const MIN_VIRTUAL_TABLE_HEIGHT = 220;
 const VIEWPORT_BOTTOM_GAP = 24;
+const VIEWPORT_SAFETY_BUFFER = 12;
 
 type VirtualRowProps = {
   rows: Array<Array<React.ReactNode>>;
@@ -145,6 +146,7 @@ const Table: React.FC<TableProps> = ({
   const [listViewportWidth, setListViewportWidth] = useState<number>(0);
   const [viewportHeight, setViewportHeight] = useState<number>(virtualTableHeight);
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const headerTableRef = useRef<HTMLTableElement>(null);
   const listRef = useListRef(null);
   const maxCols = Math.max(headers.length, ...rows.map((row) => row.length), 0);
   const dynamicRowHeight = useDynamicRowHeight({
@@ -248,13 +250,35 @@ const Table: React.FC<TableProps> = ({
       return () => {};
     }
 
+    const parseCssPx = (value: string): number => {
+      const parsed = Number.parseFloat(value);
+      return Number.isFinite(parsed) ? parsed : 0;
+    };
+
     const updateViewportHeight = () => {
       if (!wrapperRef.current) {
         return;
       }
 
       const bounds = wrapperRef.current.getBoundingClientRect();
-      const availableHeight = Math.floor(window.innerHeight - bounds.top - VIEWPORT_BOTTOM_GAP);
+      const headerHeight = Math.ceil(headerTableRef.current?.getBoundingClientRect().height ?? 0);
+      const footerHeight = Math.ceil(
+        document.querySelector('footer')?.getBoundingClientRect().height ?? 0
+      );
+      const wrapperStyle = window.getComputedStyle(wrapperRef.current);
+      const wrapperChromeHeight =
+        parseCssPx(wrapperStyle.borderTopWidth) + parseCssPx(wrapperStyle.borderBottomWidth);
+      const wrapperMarginBottom = parseCssPx(wrapperStyle.marginBottom);
+      const availableHeight = Math.floor(
+        window.innerHeight -
+          bounds.top -
+          VIEWPORT_BOTTOM_GAP -
+          VIEWPORT_SAFETY_BUFFER -
+          headerHeight -
+          footerHeight -
+          wrapperChromeHeight -
+          wrapperMarginBottom
+      );
       const nextHeight = Math.max(
         MIN_VIRTUAL_TABLE_HEIGHT,
         Math.min(virtualTableHeight, availableHeight)
@@ -318,6 +342,7 @@ const Table: React.FC<TableProps> = ({
       className={`overflow-x-auto rounded-lg border border-slate-200/50 shadow-sm ${className} my-5`}
     >
       <table
+        ref={headerTableRef}
         className={`${shouldVirtualize ? 'table-fixed border-collapse' : ''} divide-y divide-slate-200/50`}
         style={
           shouldVirtualize
