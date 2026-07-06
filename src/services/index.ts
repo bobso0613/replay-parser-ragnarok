@@ -1,5 +1,5 @@
 import { PARSER_URL } from '@/constants';
-import type { IMob, ISkill } from '@/types';
+import type { IMob, IReplayData, ISkill } from '@/types';
 import * as yaml from 'js-yaml';
 
 export const fetchReplay = async (link: string, controller: AbortController) => {
@@ -8,12 +8,33 @@ export const fetchReplay = async (link: string, controller: AbortController) => 
   return result;
 };
 
-export const fetchReplayApi = async (formData: FormData, controller: AbortController) => {
-  const result = await fetch(`${PARSER_URL}`, {
+export const fetchReplayApi = async (
+  formData: FormData,
+  controller: AbortController
+): Promise<IReplayData> => {
+  const response = await fetch(`${PARSER_URL}`, {
     method: 'POST',
     body: formData,
     signal: controller.signal,
-  }).then((res) => res.json());
+  });
+
+  let payload: unknown = null;
+
+  try {
+    payload = await response.json();
+  } catch {
+    payload = null;
+  }
+
+  if (!response.ok) {
+    const apiError = payload as { error?: string; requestId?: string } | null;
+    const errorMessage = apiError?.error ?? `Request failed with status ${response.status}`;
+    const requestIdLabel = apiError?.requestId ? ` (requestId: ${apiError.requestId})` : '';
+
+    throw new Error(`${errorMessage}${requestIdLabel}`);
+  }
+
+  const result = payload as IReplayData;
 
   return result;
 };

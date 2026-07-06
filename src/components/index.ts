@@ -13,3 +13,4 @@ export * from './TextImage';
 export * from './Tooltip';
 export * from './ErrorDetails';
 export * from './StickyButton';
+export * from './Footer';
