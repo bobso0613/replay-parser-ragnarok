@@ -5,7 +5,7 @@ Replay Parser Ragnarok is a React + Vite frontend application for exploring Ragn
 ## ✨ Features
 
 - 🔍 Browse and parse Ragnarok Online replay data through a modern, interactive web interface
-- 📤 Upload and process replay JSON files from the RagnarokReplayExample tool
+- 📤 Upload replay files and process them through a configurable parser API endpoint
 - 📊 View detailed replay breakdowns with formatted data tables and sections
 - 🧩 Reusable components for data display: tables, dropdowns, loading states, and skeleton loaders
 - 📁 File upload with parsing and validation for replay data
@@ -21,13 +21,22 @@ Replay Parser Ragnarok is a React + Vite frontend application for exploring Ragn
    npm install
    ```
 2. Create a `.env` file and set any required environment variables for your local setup.
+
+```dotenv
+VITE_APPLICATION_NAME="Ragnarok Replay Parser"
+VITE_PARSER_URL=https://your-api-host/parse
+VITE_SKILL_IMAGE_URL=https://static.divine-pride.net/images/skill/PLACEHOLDER_TEXT.png
+VITE_JOB_IMAGE_URL=https://static.divine-pride.net/images/jobs/icon_jobs_PLACEHOLDER_TEXT.png
+VITE_MONSTER_IMAGE_URL=https://talontales.com/panel/data/monsters/PLACEHOLDER_TEXT.gif
+```
+
 3. Start the development server:
    ```bash
    npm run dev
    ```
 4. Open the local Vite URL in your browser to use the app.
 
-> Note: This project requires certain files to be placed in the public/ folder. The contents of public/external are expected to include RagnarokReplayExample.exe, which will be run through a separate service such as a Node.js app using npm and Wine. The YAML files are Ragnarok-related database files, such as mob lists, skill lists, item lists, and similar data.
+> Note: This project reads YAML lookup data from `public/yaml/`. Replay parsing is handled by your API configured in `VITE_PARSER_URL`.
 
 ## 🛠️ Development
 
@@ -67,7 +76,6 @@ npm run lint
 - ⚙️ `src/constants/` - shared constants and config values
 - 🎨 `src/assets/` - local static assets (SVG icons, etc.)
 - 📂 `public/` - public static files:
-  - 🎮 `public/external/` - external replay tools and generated JSON output files
   - 📋 `public/yaml/` - Ragnarok database files (mob_db.yml, skill_db.yml)
 - 📖 `README.md` - project documentation
 
@@ -75,7 +83,7 @@ npm run lint
 
 1. 🚀 Start the development server with `npm run dev`
 2. 🌐 Open the application in your browser
-3. 📤 Use the file upload component to select a replay JSON file (generated from RagnarokReplayExample.exe)
+3. 📤 Use the file upload component to select a replay file
 4. 📊 The application will parse the replay data and display:
    - 📋 Structured replay breakdown with key information
    - 📈 Formatted data tables for detailed statistics

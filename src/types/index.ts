@@ -72,6 +72,11 @@ export type TableProps = {
   sortableColumns?: number[];
   sortExtractors?: Record<number, ((cell: React.ReactNode) => string | number) | string>;
   onSort?: (columnIndex: number, direction: 'asc' | 'desc') => void;
+  enableVirtualization?: boolean;
+  virtualRowHeight?: number;
+  virtualTableHeight?: number;
+  virtualOverscan?: number;
+  virtualColumnWeights?: number[];
 };
 
 export interface TabItem {

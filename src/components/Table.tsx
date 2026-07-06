@@ -1,5 +1,99 @@
 import type { TableProps } from '@/types';
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
+import {
+  List,
+  useListRef,
+  useDynamicRowHeight,
+  type DynamicRowHeight,
+  type RowComponentProps,
+} from 'react-window';
+
+const DEFAULT_VIRTUAL_ROW_HEIGHT = 56;
+const DEFAULT_VIRTUAL_TABLE_HEIGHT = 520;
+const DEFAULT_VIRTUAL_OVERSCAN = 12;
+const MIN_VIRTUAL_TABLE_HEIGHT = 220;
+const VIEWPORT_BOTTOM_GAP = 24;
+
+type VirtualRowProps = {
+  rows: Array<Array<React.ReactNode>>;
+  rowClassNames: string[];
+  maxCols: number;
+  columnWidths: number[];
+  tableWidth: number;
+  dynamicRowHeight: DynamicRowHeight;
+};
+
+const VirtualTableRow = ({
+  index,
+  style,
+  rows,
+  rowClassNames,
+  maxCols,
+  columnWidths,
+  tableWidth,
+  dynamicRowHeight,
+  ariaAttributes,
+}: RowComponentProps<VirtualRowProps>) => {
+  const row = rows[index] ?? [];
+  const rowRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const rowElement = rowRef.current;
+
+    if (!rowElement) {
+      return () => {};
+    }
+
+    const syncHeight = () => {
+      const height = Math.ceil(rowElement.getBoundingClientRect().height);
+      if (height > 0) {
+        dynamicRowHeight.setRowHeight(index, height);
+      }
+    };
+
+    syncHeight();
+
+    const resizeObserver = new ResizeObserver(() => {
+      syncHeight();
+    });
+
+    resizeObserver.observe(rowElement);
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [index, dynamicRowHeight, row]);
+
+  return (
+    <div ref={rowRef} style={style} {...ariaAttributes}>
+      <table
+        className="table-fixed border-collapse divide-y divide-slate-200/50"
+        style={tableWidth > 0 ? { width: `${tableWidth}px` } : { width: '100%' }}
+      >
+        <colgroup>
+          {Array.from({ length: maxCols }).map((_, colIndex) => (
+            <col
+              key={colIndex}
+              style={columnWidths[colIndex] ? { width: `${columnWidths[colIndex]}px` } : undefined}
+            />
+          ))}
+        </colgroup>
+        <tbody>
+          <tr className="text-slate-50 hover:bg-slate-50/20">
+            {row.map((cell, cellIndex) => (
+              <td key={cellIndex} className={`${rowClassNames[cellIndex] ?? ''} px-4 py-3`}>
+                {cell}
+              </td>
+            ))}
+            {Array.from({ length: maxCols - row.length }).map((_, padIndex) => (
+              <td key={`pad-${padIndex}`} className="px-4 py-3" />
+            ))}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
 const extractAllText = (node: React.ReactNode): string => {
   if (typeof node === 'string' || typeof node === 'number') return String(node);
@@ -38,12 +132,25 @@ const Table: React.FC<TableProps> = ({
   sortableColumns = [],
   sortExtractors = {},
   onSort,
+  enableVirtualization = false,
+  virtualRowHeight = DEFAULT_VIRTUAL_ROW_HEIGHT,
+  virtualTableHeight = DEFAULT_VIRTUAL_TABLE_HEIGHT,
+  virtualOverscan = DEFAULT_VIRTUAL_OVERSCAN,
+  virtualColumnWeights,
 }) => {
   const [sortConfig, setSortConfig] = useState<{
     column: number;
     direction: 'asc' | 'desc';
   } | null>(null);
+  const [listViewportWidth, setListViewportWidth] = useState<number>(0);
+  const [viewportHeight, setViewportHeight] = useState<number>(virtualTableHeight);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const listRef = useListRef(null);
   const maxCols = Math.max(headers.length, ...rows.map((row) => row.length), 0);
+  const dynamicRowHeight = useDynamicRowHeight({
+    defaultRowHeight: virtualRowHeight,
+    key: `${maxCols}-${rows.length}-${sortConfig?.column ?? 'none'}-${sortConfig?.direction ?? 'none'}`,
+  });
 
   const handleHeaderClick = (columnIndex: number) => {
     if (!sortableColumns.includes(columnIndex)) return;
@@ -106,11 +213,134 @@ const Table: React.FC<TableProps> = ({
     return sorted.map(({ row }) => row);
   }, [sortConfig, rows, sortValues, sortExtractors]);
 
+  const shouldVirtualize = enableVirtualization && sortedRows.length > 0;
+  const estimatedContentHeight = Math.ceil(
+    sortedRows.length * dynamicRowHeight.getAverageRowHeight()
+  );
+  const virtualizedHeight = Math.max(
+    MIN_VIRTUAL_TABLE_HEIGHT,
+    Math.min(viewportHeight, estimatedContentHeight)
+  );
+  const computedColumnWidths = useMemo(() => {
+    if (!shouldVirtualize || maxCols <= 0 || listViewportWidth <= 0) {
+      return [] as number[];
+    }
+
+    const safeWeights = Array.from({ length: maxCols }).map((_, index) => {
+      const weight = Number(virtualColumnWeights?.[index] ?? 1);
+      return Number.isFinite(weight) && weight > 0 ? weight : 1;
+    });
+    const totalWeight = safeWeights.reduce((acc, weight) => acc + weight, 0);
+    const rawWidths = safeWeights.map((weight) => (listViewportWidth * weight) / totalWeight);
+    const flooredWidths = rawWidths.map((width) => Math.floor(width));
+    const remainder = Math.max(
+      0,
+      listViewportWidth - flooredWidths.reduce((acc, width) => acc + width, 0)
+    );
+
+    return flooredWidths.map((width, index) =>
+      index === flooredWidths.length - 1 ? width + remainder : width
+    );
+  }, [shouldVirtualize, maxCols, listViewportWidth, virtualColumnWeights]);
+
+  useEffect(() => {
+    if (!shouldVirtualize) {
+      return () => {};
+    }
+
+    const updateViewportHeight = () => {
+      if (!wrapperRef.current) {
+        return;
+      }
+
+      const bounds = wrapperRef.current.getBoundingClientRect();
+      const availableHeight = Math.floor(window.innerHeight - bounds.top - VIEWPORT_BOTTOM_GAP);
+      const nextHeight = Math.max(
+        MIN_VIRTUAL_TABLE_HEIGHT,
+        Math.min(virtualTableHeight, availableHeight)
+      );
+
+      setViewportHeight(nextHeight);
+    };
+
+    updateViewportHeight();
+
+    const resizeObserver = new ResizeObserver(() => {
+      updateViewportHeight();
+    });
+
+    if (wrapperRef.current) {
+      resizeObserver.observe(wrapperRef.current);
+    }
+
+    window.addEventListener('resize', updateViewportHeight);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener('resize', updateViewportHeight);
+    };
+  }, [shouldVirtualize, virtualTableHeight]);
+
+  useEffect(() => {
+    if (!shouldVirtualize) {
+      return () => {};
+    }
+
+    const syncListViewportWidth = () => {
+      const nextListViewportWidth =
+        listRef.current?.element?.clientWidth ?? wrapperRef.current?.clientWidth ?? 0;
+
+      setListViewportWidth(nextListViewportWidth);
+    };
+
+    syncListViewportWidth();
+
+    const resizeObserver = new ResizeObserver(() => {
+      syncListViewportWidth();
+    });
+
+    if (wrapperRef.current) {
+      resizeObserver.observe(wrapperRef.current);
+    }
+
+    if (listRef.current?.element) {
+      resizeObserver.observe(listRef.current.element);
+    }
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [shouldVirtualize, maxCols, listRef]);
+
   return (
     <div
+      ref={wrapperRef}
       className={`overflow-x-auto rounded-lg border border-slate-200/50 shadow-sm ${className} my-5`}
     >
-      <table className="min-w-full divide-y divide-slate-200/50">
+      <table
+        className={`${shouldVirtualize ? 'table-fixed border-collapse' : ''} divide-y divide-slate-200/50`}
+        style={
+          shouldVirtualize
+            ? listViewportWidth > 0
+              ? { width: `${listViewportWidth}px` }
+              : { width: '100%' }
+            : { minWidth: '100%' }
+        }
+      >
+        {shouldVirtualize && (
+          <colgroup>
+            {Array.from({ length: maxCols }).map((_, colIndex) => (
+              <col
+                key={`head-col-${colIndex}`}
+                style={
+                  computedColumnWidths[colIndex]
+                    ? { width: `${computedColumnWidths[colIndex]}px` }
+                    : undefined
+                }
+              />
+            ))}
+          </colgroup>
+        )}
         {headers.length > 0 && (
           <thead className="">
             <tr>
@@ -145,35 +375,57 @@ const Table: React.FC<TableProps> = ({
                   </th>
                 );
               })}
-              {Array.from({ length: Math.max(0, maxCols - headers.length) }).map((_, index) => (
-                <th key={`empty-${index}`} className="px-4 py-3" />
-              ))}
+              {Array.from({ length: Math.max(0, maxCols - headers.length) }).map((_, index) => {
+                return <th key={`empty-${index}`} className="px-4 py-3" />;
+              })}
             </tr>
           </thead>
         )}
-        <tbody className="divide-y divide-slate-50/50">
-          {sortedRows.length === 0 ? (
-            <tr>
-              <td colSpan={maxCols} className="px-4 py-8 text-center text-slate-400">
-                No records found
-              </td>
-            </tr>
-          ) : (
-            sortedRows.map((row, rowIndex) => (
-              <tr key={rowIndex} className={`text-slate-50 hover:bg-slate-50/20`}>
-                {row.map((cell, cellIndex) => (
-                  <td key={cellIndex} className={`${rowClassNames[cellIndex] ?? ''} px-4 py-3`}>
-                    {cell}
-                  </td>
-                ))}
-                {Array.from({ length: maxCols - row.length }).map((_, index) => (
-                  <td key={`pad-${index}`} className="px-4 py-3" />
-                ))}
+        {!shouldVirtualize && (
+          <tbody className="divide-y divide-slate-50/50">
+            {sortedRows.length === 0 ? (
+              <tr>
+                <td colSpan={maxCols} className="px-4 py-8 text-center text-slate-400">
+                  No records found
+                </td>
               </tr>
-            ))
-          )}
-        </tbody>
+            ) : (
+              sortedRows.map((row, rowIndex) => (
+                <tr key={rowIndex} className={`text-slate-50 hover:bg-slate-50/20`}>
+                  {row.map((cell, cellIndex) => (
+                    <td key={cellIndex} className={`${rowClassNames[cellIndex] ?? ''} px-4 py-3`}>
+                      {cell}
+                    </td>
+                  ))}
+                  {Array.from({ length: maxCols - row.length }).map((_, index) => (
+                    <td key={`pad-${index}`} className="px-4 py-3" />
+                  ))}
+                </tr>
+              ))
+            )}
+          </tbody>
+        )}
       </table>
+
+      {shouldVirtualize && (
+        <List
+          listRef={listRef}
+          rowCount={sortedRows.length}
+          rowHeight={dynamicRowHeight}
+          rowComponent={VirtualTableRow}
+          rowProps={{
+            rows: sortedRows,
+            rowClassNames,
+            maxCols,
+            columnWidths: computedColumnWidths,
+            tableWidth: listViewportWidth,
+            dynamicRowHeight,
+          }}
+          overscanCount={virtualOverscan}
+          style={{ height: virtualizedHeight, width: '100%' }}
+          className="divide-y divide-slate-50/50"
+        />
+      )}
     </div>
   );
 };

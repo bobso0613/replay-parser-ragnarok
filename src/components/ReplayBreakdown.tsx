@@ -7,8 +7,24 @@ import commaNumber from 'comma-number';
 import prettyMilliseconds from 'pretty-ms';
 import DropdownSelect from './DropdownSelect';
 import HorizontalTabs from './HorizontalTabs';
+import StickyButton from './StickyButton';
 import TextImage from './TextImage';
 import { MONSTER_IMAGE_URL, TEXT_IMAGE_VARIANTS } from '@/constants';
+
+type TabContentWithStickyProps = {
+  children: React.ReactNode;
+};
+
+const TabContentWithSticky: React.FC<TabContentWithStickyProps> = ({ children }) => {
+  const contentRef = React.useRef<HTMLDivElement>(null);
+
+  return (
+    <div ref={contentRef} className="relative">
+      {children}
+      <StickyButton scrollContainerRef={contentRef} />
+    </div>
+  );
+};
 
 const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
   apiResponse = null,
@@ -51,7 +67,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
             id: 'players',
             label: 'Breakdown per Player',
             content: (
-              <div>
+              <TabContentWithSticky>
                 <h2>Breakdown Per Player</h2>
                 <Table
                   headers={[
@@ -61,6 +77,10 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                     'Highest Damage',
                     'Skill Breakdown',
                   ]}
+                  enableVirtualization
+                  virtualColumnWeights={[1, 1, 1, 1, 4]}
+                  virtualRowHeight={220}
+                  virtualTableHeight={780}
                   sortableColumns={[0, 1, 2]}
                   sortValues={replayToDisplay.breakdownPerPlayer.map((player) => [
                     player.playerName,
@@ -118,14 +138,14 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                   ])}
                   className="w-full"
                 />
-              </div>
+              </TabContentWithSticky>
             ),
           },
           {
             id: 'monsters',
             label: 'Breakdown per Monster',
             content: (
-              <div>
+              <TabContentWithSticky>
                 <h2>Breakdown Per Monster</h2>
                 <DropdownSelect
                   select={mobMode.toString()}
@@ -146,6 +166,10 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                     'Breakdown per player',
                     'Breakdown per skill',
                   ]}
+                  enableVirtualization
+                  virtualColumnWeights={[1, 2, 2, 4, 3]}
+                  virtualRowHeight={260}
+                  virtualTableHeight={780}
                   sortableColumns={[1]}
                   sortValues={replayToDisplay.breakdownPerMonsterUnique.map((monster) => [
                     null,
@@ -256,14 +280,14 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                     ])}
                   className="w-full"
                 />
-              </div>
+              </TabContentWithSticky>
             ),
           },
           {
             id: 'skills',
             label: 'Support Skill Usage',
             content: (
-              <div>
+              <TabContentWithSticky>
                 <h2>Support Skill Usage</h2>
                 <Table
                   headers={[
@@ -272,6 +296,10 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                     'Top Spammer',
                     'Breakdown per Player',
                   ]}
+                  enableVirtualization
+                  virtualColumnWeights={[1, 1, 1, 4]}
+                  virtualRowHeight={180}
+                  virtualTableHeight={780}
                   sortableColumns={[0, 1]}
                   sortValues={replayToDisplay.skillUsage.map((skill) => [
                     skill.skillInfo,
@@ -317,7 +345,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                   ])}
                   className="w-full"
                 />
-              </div>
+              </TabContentWithSticky>
             ),
           },
         ]}
