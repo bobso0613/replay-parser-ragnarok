@@ -70,7 +70,6 @@ export const Home = () => {
       setParsedReplay(null);
       setIsError(true);
     } finally {
-      normalizeReplayPath();
       setReplayOutputId(null);
       setReplayIsParsing(false);
     }
@@ -135,6 +134,7 @@ export const Home = () => {
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1">
         <InputUpload
           onChange={handleFileUpload}
+          onFilesSelected={setSelectedFiles}
           selectedFiles={selectedFiles}
           accept={'.rrf'}
           multiple={false}

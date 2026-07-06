@@ -77,6 +77,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
     if (!hasRun.current && replayToDisplay === null && apiResponse) {
       const parsedOutput = parseReplayOutput(apiResponse, skillDb, mobDb);
       hasRun.current = true;
+      console.log(parsedOutput);
       setReplayToDisplay(parsedOutput);
     }
 
@@ -108,6 +109,46 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
           </div>
         }
         tabs={[
+          {
+            id: 'summary',
+            label: 'Summary',
+            content: (
+              <TabContentWithSticky>
+                <h2 className="text-slate-200">Summary</h2>
+                <div className="flex flex-col md:flex-row gap-4">
+                  <div className="flex-1">
+                    <Table
+                      headers={['Player Name', 'Total Damage', 'MVP Damage']}
+                      enableVirtualization
+                      virtualColumnWeights={[1, 1, 1]}
+                      virtualRowHeight={220}
+                      virtualTableHeight={virtualTableHeight}
+                      sortableColumns={[0, 1, 2]}
+                      sortValues={replayToDisplay.breakdownPerPlayer.map((player) => [
+                        player.playerName,
+                        player.totalDamageDealt,
+                        player.totalDamageDealthMvps,
+                      ])}
+                      rows={replayToDisplay.breakdownPerPlayer.map((player) => [
+                        <TextImage
+                          variant={TEXT_IMAGE_VARIANTS.JOB}
+                          keyId={player.jobId}
+                          keyInfo={player.playerName}
+                          title={player.jobName}
+                        />,
+                        player.highestDamage.damage ? commaNumber(player.totalDamageDealt) : 'N/A',
+                        player.highestDamage.damage
+                          ? commaNumber(player.totalDamageDealthMvps)
+                          : 'N/A',
+                      ])}
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="flex-1"></div>
+                </div>
+              </TabContentWithSticky>
+            ),
+          },
           {
             id: 'players',
             label: 'Breakdown per Player',
@@ -402,6 +443,20 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
       <HorizontalTabs
         tabs={[
           {
+            id: 'summary',
+            label: 'Summary',
+            content: (
+              <SkeletonLoader
+                rows={
+                  (apiResponse?.players?.length ?? 0) <= 10
+                    ? (apiResponse?.players?.length ?? 0)
+                    : 5
+                }
+                columns={3}
+              />
+            ),
+          },
+          {
             id: 'players',
             label: 'Breakdown per Player',
             content: (
@@ -411,7 +466,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                     ? (apiResponse?.players?.length ?? 0)
                     : 5
                 }
-                columns={4}
+                columns={5}
               />
             ),
           },

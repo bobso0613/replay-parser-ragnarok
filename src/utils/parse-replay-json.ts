@@ -60,7 +60,7 @@ export const parseReplayOutput = (
           noOfHits: skillUsage.skillUsageCount ?? 0,
           noOfHitsUnique: skillUsage.skillUsageCount ?? 0,
           highestDamage: skillUsage.maxDamageDealt ?? 0,
-          highestMonsterName: monsterFromMobDb?.Name ?? skillUsage.maxDamageMonsterName ?? '',
+          highestMonsterName: skillUsage.maxDamageMonsterName ?? monsterFromMobDb?.Name ?? '',
           highestIsMvp: mobIsMvp ?? false,
           highestMonsterId: skillUsage.maxDamageMonsterId ?? '',
         });
@@ -68,7 +68,7 @@ export const parseReplayOutput = (
         if (existingPlayer.highestDamage.damage < (skillUsage.maxDamageDealt ?? 0)) {
           existingPlayer.highestDamage = {
             monsterId: skillUsage.maxDamageMonsterId ?? '',
-            monsterName: monsterFromMobDb?.Name ?? skillUsage.maxDamageMonsterName ?? '',
+            monsterName: skillUsage.maxDamageMonsterName ?? monsterFromMobDb?.Name ?? '',
             isMvp: mobIsMvp ?? false,
             skillId: skillUsage.skillId,
             skillName: skillInfo?.Description ?? '',
@@ -298,6 +298,9 @@ export const parseReplayOutput = (
     });
   });
 
+  finalOutput.breakdownPerPlayer = finalOutput.breakdownPerPlayer.filter(
+    (player) => player.skillDamages.length > 0
+  );
   finalOutput.breakdownPerPlayer.sort((a, b) => b.totalDamageDealt - a.totalDamageDealt);
   finalOutput.breakdownPerPlayer.forEach((player) => {
     player.skillDamages.sort((a, b) => b.damage - a.damage);

@@ -9,11 +9,57 @@ const InputUpload: React.FC<InputUploadProps> = ({
   accept,
   multiple,
   onChange,
+  onFilesSelected,
   label = 'Select file',
   selectedFiles,
 }) => {
+  const [isDragging, setIsDragging] = React.useState(false);
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(event.target.files ?? []);
+    onFilesSelected?.(files);
     onChange?.(event);
+  };
+
+  const handleDragOver = (event: React.DragEvent<HTMLLabelElement>) => {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'copy';
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = (event: React.DragEvent<HTMLLabelElement>) => {
+    event.preventDefault();
+    setIsDragging(false);
+  };
+
+  const handleDrop = (event: React.DragEvent<HTMLLabelElement>) => {
+    event.preventDefault();
+    setIsDragging(false);
+
+    const droppedFiles = Array.from(event.dataTransfer.files ?? []);
+    if (droppedFiles.length === 0) {
+      return;
+    }
+
+    const acceptedExtensions = accept
+      ? accept
+          .split(',')
+          .map((entry) => entry.trim().toLowerCase())
+          .filter(Boolean)
+      : [];
+
+    const matchingFiles =
+      acceptedExtensions.length === 0
+        ? droppedFiles
+        : droppedFiles.filter((file) => {
+            const fileName = file.name.toLowerCase();
+            return acceptedExtensions.some((extension) =>
+              extension.startsWith('.') ? fileName.endsWith(extension) : true
+            );
+          });
+
+    const nextFiles = multiple ? matchingFiles : matchingFiles.slice(0, 1);
+    onFilesSelected?.(nextFiles);
   };
 
   const previewText =
@@ -27,7 +73,15 @@ const InputUpload: React.FC<InputUploadProps> = ({
     <div className="my-5">
       <label
         htmlFor={id}
-        className="group relative flex cursor-pointer items-center justify-between rounded-md border border-gray-200 bg-white/90 px-4 py-3 shadow-sm hover:border-gray-300 focus-within:ring-2 focus-within:ring-indigo-500"
+        className={`group relative flex cursor-pointer items-center justify-between rounded-md border bg-white/90 px-4 py-3 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 ${
+          isDragging
+            ? 'border-sky-400 ring-2 ring-sky-500/40'
+            : 'border-gray-200 hover:border-gray-300'
+        }`}
+        onDragOver={handleDragOver}
+        onDragEnter={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
       >
         <div className="flex min-w-0 flex-1 items-center gap-3">
           <img src={FileUploadIcon} alt="Upload Icon" />

@@ -16,16 +16,19 @@ const TextImage: React.FC<TextImageProps> = ({
   };
 
   return (
-    <div className="flex gap-1.5 items-center xs-grid" key={keyId}>
+    <div className="flex gap-1.5 items-center" key={keyId}>
       {textBefore ?? null}
-      <Tooltip content={title ?? keyInfo} placement={TOOLTIP_POSITION.BOTTOM}>
-        <img
-          src={`${skillUrl[variant || 'skill']}`}
-          alt={keyInfo}
-          loading="lazy"
-          referrerPolicy="no-referrer"
-        />
-      </Tooltip>
+      <div className="w-6.25 h-6.25">
+        <Tooltip content={title ?? keyInfo} placement={TOOLTIP_POSITION.BOTTOM}>
+          <img
+            src={`${skillUrl[variant || 'skill']}`}
+            alt={keyInfo}
+            loading="lazy"
+            referrerPolicy="no-referrer"
+            className="w-6.25 h-6.25"
+          />
+        </Tooltip>
+      </div>
       <span className="sort-value">{keyInfo}</span>
     </div>
   );

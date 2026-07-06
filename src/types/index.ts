@@ -42,6 +42,7 @@ export type InputUploadProps = {
   accept?: string;
   multiple?: boolean;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onFilesSelected?: (files: File[]) => void;
   label?: string;
   selectedFiles: File[];
 };
