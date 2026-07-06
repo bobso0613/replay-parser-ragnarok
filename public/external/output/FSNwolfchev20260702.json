@@ -1,0 +1,7653 @@
+{
+  "players": [
+    {
+      "AID": "2110668",
+      "name": "Dmitriy Zakharov",
+      "jobId": 4016,
+      "totalDamageDealt": 1195,
+      "totalDamageTaken": 311877,
+      "totalSkillUsageCount": 96,
+      "totalItemUsageCount": 175,
+      "MVPCount": 0,
+      "deathCount": 6,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "0",
+            "skillDamageDealt": 845,
+            "skillUsageCount": 8
+          },
+          {
+            "skillId": "263",
+            "skillDamageDealt": 284,
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "156",
+            "skillDamageDealt": 64,
+            "skillUsageCount": 28
+          },
+          {
+            "skillId": "17",
+            "skillDamageDealt": 2,
+            "skillUsageCount": 1
+          }
+        ],
+        "support": [
+          {
+            "skillId": "401",
+            "skillUsageCount": 21
+          },
+          {
+            "skillId": "270",
+            "skillUsageCount": 11
+          },
+          {
+            "skillId": "34",
+            "skillUsageCount": 6
+          },
+          {
+            "skillId": "29",
+            "skillUsageCount": 5
+          },
+          {
+            "skillId": "268",
+            "skillUsageCount": 5
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 4
+          },
+          {
+            "skillId": "28",
+            "skillUsageCount": 3
+          },
+          {
+            "skillId": "24",
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "671",
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "677",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "579",
+          "itemUsageCount": 163
+        },
+        {
+          "itemId": "505",
+          "itemUsageCount": 5
+        },
+        {
+          "itemId": "607",
+          "itemUsageCount": 3
+        },
+        {
+          "itemId": "12209",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12320",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12461",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "410172",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2112290",
+      "name": "Ensla",
+      "jobId": 4019,
+      "totalDamageDealt": 14353307,
+      "totalDamageTaken": 34187,
+      "totalSkillUsageCount": 269,
+      "totalItemUsageCount": 7,
+      "MVPCount": 2,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "490",
+            "skillDamageDealt": 14348596,
+            "skillUsageCount": 249
+          },
+          {
+            "skillId": "14",
+            "skillDamageDealt": 4080,
+            "skillUsageCount": 2
+          },
+          {
+            "skillId": "19",
+            "skillDamageDealt": 225,
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "20",
+            "skillDamageDealt": 216,
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "90",
+            "skillDamageDealt": 189,
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "0",
+            "skillDamageDealt": 1,
+            "skillUsageCount": 1
+          }
+        ],
+        "support": [
+          {
+            "skillId": "155",
+            "skillUsageCount": 9
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 4
+          },
+          {
+            "skillId": "231",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "6472",
+          "itemUsageCount": 2
+        },
+        {
+          "itemId": "602",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "657",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12065",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12077",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "410172",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2113552",
+      "name": "Evang",
+      "jobId": 4009,
+      "totalDamageDealt": 174,
+      "totalDamageTaken": 32093,
+      "totalSkillUsageCount": 335,
+      "totalItemUsageCount": 1,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "0",
+            "skillDamageDealt": 174,
+            "skillUsageCount": 4
+          }
+        ],
+        "support": [
+          {
+            "skillId": "361",
+            "skillUsageCount": 75
+          },
+          {
+            "skillId": "28",
+            "skillUsageCount": 70
+          },
+          {
+            "skillId": "78",
+            "skillUsageCount": 50
+          },
+          {
+            "skillId": "34",
+            "skillUsageCount": 43
+          },
+          {
+            "skillId": "29",
+            "skillUsageCount": 36
+          },
+          {
+            "skillId": "32",
+            "skillUsageCount": 31
+          },
+          {
+            "skillId": "54",
+            "skillUsageCount": 13
+          },
+          {
+            "skillId": "66",
+            "skillUsageCount": 8
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 4
+          },
+          {
+            "skillId": "24",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "410172",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2110881",
+      "name": "Himmelblau",
+      "jobId": 4012,
+      "totalDamageDealt": 12782056,
+      "totalDamageTaken": 123077,
+      "totalSkillUsageCount": 429,
+      "totalItemUsageCount": 33,
+      "MVPCount": 0,
+      "deathCount": 5,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "382",
+            "skillDamageDealt": 12340339,
+            "skillUsageCount": 224
+          },
+          {
+            "skillId": "46",
+            "skillDamageDealt": 436243,
+            "skillUsageCount": 161
+          },
+          {
+            "skillId": "0",
+            "skillDamageDealt": 4399,
+            "skillUsageCount": 5
+          },
+          {
+            "skillId": "129",
+            "skillDamageDealt": 1075,
+            "skillUsageCount": 1
+          }
+        ],
+        "support": [
+          {
+            "skillId": "380",
+            "skillUsageCount": 25
+          },
+          {
+            "skillId": "45",
+            "skillUsageCount": 8
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 4
+          },
+          {
+            "skillId": "54",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "526",
+          "itemUsageCount": 14
+        },
+        {
+          "itemId": "610",
+          "itemUsageCount": 6
+        },
+        {
+          "itemId": "656",
+          "itemUsageCount": 5
+        },
+        {
+          "itemId": "12065",
+          "itemUsageCount": 4
+        },
+        {
+          "itemId": "525",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12117",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12575",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12887",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2110602",
+      "name": "Kandice",
+      "jobId": 4009,
+      "totalDamageDealt": 1770,
+      "totalDamageTaken": 72887,
+      "totalSkillUsageCount": 309,
+      "totalItemUsageCount": 23,
+      "MVPCount": 0,
+      "deathCount": 1,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "70",
+            "skillDamageDealt": 1768,
+            "skillUsageCount": 2
+          },
+          {
+            "skillId": "0",
+            "skillDamageDealt": 2,
+            "skillUsageCount": 1
+          }
+        ],
+        "support": [
+          {
+            "skillId": "78",
+            "skillUsageCount": 84
+          },
+          {
+            "skillId": "28",
+            "skillUsageCount": 70
+          },
+          {
+            "skillId": "361",
+            "skillUsageCount": 56
+          },
+          {
+            "skillId": "34",
+            "skillUsageCount": 40
+          },
+          {
+            "skillId": "29",
+            "skillUsageCount": 38
+          },
+          {
+            "skillId": "54",
+            "skillUsageCount": 8
+          },
+          {
+            "skillId": "66",
+            "skillUsageCount": 5
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 4
+          },
+          {
+            "skillId": "32",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "547",
+          "itemUsageCount": 22
+        },
+        {
+          "itemId": "410172",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2099584",
+      "name": "Kimuchii",
+      "jobId": 4019,
+      "totalDamageDealt": 7316154,
+      "totalDamageTaken": 19426,
+      "totalSkillUsageCount": 164,
+      "totalItemUsageCount": 3,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "490",
+            "skillDamageDealt": 7316152,
+            "skillUsageCount": 157
+          },
+          {
+            "skillId": "0",
+            "skillDamageDealt": 2,
+            "skillUsageCount": 2
+          }
+        ],
+        "support": [
+          {
+            "skillId": "74",
+            "skillUsageCount": 4
+          },
+          {
+            "skillId": "479",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "602",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12065",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "410172",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2118822",
+      "name": "MimoriChan",
+      "jobId": 4021,
+      "totalDamageDealt": 406,
+      "totalDamageTaken": 44461,
+      "totalSkillUsageCount": 108,
+      "totalItemUsageCount": 30,
+      "MVPCount": 0,
+      "deathCount": 1,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "0",
+            "skillDamageDealt": 406,
+            "skillUsageCount": 3
+          }
+        ],
+        "support": [
+          {
+            "skillId": "330",
+            "skillUsageCount": 56
+          },
+          {
+            "skillId": "329",
+            "skillUsageCount": 41
+          },
+          {
+            "skillId": "309",
+            "skillUsageCount": 4
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 3
+          },
+          {
+            "skillId": "45",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "578",
+          "itemUsageCount": 29
+        },
+        {
+          "itemId": "410172",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2112136",
+      "name": "Myung Soo",
+      "jobId": 4020,
+      "totalDamageDealt": 746,
+      "totalDamageTaken": 14500,
+      "totalSkillUsageCount": 182,
+      "totalItemUsageCount": 4,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "0",
+            "skillDamageDealt": 746,
+            "skillUsageCount": 2
+          }
+        ],
+        "support": [
+          {
+            "skillId": "321",
+            "skillUsageCount": 75
+          },
+          {
+            "skillId": "322",
+            "skillUsageCount": 44
+          },
+          {
+            "skillId": "320",
+            "skillUsageCount": 40
+          },
+          {
+            "skillId": "319",
+            "skillUsageCount": 8
+          },
+          {
+            "skillId": "45",
+            "skillUsageCount": 5
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 4
+          },
+          {
+            "skillId": "309",
+            "skillUsageCount": 4
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "526",
+          "itemUsageCount": 3
+        },
+        {
+          "itemId": "602",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2120044",
+      "name": "Si Hyun",
+      "jobId": 24,
+      "totalDamageDealt": 4052691,
+      "totalDamageTaken": 68325,
+      "totalSkillUsageCount": 633,
+      "totalItemUsageCount": 32,
+      "MVPCount": 0,
+      "deathCount": 6,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "516",
+            "skillDamageDealt": 2104740,
+            "skillUsageCount": 120
+          },
+          {
+            "skillId": "519",
+            "skillDamageDealt": 1944937,
+            "skillUsageCount": 264
+          },
+          {
+            "skillId": "0",
+            "skillDamageDealt": 3014,
+            "skillUsageCount": 5
+          }
+        ],
+        "support": [
+          {
+            "skillId": "500",
+            "skillUsageCount": 151
+          },
+          {
+            "skillId": "5077",
+            "skillUsageCount": 32
+          },
+          {
+            "skillId": "504",
+            "skillUsageCount": 31
+          },
+          {
+            "skillId": "506",
+            "skillUsageCount": 26
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 4
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "518",
+          "itemUsageCount": 15
+        },
+        {
+          "itemId": "657",
+          "itemUsageCount": 4
+        },
+        {
+          "itemId": "12016",
+          "itemUsageCount": 3
+        },
+        {
+          "itemId": "23126",
+          "itemUsageCount": 3
+        },
+        {
+          "itemId": "23123",
+          "itemUsageCount": 2
+        },
+        {
+          "itemId": "505",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12151",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "23124",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "23125",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "410172",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2116194",
+      "name": "Walaocici",
+      "jobId": 4012,
+      "totalDamageDealt": 6746570,
+      "totalDamageTaken": 164015,
+      "totalSkillUsageCount": 289,
+      "totalItemUsageCount": 5,
+      "MVPCount": 0,
+      "deathCount": 9,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "382",
+            "skillDamageDealt": 6681563,
+            "skillUsageCount": 162
+          },
+          {
+            "skillId": "0",
+            "skillDamageDealt": 54559,
+            "skillUsageCount": 48
+          },
+          {
+            "skillId": "46",
+            "skillDamageDealt": 6188,
+            "skillUsageCount": 2
+          },
+          {
+            "skillId": "129",
+            "skillDamageDealt": 4260,
+            "skillUsageCount": 4
+          }
+        ],
+        "support": [
+          {
+            "skillId": "380",
+            "skillUsageCount": 47
+          },
+          {
+            "skillId": "45",
+            "skillUsageCount": 22
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 3
+          },
+          {
+            "skillId": "54",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "656",
+          "itemUsageCount": 2
+        },
+        {
+          "itemId": "518",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "610",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12065",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2116846",
+      "name": "Zinca",
+      "jobId": 4017,
+      "totalDamageDealt": 3861,
+      "totalDamageTaken": 52999,
+      "totalSkillUsageCount": 204,
+      "totalItemUsageCount": 16,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "21",
+            "skillDamageDealt": 3858,
+            "skillUsageCount": 16
+          },
+          {
+            "skillId": "0",
+            "skillDamageDealt": 3,
+            "skillUsageCount": 1
+          }
+        ],
+        "support": [
+          {
+            "skillId": "373",
+            "skillUsageCount": 79
+          },
+          {
+            "skillId": "289",
+            "skillUsageCount": 60
+          },
+          {
+            "skillId": "374",
+            "skillUsageCount": 44
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 3
+          },
+          {
+            "skillId": "157",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "547",
+          "itemUsageCount": 12
+        },
+        {
+          "itemId": "610",
+          "itemUsageCount": 2
+        },
+        {
+          "itemId": "602",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "410172",
+          "itemUsageCount": 1
+        }
+      ]
+    }
+  ],
+  "monsters": [
+    {
+      "monsterId": "2226",
+      "monsterName": "Alphoccio",
+      "battleStartTime": 236661,
+      "battleEndTime": 239443,
+      "battleDuration": 2782,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 41430
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 165720,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 165720
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 11103,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 9,
+              "damageDealt": 11103
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 6188,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 2,
+              "damageDealt": 6188
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2226",
+      "monsterName": "Alphoccio",
+      "battleStartTime": 300963,
+      "battleEndTime": 305511,
+      "battleDuration": 4548,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 41430
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 124290,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 3,
+              "damageDealt": 124290
+            }
+          ]
+        },
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 36550,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 1,
+              "damageDealt": 36550
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 13635,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 2,
+              "damageDealt": 13635
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 888,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 1,
+              "damageDealt": 716
+            },
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 172
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2226",
+      "monsterName": "Alphoccio",
+      "battleStartTime": 304688,
+      "battleEndTime": 314672,
+      "battleDuration": 9984,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 41430
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 248580,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 6,
+              "damageDealt": 248580
+            }
+          ]
+        },
+        {
+          "playerId": "2110602",
+          "playerName": "Kandice",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2226",
+      "monsterName": "Alphoccio",
+      "battleStartTime": 324835,
+      "battleEndTime": 325746,
+      "battleDuration": 911,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 75340
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 188350,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 188350
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2226",
+      "monsterName": "Alphoccio",
+      "battleStartTime": 328052,
+      "battleEndTime": 329036,
+      "battleDuration": 984,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 75340
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 188350,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 188350
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2226",
+      "monsterName": "Alphoccio",
+      "battleStartTime": 337856,
+      "battleEndTime": 338616,
+      "battleDuration": 760,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 82860
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 207150,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 207150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2226",
+      "monsterName": "Alphoccio",
+      "battleStartTime": 373186,
+      "battleEndTime": 374187,
+      "battleDuration": 1001,
+      "taker": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii"
+      },
+      "highestDamageInfo": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii",
+        "skillId": "490",
+        "damage": 73100
+      },
+      "battleInfo": [
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 182750,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 182750
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2226",
+      "monsterName": "Alphoccio",
+      "battleStartTime": 395780,
+      "battleEndTime": 396623,
+      "battleDuration": 843,
+      "taker": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 41430
+      },
+      "battleInfo": [
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 109650,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 3,
+              "damageDealt": 109650
+            }
+          ]
+        },
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 82860,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 2,
+              "damageDealt": 82860
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 148,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 3,
+              "damageDealt": 148
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2229",
+      "monsterName": "Biochemist Flamel",
+      "battleStartTime": 202319,
+      "battleEndTime": 205578,
+      "battleDuration": 3259,
+      "taker": {
+        "playerId": "2116194",
+        "playerName": "Walaocici"
+      },
+      "highestDamageInfo": {
+        "playerId": "2116194",
+        "playerName": "Walaocici",
+        "skillId": "382",
+        "damage": 1811
+      },
+      "battleInfo": [
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 1811,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 1811
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2223",
+      "monsterName": "Celia",
+      "battleStartTime": 240608,
+      "battleEndTime": 254363,
+      "battleDuration": 13755,
+      "taker": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun"
+      },
+      "highestDamageInfo": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun",
+        "skillId": "519",
+        "damage": 8393
+      },
+      "battleInfo": [
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 64838,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 8,
+              "damageDealt": 64838
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 54679,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 20,
+              "damageDealt": 40692
+            },
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 13987
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 47797,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 12,
+              "damageDealt": 46905
+            },
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 892
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2223",
+      "monsterName": "Celia",
+      "battleStartTime": 267679,
+      "battleEndTime": 271120,
+      "battleDuration": 3441,
+      "taker": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun"
+      },
+      "highestDamageInfo": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun",
+        "skillId": "519",
+        "damage": 16084
+      },
+      "battleInfo": [
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 88054,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 9,
+              "damageDealt": 88054
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 57927,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 13,
+              "damageDealt": 57927
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 24377,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 5,
+              "damageDealt": 23478
+            },
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 899
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 15,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2223",
+      "monsterName": "Celia",
+      "battleStartTime": 277471,
+      "battleEndTime": 284078,
+      "battleDuration": 6607,
+      "taker": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun"
+      },
+      "highestDamageInfo": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun",
+        "skillId": "519",
+        "damage": 8374
+      },
+      "battleInfo": [
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 89564,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 11,
+              "damageDealt": 89564
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 61114,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 18,
+              "damageDealt": 61114
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 22693,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 7,
+              "damageDealt": 19916
+            },
+            {
+              "skillId": "0",
+              "skillCount": 3,
+              "damageDealt": 2777
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2223",
+      "monsterName": "Celia",
+      "battleStartTime": 292983,
+      "battleEndTime": 311831,
+      "battleDuration": 18848,
+      "taker": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun"
+      },
+      "highestDamageInfo": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun",
+        "skillId": "519",
+        "damage": 8595
+      },
+      "battleInfo": [
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 117726,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 16,
+              "damageDealt": 117726
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 51434,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 19,
+              "damageDealt": 51434
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 3963,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 3963
+            }
+          ]
+        },
+        {
+          "playerId": "2118822",
+          "playerName": "MimoriChan",
+          "damageDealt": 232,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 2,
+              "damageDealt": 232
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2223",
+      "monsterName": "Celia",
+      "battleStartTime": 334834,
+      "battleEndTime": 340317,
+      "battleDuration": 5483,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun",
+        "skillId": "519",
+        "damage": 8742
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 86393,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 7,
+              "damageDealt": 46610
+            },
+            {
+              "skillId": "46",
+              "skillCount": 13,
+              "damageDealt": 39783
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 84862,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 10,
+              "damageDealt": 84862
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2223",
+      "monsterName": "Celia",
+      "battleStartTime": 338308,
+      "battleEndTime": 346605,
+      "battleDuration": 8297,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun",
+        "skillId": "519",
+        "damage": 8558
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 101760,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 13,
+              "damageDealt": 80189
+            },
+            {
+              "skillId": "46",
+              "skillCount": 7,
+              "damageDealt": 21571
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 66483,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 8,
+              "damageDealt": 66483
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2223",
+      "monsterName": "Celia",
+      "battleStartTime": 385462,
+      "battleEndTime": 391095,
+      "battleDuration": 5633,
+      "taker": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun"
+      },
+      "highestDamageInfo": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun",
+        "skillId": "519",
+        "damage": 16546
+      },
+      "battleInfo": [
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 122615,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 12,
+              "damageDealt": 122615
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 48685,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 15,
+              "damageDealt": 48685
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2223",
+      "monsterName": "Celia",
+      "battleStartTime": 391712,
+      "battleEndTime": 395590,
+      "battleDuration": 3878,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun",
+        "skillId": "519",
+        "damage": 16434
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 95918,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 11,
+              "damageDealt": 86840
+            },
+            {
+              "skillId": "46",
+              "skillCount": 3,
+              "damageDealt": 9078
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 81995,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 9,
+              "damageDealt": 81995
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2223",
+      "monsterName": "Celia",
+      "battleStartTime": 403315,
+      "battleEndTime": 408957,
+      "battleDuration": 5642,
+      "taker": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun"
+      },
+      "highestDamageInfo": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun",
+        "skillId": "519",
+        "damage": 17190
+      },
+      "battleInfo": [
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 124421,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 13,
+              "damageDealt": 124421
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 51259,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 11,
+              "damageDealt": 36304
+            },
+            {
+              "skillId": "46",
+              "skillCount": 5,
+              "damageDealt": 14955
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2223",
+      "monsterName": "Celia",
+      "battleStartTime": 427221,
+      "battleEndTime": 435068,
+      "battleDuration": 7847,
+      "taker": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun"
+      },
+      "highestDamageInfo": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun",
+        "skillId": "519",
+        "damage": 17172
+      },
+      "battleInfo": [
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 157451,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 14,
+              "damageDealt": 157451
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 12348,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 3,
+              "damageDealt": 12348
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 352,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 2,
+              "damageDealt": 352
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2223",
+      "monsterName": "Celia",
+      "battleStartTime": 435821,
+      "battleEndTime": 442553,
+      "battleDuration": 6732,
+      "taker": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun"
+      },
+      "highestDamageInfo": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun",
+        "skillId": "519",
+        "damage": 8393
+      },
+      "battleInfo": [
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 88901,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 11,
+              "damageDealt": 88901
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 41357,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 10,
+              "damageDealt": 39448
+            },
+            {
+              "skillId": "0",
+              "skillCount": 2,
+              "damageDealt": 1909
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 39553,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 11,
+              "damageDealt": 36503
+            },
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 3050
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2223",
+      "monsterName": "Celia",
+      "battleStartTime": 439757,
+      "battleEndTime": 453755,
+      "battleDuration": 13998,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun",
+        "skillId": "519",
+        "damage": 8753
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 69426,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 11,
+              "damageDealt": 60460
+            },
+            {
+              "skillId": "46",
+              "skillCount": 2,
+              "damageDealt": 8966
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 68723,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 16,
+              "damageDealt": 66391
+            },
+            {
+              "skillId": "0",
+              "skillCount": 3,
+              "damageDealt": 2332
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 33856,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 4,
+              "damageDealt": 33856
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "17",
+              "skillCount": 1,
+              "damageDealt": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2223",
+      "monsterName": "Celia",
+      "battleStartTime": 489980,
+      "battleEndTime": 495457,
+      "battleDuration": 5477,
+      "taker": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun"
+      },
+      "highestDamageInfo": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun",
+        "skillId": "519",
+        "damage": 18094
+      },
+      "battleInfo": [
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 97528,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 9,
+              "damageDealt": 97528
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 78416,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 13,
+              "damageDealt": 62214
+            },
+            {
+              "skillId": "46",
+              "skillCount": 6,
+              "damageDealt": 16202
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2223",
+      "monsterName": "Celia",
+      "battleStartTime": 520203,
+      "battleEndTime": 0,
+      "battleDuration": 0,
+      "taker": {
+        "playerId": "2116194",
+        "playerName": "Walaocici"
+      },
+      "highestDamageInfo": {
+        "playerId": "2116194",
+        "playerName": "Walaocici",
+        "skillId": "382",
+        "damage": 4600
+      },
+      "battleInfo": [
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 32039,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 7,
+              "damageDealt": 32039
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 1192,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 1192
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 987,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 987
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2231",
+      "monsterName": "Champion Chen",
+      "battleStartTime": 202320,
+      "battleEndTime": 205578,
+      "battleDuration": 3258,
+      "taker": {
+        "playerId": "2116194",
+        "playerName": "Walaocici"
+      },
+      "highestDamageInfo": {
+        "playerId": "2116194",
+        "playerName": "Walaocici",
+        "skillId": "382",
+        "damage": 6562
+      },
+      "battleInfo": [
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 6562,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 6562
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2231",
+      "monsterName": "Champion Chen",
+      "battleStartTime": 510182,
+      "battleEndTime": 518541,
+      "battleDuration": 8359,
+      "taker": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii"
+      },
+      "highestDamageInfo": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii",
+        "skillId": "490",
+        "damage": 40590
+      },
+      "battleInfo": [
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 40590,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 1,
+              "damageDealt": 40590
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2224",
+      "monsterName": "Chen",
+      "battleStartTime": 277658,
+      "battleEndTime": 279106,
+      "battleDuration": 1448,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 42410
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 84820,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 2,
+              "damageDealt": 84820
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 83135,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 4,
+              "damageDealt": 83135
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 15474,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 15474
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2224",
+      "monsterName": "Chen",
+      "battleStartTime": 279666,
+      "battleEndTime": 281425,
+      "battleDuration": 1759,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 42410
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 169640,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 169640
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 23902,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 23902
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 20648,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 4,
+              "damageDealt": 20648
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 1294,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 3,
+              "damageDealt": 1294
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2224",
+      "monsterName": "Chen",
+      "battleStartTime": 292107,
+      "battleEndTime": 294307,
+      "battleDuration": 2200,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 42410
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 169640,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 169640
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 57160,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 9,
+              "damageDealt": 57160
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 10268,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 7785
+            },
+            {
+              "skillId": "0",
+              "skillCount": 2,
+              "damageDealt": 2483
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2224",
+      "monsterName": "Chen",
+      "battleStartTime": 358796,
+      "battleEndTime": 359844,
+      "battleDuration": 1048,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 42410
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 127230,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 3,
+              "damageDealt": 127230
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 55987,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 4,
+              "damageDealt": 55987
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2224",
+      "monsterName": "Chen",
+      "battleStartTime": 368857,
+      "battleEndTime": 369510,
+      "battleDuration": 653,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 84820
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 127230,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 2,
+              "damageDealt": 127230
+            }
+          ]
+        },
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 74780,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 2,
+              "damageDealt": 74780
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2224",
+      "monsterName": "Chen",
+      "battleStartTime": 368328,
+      "battleEndTime": 372345,
+      "battleDuration": 4017,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 42410
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 84820,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 2,
+              "damageDealt": 84820
+            }
+          ]
+        },
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 74780,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 2,
+              "damageDealt": 74780
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 28653,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 2,
+              "damageDealt": 28653
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2224",
+      "monsterName": "Chen",
+      "battleStartTime": 375512,
+      "battleEndTime": 381434,
+      "battleDuration": 5922,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 42410
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 84820,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 2,
+              "damageDealt": 84820
+            }
+          ]
+        },
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 74780,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 2,
+              "damageDealt": 74780
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 28804,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 1,
+              "damageDealt": 28804
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 30,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2224",
+      "monsterName": "Chen",
+      "battleStartTime": 473591,
+      "battleEndTime": 475127,
+      "battleDuration": 1536,
+      "taker": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 42410
+      },
+      "battleInfo": [
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 112170,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 3,
+              "damageDealt": 112170
+            }
+          ]
+        },
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 84820,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 2,
+              "damageDealt": 84820
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2224",
+      "monsterName": "Chen",
+      "battleStartTime": 475627,
+      "battleEndTime": 478313,
+      "battleDuration": 2686,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 42410
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 169640,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 169640
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 34297,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 3,
+              "damageDealt": 34297
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2224",
+      "monsterName": "Chen",
+      "battleStartTime": 539802,
+      "battleEndTime": 0,
+      "battleDuration": 0,
+      "taker": {
+        "playerId": "2118822",
+        "playerName": "MimoriChan"
+      },
+      "highestDamageInfo": {
+        "playerId": "2118822",
+        "playerName": "MimoriChan",
+        "skillId": "0",
+        "damage": 174
+      },
+      "battleInfo": [
+        {
+          "playerId": "2118822",
+          "playerName": "MimoriChan",
+          "damageDealt": 174,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 174
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2222",
+      "monsterName": "Flamel",
+      "battleStartTime": 237842,
+      "battleEndTime": 239192,
+      "battleDuration": 1350,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 100900
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 201800,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 3,
+              "damageDealt": 201800
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2222",
+      "monsterName": "Flamel",
+      "battleStartTime": 229616,
+      "battleEndTime": 250784,
+      "battleDuration": 21168,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 50450
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 205562,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 201800
+            },
+            {
+              "skillId": "14",
+              "skillCount": 1,
+              "damageDealt": 3762
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 4800,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 3331
+            },
+            {
+              "skillId": "46",
+              "skillCount": 2,
+              "damageDealt": 1469
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 492,
+          "skills": [
+            {
+              "skillId": "263",
+              "skillCount": 1,
+              "damageDealt": 284
+            },
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 208
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2222",
+      "monsterName": "Flamel",
+      "battleStartTime": 278350,
+      "battleEndTime": 285008,
+      "battleDuration": 6658,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 100900
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 100900,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 1,
+              "damageDealt": 100900
+            }
+          ]
+        },
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 88480,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 2,
+              "damageDealt": 88480
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 25891,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 7,
+              "damageDealt": 25891
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2222",
+      "monsterName": "Flamel",
+      "battleStartTime": 322970,
+      "battleEndTime": 323620,
+      "battleDuration": 650,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 91320
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 182640,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 3,
+              "damageDealt": 182640
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2222",
+      "monsterName": "Flamel",
+      "battleStartTime": 341305,
+      "battleEndTime": 344385,
+      "battleDuration": 3080,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 50450
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 151350,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 3,
+              "damageDealt": 151350
+            }
+          ]
+        },
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 44240,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 1,
+              "damageDealt": 44240
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 3974,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 3974
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2222",
+      "monsterName": "Flamel",
+      "battleStartTime": 389132,
+      "battleEndTime": 390283,
+      "battleDuration": 1151,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 100900
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 201800,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 3,
+              "damageDealt": 201800
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2222",
+      "monsterName": "Flamel",
+      "battleStartTime": 394788,
+      "battleEndTime": 395462,
+      "battleDuration": 674,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 100900
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 201800,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 3,
+              "damageDealt": 201800
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2222",
+      "monsterName": "Flamel",
+      "battleStartTime": 440246,
+      "battleEndTime": 440979,
+      "battleDuration": 733,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 50450
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 201800,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 201800
+            }
+          ]
+        },
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 44240,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 1,
+              "damageDealt": 44240
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2222",
+      "monsterName": "Flamel",
+      "battleStartTime": 443138,
+      "battleEndTime": 447913,
+      "battleDuration": 4775,
+      "taker": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii"
+      },
+      "highestDamageInfo": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii",
+        "skillId": "490",
+        "damage": 44240
+      },
+      "battleInfo": [
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 176960,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 176960
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 20710,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 5,
+              "damageDealt": 20710
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 4711,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 4711
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 481,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 12,
+              "damageDealt": 481
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 30,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2222",
+      "monsterName": "Flamel",
+      "battleStartTime": 488785,
+      "battleEndTime": 489243,
+      "battleDuration": 458,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 50450
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 100900,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 2,
+              "damageDealt": 100900
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2225",
+      "monsterName": "Gertie",
+      "battleStartTime": 240608,
+      "battleEndTime": 248270,
+      "battleDuration": 7662,
+      "taker": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 27910
+      },
+      "battleInfo": [
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 133878,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 15,
+              "damageDealt": 133878
+            }
+          ]
+        },
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 27910,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 1,
+              "damageDealt": 27910
+            }
+          ]
+        },
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 24860,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 1,
+              "damageDealt": 24860
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 11781,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 4,
+              "damageDealt": 11781
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 2688,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 2499
+            },
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 189
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2225",
+      "monsterName": "Gertie",
+      "battleStartTime": 292983,
+      "battleEndTime": 298863,
+      "battleDuration": 5880,
+      "taker": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 27910
+      },
+      "battleInfo": [
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 124300,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 5,
+              "damageDealt": 124300
+            }
+          ]
+        },
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 55820,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 2,
+              "damageDealt": 55820
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 2951,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 2951
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2225",
+      "monsterName": "Gertie",
+      "battleStartTime": 317133,
+      "battleEndTime": 319869,
+      "battleDuration": 2736,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 27910
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 167460,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 6,
+              "damageDealt": 167460
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2225",
+      "monsterName": "Gertie",
+      "battleStartTime": 356818,
+      "battleEndTime": 357968,
+      "battleDuration": 1150,
+      "taker": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 27910
+      },
+      "battleInfo": [
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 99440,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 99440
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 34806,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 2,
+              "damageDealt": 34806
+            }
+          ]
+        },
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 27910,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 1,
+              "damageDealt": 27910
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 13554,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 10590
+            },
+            {
+              "skillId": "0",
+              "skillCount": 2,
+              "damageDealt": 1884
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2225",
+      "monsterName": "Gertie",
+      "battleStartTime": 415125,
+      "battleEndTime": 416441,
+      "battleDuration": 1316,
+      "taker": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii"
+      },
+      "highestDamageInfo": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii",
+        "skillId": "490",
+        "damage": 24860
+      },
+      "battleInfo": [
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 174020,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 7,
+              "damageDealt": 174020
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2225",
+      "monsterName": "Gertie",
+      "battleStartTime": 412024,
+      "battleEndTime": 416780,
+      "battleDuration": 4756,
+      "taker": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii"
+      },
+      "highestDamageInfo": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii",
+        "skillId": "490",
+        "damage": 49720
+      },
+      "battleInfo": [
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 124300,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 124300
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 45579,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 18,
+              "damageDealt": 45579
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2225",
+      "monsterName": "Gertie",
+      "battleStartTime": 429127,
+      "battleEndTime": 430205,
+      "battleDuration": 1078,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 27910
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 111640,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 111640
+            }
+          ]
+        },
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 99440,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 99440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2225",
+      "monsterName": "Gertie",
+      "battleStartTime": 503611,
+      "battleEndTime": 504323,
+      "battleDuration": 712,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 27910
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 111640,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 111640
+            }
+          ]
+        },
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 99440,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 99440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2225",
+      "monsterName": "Gertie",
+      "battleStartTime": 535295,
+      "battleEndTime": 0,
+      "battleDuration": 0,
+      "taker": {
+        "playerId": "2110602",
+        "playerName": "Kandice"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110602",
+        "playerName": "Kandice",
+        "skillId": "70",
+        "damage": 442
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110602",
+          "playerName": "Kandice",
+          "damageDealt": 1768,
+          "skills": [
+            {
+              "skillId": "70",
+              "skillCount": 2,
+              "damageDealt": 1768
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2241",
+      "monsterName": "Gypsy Trentini",
+      "battleStartTime": 196279,
+      "battleEndTime": 205578,
+      "battleDuration": 9299,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 110240
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 2259920,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 39,
+              "damageDealt": 2259920
+            }
+          ]
+        },
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 1830840,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 34,
+              "damageDealt": 1830840
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 9674,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 6657
+            },
+            {
+              "skillId": "0",
+              "skillCount": 2,
+              "damageDealt": 3017
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 330,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 6,
+              "damageDealt": 330
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 208,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 208
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2228",
+      "monsterName": "Paladin Randel",
+      "battleStartTime": 202806,
+      "battleEndTime": 205578,
+      "battleDuration": 2772,
+      "taker": {
+        "playerId": "2116194",
+        "playerName": "Walaocici"
+      },
+      "highestDamageInfo": {
+        "playerId": "2116194",
+        "playerName": "Walaocici",
+        "skillId": "382",
+        "damage": 1
+      },
+      "battleInfo": [
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2235",
+      "monsterName": "Paladin Randel",
+      "battleStartTime": 509685,
+      "battleEndTime": 518541,
+      "battleDuration": 8856,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 142120
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 3737756,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 54,
+              "damageDealt": 3737756
+            }
+          ]
+        },
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 2813952,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 49,
+              "damageDealt": 2813952
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 348,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 6,
+              "damageDealt": 348
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2221",
+      "monsterName": "Randel",
+      "battleStartTime": 248018,
+      "battleEndTime": 249028,
+      "battleDuration": 1010,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 65790
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 328950,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 5,
+              "damageDealt": 328950
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2221",
+      "monsterName": "Randel",
+      "battleStartTime": 278578,
+      "battleEndTime": 279411,
+      "battleDuration": 833,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 65790
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 328950,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 5,
+              "damageDealt": 328950
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2221",
+      "monsterName": "Randel",
+      "battleStartTime": 292983,
+      "battleEndTime": 304168,
+      "battleDuration": 11185,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 65790
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 264108,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 263160
+            },
+            {
+              "skillId": "14",
+              "skillCount": 1,
+              "damageDealt": 318
+            },
+            {
+              "skillId": "19",
+              "skillCount": 1,
+              "damageDealt": 225
+            },
+            {
+              "skillId": "20",
+              "skillCount": 1,
+              "damageDealt": 216
+            },
+            {
+              "skillId": "90",
+              "skillCount": 1,
+              "damageDealt": 189
+            }
+          ]
+        },
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 57090,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 1,
+              "damageDealt": 57090
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 969,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 969
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 99,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 1,
+              "damageDealt": 99
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2221",
+      "monsterName": "Randel",
+      "battleStartTime": 312691,
+      "battleEndTime": 317548,
+      "battleDuration": 4857,
+      "taker": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii"
+      },
+      "highestDamageInfo": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii",
+        "skillId": "490",
+        "damage": 57090
+      },
+      "battleInfo": [
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 285450,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 5,
+              "damageDealt": 285450
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 924,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 9,
+              "damageDealt": 924
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 231,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 231
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2221",
+      "monsterName": "Randel",
+      "battleStartTime": 353688,
+      "battleEndTime": 354524,
+      "battleDuration": 836,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 65790
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 328950,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 5,
+              "damageDealt": 328950
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2221",
+      "monsterName": "Randel",
+      "battleStartTime": 361194,
+      "battleEndTime": 361986,
+      "battleDuration": 792,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 65790
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 328950,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 5,
+              "damageDealt": 328950
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2221",
+      "monsterName": "Randel",
+      "battleStartTime": 362459,
+      "battleEndTime": 363840,
+      "battleDuration": 1381,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 65790
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 263160,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 263160
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 24934,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 3,
+              "damageDealt": 24934
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2221",
+      "monsterName": "Randel",
+      "battleStartTime": 388174,
+      "battleEndTime": 389083,
+      "battleDuration": 909,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 131580
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 328950,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 328950
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2221",
+      "monsterName": "Randel",
+      "battleStartTime": 421514,
+      "battleEndTime": 422493,
+      "battleDuration": 979,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 65790
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 328950,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 5,
+              "damageDealt": 328950
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2221",
+      "monsterName": "Randel",
+      "battleStartTime": 443776,
+      "battleEndTime": 444545,
+      "battleDuration": 769,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 65790
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 328950,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 5,
+              "damageDealt": 328950
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2221",
+      "monsterName": "Randel",
+      "battleStartTime": 483589,
+      "battleEndTime": 484265,
+      "battleDuration": 676,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 131580
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 328950,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 328950
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2221",
+      "monsterName": "Randel",
+      "battleStartTime": 499136,
+      "battleEndTime": 500103,
+      "battleDuration": 967,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 65790
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 328950,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 5,
+              "damageDealt": 328950
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2221",
+      "monsterName": "Randel",
+      "battleStartTime": 515313,
+      "battleEndTime": 0,
+      "battleDuration": 0,
+      "taker": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun"
+      },
+      "highestDamageInfo": {
+        "playerId": "2120044",
+        "playerName": "Si Hyun",
+        "skillId": "519",
+        "damage": 14154
+      },
+      "battleInfo": [
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 163672,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 32,
+              "damageDealt": 163672
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 14856,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 7,
+              "damageDealt": 9930
+            },
+            {
+              "skillId": "0",
+              "skillCount": 8,
+              "damageDealt": 4926
+            }
+          ]
+        },
+        {
+          "playerId": "2113552",
+          "playerName": "Evang",
+          "damageDealt": 138,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 4,
+              "damageDealt": 138
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2232",
+      "monsterName": "Stalker Gertie",
+      "battleStartTime": 202806,
+      "battleEndTime": 205578,
+      "battleDuration": 2772,
+      "taker": {
+        "playerId": "2116194",
+        "playerName": "Walaocici"
+      },
+      "highestDamageInfo": {
+        "playerId": "2116194",
+        "playerName": "Walaocici",
+        "skillId": "382",
+        "damage": 6586
+      },
+      "battleInfo": [
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 9296,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 9296
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2232",
+      "monsterName": "Stalker Gertie",
+      "battleStartTime": 510339,
+      "battleEndTime": 518541,
+      "battleDuration": 8202,
+      "taker": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii"
+      },
+      "highestDamageInfo": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii",
+        "skillId": "490",
+        "damage": 36980
+      },
+      "battleInfo": [
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 36980,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 1,
+              "damageDealt": 36980
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 39497,
+      "battleEndTime": 64892,
+      "battleDuration": 25395,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 346230,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 55,
+              "damageDealt": 346230
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 207023,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 34,
+              "damageDealt": 207023
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 320,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 3,
+              "damageDealt": 320
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 36690,
+      "battleEndTime": 65119,
+      "battleDuration": 28429,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 369797,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 50,
+              "damageDealt": 369582
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 215
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 185587,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 32,
+              "damageDealt": 185587
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 212,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 3,
+              "damageDealt": 212
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 10,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 36161,
+      "battleEndTime": 65119,
+      "battleDuration": 28958,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 309271,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 54,
+              "damageDealt": 309271
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 195538,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 31,
+              "damageDealt": 195538
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 50316,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 41,
+              "damageDealt": 50270
+            },
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 46
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 153,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 2,
+              "damageDealt": 153
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 35797,
+      "battleEndTime": 65337,
+      "battleDuration": 29540,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 370131,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 56,
+              "damageDealt": 370131
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 192721,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 33,
+              "damageDealt": 192721
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 202,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 3,
+              "damageDealt": 202
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 35417,
+      "battleEndTime": 65402,
+      "battleDuration": 29985,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 377624,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 54,
+              "damageDealt": 377409
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 215
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 174649,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 34,
+              "damageDealt": 174649
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 281,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 3,
+              "damageDealt": 281
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 35797,
+      "battleEndTime": 65761,
+      "battleDuration": 29964,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2116194",
+        "playerName": "Walaocici",
+        "skillId": "382",
+        "damage": 21142
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 341960,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 52,
+              "damageDealt": 341960
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 213619,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 35,
+              "damageDealt": 213619
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 268,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 3,
+              "damageDealt": 268
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 2,
+              "damageDealt": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 37484,
+      "battleEndTime": 65957,
+      "battleDuration": 28473,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 364153,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 56,
+              "damageDealt": 364153
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 185933,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 33,
+              "damageDealt": 185933
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 8612,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 40,
+              "damageDealt": 8612
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 49,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 49
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 33903,
+      "battleEndTime": 65957,
+      "battleDuration": 32054,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 316106,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 51,
+              "damageDealt": 316106
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 168383,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 33,
+              "damageDealt": 168383
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 74013,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 43,
+              "damageDealt": 73177
+            },
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 836
+            }
+          ]
+        },
+        {
+          "playerId": "2112136",
+          "playerName": "Myung Soo",
+          "damageDealt": 746,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 2,
+              "damageDealt": 746
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 248,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 2,
+              "damageDealt": 248
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 18,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 7,
+              "damageDealt": 18
+            }
+          ]
+        },
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 2,
+              "damageDealt": 2
+            }
+          ]
+        },
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 38703,
+      "battleEndTime": 66243,
+      "battleDuration": 27540,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 16320
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 338387,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 60,
+              "damageDealt": 338172
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 215
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 214575,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 36,
+              "damageDealt": 214575
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 203,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 2,
+              "damageDealt": 203
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 37709,
+      "battleEndTime": 66243,
+      "battleDuration": 28534,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 378820,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 60,
+              "damageDealt": 378820
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 173255,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 36,
+              "damageDealt": 173255
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 261,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 3,
+              "damageDealt": 261
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 36588,
+      "battleEndTime": 66388,
+      "battleDuration": 29800,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 360039,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 55,
+              "damageDealt": 360039
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 199915,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 36,
+              "damageDealt": 199915
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 189,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 3,
+              "damageDealt": 189
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 34393,
+      "battleEndTime": 66388,
+      "battleDuration": 31995,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 24532
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 386186,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 54,
+              "damageDealt": 385971
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 215
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 170100,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 32,
+              "damageDealt": 157455
+            },
+            {
+              "skillId": "0",
+              "skillCount": 11,
+              "damageDealt": 12645
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 191,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 3,
+              "damageDealt": 191
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 7,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 2,
+              "damageDealt": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 39988,
+      "battleEndTime": 67577,
+      "battleDuration": 27589,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 349654,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 60,
+              "damageDealt": 349438
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 215
+            },
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 204048,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 35,
+              "damageDealt": 204048
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 189,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 2,
+              "damageDealt": 189
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 7,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 2,
+              "damageDealt": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 34986,
+      "battleEndTime": 69156,
+      "battleDuration": 34170,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 322597,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 56,
+              "damageDealt": 322597
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 233890,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 39,
+              "damageDealt": 232383
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 1080
+            },
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 427
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 201,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 3,
+              "damageDealt": 201
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 118880,
+      "battleEndTime": 133736,
+      "battleDuration": 14856,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 24532
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 324058,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 30,
+              "damageDealt": 324058
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 146683,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 20,
+              "damageDealt": 137089
+            },
+            {
+              "skillId": "0",
+              "skillCount": 5,
+              "damageDealt": 9489
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 81898,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 25,
+              "damageDealt": 81898
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 120,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 120
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 114598,
+      "battleEndTime": 134726,
+      "battleDuration": 20128,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 323907,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 35,
+              "damageDealt": 323907
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 160846,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 19,
+              "damageDealt": 159182
+            },
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 1559
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 70381,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 24,
+              "damageDealt": 70381
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 51,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 51
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 118275,
+      "battleEndTime": 135258,
+      "battleDuration": 16983,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 322724,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 37,
+              "damageDealt": 322724
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 167554,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 21,
+              "damageDealt": 167449
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 68167,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 26,
+              "damageDealt": 68167
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 115223,
+      "battleEndTime": 135258,
+      "battleDuration": 20035,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 300801,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 34,
+              "damageDealt": 300801
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 172593,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 21,
+              "damageDealt": 172488
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 91626,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 28,
+              "damageDealt": 91626
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 116068,
+      "battleEndTime": 135327,
+      "battleDuration": 19259,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 322756,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 36,
+              "damageDealt": 322756
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 145835,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 20,
+              "damageDealt": 145730
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 83939,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 26,
+              "damageDealt": 83939
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 7,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 115707,
+      "battleEndTime": 135327,
+      "battleDuration": 19620,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 328036,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 37,
+              "damageDealt": 328036
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 159117,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 22,
+              "damageDealt": 159012
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 68675,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 26,
+              "damageDealt": 68675
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 69,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 69
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 119050,
+      "battleEndTime": 135744,
+      "battleDuration": 16694,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 319815,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 35,
+              "damageDealt": 319815
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 157471,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 20,
+              "damageDealt": 157366
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 77141,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 27,
+              "damageDealt": 77141
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 114598,
+      "battleEndTime": 135744,
+      "battleDuration": 21146,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 313387,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 35,
+              "damageDealt": 313387
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 171771,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 22,
+              "damageDealt": 171666
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 72336,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 25,
+              "damageDealt": 72336
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 91,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 114393,
+      "battleEndTime": 136704,
+      "battleDuration": 22311,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 330651,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 36,
+              "damageDealt": 330651
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 160298,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 21,
+              "damageDealt": 160193
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 63366,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 23,
+              "damageDealt": 63366
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 117589,
+      "battleEndTime": 136704,
+      "battleDuration": 19115,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 311541,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 37,
+              "damageDealt": 311541
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 174565,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 22,
+              "damageDealt": 174460
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 70587,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 26,
+              "damageDealt": 70587
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 152900,
+      "battleEndTime": 170732,
+      "battleDuration": 17832,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 16320
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 304359,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 39,
+              "damageDealt": 304359
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 152265,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 25,
+              "damageDealt": 150618
+            },
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 1542
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 98006,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 25,
+              "damageDealt": 98006
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 125,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 125
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 152900,
+      "battleEndTime": 171542,
+      "battleDuration": 18642,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 16320
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 307002,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 37,
+              "damageDealt": 307002
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 157820,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 24,
+              "damageDealt": 157715
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 108754,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 33,
+              "damageDealt": 108754
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 99,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 99
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 152900,
+      "battleEndTime": 172337,
+      "battleDuration": 19437,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 16320
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 298588,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 38,
+              "damageDealt": 298588
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 165542,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 27,
+              "damageDealt": 163868
+            },
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 1569
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 99942,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 32,
+              "damageDealt": 99942
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 111,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 111
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 154196,
+      "battleEndTime": 172439,
+      "battleDuration": 18243,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 312421,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 42,
+              "damageDealt": 312421
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 136866,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 23,
+              "damageDealt": 136761
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 102548,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 33,
+              "damageDealt": 102548
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 139,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 2,
+              "damageDealt": 139
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2242",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 152900,
+      "battleEndTime": 173102,
+      "battleDuration": 20202,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2116194",
+        "playerName": "Walaocici",
+        "skillId": "382",
+        "damage": 13334
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 290830,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 42,
+              "damageDealt": 290830
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 170325,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 26,
+              "damageDealt": 165276
+            },
+            {
+              "skillId": "0",
+              "skillCount": 3,
+              "damageDealt": 4944
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 96972,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 38,
+              "damageDealt": 96972
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 72,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 72
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 115707,
+      "battleEndTime": 128710,
+      "battleDuration": 13003,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 145011,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 12,
+              "damageDealt": 145011
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 88264,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 8,
+              "damageDealt": 88264
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 47516,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 8,
+              "damageDealt": 47516
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 120089,
+      "battleEndTime": 128710,
+      "battleDuration": 8621,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2116194",
+        "playerName": "Walaocici",
+        "skillId": "382",
+        "damage": 22138
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 143566,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 12,
+              "damageDealt": 143566
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 99156,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 8,
+              "damageDealt": 99156
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 38622,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 6,
+              "damageDealt": 38622
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 120089,
+      "battleEndTime": 128959,
+      "battleDuration": 8870,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 157301,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 13,
+              "damageDealt": 157301
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 88387,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 8,
+              "damageDealt": 88387
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 34128,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 9,
+              "damageDealt": 34128
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 116996,
+      "battleEndTime": 128959,
+      "battleDuration": 11963,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 159084,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 13,
+              "damageDealt": 159084
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 88274,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 8,
+              "damageDealt": 88274
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 32911,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 7,
+              "damageDealt": 32911
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 116996,
+      "battleEndTime": 128959,
+      "battleDuration": 11963,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 159084,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 13,
+              "damageDealt": 159084
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 86710,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 8,
+              "damageDealt": 86710
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 38460,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 9,
+              "damageDealt": 38460
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 118880,
+      "battleEndTime": 128959,
+      "battleDuration": 10079,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 157900,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 13,
+              "damageDealt": 157900
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 88219,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 8,
+              "damageDealt": 88219
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 40450,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 9,
+              "damageDealt": 40450
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 116902,
+      "battleEndTime": 128959,
+      "battleDuration": 12057,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 157471,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 13,
+              "damageDealt": 157471
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 88184,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 8,
+              "damageDealt": 88184
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 29152,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 8,
+              "damageDealt": 29152
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 116996,
+      "battleEndTime": 129154,
+      "battleDuration": 12158,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 171350,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 14,
+              "damageDealt": 171350
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 88204,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 8,
+              "damageDealt": 88204
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 28697,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 7,
+              "damageDealt": 28697
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 118880,
+      "battleEndTime": 129176,
+      "battleDuration": 10296,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 169435,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 14,
+              "damageDealt": 169435
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 86049,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 8,
+              "damageDealt": 86049
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 26330,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 7,
+              "damageDealt": 26330
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 116995,
+      "battleEndTime": 129176,
+      "battleDuration": 12181,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 12266
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 169437,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 14,
+              "damageDealt": 169437
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 88412,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 8,
+              "damageDealt": 88412
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 23350,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 8,
+              "damageDealt": 23350
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 154434,
+      "battleEndTime": 164252,
+      "battleDuration": 9818,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 8160
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 120729,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 15,
+              "damageDealt": 120729
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 101314,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 14,
+              "damageDealt": 100605
+            },
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 709
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 52767,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 8,
+              "damageDealt": 52662
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 152900,
+      "battleEndTime": 164835,
+      "battleDuration": 11935,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 8160
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 135587,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 17,
+              "damageDealt": 135587
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 85468,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 15,
+              "damageDealt": 85468
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 60565,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 9,
+              "damageDealt": 59195
+            },
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 1265
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 155194,
+      "battleEndTime": 164835,
+      "battleDuration": 9641,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 8160
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 136355,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 17,
+              "damageDealt": 136355
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 81887,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 14,
+              "damageDealt": 81887
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 60861,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 9,
+              "damageDealt": 60756
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2110668",
+          "playerName": "Dmitriy Zakharov",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "156",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 152900,
+      "battleEndTime": 165142,
+      "battleDuration": 12242,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 8160
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 143562,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 18,
+              "damageDealt": 143562
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 74279,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 11,
+              "damageDealt": 74174
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 62988,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 16,
+              "damageDealt": 62988
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2243",
+      "monsterName": "Starving Lab animal",
+      "battleStartTime": 152900,
+      "battleEndTime": 165622,
+      "battleDuration": 12722,
+      "taker": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau"
+      },
+      "highestDamageInfo": {
+        "playerId": "2110881",
+        "playerName": "Himmelblau",
+        "skillId": "382",
+        "damage": 8160
+      },
+      "battleInfo": [
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 157551,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 20,
+              "damageDealt": 157551
+            }
+          ]
+        },
+        {
+          "playerId": "2116194",
+          "playerName": "Walaocici",
+          "damageDealt": 74614,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 11,
+              "damageDealt": 74509
+            },
+            {
+              "skillId": "129",
+              "skillCount": 1,
+              "damageDealt": 105
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 47779,
+          "skills": [
+            {
+              "skillId": "516",
+              "skillCount": 11,
+              "damageDealt": 47779
+            }
+          ]
+        },
+        {
+          "playerId": "2116846",
+          "playerName": "Zinca",
+          "damageDealt": 1,
+          "skills": [
+            {
+              "skillId": "21",
+              "skillCount": 1,
+              "damageDealt": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2227",
+      "monsterName": "Trentini",
+      "battleStartTime": 321747,
+      "battleEndTime": 325871,
+      "battleDuration": 4124,
+      "taker": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 84820
+      },
+      "battleInfo": [
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 112170,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 3,
+              "damageDealt": 112170
+            }
+          ]
+        },
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 84820,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 1,
+              "damageDealt": 84820
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2227",
+      "monsterName": "Trentini",
+      "battleStartTime": 338308,
+      "battleEndTime": 347030,
+      "battleDuration": 8722,
+      "taker": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 42410
+      },
+      "battleInfo": [
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 149560,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 149560
+            }
+          ]
+        },
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 42410,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 1,
+              "damageDealt": 42410
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 15042,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 9,
+              "damageDealt": 15042
+            }
+          ]
+        },
+        {
+          "playerId": "2120044",
+          "playerName": "Si Hyun",
+          "damageDealt": 148,
+          "skills": [
+            {
+              "skillId": "519",
+              "skillCount": 4,
+              "damageDealt": 148
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2227",
+      "monsterName": "Trentini",
+      "battleStartTime": 428789,
+      "battleEndTime": 429503,
+      "battleDuration": 714,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 84820
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 169640,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 3,
+              "damageDealt": 169640
+            }
+          ]
+        },
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 37390,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 1,
+              "damageDealt": 37390
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2227",
+      "monsterName": "Trentini",
+      "battleStartTime": 435169,
+      "battleEndTime": 437645,
+      "battleDuration": 2476,
+      "taker": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii"
+      },
+      "highestDamageInfo": {
+        "playerId": "2099584",
+        "playerName": "Kimuchii",
+        "skillId": "490",
+        "damage": 74780
+      },
+      "battleInfo": [
+        {
+          "playerId": "2099584",
+          "playerName": "Kimuchii",
+          "damageDealt": 186950,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 186950
+            }
+          ]
+        },
+        {
+          "playerId": "2110881",
+          "playerName": "Himmelblau",
+          "damageDealt": 1380,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 1,
+              "damageDealt": 1380
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2227",
+      "monsterName": "Trentini",
+      "battleStartTime": 500326,
+      "battleEndTime": 500970,
+      "battleDuration": 644,
+      "taker": {
+        "playerId": "2112290",
+        "playerName": "Ensla"
+      },
+      "highestDamageInfo": {
+        "playerId": "2112290",
+        "playerName": "Ensla",
+        "skillId": "490",
+        "damage": 84820
+      },
+      "battleInfo": [
+        {
+          "playerId": "2112290",
+          "playerName": "Ensla",
+          "damageDealt": 212050,
+          "skills": [
+            {
+              "skillId": "490",
+              "skillCount": 4,
+              "damageDealt": 212050
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
