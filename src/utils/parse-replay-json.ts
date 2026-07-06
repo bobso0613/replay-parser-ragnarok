@@ -31,6 +31,7 @@ export const parseReplayOutput = (
       jobId: player.jobId,
       jobName: JOB_LIST[player.jobId],
       totalDamageDealt: player.totalDamageDealt,
+      totalDamageDealthMvps: 0,
       highestDamage: {
         monsterId: '',
         monsterName: '',
@@ -263,6 +264,16 @@ export const parseReplayOutput = (
             damage: battleInfoEntry.highestDamageInfo.damageDealt ?? 0,
             skillId: battleInfoEntry.highestDamageInfo.skillId ?? '',
           };
+        }
+
+        // add mvp only damage
+        const existingPlayerFromBreakdown = finalOutput.breakdownPerPlayer.find(
+          (p: IPlayerBreakdown) => p.playerId === battleInfoEntry.playerId
+        );
+        if (existingPlayerFromBreakdown) {
+          existingPlayerFromBreakdown.totalDamageDealthMvps += mobIsMvp
+            ? battleInfoEntry.damageDealt
+            : 0;
         }
       }
 

@@ -67,7 +67,11 @@ export type TableProps = {
   headers?: string[] | Array<React.ReactNode>;
   rowClassNames?: string[];
   rows: Array<Array<React.ReactNode>>;
+  sortValues?: Array<Array<string | number | null>>;
   className?: string;
+  sortableColumns?: number[];
+  sortExtractors?: Record<number, ((cell: React.ReactNode) => string | number) | string>;
+  onSort?: (columnIndex: number, direction: 'asc' | 'desc') => void;
 };
 
 export interface TabItem {

@@ -55,62 +55,67 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                 <h2>Breakdown Per Player</h2>
                 <Table
                   headers={[
-                    'Class',
                     'Player Name',
                     'Total Damage',
+                    'MVP Damage',
                     'Highest Damage',
                     'Skill Breakdown',
                   ]}
-                  rows={replayToDisplay.breakdownPerPlayer
-                    .filter((player) => player.highestDamage.damage)
-                    .map((player) => [
-                      <TextImage
-                        variant={TEXT_IMAGE_VARIANTS.JOB}
-                        keyId={player.jobId}
-                        keyInfo={player.jobName}
-                      />,
-                      player.playerName,
-                      player.highestDamage.damage ? commaNumber(player.totalDamageDealt) : 'N/A',
-                      player.highestDamage.damage ? (
-                        <div>
-                          {commaNumber(player.highestDamage.damage)}
-                          <br />
-                          <TextImage
-                            textBefore={<i>using</i>}
-                            variant={TEXT_IMAGE_VARIANTS.SKILL}
-                            keyId={player.highestDamage.skillId}
-                            keyInfo={player.highestDamage.skillName}
-                          />
-                          <i>vs.</i>{' '}
-                          {getMonsterName(
-                            player.highestDamage.monsterName,
-                            player.highestDamage.isMvp
-                          )}
-                        </div>
-                      ) : (
-                        'N/A'
-                      ),
-                      player.skillDamages.length > 0 ? (
-                        <Table
-                          headers={['Skill Name', 'Total Damage', 'No. of Hits', 'Highest Damage']}
-                          rows={player.skillDamages.map((skill) => [
-                            <TextImage
-                              keyId={skill.skillId}
-                              keyInfo={skill.skillInfo}
-                              variant={TEXT_IMAGE_VARIANTS.SKILL}
-                            />,
-                            commaNumber(skill.damage),
-                            commaNumber(skill.noOfHits),
-                            <div>
-                              {commaNumber(skill.highestDamage)} <i>vs.</i>{' '}
-                              {getMonsterName(skill.highestMonsterName, skill.highestIsMvp)}
-                            </div>,
-                          ])}
+                  sortableColumns={[0, 1, 2]}
+                  sortValues={replayToDisplay.breakdownPerPlayer.map((player) => [
+                    player.playerName,
+                    player.totalDamageDealt,
+                    player.totalDamageDealthMvps,
+                  ])}
+                  rows={replayToDisplay.breakdownPerPlayer.map((player) => [
+                    <TextImage
+                      variant={TEXT_IMAGE_VARIANTS.JOB}
+                      keyId={player.jobId}
+                      keyInfo={player.playerName}
+                      title={player.jobName}
+                    />,
+                    player.highestDamage.damage ? commaNumber(player.totalDamageDealt) : 'N/A',
+                    player.highestDamage.damage ? commaNumber(player.totalDamageDealthMvps) : 'N/A',
+                    player.highestDamage.damage ? (
+                      <div>
+                        {commaNumber(player.highestDamage.damage)}
+                        <br />
+                        <TextImage
+                          textBefore={<i>using</i>}
+                          variant={TEXT_IMAGE_VARIANTS.SKILL}
+                          keyId={player.highestDamage.skillId}
+                          keyInfo={player.highestDamage.skillName}
                         />
-                      ) : (
-                        'N/A'
-                      ),
-                    ])}
+                        <i>vs.</i>{' '}
+                        {getMonsterName(
+                          player.highestDamage.monsterName,
+                          player.highestDamage.isMvp
+                        )}
+                      </div>
+                    ) : (
+                      'N/A'
+                    ),
+                    player.skillDamages.length > 0 ? (
+                      <Table
+                        headers={['Skill Name', 'Total Damage', 'No. of Hits', 'Highest Damage']}
+                        rows={player.skillDamages.map((skill) => [
+                          <TextImage
+                            keyId={skill.skillId}
+                            keyInfo={skill.skillInfo}
+                            variant={TEXT_IMAGE_VARIANTS.SKILL}
+                          />,
+                          commaNumber(skill.damage),
+                          commaNumber(skill.noOfHits),
+                          <div>
+                            {commaNumber(skill.highestDamage)} <i>vs.</i>{' '}
+                            {getMonsterName(skill.highestMonsterName, skill.highestIsMvp)}
+                          </div>,
+                        ])}
+                      />
+                    ) : (
+                      'N/A'
+                    ),
+                  ])}
                   className="w-full"
                 />
               </div>
@@ -141,6 +146,11 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                     'Breakdown per player',
                     'Breakdown per skill',
                   ]}
+                  sortableColumns={[1]}
+                  sortValues={replayToDisplay.breakdownPerMonsterUnique.map((monster) => [
+                    null,
+                    getMonsterName(monster.name, monster.isMvp),
+                  ])}
                   rowClassNames={[
                     'align-middle',
                     'align-middle',
@@ -262,6 +272,12 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                     'Top Spammer',
                     'Breakdown per Player',
                   ]}
+                  sortableColumns={[0, 1]}
+                  sortValues={replayToDisplay.skillUsage.map((skill) => [
+                    skill.skillInfo,
+                    skill.skillUsageCount,
+                  ])}
+                  rowClassNames={['align-middle', 'align-middle', 'align-middle', 'align-top']}
                   rows={replayToDisplay.skillUsage.map((skill) => [
                     <TextImage
                       keyId={skill.skillId}
@@ -283,14 +299,14 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
 
                     skill.playerSkills.length > 0 ? (
                       <Table
-                        headers={['Class', 'Player Name', 'Usage Count']}
+                        headers={['Player Name', 'Usage Count']}
                         rows={skill.playerSkills.map((playerSkill) => [
                           <TextImage
                             keyId={playerSkill.jobId}
-                            keyInfo={playerSkill.jobName}
+                            keyInfo={playerSkill.playerName}
                             variant={TEXT_IMAGE_VARIANTS.JOB}
+                            title={playerSkill.jobName}
                           />,
-                          playerSkill.playerName,
                           commaNumber(playerSkill.skillUsageCount),
                         ])}
                         className="w-full"
@@ -321,6 +337,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                     ? (apiResponse?.players?.length ?? 0)
                     : 5
                 }
+                columns={4}
               />
             ),
           },

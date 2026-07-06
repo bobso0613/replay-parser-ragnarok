@@ -41,6 +41,7 @@ export interface IPlayerBreakdown {
   jobId: number;
   jobName: string;
   totalDamageDealt: number;
+  totalDamageDealthMvps: number;
   highestDamage: IPlayerHighestDamage;
   skillDamages: IPlayerSkillDamage[];
 }

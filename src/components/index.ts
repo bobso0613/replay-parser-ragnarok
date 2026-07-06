@@ -11,3 +11,5 @@ export * from './ReplayBreakdown';
 export * from './HorizontalTabs';
 export * from './TextImage';
 export * from './Tooltip';
+export * from './ErrorDetails';
+export * from './StickyButton';

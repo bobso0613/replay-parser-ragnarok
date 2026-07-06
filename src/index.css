@@ -125,3 +125,9 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+.xs-grid {
+  @media (max-width: 1000px) {
+    display: grid;
+  }
+}

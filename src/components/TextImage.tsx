@@ -16,7 +16,7 @@ const TextImage: React.FC<TextImageProps> = ({
   };
 
   return (
-    <div className="flex gap-1.5 items-center" key={keyId}>
+    <div className="flex gap-1.5 items-center xs-grid" key={keyId}>
       {textBefore ?? null}
       <Tooltip content={title ?? keyInfo} placement={TOOLTIP_POSITION.BOTTOM}>
         <img
@@ -26,7 +26,7 @@ const TextImage: React.FC<TextImageProps> = ({
           referrerPolicy="no-referrer"
         />
       </Tooltip>
-      <span>{keyInfo}</span>
+      <span className="sort-value">{keyInfo}</span>
     </div>
   );
 };

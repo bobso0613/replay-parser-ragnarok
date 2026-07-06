@@ -1,15 +1,23 @@
 import Header from '@/components/Header';
+import StickyButton from '@/components/StickyButton';
+import React from 'react';
 import { Outlet } from 'react-router-dom';
 
 export const BaseLayout = () => {
+  const scrollContainerRef = React.useRef<HTMLDivElement>(null);
+
   return (
     <div className=" flex overflow-hidden h-screen ">
       <div className="w-full h-full overflow-hidden">
         <Header routes={[]} />
-        <div className="px-8 pt-4 pb-37.5 w-full h-full overflow-auto bg-secondary_bg ">
+        <div
+          ref={scrollContainerRef}
+          className="px-8 pt-4 pb-37.5 w-full h-full overflow-auto bg-secondary_bg "
+        >
           <div className="bg-gray-950/60 p-5 rounded-lg">
             <Outlet />
           </div>
+          <StickyButton scrollContainerRef={scrollContainerRef} />
         </div>
       </div>
     </div>

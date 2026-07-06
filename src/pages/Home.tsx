@@ -1,15 +1,16 @@
+import ErrorDetails from '@/components/ErrorDetails';
 import InputUpload from '@/components/InputUpload';
 import PlaceholderDetails from '@/components/PlaceholderDetails';
 import ReplayBreakdown from '@/components/ReplayBreakdown';
 import SectionLoading from '@/components/SectionLoading';
-import { fetchMobDb, fetchReplay, fetchSkillDb } from '@/services';
+import { fetchMobDb, fetchReplayApi, fetchSkillDb } from '@/services';
 import type { IMob, IReplayData, ISkill } from '@/types';
-import { removeAllFileExtensions } from '@/utils';
 import React, { useEffect } from 'react';
 
 export const Home = () => {
   const [selectedFiles, setSelectedFiles] = React.useState<File[]>([]);
   const [replayIsParsing, setReplayIsParsing] = React.useState<boolean>(false);
+  const [isError, setIsError] = React.useState<boolean>(false);
   const [parsedReplay, setParsedReplay] = React.useState<IReplayData | null>(null);
   const [skillDb, setSkillDb] = React.useState<ISkill[] | null>(null);
   const [mobDb, setMobDb] = React.useState<IMob[] | null>(null);
@@ -19,29 +20,39 @@ export const Home = () => {
     setSelectedFiles(files);
   };
 
+  const parseReplayFile = async (file: File, controller: AbortController) => {
+    setReplayIsParsing(true);
+    setIsError(false);
+
+    try {
+      const formData = new FormData();
+      formData.append('replay', file);
+      const resultReplay = await fetchReplayApi(formData, controller);
+
+      setParsedReplay(resultReplay);
+    } catch {
+      setParsedReplay(null);
+      setIsError(true);
+    } finally {
+      setReplayIsParsing(false);
+    }
+  };
+
+  const handleClick = () => {
+    const controller = new AbortController();
+
+    if (selectedFiles.length > 0) {
+      parseReplayFile(selectedFiles[0], controller);
+    }
+
+    return () => controller.abort('unmounted');
+  };
+
   useEffect(() => {
     const controller = new AbortController();
 
     if (selectedFiles.length > 0) {
-      setReplayIsParsing(true);
-
-      const apiCall = async (controller: AbortController) => {
-        try {
-          const resultReplay = await fetchReplay(
-            `/external/output/${removeAllFileExtensions(selectedFiles[0].name)}.json`,
-            controller
-          );
-
-          return resultReplay;
-        } catch {
-          return null;
-        }
-      };
-
-      // api call here - todo
-      apiCall(controller).then((resultReplay) => {
-        setParsedReplay(resultReplay);
-      });
+      parseReplayFile(selectedFiles[0], controller);
     }
 
     return () => controller.abort('unmounted');
@@ -50,7 +61,7 @@ export const Home = () => {
   useEffect(() => {
     const controller = new AbortController();
     if (skillDb === null || mobDb === null) {
-      const retrieveMobAndSkllDb = async (controller: AbortController) => {
+      const retrieveMobAndSkillDb = async (controller: AbortController) => {
         try {
           const resultSkillDb = await fetchSkillDb(controller);
           const resultMobDb = await fetchMobDb(controller);
@@ -61,7 +72,7 @@ export const Home = () => {
         }
       };
 
-      retrieveMobAndSkllDb(controller).then(({ resultSkillDb, resultMobDb }) => {
+      retrieveMobAndSkillDb(controller).then(({ resultSkillDb, resultMobDb }) => {
         setSkillDb(resultSkillDb);
         setMobDb(resultMobDb);
       });
@@ -97,7 +108,8 @@ export const Home = () => {
           fileName={selectedFiles[0].name}
         />
       )}
-      {!!!parsedReplay && !replayIsParsing && <PlaceholderDetails />}
+      {isError && !replayIsParsing && <ErrorDetails retryOnClick={handleClick} />}
+      {!!!parsedReplay && !replayIsParsing && !isError && <PlaceholderDetails />}
     </>
   );
 };

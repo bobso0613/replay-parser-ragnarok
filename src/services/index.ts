@@ -1,8 +1,19 @@
+import { PARSER_URL } from '@/constants';
 import type { IMob, ISkill } from '@/types';
 import * as yaml from 'js-yaml';
 
 export const fetchReplay = async (link: string, controller: AbortController) => {
   const result = await fetch(`${link}`, { signal: controller.signal }).then((res) => res.json());
+
+  return result;
+};
+
+export const fetchReplayApi = async (formData: FormData, controller: AbortController) => {
+  const result = await fetch(`${PARSER_URL}`, {
+    method: 'POST',
+    body: formData,
+    signal: controller.signal,
+  }).then((res) => res.json());
 
   return result;
 };

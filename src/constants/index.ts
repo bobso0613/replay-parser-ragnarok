@@ -7,6 +7,7 @@ export const ENV = {
 export const SKILL_IMAGE_URL = import.meta.env.VITE_SKILL_IMAGE_URL;
 export const JOB_IMAGE_URL = import.meta.env.VITE_JOB_IMAGE_URL;
 export const MONSTER_IMAGE_URL = import.meta.env.VITE_MONSTER_IMAGE_URL;
+export const PARSER_URL = import.meta.env.VITE_PARSER_URL;
 export const TEXT_IMAGE_VARIANTS = {
   SKILL: 'skill',
   JOB: 'job',
