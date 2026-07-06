@@ -33,9 +33,30 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
   fileName = '',
 }) => {
   const [isParsingDone, setIsParsingDone] = React.useState<boolean>(false);
+  const [isLinkCopied, setIsLinkCopied] = React.useState<boolean>(false);
   const [replayToDisplay, setReplayToDisplay] = React.useState<IParsedReplay | null>(null);
   const hasRun = React.useRef(false);
   const [mobMode, setMobMode] = React.useState<number>(0);
+  const replaySharePath = `${import.meta.env.VITE_REPLAY_URL_SHARE}`.replace(
+    'ID_HERE',
+    apiResponse?.outputId ?? ''
+  );
+  const COPY_PASTED_LINK =
+    replaySharePath.startsWith('http://') || replaySharePath.startsWith('https://')
+      ? replaySharePath
+      : `${window.location.origin}${replaySharePath.startsWith('/') ? replaySharePath : `/${replaySharePath}`}`;
+
+  const handleCopyOutputLink = async () => {
+    try {
+      await navigator.clipboard.writeText(COPY_PASTED_LINK);
+      setIsLinkCopied(true);
+      window.setTimeout(() => {
+        setIsLinkCopied(false);
+      }, 1500);
+    } catch {
+      setIsLinkCopied(false);
+    }
+  };
 
   useEffect(() => {
     if (!hasRun.current && replayToDisplay === null && apiResponse) {
@@ -58,8 +79,17 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
     <div className="flex flex-col">
       <HorizontalTabs
         extraContent={
-          <div className="">
-            Showing file: <strong>{fileName ? `${fileName}` : ''}</strong>
+          <div className="flex min-w-0 items-center gap-3">
+            <div className="truncate">
+              Showing file: <strong>{fileName ? `${fileName}` : ''}</strong>
+            </div>
+            <button
+              type="button"
+              onClick={handleCopyOutputLink}
+              className="shrink-0 rounded-md border bg-blue-400/40 border-slate-500/60 px-2.5 py-1 text-slate-200 hover:border-slate-300 hover:text-white"
+            >
+              {isLinkCopied ? 'Copied' : 'Copy link'}
+            </button>
           </div>
         }
         tabs={[

@@ -2,8 +2,8 @@ const Footer = () => {
   return (
     <footer className="w-full border-t border-gray-950/60 px-4 py-2 text-slate-300/70">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-        <div className="text-left"></div>
-        <div className="text-right">
+        <div className="text-left text-sm">Disclaimer: parsed replays are stored.</div>
+        <div className="text-right text-sm">
           Frontend by:{' '}
           <a
             href="https://discord.com/users/92073343238279168"

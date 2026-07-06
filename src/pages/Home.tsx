@@ -3,9 +3,11 @@ import InputUpload from '@/components/InputUpload';
 import PlaceholderDetails from '@/components/PlaceholderDetails';
 import ReplayBreakdown from '@/components/ReplayBreakdown';
 import SectionLoading from '@/components/SectionLoading';
-import { fetchMobDb, fetchReplayApi, fetchSkillDb } from '@/services';
+import { PARSER_URL } from '@/constants';
+import { fetchMobDb, fetchReplay, fetchReplayApi, fetchSkillDb } from '@/services';
 import type { IMob, IReplayData, ISkill } from '@/types';
 import React, { useEffect } from 'react';
+import { useParams, useSearchParams } from 'react-router-dom';
 
 export const Home = () => {
   const [selectedFiles, setSelectedFiles] = React.useState<File[]>([]);
@@ -14,6 +16,11 @@ export const Home = () => {
   const [parsedReplay, setParsedReplay] = React.useState<IReplayData | null>(null);
   const [skillDb, setSkillDb] = React.useState<ISkill[] | null>(null);
   const [mobDb, setMobDb] = React.useState<IMob[] | null>(null);
+  const [searchParams] = useSearchParams();
+  const { outputId: routeOutputId } = useParams();
+  const [replayOutputId, setReplayOutputId] = React.useState<string | null>(
+    routeOutputId ?? searchParams.get('path')
+  );
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files ?? []);
@@ -34,6 +41,33 @@ export const Home = () => {
       setParsedReplay(null);
       setIsError(true);
     } finally {
+      const canonicalReplayPath = '/replay-parser';
+      const normalizedPath = `${canonicalReplayPath}${window.location.hash}`;
+
+      if (`${window.location.pathname}${window.location.hash}` !== normalizedPath) {
+        window.history.replaceState({}, document.title, normalizedPath);
+      }
+
+      setReplayIsParsing(false);
+    }
+  };
+
+  const parseReplayByOutputId = async (outputId: string, controller: AbortController) => {
+    setReplayIsParsing(true);
+    setIsError(false);
+
+    try {
+      const resultReplay = (await fetchReplay(
+        `${PARSER_URL}/${outputId}`,
+        controller
+      )) as IReplayData;
+
+      setParsedReplay(resultReplay);
+    } catch {
+      setParsedReplay(null);
+      setIsError(true);
+    } finally {
+      setReplayOutputId(null);
       setReplayIsParsing(false);
     }
   };
@@ -51,12 +85,15 @@ export const Home = () => {
   useEffect(() => {
     const controller = new AbortController();
 
-    if (selectedFiles.length > 0) {
+    if (replayOutputId) {
+      parseReplayByOutputId(replayOutputId, controller);
+      return () => controller.abort('unmounted');
+    } else if (selectedFiles.length > 0) {
       parseReplayFile(selectedFiles[0], controller);
     }
 
     return () => controller.abort('unmounted');
-  }, [selectedFiles]);
+  }, [selectedFiles, replayOutputId]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -105,10 +142,13 @@ export const Home = () => {
           apiResponse={parsedReplay}
           skillDb={skillDb}
           mobDb={mobDb}
-          fileName={selectedFiles[0].name}
+          fileName={parsedReplay.replayFileName ?? selectedFiles[0].name}
+          outputId={parsedReplay.outputId}
         />
       )}
-      {isError && !replayIsParsing && <ErrorDetails retryOnClick={handleClick} />}
+      {isError && !!!parsedReplay && !replayIsParsing && (
+        <ErrorDetails retryOnClick={handleClick} />
+      )}
       {!!!parsedReplay && !replayIsParsing && !isError && <PlaceholderDetails />}
     </>
   );

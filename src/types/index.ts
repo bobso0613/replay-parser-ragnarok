@@ -61,6 +61,7 @@ export type ReplayBreakdownProps = {
   skillDb: ISkill[] | null;
   mobDb: IMob[] | null;
   fileName?: string;
+  outputId?: string;
 };
 
 export type TableProps = {

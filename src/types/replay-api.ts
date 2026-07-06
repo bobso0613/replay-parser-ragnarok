@@ -66,6 +66,8 @@ export interface IMonster {
 }
 
 export interface IReplayData {
+  outputId?: string;
+  replayFileName?: string;
   replayVersion: string;
   players: IPlayer[];
   monsters: IMonster[];
