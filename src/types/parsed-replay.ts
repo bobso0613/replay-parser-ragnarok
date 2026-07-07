@@ -109,8 +109,35 @@ export interface IPlayerSkillUsage {
   skillUsageCount: number;
 }
 
+export interface IDeathBreakdown {
+  playerId: string;
+  playerName: string;
+  jobId: number;
+  jobName: string;
+  deathCount: number;
+}
+
+export interface IMVPBreakdown {
+  playerId: string;
+  playerName: string;
+  jobId: number;
+  jobName: string;
+  mvpCount: number;
+}
+
+export interface IPlayerSkillUsageBreakdown {
+  playerId: string;
+  playerName: string;
+  jobId: number;
+  jobName: string;
+  skillUsageCount: number;
+}
+
 export interface IParsedReplay {
   breakdownPerMonsterUnique: IMonsterBreakdown[];
   breakdownPerPlayer: IPlayerBreakdown[];
   skillUsage: ISkillUsageBreakdown[];
+  deathBreakdown: IDeathBreakdown[];
+  mvpBreakdown: IMVPBreakdown[];
+  skillUsageBreakdown: IPlayerSkillUsageBreakdown[];
 }

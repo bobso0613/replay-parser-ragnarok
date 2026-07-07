@@ -1,12 +1,15 @@
 import { JOB_LIST } from '@/constants';
 import type {
+  IDeathBreakdown,
   IMob,
   IMonster,
   IMonsterBreakdown,
+  IMVPBreakdown,
   IParsedReplay,
   IPlayer,
   IPlayerBreakdown,
   IPlayerDamage,
+  IPlayerSkillUsageBreakdown,
   IReplayData,
   ISkill,
   ISkillDamage,
@@ -22,6 +25,9 @@ export const parseReplayOutput = (
     breakdownPerMonsterUnique: [] as IMonsterBreakdown[],
     breakdownPerPlayer: [] as IPlayerBreakdown[],
     skillUsage: [] as ISkillUsageBreakdown[],
+    deathBreakdown: [] as IDeathBreakdown[],
+    mvpBreakdown: [] as IMVPBreakdown[],
+    skillUsageBreakdown: [] as IPlayerSkillUsageBreakdown[],
   };
 
   apiResponse?.players.forEach((player: IPlayer) => {
@@ -42,6 +48,36 @@ export const parseReplayOutput = (
       },
       skillDamages: [],
     });
+
+    if (player.deathCount > 0) {
+      finalOutput.deathBreakdown.push({
+        playerId: player.AID,
+        playerName: player.name,
+        jobId: player.jobId,
+        jobName: JOB_LIST[player.jobId],
+        deathCount: player.deathCount,
+      });
+    }
+
+    if (player.MVPCount > 0) {
+      finalOutput.mvpBreakdown.push({
+        playerId: player.AID,
+        playerName: player.name,
+        jobId: player.jobId,
+        jobName: JOB_LIST[player.jobId],
+        mvpCount: player.MVPCount,
+      });
+    }
+
+    if (player.skillInfo.offensive.length > 0 || player.skillInfo.support?.length > 0) {
+      finalOutput.skillUsageBreakdown.push({
+        playerId: player.AID,
+        playerName: player.name,
+        jobId: player.jobId,
+        jobName: JOB_LIST[player.jobId],
+        skillUsageCount: player.totalSkillUsageCount,
+      });
+    }
 
     const existingPlayer = finalOutput.breakdownPerPlayer.find(
       (p: IPlayerBreakdown) => p.playerId === player.AID
@@ -298,8 +334,14 @@ export const parseReplayOutput = (
     });
   });
 
+  finalOutput.skillUsageBreakdown.sort((a, b) => b.skillUsageCount - a.skillUsageCount);
+  finalOutput.deathBreakdown.sort((a, b) => b.deathCount - a.deathCount);
+  finalOutput.mvpBreakdown.sort((a, b) => b.mvpCount - a.mvpCount);
   finalOutput.breakdownPerPlayer = finalOutput.breakdownPerPlayer.filter(
-    (player) => player.skillDamages.length > 0
+    (player) =>
+      player.skillDamages.length > 0 &&
+      player.totalDamageDealt > 0 &&
+      player.highestDamage.monsterId !== ''
   );
   finalOutput.breakdownPerPlayer.sort((a, b) => b.totalDamageDealt - a.totalDamageDealt);
   finalOutput.breakdownPerPlayer.forEach((player) => {

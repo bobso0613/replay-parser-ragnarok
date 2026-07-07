@@ -113,21 +113,19 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
             id: 'summary',
             label: 'Summary',
             content: (
-              <TabContentWithSticky>
+              <div className="flex flex-col gap-4">
                 <h2 className="text-slate-200">Summary</h2>
                 <div className="flex flex-col md:flex-row gap-4">
-                  <div className="flex-1">
+                  <div className="basis-full md:basis-1/2">
+                    <h3 className="text-slate-200 text-xl">Top Damage</h3>
                     <Table
-                      headers={['Player Name', 'Total Damage', 'MVP Damage']}
-                      enableVirtualization
-                      virtualColumnWeights={[1, 1, 1]}
-                      virtualRowHeight={220}
-                      virtualTableHeight={virtualTableHeight}
-                      sortableColumns={[0, 1, 2]}
+                      headers={['Player Name', 'Total Damage', 'MVP Damage', 'Highest Burst']}
+                      sortableColumns={[0, 1, 2, 3]}
                       sortValues={replayToDisplay.breakdownPerPlayer.map((player) => [
                         player.playerName,
                         player.totalDamageDealt,
                         player.totalDamageDealthMvps,
+                        player.highestDamage.damage,
                       ])}
                       rows={replayToDisplay.breakdownPerPlayer.map((player) => [
                         <TextImage
@@ -140,13 +138,80 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                         player.highestDamage.damage
                           ? commaNumber(player.totalDamageDealthMvps)
                           : 'N/A',
+                        player.highestDamage.damage
+                          ? commaNumber(player.highestDamage.damage)
+                          : 'N/A',
                       ])}
                       className="w-full"
                     />
                   </div>
-                  <div className="flex-1"></div>
+                  <div className="basis-full md:basis-1/2">
+                    <h3 className="text-slate-200 text-xl">Top MVPs</h3>
+                    <Table
+                      headers={['Player Name', 'Total MVPs']}
+                      sortableColumns={[0, 1]}
+                      sortValues={replayToDisplay.mvpBreakdown.map((player) => [
+                        player.playerName,
+                        player.mvpCount,
+                      ])}
+                      rows={replayToDisplay.mvpBreakdown.map((player) => [
+                        <TextImage
+                          variant={TEXT_IMAGE_VARIANTS.JOB}
+                          keyId={player.jobId}
+                          keyInfo={player.playerName}
+                          title={player.jobName}
+                        />,
+                        commaNumber(player.mvpCount),
+                      ])}
+                      className="w-full"
+                    />
+                  </div>
                 </div>
-              </TabContentWithSticky>
+                <div className="flex flex-col md:flex-row gap-4 mt-4">
+                  <div className="basis-full md:basis-1/2">
+                    <h3 className="text-slate-200 text-xl">Top Deaths</h3>
+                    <Table
+                      headers={['Player Name', 'Total Deaths']}
+                      sortableColumns={[0, 1]}
+                      sortValues={replayToDisplay.deathBreakdown.map((player) => [
+                        player.playerName,
+                        player.deathCount,
+                      ])}
+                      rows={replayToDisplay.deathBreakdown.map((player) => [
+                        <TextImage
+                          variant={TEXT_IMAGE_VARIANTS.JOB}
+                          keyId={player.jobId}
+                          keyInfo={player.playerName}
+                          title={player.jobName}
+                        />,
+                        commaNumber(player.deathCount),
+                      ])}
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="basis-full md:basis-1/2">
+                    <h3 className="text-slate-200 text-xl">Top Skill Usage</h3>
+                    <Table
+                      headers={['Player Name', 'Total Skill Usage']}
+                      sortableColumns={[0, 1]}
+                      sortValues={replayToDisplay.skillUsageBreakdown.map((player) => [
+                        player.playerName,
+                        player.skillUsageCount,
+                      ])}
+                      rows={replayToDisplay.skillUsageBreakdown.map((player) => [
+                        <TextImage
+                          variant={TEXT_IMAGE_VARIANTS.JOB}
+                          keyId={player.jobId}
+                          keyInfo={player.playerName}
+                          title={player.jobName}
+                        />,
+                        commaNumber(player.skillUsageCount),
+                      ])}
+                      className="w-full"
+                    />
+                  </div>
+                </div>
+              </div>
             ),
           },
           {
