@@ -128,6 +128,7 @@ const Table: React.FC<TableProps> = ({
   headers = [],
   rowClassNames = [],
   rows,
+  columnWidths = [],
   sortValues,
   className = '',
   sortableColumns = [],
@@ -149,10 +150,25 @@ const Table: React.FC<TableProps> = ({
   const headerTableRef = useRef<HTMLTableElement>(null);
   const listRef = useListRef(null);
   const maxCols = Math.max(headers.length, ...rows.map((row) => row.length), 0);
+  const hasExplicitColumnWidths = columnWidths.length > 0;
   const dynamicRowHeight = useDynamicRowHeight({
     defaultRowHeight: virtualRowHeight,
     key: `${maxCols}-${rows.length}-${sortConfig?.column ?? 'none'}-${sortConfig?.direction ?? 'none'}`,
   });
+
+  const getExplicitColumnWidthStyle = (columnIndex: number): React.CSSProperties | undefined => {
+    const columnWidth = columnWidths[columnIndex];
+
+    if (columnWidth === null || columnWidth === undefined) {
+      return undefined;
+    }
+
+    if (typeof columnWidth === 'number') {
+      return { width: `${columnWidth}px` };
+    }
+
+    return { width: columnWidth };
+  };
 
   const handleHeaderClick = (columnIndex: number) => {
     if (!sortableColumns.includes(columnIndex)) return;
@@ -343,7 +359,7 @@ const Table: React.FC<TableProps> = ({
     >
       <table
         ref={headerTableRef}
-        className={`${shouldVirtualize ? 'table-fixed border-collapse' : ''} divide-y divide-slate-200/50`}
+        className={`${shouldVirtualize || hasExplicitColumnWidths ? 'table-fixed' : ''} ${shouldVirtualize ? 'border-collapse' : ''} divide-y divide-slate-200/50`}
         style={
           shouldVirtualize
             ? listViewportWidth > 0
@@ -366,24 +382,35 @@ const Table: React.FC<TableProps> = ({
             ))}
           </colgroup>
         )}
+        {!shouldVirtualize && hasExplicitColumnWidths && (
+          <colgroup>
+            {Array.from({ length: maxCols }).map((_, colIndex) => (
+              <col
+                key={`head-explicit-col-${colIndex}`}
+                style={getExplicitColumnWidthStyle(colIndex)}
+              />
+            ))}
+          </colgroup>
+        )}
         {headers.length > 0 && (
           <thead className="">
             <tr>
               {headers.map((header, index) => {
                 const isSortable = sortableColumns.includes(index);
                 const isSorted = sortConfig?.column === index;
+                const hasComplexHeader = React.isValidElement(header);
 
                 return (
                   <th
                     key={index}
                     onClick={() => handleHeaderClick(index)}
-                    className={`whitespace-nowrap px-4 py-3 text-left font-bold uppercase tracking-wide text-slate-200 ${
-                      isSortable ? 'cursor-pointer hover:bg-slate-50/10' : ''
-                    }`}
+                    className={`px-4 py-3 text-left font-bold uppercase tracking-wide text-slate-200 ${
+                      hasComplexHeader ? '' : 'whitespace-nowrap '
+                    }${isSortable ? 'cursor-pointer hover:bg-slate-50/10' : ''}`}
                   >
-                    <div className="flex items-center gap-2">
-                      {header}
-                      {isSortable && (
+                    {isSortable ? (
+                      <div className="flex items-center gap-2">
+                        {header}
                         <span className="text-2xl">
                           {isSorted ? (
                             sortConfig.direction === 'asc' ? (
@@ -395,8 +422,10 @@ const Table: React.FC<TableProps> = ({
                             <span className="opacity-30">⇅</span>
                           )}
                         </span>
-                      )}
-                    </div>
+                      </div>
+                    ) : (
+                      header
+                    )}
                   </th>
                 );
               })}

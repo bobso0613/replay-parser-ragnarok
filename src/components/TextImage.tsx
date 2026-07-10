@@ -19,7 +19,11 @@ const TextImage: React.FC<TextImageProps> = ({
     <div className="flex gap-1.5 items-center" key={keyId}>
       {textBefore ?? null}
       <div className="w-6.25 h-6.25">
-        <Tooltip content={title ?? keyInfo} placement={TOOLTIP_POSITION.BOTTOM}>
+        <Tooltip
+          content={title ?? keyInfo}
+          placement={TOOLTIP_POSITION.BOTTOM}
+          className="w-6.25 h-6.25"
+        >
           <img
             src={`${skillUrl[variant || 'skill']}`}
             alt={keyInfo}

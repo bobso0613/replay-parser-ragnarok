@@ -15,6 +15,37 @@ type TabContentWithStickyProps = {
   children: React.ReactNode;
 };
 
+type NestedHeaderProps = {
+  headers: React.ReactNode[];
+  columnWidths: Array<number | string>;
+};
+
+const getColumnWidthStyle = (columnWidth: number | string): React.CSSProperties => {
+  if (typeof columnWidth === 'number') {
+    return { width: `${columnWidth}px` };
+  }
+
+  return { width: columnWidth };
+};
+
+const NestedHeader: React.FC<NestedHeaderProps> = ({ headers, columnWidths }) => {
+  return (
+    <div className=" border-slate-200/50 pt-3">
+      <div className="flex text-left font-bold uppercase tracking-wide text-slate-200">
+        {headers.map((header, index) => (
+          <div
+            key={`${String(header)}-${index}`}
+            className="shrink-0 px-4 last:pr-0"
+            style={getColumnWidthStyle(columnWidths[index] ?? 'auto')}
+          >
+            {header}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const TabContentWithSticky: React.FC<TabContentWithStickyProps> = ({ children }) => {
   const contentRef = React.useRef<HTMLDivElement>(null);
 
@@ -226,10 +257,16 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                     'Total Damage',
                     'MVP Damage',
                     'Highest Damage',
-                    'Skill Breakdown',
+                    <div key="skill-breakdown-header">
+                      <div className="text-center mb-1">Skill Breakdown</div>
+                      <NestedHeader
+                        headers={['Skill Name', 'Total Damage', 'No. of Hits', 'Highest Damage']}
+                        columnWidths={['30%', '25%', '15%', '30%']}
+                      />
+                    </div>,
                   ]}
                   enableVirtualization
-                  virtualColumnWeights={[1, 1, 1, 1, 4]}
+                  virtualColumnWeights={[1, 1, 1, 1, 3]}
                   virtualRowHeight={220}
                   virtualTableHeight={virtualTableHeight}
                   sortableColumns={[0, 1, 2]}
@@ -268,7 +305,8 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                     ),
                     player.skillDamages.length > 0 ? (
                       <Table
-                        headers={['Skill Name', 'Total Damage', 'No. of Hits', 'Highest Damage']}
+                        headers={[]}
+                        columnWidths={['30%', '25%', '15%', '30%']}
                         rows={player.skillDamages.map((skill) => [
                           <TextImage
                             keyId={skill.skillId}
@@ -314,8 +352,20 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                     '',
                     'Monster Name',
                     'Highest Burst Damage',
-                    'Breakdown per player',
-                    'Breakdown per skill',
+                    <div key="breakdown-player-header">
+                      <div className="text-center mb-1">Breakdown per player</div>
+                      <NestedHeader
+                        headers={['Player Name', 'Total Damage', 'No. of Hits', 'Highest Damage']}
+                        columnWidths={['30%', '25%', '15%', '35%']}
+                      />
+                    </div>,
+                    <div key="breakdown-skill-header">
+                      <div className="text-center mb-1">Breakdown per skill</div>
+                      <NestedHeader
+                        headers={['Skill Name', 'Total Damage', 'No. of Hits']}
+                        columnWidths={['50%', '30%', '20%']}
+                      />
+                    </div>,
                   ]}
                   enableVirtualization
                   virtualColumnWeights={[1, 2, 2, 4, 3]}
@@ -387,7 +437,8 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                       ),
                       monster.playerDamages.length > 0 ? (
                         <Table
-                          headers={['Player Name', 'Total Damage', 'No. of Hits', 'Highest Damage']}
+                          headers={[]}
+                          columnWidths={['30%', '25%', '15%', '35%']}
                           rows={monster.playerDamages.map((player) => [
                             <TextImage
                               variant={TEXT_IMAGE_VARIANTS.JOB}
@@ -407,14 +458,15 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                               />
                             </div>,
                           ])}
-                          className="w-full"
+                          className="my-0"
                         />
                       ) : (
                         'N/A'
                       ),
                       monster.skillDamages.length > 0 ? (
                         <Table
-                          headers={['Skill Name', 'Total Damage', 'No. of Hits']}
+                          headers={[]}
+                          columnWidths={['50%', '30%', '20%']}
                           rows={monster.skillDamages.map((skill) => [
                             <TextImage
                               keyId={skill.skillId}
@@ -424,7 +476,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                             commaNumber(skill.damage),
                             commaNumber(skill.noOfHitsUnique),
                           ])}
-                          className="w-full"
+                          className="my-0"
                         />
                       ) : (
                         'N/A'
@@ -446,10 +498,16 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                     'Skill Name',
                     'Total Usage Count',
                     'Top Spammer',
-                    'Breakdown per Player',
+                    <div key="support-breakdown-header">
+                      <div className="text-center mb-1">Breakdown per Player</div>
+                      <NestedHeader
+                        headers={['Player', 'Usage Count']}
+                        columnWidths={['70%', '30%']}
+                      />
+                    </div>,
                   ]}
                   enableVirtualization
-                  virtualColumnWeights={[1, 1, 1, 4]}
+                  virtualColumnWeights={[1, 1, 1, 1]}
                   virtualRowHeight={180}
                   virtualTableHeight={virtualTableHeight}
                   sortableColumns={[0, 1]}
@@ -479,7 +537,8 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
 
                     skill.playerSkills.length > 0 ? (
                       <Table
-                        headers={['Player Name', 'Usage Count']}
+                        headers={[]}
+                        columnWidths={['70%', '30%']}
                         rows={skill.playerSkills.map((playerSkill) => [
                           <TextImage
                             keyId={playerSkill.jobId}

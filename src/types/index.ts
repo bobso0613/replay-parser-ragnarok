@@ -69,6 +69,7 @@ export type TableProps = {
   headers?: string[] | Array<React.ReactNode>;
   rowClassNames?: string[];
   rows: Array<Array<React.ReactNode>>;
+  columnWidths?: Array<number | string>;
   sortValues?: Array<Array<string | number | null>>;
   className?: string;
   sortableColumns?: number[];
