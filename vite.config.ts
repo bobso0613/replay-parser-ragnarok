@@ -20,5 +20,16 @@ export default defineConfig(({ mode }) => {
         '@': path.resolve(__dirname, './src'),
       },
     },
+    test: {
+      globals: true,
+      environment: 'jsdom',
+      setupFiles: ['./src/vitest.setup.ts'],
+      css: true,
+      coverage: {
+        provider: 'v8',
+        reporter: ['text', 'html', 'json'],
+        exclude: ['node_modules/', 'src/**/*.test.ts', 'src/**/*.test.tsx'],
+      },
+    },
   };
 });

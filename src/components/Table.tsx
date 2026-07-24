@@ -7,6 +7,16 @@ import {
   type DynamicRowHeight,
   type RowComponentProps,
 } from 'react-window';
+import {
+  extractTextByClassName,
+  compareValues,
+  getNextSortDirection,
+  computeColumnWidths,
+  calculateViewportHeight,
+  getElementHeight,
+  getWrapperChromeHeight,
+  getWrapperMarginBottom,
+} from '@/utils/table-utils';
 
 const DEFAULT_VIRTUAL_ROW_HEIGHT = 56;
 const DEFAULT_VIRTUAL_TABLE_HEIGHT = 520;
@@ -96,34 +106,6 @@ const VirtualTableRow = ({
   );
 };
 
-const extractAllText = (node: React.ReactNode): string => {
-  if (typeof node === 'string' || typeof node === 'number') return String(node);
-  if (!React.isValidElement(node)) return '';
-  const props = node.props as { children?: React.ReactNode };
-  if (Array.isArray(props.children)) return props.children.map(extractAllText).join('');
-  return extractAllText(props.children);
-};
-
-const extractTextByClassName = (node: React.ReactNode, targetClass: string): string => {
-  if (!React.isValidElement(node)) return '';
-  const props = node.props as { className?: string; children?: React.ReactNode };
-
-  if (props.className?.split(' ').includes(targetClass)) {
-    return extractAllText(props.children);
-  }
-
-  if (Array.isArray(props.children)) {
-    for (const child of props.children) {
-      const result = extractTextByClassName(child, targetClass);
-      if (result) return result;
-    }
-  } else if (props.children) {
-    return extractTextByClassName(props.children, targetClass);
-  }
-
-  return '';
-};
-
 const Table: React.FC<TableProps> = ({
   headers = [],
   rowClassNames = [],
@@ -173,10 +155,11 @@ const Table: React.FC<TableProps> = ({
   const handleHeaderClick = (columnIndex: number) => {
     if (!sortableColumns.includes(columnIndex)) return;
 
-    let newDirection: 'asc' | 'desc' = 'asc';
-    if (sortConfig?.column === columnIndex && sortConfig.direction === 'asc') {
-      newDirection = 'desc';
-    }
+    const newDirection = getNextSortDirection(
+      sortConfig?.column ?? null,
+      columnIndex,
+      sortConfig?.direction ?? null
+    );
 
     setSortConfig({ column: columnIndex, direction: newDirection });
     onSort?.(columnIndex, newDirection);
@@ -191,11 +174,10 @@ const Table: React.FC<TableProps> = ({
       const aVal = a.row[column];
       const bVal = b.row[column];
 
-      // Use custom extractor if provided
+      const extractor = sortExtractors[column];
+
       let aExtracted: string | number;
       let bExtracted: string | number;
-
-      const extractor = sortExtractors[column];
 
       if (sortValues) {
         aExtracted = sortValues[a.i]?.[column] ?? '';
@@ -211,20 +193,7 @@ const Table: React.FC<TableProps> = ({
         bExtracted = typeof bVal === 'string' ? bVal : String(bVal || '');
       }
 
-      const aText = String(aExtracted);
-      const bText = String(bExtracted);
-
-      // Try numeric comparison first
-      const aNum = parseFloat(aText.replace(/,/g, ''));
-      const bNum = parseFloat(bText.replace(/,/g, ''));
-
-      let comparison = 0;
-      if (!isNaN(aNum) && !isNaN(bNum)) {
-        comparison = aNum - bNum;
-      } else {
-        comparison = aText.localeCompare(bText);
-      }
-
+      const comparison = compareValues(aExtracted, bExtracted);
       return direction === 'asc' ? comparison : -comparison;
     });
 
@@ -244,21 +213,7 @@ const Table: React.FC<TableProps> = ({
       return [] as number[];
     }
 
-    const safeWeights = Array.from({ length: maxCols }).map((_, index) => {
-      const weight = Number(virtualColumnWeights?.[index] ?? 1);
-      return Number.isFinite(weight) && weight > 0 ? weight : 1;
-    });
-    const totalWeight = safeWeights.reduce((acc, weight) => acc + weight, 0);
-    const rawWidths = safeWeights.map((weight) => (listViewportWidth * weight) / totalWeight);
-    const flooredWidths = rawWidths.map((width) => Math.floor(width));
-    const remainder = Math.max(
-      0,
-      listViewportWidth - flooredWidths.reduce((acc, width) => acc + width, 0)
-    );
-
-    return flooredWidths.map((width, index) =>
-      index === flooredWidths.length - 1 ? width + remainder : width
-    );
+    return computeColumnWidths(maxCols, listViewportWidth, virtualColumnWeights);
   }, [shouldVirtualize, maxCols, listViewportWidth, virtualColumnWeights]);
 
   useEffect(() => {
@@ -266,38 +221,27 @@ const Table: React.FC<TableProps> = ({
       return () => {};
     }
 
-    const parseCssPx = (value: string): number => {
-      const parsed = Number.parseFloat(value);
-      return Number.isFinite(parsed) ? parsed : 0;
-    };
-
     const updateViewportHeight = () => {
       if (!wrapperRef.current) {
         return;
       }
 
       const bounds = wrapperRef.current.getBoundingClientRect();
-      const headerHeight = Math.ceil(headerTableRef.current?.getBoundingClientRect().height ?? 0);
-      const footerHeight = Math.ceil(
-        document.querySelector('footer')?.getBoundingClientRect().height ?? 0
-      );
-      const wrapperStyle = window.getComputedStyle(wrapperRef.current);
-      const wrapperChromeHeight =
-        parseCssPx(wrapperStyle.borderTopWidth) + parseCssPx(wrapperStyle.borderBottomWidth);
-      const wrapperMarginBottom = parseCssPx(wrapperStyle.marginBottom);
-      const availableHeight = Math.floor(
-        window.innerHeight -
-          bounds.top -
-          VIEWPORT_BOTTOM_GAP -
-          VIEWPORT_SAFETY_BUFFER -
-          headerHeight -
-          footerHeight -
-          wrapperChromeHeight -
-          wrapperMarginBottom
-      );
-      const nextHeight = Math.max(
+      const headerHeight = getElementHeight(headerTableRef.current);
+      const footerHeight = getElementHeight(document.querySelector('footer'));
+      const wrapperChromeHeight = getWrapperChromeHeight(wrapperRef.current);
+      const wrapperMarginBottom = getWrapperMarginBottom(wrapperRef.current);
+
+      const nextHeight = calculateViewportHeight(
+        bounds,
+        headerHeight,
+        footerHeight,
+        wrapperChromeHeight,
+        wrapperMarginBottom,
+        VIEWPORT_BOTTOM_GAP,
+        VIEWPORT_SAFETY_BUFFER,
         MIN_VIRTUAL_TABLE_HEIGHT,
-        Math.min(virtualTableHeight, availableHeight)
+        virtualTableHeight
       );
 
       setViewportHeight(nextHeight);
