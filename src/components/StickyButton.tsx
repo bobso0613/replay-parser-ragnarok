@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { resolveScrollableTarget, getComputedScrollTop } from '@/utils/scroll-utils';
 
 type StickyButtonProps = {
   scrollContainerRef: React.RefObject<HTMLElement | null>;
@@ -7,54 +8,11 @@ type StickyButtonProps = {
 export const StickyButton = ({ scrollContainerRef }: StickyButtonProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const isScrollableElement = (element: HTMLElement) => {
-    const styles = window.getComputedStyle(element);
-    const isScrollableY = styles.overflowY === 'auto' || styles.overflowY === 'scroll';
-    const canActuallyScroll = element.scrollHeight > element.clientHeight + 1;
-
-    return isScrollableY && canActuallyScroll;
-  };
-
-  const resolveScrollableTarget = (): HTMLElement | null => {
-    const root = scrollContainerRef.current;
-
-    if (root) {
-      const descendants = Array.from(root.querySelectorAll<HTMLElement>('*')).filter((element) =>
-        isScrollableElement(element)
-      );
-
-      if (descendants.length > 0) {
-        return descendants.sort(
-          (a, b) => b.scrollHeight - b.clientHeight - (a.scrollHeight - a.clientHeight)
-        )[0];
-      }
-
-      if (isScrollableElement(root)) {
-        return root;
-      }
-    }
-
-    let current = root?.parentElement ?? null;
-
-    while (current) {
-      if (isScrollableElement(current)) {
-        return current;
-      }
-
-      current = current.parentElement;
-    }
-
-    return document.scrollingElement as HTMLElement | null;
-  };
-
   useEffect(() => {
     const handleScroll = () => {
-      const target = resolveScrollableTarget();
-      const elementScrollTop = target?.scrollTop ?? 0;
-      const pageScrollTop =
-        window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
-      setIsVisible(Math.max(elementScrollTop, pageScrollTop) > 180);
+      const target = resolveScrollableTarget(scrollContainerRef);
+      const { isVisible: visible } = getComputedScrollTop(target);
+      setIsVisible(visible);
     };
 
     handleScroll();
@@ -83,7 +41,7 @@ export const StickyButton = ({ scrollContainerRef }: StickyButtonProps) => {
   }, [scrollContainerRef]);
 
   const handleScrollTop = () => {
-    const target = resolveScrollableTarget();
+    const target = resolveScrollableTarget(scrollContainerRef);
 
     if (target) {
       target.scrollTo({ top: 0, behavior: 'smooth' });
