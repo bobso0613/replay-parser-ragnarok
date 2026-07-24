@@ -52,6 +52,68 @@ npm run preview
 npm run lint
 ```
 
+## 🧪 Testing
+
+This project uses **Vitest** for unit testing and **@testing-library/react** for component testing.
+
+### Running Tests
+
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm test -- --watch
+
+# Run tests once (CI mode)
+npm test -- --run
+
+# Run tests with coverage report
+npm run test:coverage
+
+# Run tests with coverage (CI mode)
+npm run test:coverage -- --run
+```
+
+### Test Structure
+
+- **Component Tests**: Located alongside components with `.test.tsx` suffix
+  - Tests for rendering, props, user interactions, and state changes
+  - Uses `@testing-library/react` with jsdom environment
+  - ~36 test files covering all major components
+
+- **Utility Tests**: Located alongside utilities with `.test.ts` suffix
+  - Pure function tests extracted from components
+  - Higher coverage due to testable logic (sorting, layout calculations, etc.)
+
+### Coverage
+
+Current test coverage:
+
+- **Lines**: 84.82% (626/738)
+- **Statements**: 84.32%
+- **Branches**: 75.5%
+- **Functions**: 81.27%
+
+The test suite includes 794 passing tests focusing on:
+
+- Component rendering and lifecycle
+- User interactions (clicks, form submissions, drag-drop detection)
+- Props validation and edge cases
+- Pure utility functions (text extraction, sorting, column width calculations)
+- Event listener attachment and cleanup
+- Conditional rendering logic
+
+### Testing Approach
+
+This project uses **Approach 2: Component Restructuring**, where complex logic is extracted into pure, testable utility functions:
+
+1. **Scroll Utilities** (`src/utils/scroll-utils.ts`): Pure functions for scroll detection and target resolution
+2. **Table Utilities** (`src/utils/table-utils.ts`): Pure functions for sorting, text extraction, and layout calculations
+3. **Component Logic**: Components focus on rendering and side effects (DOM updates, event listeners)
+
+This separation enables high-coverage testing while respecting jsdom limitations for complex DOM operations.
+
 ## 📁 Project Structure
 
 - 📦 `src/` - main application source code
