@@ -52,6 +52,22 @@ npm run preview
 npm run lint
 ```
 
+## 📚 API Documentation
+
+JSDoc-style HTML documentation is generated from TypeScript source files using [TypeDoc](https://typedoc.org/).
+
+All exported functions, components, interfaces, and types carry multi-line JSDoc comments with `@param`, `@returns`, `@throws`, and `@property` tags where applicable.
+
+### Generating the docs
+
+```bash
+npm run docs
+```
+
+The output is written to the `docs/` folder. Open `docs/index.html` in any browser to browse the generated site.
+
+Configuration lives in [`jsdoc.config.json`](./jsdoc.config.json). Test files are excluded automatically.
+
 ## 🧪 Testing
 
 This project uses **Vitest** for unit testing and **@testing-library/react** for component testing.
