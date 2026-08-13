@@ -3,6 +3,16 @@ import type { TextImageProps } from '@/types';
 import React from 'react';
 import Tooltip from './Tooltip';
 
+/**
+ * Renders a small icon image alongside a text label, with a {@link Tooltip}
+ * on hover.
+ *
+ * The image URL is built from the `SKILL_IMAGE_URL` or `JOB_IMAGE_URL`
+ * environment constants by replacing the `PLACEHOLDER_TEXT` token with
+ * `keyId`. The image is lazy-loaded to avoid blocking above-the-fold content.
+ *
+ * @param props - {@link TextImageProps}
+ */
 const TextImage: React.FC<TextImageProps> = ({
   keyId,
   variant = TEXT_IMAGE_VARIANTS.SKILL,

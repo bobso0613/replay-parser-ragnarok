@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+import jsdoc from 'eslint-plugin-jsdoc';
 import tseslint from 'typescript-eslint';
 
 import react from 'eslint-plugin-react';
@@ -19,8 +20,18 @@ export default tseslint.config(
   },
 
   js.configs.recommended,
+  jsdoc.configs['flat/recommended-typescript'],
 
   ...tseslint.configs.recommended,
+
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+
+    rules: {
+      'jsdoc/require-jsdoc': 'off',
+      'jsdoc/require-description': 'warn',
+    },
+  },
 
   {
     files: ['**/*.{ts,tsx}'],

@@ -1,3 +1,4 @@
+/** A numeric value that can vary per skill level. */
 export interface ILevelledValue {
   Level: number;
   Amount?: number;
@@ -7,17 +8,20 @@ export interface ILevelledValue {
   Count?: number;
 }
 
+/** Flags that modify how a skill's damage is applied. */
 export interface IDamageFlags {
   NoDamage?: boolean;
   Splash?: boolean;
   SplashSplit?: boolean;
 }
 
+/** Miscellaneous behaviour flags for a skill. */
 export interface ISkillFlags {
   TargetTrap?: boolean;
   IsAutoShadowSpell?: boolean;
 }
 
+/** Flags controlling which skills can copy this skill. */
 export interface ICopyFlags {
   Skill?: {
     Plagiarism?: boolean;
@@ -26,6 +30,7 @@ export interface ICopyFlags {
   RemoveRequirement?: string[];
 }
 
+/** Weapon types that satisfy the equipped-weapon requirement for a skill. */
 export interface IWeaponRequirements {
   Fist?: boolean;
   Dagger?: boolean;
@@ -51,12 +56,14 @@ export interface IWeaponRequirements {
   Huuma?: boolean;
 }
 
+/** Item cost entry for a skill requirement. */
 export interface IItemCost {
   Item: string;
   Amount: number;
   Level?: number;
 }
 
+/** All resource and equipment requirements needed to cast a skill. */
 export interface ISkillRequirements {
   HpCost?: number | ILevelledValue[];
   SpCost?: number | ILevelledValue[];
@@ -76,6 +83,7 @@ export interface ISkillRequirements {
   Equipment?: string;
 }
 
+/** Ground-unit placement configuration for a skill. */
 export interface ISkillUnit {
   Id: number;
   AlternateId?: number;
@@ -86,6 +94,7 @@ export interface ISkillUnit {
   Flag?: string;
 }
 
+/** Full skill definition as read from the skill database YAML. */
 export interface ISkill {
   Id: number;
   Name: string;
@@ -124,11 +133,13 @@ export interface ISkill {
   Status?: string;
 }
 
+/** Header metadata for the skill database file. */
 export interface ISkillDBHeader {
   Type: string;
   Version: number;
 }
 
+/** Root structure of the parsed skill database YAML. */
 export interface ISkillDB {
   Header: ISkillDBHeader;
   Body: ISkill[];

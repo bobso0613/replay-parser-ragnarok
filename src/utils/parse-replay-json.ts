@@ -16,6 +16,27 @@ import type {
   ISkillUsageBreakdown,
 } from '@/types';
 
+/**
+ * Transforms raw replay API data into structured breakdown sections ready
+ * for display in the `ReplayBreakdown` component.
+ *
+ * The function iterates over every player and every monster encounter in the
+ * raw API response and builds six parallel breakdown arrays:
+ *
+ * - **`breakdownPerMonsterUnique`** — merges all encounters of the same monster
+ *   type into one entry with combined damage and participant info.
+ * - **`breakdownPerPlayer`** — accumulates each player's total damage, highest
+ *   hit, and per-skill damage statistics.
+ * - **`skillUsage`** — aggregates support-skill cast counts across all players.
+ * - **`deathBreakdown`** — lists players who died at least once.
+ * - **`mvpBreakdown`** — lists players who earned at least one MVP kill.
+ * - **`skillUsageBreakdown`** — total skill-cast counts per player.
+ *
+ * @param apiResponse - Raw replay data from the parser API, or `null` if unavailable.
+ * @param skillDb - Skill database used to resolve skill descriptions; pass `null` to skip enrichment.
+ * @param mobDb - Mob database used to resolve monster names and MVP status; pass `null` to skip enrichment.
+ * @returns A fully populated `IParsedReplay` object. Returns an empty structure when `apiResponse` is `null`.
+ */
 export const parseReplayOutput = (
   apiResponse: IReplayData | null,
   skillDb: ISkill[] | null,

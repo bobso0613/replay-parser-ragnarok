@@ -20,6 +20,7 @@ type NestedHeaderProps = {
   columnWidths: Array<number | string>;
 };
 
+/** Converts a column width value to an inline `width` style object. */
 const getColumnWidthStyle = (columnWidth: number | string): React.CSSProperties => {
   if (typeof columnWidth === 'number') {
     return { width: `${columnWidth}px` };
@@ -28,6 +29,12 @@ const getColumnWidthStyle = (columnWidth: number | string): React.CSSProperties 
   return { width: columnWidth };
 };
 
+/**
+ * Renders a row of column header labels with explicit widths for nested table sections.
+ *
+ * Used inside breakdown tabs to display a sticky sub-header that aligns with
+ * the virtualised table columns below it.
+ */
 const NestedHeader: React.FC<NestedHeaderProps> = ({ headers, columnWidths }) => {
   return (
     <div className=" border-slate-200/50 pt-3">
@@ -46,6 +53,13 @@ const NestedHeader: React.FC<NestedHeaderProps> = ({ headers, columnWidths }) =>
   );
 };
 
+/**
+ * Wraps tab panel content in a scroll container and mounts a
+ * {@link StickyButton} that floats to the bottom-right corner.
+ *
+ * The ref is forwarded to the inner `<div>` so that `StickyButton` can
+ * resolve the correct scrollable target.
+ */
 const TabContentWithSticky: React.FC<TabContentWithStickyProps> = ({ children }) => {
   const contentRef = React.useRef<HTMLDivElement>(null);
 
@@ -57,6 +71,23 @@ const TabContentWithSticky: React.FC<TabContentWithStickyProps> = ({ children })
   );
 };
 
+/**
+ * Main breakdown view for a parsed replay.
+ *
+ * Renders six {@link HorizontalTabs} panels:
+ *
+ * 1. **Per Monster** — damage, participants, and skill breakdown per unique monster type.
+ * 2. **Per Player** — total damage dealt, MVP damage share, highest hit, and skill breakdown.
+ * 3. **Skill Usage** — support-skill cast counts aggregated across all players.
+ * 4. **Deaths** — players who died at least once, sorted by death count.
+ * 5. **MVP** — players who earned MVP kills, sorted by kill count.
+ * 6. **Skill Breakdown** — total skill casts per player across all skill types.
+ *
+ * Data transformation from raw API output is performed by {@link parseReplayOutput}.
+ * Skill names and monster names are enriched from the `skillDb` and `mobDb` props.
+ *
+ * @param props - {@link ReplayBreakdownProps}
+ */
 const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
   apiResponse = null,
   skillDb = null,

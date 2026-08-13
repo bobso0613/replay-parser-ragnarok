@@ -2,6 +2,15 @@ import type { SectionLoadingProps } from '@/types';
 import React from 'react';
 import Spinner from './Spinner';
 
+/**
+ * Inline section-level loading indicator used within content areas.
+ *
+ * Unlike {@link PageLoading}, this component is not fullscreen; it fills
+ * its container with a minimum height of 60 and renders a {@link Spinner}
+ * alongside a pulsing label. It is memoised with `React.memo`.
+ *
+ * @param props - {@link SectionLoadingProps}
+ */
 const SectionLoading: React.FC<SectionLoadingProps> = ({
   size = 40,
   className = '',

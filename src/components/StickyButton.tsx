@@ -5,6 +5,20 @@ type StickyButtonProps = {
   scrollContainerRef: React.RefObject<HTMLElement | null>;
 };
 
+/**
+ * Floating scroll-to-top button that becomes visible after the user scrolls
+ * past the scroll threshold (~180 px).
+ *
+ * Attaches listeners to both `window` and the resolved scrollable target
+ * (via {@link resolveScrollableTarget}) so it works regardless of whether the
+ * page itself or a nested overflow container is scrolling. A `MutationObserver`
+ * recalculates visibility when DOM children are added or removed.
+ *
+ * Visibility is controlled via opacity and `pointer-events` so the button
+ * fades in/out without layout shifts.
+ *
+ * @param scrollContainerRef - Ref to the scrollable container element.
+ */
 export const StickyButton = ({ scrollContainerRef }: StickyButtonProps) => {
   const [isVisible, setIsVisible] = useState(false);
 

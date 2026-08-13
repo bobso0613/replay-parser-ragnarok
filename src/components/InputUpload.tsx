@@ -4,6 +4,20 @@ import React from 'react';
 import Tooltip from './Tooltip';
 import { TOOLTIP_POSITION } from '@/constants';
 
+/**
+ * Styled file input with drag-and-drop support and a selected-file preview.
+ *
+ * Exposes two callbacks: `onChange` mirrors the native `<input>` event and
+ * `onFilesSelected` receives a resolved `File[]` array from both dialog
+ * selection and drag-and-drop. Dropped files are filtered by the `accept`
+ * extension list; if no filter is set all file types are accepted. When
+ * `multiple` is `false`, only the first matching file is kept.
+ *
+ * Memoised with `React.memo` to avoid re-renders when parent state unrelated
+ * to this component changes.
+ *
+ * @param props - {@link InputUploadProps}
+ */
 const InputUpload: React.FC<InputUploadProps> = ({
   id = 'file-upload',
   accept,

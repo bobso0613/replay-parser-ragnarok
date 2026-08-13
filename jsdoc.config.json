@@ -1,0 +1,11 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["src"],
+  "entryPointStrategy": "expand",
+  "exclude": ["**/*.test.*", "**/*.setup.*"],
+  "out": "docs",
+  "readme": "README.md",
+  "name": "replay-parser-ragnarok",
+  "includeVersion": true,
+  "skipErrorChecking": false
+}

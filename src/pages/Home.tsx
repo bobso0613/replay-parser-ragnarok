@@ -9,6 +9,26 @@ import type { IMob, IReplayData, ISkill } from '@/types';
 import React, { useEffect } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
 
+/**
+ * Home page — the primary interactive view of the application.
+ *
+ * Handles three distinct workflows:
+ *
+ * 1. **File upload** — the user selects one or more `.grf` replay files via
+ *    {@link InputUpload}. Each file is sent to the parser API via
+ *    {@link fetchReplayApi} and the result is displayed in
+ *    {@link ReplayBreakdown}.
+ *
+ * 2. **Shared-link loading** — when the URL contains an `:outputId` path
+ *    parameter or a `?path=` query param, the replay is fetched from the
+ *    share URL via {@link fetchReplay} and displayed automatically on mount.
+ *
+ * 3. **Error recovery** — if parsing or fetching fails, {@link ErrorDetails}
+ *    is shown with a retry button that re-triggers the last operation.
+ *
+ * The skill and mob databases are fetched once on first mount and reused
+ * across subsequent parses.
+ */
 export const Home = () => {
   const [selectedFiles, setSelectedFiles] = React.useState<File[]>([]);
   const [replayIsParsing, setReplayIsParsing] = React.useState<boolean>(false);

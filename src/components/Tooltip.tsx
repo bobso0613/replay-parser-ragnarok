@@ -3,6 +3,17 @@ import type { TooltipProps } from '@/types';
 import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
+/**
+ * Portal-based tooltip that positions itself relative to its trigger element.
+ *
+ * The tooltip is rendered via `ReactDOM.createPortal` directly into
+ * `document.body` so it is never clipped by `overflow: hidden` ancestors.
+ * Position is recalculated on every mouse-enter and on `resize`/`scroll`
+ * events while visible. The four placement options (`top`, `bottom`, `left`,
+ * `right`) map to fixed offset CSS transforms.
+ *
+ * @param props - {@link TooltipProps}
+ */
 const Tooltip = ({
   content,
   children,

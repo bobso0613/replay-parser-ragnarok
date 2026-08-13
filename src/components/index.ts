@@ -1,3 +1,4 @@
+/** Re-exports all public components from this package. */
 import DropdownSelect from './DropdownSelect';
 import SkeletonLoader from './SkeletonLoader';
 import PageLoading from './PageLoading';

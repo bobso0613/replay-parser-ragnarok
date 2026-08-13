@@ -1,3 +1,10 @@
+/**
+ * Site-wide footer displayed at the bottom of every page.
+ *
+ * Contains a disclaimer about replay storage and attribution links to the
+ * frontend developer and parser enhancer. Layout is responsive: stacks
+ * vertically on small screens and becomes a two-column row on `sm` and above.
+ */
 const Footer = () => {
   return (
     <footer className="w-full border-t border-gray-950/60 px-4 py-2 text-slate-300/70">

@@ -2,6 +2,19 @@ import type { HorizontalTabsProps } from '@/types';
 import { useState, Suspense, useTransition } from 'react';
 import SectionLoading from './SectionLoading';
 
+/**
+ * Tab container that defers heavy panel rendering via React transitions.
+ *
+ * Tab button state updates synchronously (so the active indicator feels
+ * instant), while the actual panel content swap is wrapped in
+ * `startTransition` to keep the UI responsive during expensive renders.
+ * A `<Suspense>` boundary with a {@link SectionLoading} fallback handles
+ * lazy-loaded panel content.
+ *
+ * Returns `null` when `tabs` is empty to avoid rendering an empty shell.
+ *
+ * @param props - {@link HorizontalTabsProps}
+ */
 const HorizontalTabs = ({
   tabs,
   defaultTabId,

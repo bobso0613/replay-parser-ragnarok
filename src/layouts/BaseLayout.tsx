@@ -2,6 +2,16 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Outlet } from 'react-router-dom';
 
+/** Shell layout wrapping the header, main content outlet, and footer. */
+/**
+ * Full-height application shell layout.
+ *
+ * Renders the sticky {@link Header} at the top, a scrollable main content
+ * area in the middle (via React Router's `<Outlet>`), and a {@link Footer}
+ * at the bottom. The outer container is `h-screen overflow-hidden` so the
+ * page itself never scrolls; overflow scrolling is handled by the inner
+ * content `<div>`.
+ */
 export const BaseLayout = () => {
   return (
     <div className="flex h-screen overflow-hidden">

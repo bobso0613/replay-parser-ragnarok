@@ -34,6 +34,9 @@ type VirtualRowProps = {
   dynamicRowHeight: DynamicRowHeight;
 };
 
+/** Renders a single virtualised row inside the react-window `List`, syncing
+ * its measured height back to the dynamic-row-height registry via a
+ * `ResizeObserver` so that variable-height rows are handled correctly. */
 const VirtualTableRow = ({
   index,
   style,
@@ -106,6 +109,24 @@ const VirtualTableRow = ({
   );
 };
 
+/**
+ * Sortable data table with optional react-window virtualisation for large datasets.
+ *
+ * **Sorting** is handled entirely within this component when `sortableColumns`
+ * is provided. Clicking a sortable column header cycles through `asc → desc → asc`.
+ * An `onSort` callback can be supplied for external sort state management.
+ *
+ * **Virtualisation** is activated by `enableVirtualization`. When enabled,
+ * `react-window` renders only the visible rows plus `virtualOverscan` rows
+ * above and below the viewport. Column widths are distributed by
+ * `virtualColumnWeights` ratios and the table height auto-fits to the remaining
+ * viewport space.
+ *
+ * **Column widths** can be set explicitly via `columnWidths` (non-virtual mode)
+ * or via weight ratios via `virtualColumnWeights` (virtual mode).
+ *
+ * @param props - {@link TableProps}
+ */
 const Table: React.FC<TableProps> = ({
   headers = [],
   rowClassNames = [],
