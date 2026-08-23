@@ -92,6 +92,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
   apiResponse = null,
   skillDb = null,
   mobDb = null,
+  itemDb = null,
   fileName = '',
 }) => {
   const [isParsingDone, setIsParsingDone] = React.useState<boolean>(false);
@@ -137,14 +138,13 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
 
   useEffect(() => {
     if (!hasRun.current && replayToDisplay === null && apiResponse) {
-      const parsedOutput = parseReplayOutput(apiResponse, skillDb, mobDb);
+      const parsedOutput = parseReplayOutput(apiResponse, skillDb, mobDb, itemDb);
       hasRun.current = true;
-      console.log(parsedOutput);
       setReplayToDisplay(parsedOutput);
     }
 
     return () => {};
-  }, [apiResponse, skillDb, mobDb]);
+  }, [apiResponse, skillDb, mobDb, itemDb]);
 
   useEffect(() => {
     if (replayToDisplay !== null) {
@@ -578,6 +578,65 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
                             title={playerSkill.jobName}
                           />,
                           commaNumber(playerSkill.skillUsageCount),
+                        ])}
+                        className="w-full"
+                      />
+                    ) : (
+                      'N/A'
+                    ),
+                  ])}
+                  className="w-full"
+                />
+              </TabContentWithSticky>
+            ),
+          },
+          {
+            id: 'items',
+            label: 'Item Usage',
+            content: (
+              <TabContentWithSticky>
+                <h2 className="text-slate-200">Item Usage</h2>
+                <Table
+                  headers={[
+                    'Item Name',
+                    'Total Amount Used',
+                    <div key="support-breakdown-header">
+                      <div className="text-center mb-1">Breakdown per Player</div>
+                      <NestedHeader
+                        headers={['Player', 'Usage Count']}
+                        columnWidths={['50%', '50%']}
+                      />
+                    </div>,
+                  ]}
+                  enableVirtualization
+                  virtualColumnWeights={[2, 2, 2]}
+                  virtualRowHeight={180}
+                  virtualTableHeight={virtualTableHeight}
+                  sortableColumns={[0, 1]}
+                  sortValues={replayToDisplay.itemBreakdown.map((item) => [
+                    item.itemName,
+                    item.totalAmount,
+                  ])}
+                  rowClassNames={['align-middle', 'align-middle']}
+                  rows={replayToDisplay.itemBreakdown.map((item) => [
+                    <TextImage
+                      keyId={item.itemId}
+                      keyInfo={item.itemName}
+                      variant={TEXT_IMAGE_VARIANTS.ITEM}
+                    />,
+                    commaNumber(item.totalAmount),
+                    item.playerUsages.length > 0 ? (
+                      <Table
+                        headers={[]}
+                        columnWidths={['50%', '30%']}
+                        rows={item.playerUsages.map((playerUsage) => [
+                          <TextImage
+                            keyId={playerUsage.jobId}
+                            keyInfo={playerUsage.playerName}
+                            variant={TEXT_IMAGE_VARIANTS.JOB}
+                            title={playerUsage.jobName}
+                          />,
+                          commaNumber(playerUsage.itemUsageCount),
                         ])}
                         className="w-full"
                       />

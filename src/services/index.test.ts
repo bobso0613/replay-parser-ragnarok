@@ -1,5 +1,5 @@
 ﻿import { describe, it, expect, beforeEach, vi } from 'vitest';
-import type { ISkill, IMob } from '@/types';
+import type { IItem, ISkill, IMob } from '@/types';
 import * as services from './index';
 
 // Mock yaml
@@ -38,13 +38,19 @@ describe('src/services/index', () => {
       expect(services.fetchMobDb.constructor.name).toMatch(/AsyncFunction|Function/);
     });
 
-    it('should have all 4 main exports', () => {
+    it('should export fetchItemDb as an async function', () => {
+      expect(typeof services.fetchItemDb).toBe('function');
+      expect(services.fetchItemDb.constructor.name).toMatch(/AsyncFunction|Function/);
+    });
+
+    it('should have all 5 main exports', () => {
       const exports = Object.keys(services);
       expect(exports).toContain('fetchReplay');
       expect(exports).toContain('fetchReplayApi');
       expect(exports).toContain('fetchSkillDb');
       expect(exports).toContain('fetchMobDb');
-      expect(exports.length).toBeGreaterThanOrEqual(4);
+      expect(exports).toContain('fetchItemDb');
+      expect(exports.length).toBeGreaterThanOrEqual(5);
     });
   });
 
@@ -131,6 +137,56 @@ describe('src/services/index', () => {
       expect(result[0].Name).toBe('Skill1');
       expect(result[1].Name).toBe('Skill2');
       expect(result[2].Name).toBe('Skill3');
+    });
+  });
+
+  describe('fetchItemDb YAML parsing', () => {
+    it('should handle item database loading', async () => {
+      const mockText = 'Body:\n  - Id: 501\n    Name: Potion';
+      window.fetch = vi.fn().mockResolvedValueOnce({
+        text: vi.fn().mockResolvedValueOnce(mockText),
+      } as any);
+
+      const { load } = await import('js-yaml');
+      vi.mocked(load).mockReturnValueOnce({
+        Body: [{ Id: 501, AegisName: 'Potion', Name: 'Potion', Type: 'Consume' }],
+      } as any);
+
+      const result = await services.fetchItemDb(controller);
+
+      expect(Array.isArray(result)).toBe(true);
+      expect(result.length).toBeGreaterThanOrEqual(0);
+    });
+
+    it('should pass correct URL to fetch for items', async () => {
+      window.fetch = vi.fn().mockResolvedValueOnce({
+        text: vi.fn().mockResolvedValueOnce(''),
+      } as any);
+
+      const { load } = await import('js-yaml');
+      vi.mocked(load).mockReturnValueOnce({ Body: [] } as any);
+
+      await services.fetchItemDb(controller);
+
+      expect(window.fetch).toHaveBeenCalled();
+      const calls = vi.mocked(window.fetch).mock.calls as any[];
+      const call = calls[calls.length - 1];
+      expect(call[0]).toContain('item_db.yml');
+    });
+
+    it('should include abort signal in fetch options for items', async () => {
+      window.fetch = vi.fn().mockResolvedValueOnce({
+        text: vi.fn().mockResolvedValueOnce(''),
+      } as any);
+
+      const { load } = await import('js-yaml');
+      vi.mocked(load).mockReturnValueOnce({ Body: [] } as any);
+
+      await services.fetchItemDb(controller);
+
+      const calls = vi.mocked(window.fetch).mock.calls as any[];
+      const call = calls[calls.length - 1];
+      expect(call[1]).toHaveProperty('signal', controller.signal);
     });
   });
 
@@ -382,6 +438,25 @@ describe('src/services/index', () => {
       vi.mocked(load).mockReturnValueOnce({ Body: mobs } as any);
 
       const result: IMob[] = await services.fetchMobDb(controller);
+
+      expect(Array.isArray(result)).toBe(true);
+      if (result.length > 0) {
+        expect(result[0]).toHaveProperty('Id');
+        expect(result[0]).toHaveProperty('Name');
+      }
+    });
+
+    it('should return IItem array from fetchItemDb', async () => {
+      const items: IItem[] = [{ Id: 501, AegisName: 'Potion', Name: 'Potion', Type: 'Consume' }];
+
+      window.fetch = vi.fn().mockResolvedValueOnce({
+        text: vi.fn().mockResolvedValueOnce(''),
+      } as any);
+
+      const { load } = await import('js-yaml');
+      vi.mocked(load).mockReturnValueOnce({ Body: items } as any);
+
+      const result: IItem[] = await services.fetchItemDb(controller);
 
       expect(Array.isArray(result)).toBe(true);
       if (result.length > 0) {

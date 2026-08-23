@@ -204,6 +204,23 @@ export interface IPlayerSkillUsageBreakdown {
   skillUsageCount: number;
 }
 
+/** Aggregated item usage and acquisition stats for a single item. */
+export interface IItemBreakdown {
+  itemId: string;
+  itemName: string;
+  totalAmount: number;
+  playerUsages: IPlayerItemUsage[];
+}
+
+/** Usage and acquisition stats for a single item by a single player. */
+export interface IPlayerItemUsage {
+  playerId: string;
+  playerName: string;
+  jobId: number;
+  jobName: string;
+  itemUsageCount: number;
+}
+
 /**
  * Final parsed output containing all replay breakdown sections.
  *
@@ -223,4 +240,5 @@ export interface IParsedReplay {
   deathBreakdown: IDeathBreakdown[];
   mvpBreakdown: IMVPBreakdown[];
   skillUsageBreakdown: IPlayerSkillUsageBreakdown[];
+  itemBreakdown: IItemBreakdown[];
 }

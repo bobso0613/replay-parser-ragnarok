@@ -2,11 +2,13 @@ import type { RouteObject } from 'react-router-dom';
 import type { IReplayData } from './replay-api';
 import type { ISkill } from './skill-db';
 import type { IMob } from './mob-db';
+import type { IItem } from './item-db';
 import type { ReactNode } from 'react';
 
 export * from './replay-api';
 export * from './skill-db';
 export * from './mob-db';
+export * from './item-db';
 export * from './parsed-replay';
 /** Maps a numeric job ID to its display name. */
 export interface JobListType {
@@ -124,6 +126,7 @@ export type ReplayBreakdownProps = {
   apiResponse: IReplayData;
   skillDb: ISkill[] | null;
   mobDb: IMob[] | null;
+  itemDb?: IItem[] | null;
   fileName?: string;
   outputId?: string;
 };

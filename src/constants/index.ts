@@ -11,6 +11,8 @@ export const SKILL_IMAGE_URL = import.meta.env.VITE_SKILL_IMAGE_URL;
 export const JOB_IMAGE_URL = import.meta.env.VITE_JOB_IMAGE_URL;
 /** Base URL template for monster images; replace `PLACEHOLDER_TEXT` with the monster ID. */
 export const MONSTER_IMAGE_URL = import.meta.env.VITE_MONSTER_IMAGE_URL;
+/** Base URL template for item images; replace `PLACEHOLDER_TEXT` with the item ID. */
+export const ITEM_IMAGE_URL = import.meta.env.VITE_ITEM_IMAGE_URL;
 /** API endpoint for uploading and parsing replay files. */
 export const PARSER_URL = import.meta.env.VITE_PARSER_URL;
 /** Base URL for shared replay links. */
@@ -21,6 +23,7 @@ export const BASE_PATH = import.meta.env.VITE_BASE_PATH || '/';
 export const TEXT_IMAGE_VARIANTS = {
   SKILL: 'skill',
   JOB: 'job',
+  ITEM: 'item',
 };
 
 /** Valid placement values for the Tooltip component. */

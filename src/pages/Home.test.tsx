@@ -8,6 +8,7 @@ import * as services from '@/services';
 vi.mock('@/services', () => ({
   fetchSkillDb: vi.fn(),
   fetchMobDb: vi.fn(),
+  fetchItemDb: vi.fn(),
   fetchReplay: vi.fn(),
   fetchReplayApi: vi.fn(),
 }));
@@ -17,6 +18,7 @@ describe('Home', () => {
     vi.clearAllMocks();
     vi.mocked(services.fetchSkillDb).mockResolvedValue([]);
     vi.mocked(services.fetchMobDb).mockResolvedValue([]);
+    vi.mocked(services.fetchItemDb).mockResolvedValue([]);
   });
 
   afterEach(() => {
@@ -38,18 +40,20 @@ describe('Home', () => {
     expect(container.querySelector('div')).toBeDefined();
   });
 
-  it('should fetch skill and mob databases on mount', async () => {
+  it('should fetch skill, mob, and item databases on mount', async () => {
     render(React.createElement(BrowserRouter, {}, React.createElement(Home)));
 
     await waitFor(() => {
       expect(services.fetchSkillDb).toHaveBeenCalled();
       expect(services.fetchMobDb).toHaveBeenCalled();
+      expect(services.fetchItemDb).toHaveBeenCalled();
     });
   });
 
   it('should handle database fetch errors gracefully', async () => {
     vi.mocked(services.fetchSkillDb).mockRejectedValueOnce(new Error('Fetch failed'));
     vi.mocked(services.fetchMobDb).mockRejectedValueOnce(new Error('Fetch failed'));
+    vi.mocked(services.fetchItemDb).mockRejectedValueOnce(new Error('Fetch failed'));
 
     const { container } = render(React.createElement(BrowserRouter, {}, React.createElement(Home)));
 
@@ -92,6 +96,9 @@ describe('Home', () => {
   it('should render multiple UI states', async () => {
     vi.mocked(services.fetchSkillDb).mockResolvedValue([{ Id: 1, Name: 'Skill' }] as any);
     vi.mocked(services.fetchMobDb).mockResolvedValue([{ Id: 1, Name: 'Mob' }] as any);
+    vi.mocked(services.fetchItemDb).mockResolvedValue([
+      { Id: 501, AegisName: 'Potion', Name: 'Potion' },
+    ] as any);
 
     const { container } = render(React.createElement(BrowserRouter, {}, React.createElement(Home)));
 
@@ -153,9 +160,11 @@ describe('Home', () => {
   it('should store databases in state after fetch', async () => {
     const skillData = [{ Id: 1, Name: 'Test Skill' }];
     const mobData = [{ Id: 1, Name: 'Test Mob' }];
+    const itemData = [{ Id: 501, AegisName: 'Potion', Name: 'Potion', Type: 'Consume' }];
 
     vi.mocked(services.fetchSkillDb).mockResolvedValue(skillData as any);
     vi.mocked(services.fetchMobDb).mockResolvedValue(mobData as any);
+    vi.mocked(services.fetchItemDb).mockResolvedValue(itemData as any);
 
     const { container } = render(React.createElement(BrowserRouter, {}, React.createElement(Home)));
 

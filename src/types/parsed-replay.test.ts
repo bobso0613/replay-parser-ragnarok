@@ -10,6 +10,7 @@ describe('parsed-replay types', () => {
       deathBreakdown: [],
       mvpBreakdown: [],
       skillUsageBreakdown: [],
+      itemBreakdown: [],
     };
 
     expect(replayExample).toHaveProperty('breakdownPerMonsterUnique');
@@ -18,6 +19,7 @@ describe('parsed-replay types', () => {
     expect(replayExample).toHaveProperty('deathBreakdown');
     expect(replayExample).toHaveProperty('mvpBreakdown');
     expect(replayExample).toHaveProperty('skillUsageBreakdown');
+    expect(replayExample).toHaveProperty('itemBreakdown');
   });
 
   it('should have proper array structures', () => {
@@ -28,6 +30,7 @@ describe('parsed-replay types', () => {
       deathBreakdown: [],
       mvpBreakdown: [],
       skillUsageBreakdown: [],
+      itemBreakdown: [],
     };
 
     expect(Array.isArray(replay.breakdownPerMonsterUnique)).toBe(true);
@@ -36,5 +39,6 @@ describe('parsed-replay types', () => {
     expect(Array.isArray(replay.deathBreakdown)).toBe(true);
     expect(Array.isArray(replay.mvpBreakdown)).toBe(true);
     expect(Array.isArray(replay.skillUsageBreakdown)).toBe(true);
+    expect(Array.isArray(replay.itemBreakdown)).toBe(true);
   });
 });

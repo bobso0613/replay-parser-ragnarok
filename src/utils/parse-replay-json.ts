@@ -1,6 +1,8 @@
 import { JOB_LIST } from '@/constants';
 import type {
   IDeathBreakdown,
+  IItem,
+  IItemBreakdown,
   IMob,
   IMonster,
   IMonsterBreakdown,
@@ -35,12 +37,14 @@ import type {
  * @param apiResponse - Raw replay data from the parser API, or `null` if unavailable.
  * @param skillDb - Skill database used to resolve skill descriptions; pass `null` to skip enrichment.
  * @param mobDb - Mob database used to resolve monster names and MVP status; pass `null` to skip enrichment.
+ * @param itemDb - Item database used for future item-aware enrichments; pass `null` to skip item lookup.
  * @returns A fully populated `IParsedReplay` object. Returns an empty structure when `apiResponse` is `null`.
  */
 export const parseReplayOutput = (
   apiResponse: IReplayData | null,
   skillDb: ISkill[] | null,
-  mobDb: IMob[] | null
+  mobDb: IMob[] | null,
+  itemDb: IItem[] | null = null
 ) => {
   const finalOutput: IParsedReplay = {
     breakdownPerMonsterUnique: [] as IMonsterBreakdown[],
@@ -49,6 +53,7 @@ export const parseReplayOutput = (
     deathBreakdown: [] as IDeathBreakdown[],
     mvpBreakdown: [] as IMVPBreakdown[],
     skillUsageBreakdown: [] as IPlayerSkillUsageBreakdown[],
+    itemBreakdown: [] as IItemBreakdown[],
   };
 
   apiResponse?.players.forEach((player: IPlayer) => {
@@ -178,6 +183,48 @@ export const parseReplayOutput = (
         }
       }
     });
+
+    if (player.itemInfo.length > 0) {
+      player.itemInfo.forEach((itemUsage) => {
+        const existingItem = finalOutput.itemBreakdown.find(
+          (i: IItemBreakdown) => i.itemId === itemUsage.itemId
+        );
+
+        if (existingItem) {
+          existingItem.totalAmount += itemUsage.itemUsageCount;
+
+          const existingPlayerUsage = existingItem.playerUsages.find(
+            (p) => p.playerId === player.AID
+          );
+          if (existingPlayerUsage) {
+            existingPlayerUsage.itemUsageCount += itemUsage.itemUsageCount;
+          } else {
+            existingItem.playerUsages.push({
+              playerId: player.AID,
+              playerName: player.name,
+              jobId: player.jobId,
+              jobName: JOB_LIST[player.jobId],
+              itemUsageCount: itemUsage.itemUsageCount,
+            });
+          }
+        } else {
+          finalOutput.itemBreakdown.push({
+            itemId: itemUsage.itemId,
+            itemName: itemDb?.find((i: IItem) => i.Id === Number(itemUsage.itemId))?.Name ?? '',
+            totalAmount: itemUsage.itemUsageCount,
+            playerUsages: [
+              {
+                playerId: player.AID,
+                playerName: player.name,
+                jobId: player.jobId,
+                jobName: JOB_LIST[player.jobId],
+                itemUsageCount: itemUsage.itemUsageCount,
+              },
+            ],
+          });
+        }
+      });
+    }
   });
 
   apiResponse?.monsters.forEach((monster: IMonster) => {
@@ -355,6 +402,10 @@ export const parseReplayOutput = (
     });
   });
 
+  finalOutput.itemBreakdown.sort((a, b) => a.itemName.localeCompare(b.itemName));
+  finalOutput.itemBreakdown.forEach((item) => {
+    item.playerUsages.sort((a, b) => b.itemUsageCount - a.itemUsageCount);
+  });
   finalOutput.skillUsageBreakdown.sort((a, b) => b.skillUsageCount - a.skillUsageCount);
   finalOutput.deathBreakdown.sort((a, b) => b.deathCount - a.deathCount);
   finalOutput.mvpBreakdown.sort((a, b) => b.mvpCount - a.mvpCount);

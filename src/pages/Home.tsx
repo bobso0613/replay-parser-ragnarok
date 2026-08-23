@@ -4,8 +4,8 @@ import PlaceholderDetails from '@/components/PlaceholderDetails';
 import ReplayBreakdown from '@/components/ReplayBreakdown';
 import SectionLoading from '@/components/SectionLoading';
 import { PARSER_URL } from '@/constants';
-import { fetchMobDb, fetchReplay, fetchReplayApi, fetchSkillDb } from '@/services';
-import type { IMob, IReplayData, ISkill } from '@/types';
+import { fetchItemDb, fetchMobDb, fetchReplay, fetchReplayApi, fetchSkillDb } from '@/services';
+import type { IItem, IMob, IReplayData, ISkill } from '@/types';
 import React, { useEffect } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
 
@@ -26,7 +26,7 @@ import { useParams, useSearchParams } from 'react-router-dom';
  * 3. **Error recovery** — if parsing or fetching fails, {@link ErrorDetails}
  *    is shown with a retry button that re-triggers the last operation.
  *
- * The skill and mob databases are fetched once on first mount and reused
+ * The skill, mob, and item databases are fetched once on first mount and reused
  * across subsequent parses.
  */
 export const Home = () => {
@@ -36,6 +36,7 @@ export const Home = () => {
   const [parsedReplay, setParsedReplay] = React.useState<IReplayData | null>(null);
   const [skillDb, setSkillDb] = React.useState<ISkill[] | null>(null);
   const [mobDb, setMobDb] = React.useState<IMob[] | null>(null);
+  const [itemDb, setItemDb] = React.useState<IItem[] | null>(null);
   const [searchParams] = useSearchParams();
   const { outputId: routeOutputId } = useParams();
   const [replayOutputId, setReplayOutputId] = React.useState<string | null>(
@@ -120,34 +121,38 @@ export const Home = () => {
 
   useEffect(() => {
     const controller = new AbortController();
-    if (skillDb === null || mobDb === null) {
-      const retrieveMobAndSkillDb = async (controller: AbortController) => {
+    if (skillDb === null || mobDb === null || itemDb === null) {
+      const retrieveDatabases = async (controller: AbortController) => {
         try {
-          const resultSkillDb = await fetchSkillDb(controller);
-          const resultMobDb = await fetchMobDb(controller);
+          const [resultSkillDb, resultMobDb, resultItemDb] = await Promise.all([
+            fetchSkillDb(controller),
+            fetchMobDb(controller),
+            fetchItemDb(controller),
+          ]);
 
-          return { resultSkillDb, resultMobDb };
+          return { resultSkillDb, resultMobDb, resultItemDb };
         } catch {
-          return { resultSkillDb: null, resultMobDb: null };
+          return { resultSkillDb: null, resultMobDb: null, resultItemDb: null };
         }
       };
 
-      retrieveMobAndSkillDb(controller).then(({ resultSkillDb, resultMobDb }) => {
+      retrieveDatabases(controller).then(({ resultSkillDb, resultMobDb, resultItemDb }) => {
         setSkillDb(resultSkillDb);
         setMobDb(resultMobDb);
+        setItemDb(resultItemDb);
       });
     }
 
     return () => controller.abort('unmounted');
-  }, []);
+  }, [skillDb, mobDb, itemDb]);
 
   useEffect(() => {
-    if (parsedReplay !== null && skillDb !== null && mobDb !== null) {
+    if (parsedReplay !== null && skillDb !== null && mobDb !== null && itemDb !== null) {
       setReplayIsParsing(false);
     }
 
     return () => {};
-  }, [parsedReplay, skillDb, mobDb]);
+  }, [parsedReplay, skillDb, mobDb, itemDb]);
 
   return (
     <>
@@ -166,6 +171,7 @@ export const Home = () => {
           apiResponse={parsedReplay}
           skillDb={skillDb}
           mobDb={mobDb}
+          itemDb={itemDb}
           fileName={parsedReplay.replayFileName ?? selectedFiles[0].name}
           outputId={parsedReplay.outputId}
         />

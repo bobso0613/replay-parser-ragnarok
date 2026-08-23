@@ -1,4 +1,10 @@
-import { JOB_IMAGE_URL, SKILL_IMAGE_URL, TEXT_IMAGE_VARIANTS, TOOLTIP_POSITION } from '@/constants';
+import {
+  ITEM_IMAGE_URL,
+  JOB_IMAGE_URL,
+  SKILL_IMAGE_URL,
+  TEXT_IMAGE_VARIANTS,
+  TOOLTIP_POSITION,
+} from '@/constants';
 import type { TextImageProps } from '@/types';
 import React from 'react';
 import Tooltip from './Tooltip';
@@ -23,6 +29,7 @@ const TextImage: React.FC<TextImageProps> = ({
   const skillUrl: Record<string, string> = {
     skill: SKILL_IMAGE_URL.replace('PLACEHOLDER_TEXT', keyId.toString()),
     job: JOB_IMAGE_URL.replace('PLACEHOLDER_TEXT', keyId.toString()),
+    item: ITEM_IMAGE_URL.replace('PLACEHOLDER_TEXT', keyId.toString()),
   };
 
   return (
