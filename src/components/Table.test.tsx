@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import React from 'react';
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import Table from './Table';
 import type { TableProps } from '@/types';
 
@@ -252,6 +252,82 @@ describe('Table', () => {
       })
     );
     expect(onSort).not.toHaveBeenCalled();
+  });
+
+  it('should cycle sortable headers and notify the parent', () => {
+    const onSort = vi.fn();
+    const { container } = render(
+      React.createElement(Table, {
+        ...defaultProps,
+        sortableColumns: [0],
+        onSort,
+      })
+    );
+
+    const header = container.querySelector('th');
+    expect(header).toBeTruthy();
+    fireEvent.click(header!);
+    fireEvent.click(header!);
+
+    expect(onSort).toHaveBeenNthCalledWith(1, 0, 'asc');
+    expect(onSort).toHaveBeenNthCalledWith(2, 0, 'desc');
+  });
+
+  it('sorts with sort values, function extractors, and class extractors', () => {
+    const { container } = render(
+      React.createElement(Table, {
+        headers: ['Value', 'Name'],
+        rows: [
+          ['2', React.createElement('span', { className: 'name' }, 'B')],
+          ['1', React.createElement('span', { className: 'name' }, 'A')],
+        ],
+        sortableColumns: [0, 1],
+        sortValues: [
+          [2, 'B'],
+          [1, 'A'],
+        ],
+        sortExtractors: {
+          1: (node: React.ReactNode) => (typeof node === 'object' ? 'A' : ''),
+        },
+      })
+    );
+
+    const headers = container.querySelectorAll('th');
+    fireEvent.click(headers[0]);
+    fireEvent.click(headers[1]);
+    expect(container.textContent).toContain('Value');
+
+    render(
+      React.createElement(Table, {
+        headers: ['Name'],
+        rows: [
+          [React.createElement('span', { className: 'name' }, 'B')],
+          [React.createElement('span', { className: 'name' }, 'A')],
+        ],
+        sortableColumns: [0],
+        sortExtractors: { 0: 'name' },
+      })
+    );
+  });
+
+  it('renders virtualized rows and responds to resize observers', () => {
+    const originalResizeObserver = window.ResizeObserver;
+    class TestResizeObserver {
+      observe() {}
+      disconnect() {}
+      unobserve() {}
+    }
+    window.ResizeObserver = TestResizeObserver as unknown as typeof ResizeObserver;
+
+    render(
+      React.createElement(Table, {
+        ...defaultProps,
+        enableVirtualization: true,
+        virtualColumnWeights: [1, 2, 3],
+      })
+    );
+
+    window.ResizeObserver = originalResizeObserver;
   });
 
   it('should render with custom className', () => {

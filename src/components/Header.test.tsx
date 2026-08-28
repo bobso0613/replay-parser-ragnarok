@@ -3,7 +3,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import Header from './Header';
-import { ENV } from '@/constants';
+import { ENV } from '@/constants/index.ts';
 import type { HeaderProps } from '@/types';
 
 describe('Header', () => {

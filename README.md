@@ -14,6 +14,7 @@ Replay Parser Ragnarok is a React + Vite frontend application for exploring Ragn
 - ⚡ Lazy-loaded background images for optimized performance
 - 🔧 Keep shared logic in hooks, services, utilities, and constants
 - 🔗 Dynamic API response field mapping for flexible data handling
+- 🏷️ Display names for jobs, skills, items, and monsters are provided by the parser service
 
 ## 🚀 Getting Started
 
@@ -39,7 +40,7 @@ VITE_REPLAY_URL_SHARE=/replay-parser/ID_HERE
    ```
 4. Open the local Vite URL in your browser to use the app.
 
-> Note: This project reads YAML lookup data from `public/yaml/`. Replay parsing is handled by your API configured in `VITE_PARSER_URL`. When deploying under a subpath, set `VITE_BASE_PATH` to that path so the router and Vite asset paths stay aligned. If your host does not support SPA rewrites on refresh, the bundled `404.html` fallback will route missing deep links back into the app.
+> Note: Replay parsing is handled by your API configured in `VITE_PARSER_URL`. When deploying under a subpath, set `VITE_BASE_PATH` to that path so the router and Vite asset paths stay aligned. If your host does not support SPA rewrites on refresh, the bundled `404.html` fallback will route missing deep links back into the app.
 
 ## 🛠️ Development
 
@@ -96,7 +97,7 @@ npm run test:coverage -- --run
 - **Component Tests**: Located alongside components with `.test.tsx` suffix
   - Tests for rendering, props, user interactions, and state changes
   - Uses `@testing-library/react` with jsdom environment
-  - ~36 test files covering all major components
+  - Covers all major components, including replay breakdown and upload flows
 
 - **Utility Tests**: Located alongside utilities with `.test.ts` suffix
   - Pure function tests extracted from components
@@ -104,14 +105,14 @@ npm run test:coverage -- --run
 
 ### Coverage
 
-Current test coverage:
+Current test coverage (from `npm run test:coverage`):
 
-- **Lines**: 84.82% (626/738)
-- **Statements**: 84.32%
-- **Branches**: 75.5%
-- **Functions**: 81.27%
+- **Lines**: 90.11% (647/718)
+- **Statements**: 89.08% (669/751)
+- **Branches**: 80.75% (491/608)
+- **Functions**: 84.36% (178/211)
 
-The test suite includes 794 passing tests focusing on:
+The test suite includes 727 passing tests across 34 test files, focusing on:
 
 - Component rendering and lifecycle
 - User interactions (clicks, form submissions, drag-drop detection)
@@ -150,14 +151,11 @@ This separation enables high-coverage testing while respecting jsdom limitations
 - 📚 `src/types/` - shared TypeScript type definitions:
   - 🎮 `parsed-replay.ts` - replay data types
   - 🌐 `replay-api.ts` - API response types
-  - 👹 `mob-db.ts` - mob database types
-  - ⚔️ `skill-db.ts` - skill database types
 - 🛠️ `src/utils/` - helper functions and utilities:
   - 🔄 `parse-replay-json.ts` - replay file parsing logic
 - ⚙️ `src/constants/` - shared constants and config values
 - 🎨 `src/assets/` - local static assets (SVG icons, etc.)
 - 📂 `public/` - public static files:
-  - 📋 `public/yaml/` - Ragnarok database files (mob_db.yml, skill_db.yml)
 - 📖 `README.md` - project documentation
 
 ## 📖 Usage
@@ -168,7 +166,9 @@ This separation enables high-coverage testing while respecting jsdom limitations
 4. 📊 The application will parse the replay data and display:
    - 📋 Structured replay breakdown with key information
    - 📈 Formatted data tables for detailed statistics
-   - 👹⚔️ Mob and skill database information mapped to the replay data
+
+- 👹⚔️ Job, skill, item, and monster names returned with the replay data
+
 5. 🎯 Use dropdown selectors to filter or navigate through replay sections
 6. ⏳ The interface provides loading states and placeholders during data processing
 

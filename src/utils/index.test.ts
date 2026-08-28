@@ -10,4 +10,9 @@ describe('src/utils/index', () => {
     const exported = Object.keys(utils);
     expect(exported.length).toBeGreaterThan(0);
   });
+
+  it('formats MVP and non-MVP monster names', () => {
+    expect(utils.getMonsterName('Poring', true)).toBe('Poring (MVP)');
+    expect(utils.getMonsterName('Poring', false)).toBe('Poring ');
+  });
 });

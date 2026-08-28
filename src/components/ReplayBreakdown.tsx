@@ -9,7 +9,7 @@ import DropdownSelect from './DropdownSelect';
 import HorizontalTabs from './HorizontalTabs';
 import StickyButton from './StickyButton';
 import TextImage from './TextImage';
-import { MONSTER_IMAGE_URL, TEXT_IMAGE_VARIANTS } from '@/constants';
+import { MONSTER_IMAGE_URL, TEXT_IMAGE_VARIANTS } from '@/constants/index.ts';
 
 type TabContentWithStickyProps = {
   children: React.ReactNode;
@@ -84,17 +84,10 @@ const TabContentWithSticky: React.FC<TabContentWithStickyProps> = ({ children })
  * 6. **Skill Breakdown** — total skill casts per player across all skill types.
  *
  * Data transformation from raw API output is performed by {@link parseReplayOutput}.
- * Skill names and monster names are enriched from the `skillDb` and `mobDb` props.
  *
  * @param props - {@link ReplayBreakdownProps}
  */
-const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
-  apiResponse = null,
-  skillDb = null,
-  mobDb = null,
-  itemDb = null,
-  fileName = '',
-}) => {
+const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, fileName = '' }) => {
   const [isParsingDone, setIsParsingDone] = React.useState<boolean>(false);
   const [isLinkCopied, setIsLinkCopied] = React.useState<boolean>(false);
   const [replayToDisplay, setReplayToDisplay] = React.useState<IParsedReplay | null>(null);
@@ -138,13 +131,13 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({
 
   useEffect(() => {
     if (!hasRun.current && replayToDisplay === null && apiResponse) {
-      const parsedOutput = parseReplayOutput(apiResponse, skillDb, mobDb, itemDb);
+      const parsedOutput = parseReplayOutput(apiResponse);
       hasRun.current = true;
       setReplayToDisplay(parsedOutput);
     }
 
     return () => {};
-  }, [apiResponse, skillDb, mobDb, itemDb]);
+  }, [apiResponse]);
 
   useEffect(() => {
     if (replayToDisplay !== null) {

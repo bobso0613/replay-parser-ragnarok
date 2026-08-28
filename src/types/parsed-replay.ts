@@ -57,7 +57,7 @@ export interface IPlayerSkillDamage {
  * @property playerId - Account ID of the player.
  * @property playerName - In-game character name.
  * @property jobId - Numeric job/class ID.
- * @property jobName - Resolved job name from `JOB_LIST`.
+ * @property jobName - Job name supplied by the parser service response.
  * @property totalDamageDealt - Sum of all damage dealt to all monsters.
  * @property totalDamageDealthMvps - Subset of `totalDamageDealt` directed at MVP monsters.
  * @property highestDamage - The single best hit this player landed, with monster context.

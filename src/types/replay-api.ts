@@ -10,11 +10,13 @@
  */
 export interface ISkillUsage {
   skillId: string;
+  skillName?: string;
   skillDamageDealt?: number;
   skillUsageCount: number;
   maxDamageDealt?: number;
   maxDamageMonsterId?: string;
   maxDamageMonsterName?: string;
+  maxDamageMonsterIsMvp?: boolean;
 }
 
 /**
@@ -34,6 +36,7 @@ export interface ISkillInfo {
 /** Tracks how many times a specific item was used. */
 export interface IItemUsage {
   itemId: string;
+  itemName?: string;
   itemUsageCount: number;
 }
 
@@ -42,7 +45,7 @@ export interface IItemUsage {
  *
  * @property AID - Account ID uniquely identifying the player character.
  * @property name - In-game character name.
- * @property jobId - Numeric job/class ID (see `JOB_LIST` in constants).
+ * @property jobId - Numeric job/class ID.
  * @property totalDamageDealt - Sum of all damage dealt to monsters.
  * @property totalDamageTaken - Sum of all damage received from monsters.
  * @property totalSkillUsageCount - Total number of skill casts recorded.
@@ -56,6 +59,7 @@ export interface IPlayer {
   AID: string;
   name: string;
   jobId: number;
+  jobName?: string;
   totalDamageDealt: number;
   totalDamageTaken: number;
   totalSkillUsageCount: number;
@@ -75,6 +79,7 @@ export interface IPlayerRef {
 /** Links a player reference to a specific skill damage event. */
 export interface IDamageInfo extends IPlayerRef {
   skillId: string;
+  skillName?: string;
   damage?: number;
   damageDealt?: number;
 }
@@ -89,6 +94,7 @@ export interface IBattleInfo extends IPlayerRef {
 /** Damage dealt by a player using a specific skill against a monster. */
 export interface IPlayerSkillMonsterInfo {
   skillId: string;
+  skillName?: string;
   skillCount: number;
   damageDealt: number;
 }
@@ -108,6 +114,7 @@ export interface IPlayerSkillMonsterInfo {
 export interface IMonster {
   monsterId: string;
   monsterName: string;
+  isMvp?: boolean;
   battleDuration: number;
   battleStartTime: number;
   battleEndTime: number;

@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import type { FC } from 'react';
 import type { HeaderProps } from '@/types';
-import { ENV } from '@/constants';
+import { ENV } from '@/constants/index.ts';
 import React from 'react';
 
 const linkClass = ({ isActive }: { isActive: boolean }) =>

@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import Tooltip from './Tooltip';
-import { TOOLTIP_POSITION } from '@/constants';
+import { TOOLTIP_POSITION } from '@/constants/index.ts';
 
 describe('Tooltip', () => {
   const defaultProps = {

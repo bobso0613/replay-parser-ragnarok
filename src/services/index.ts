@@ -1,6 +1,5 @@
-import { BASE_PATH, PARSER_URL } from '@/constants';
-import type { IItem, IMob, IReplayData, ISkill } from '@/types';
-import * as yaml from 'js-yaml';
+import { PARSER_URL } from '@/constants/index.ts';
+import type { IReplayData } from '@/types';
 
 let cachedClientIpAddress: string | null = null;
 let clientIpLookupPromise: Promise<string> | null = null;
@@ -257,57 +256,4 @@ export const fetchReplayApi = async (
 
   const requestIdLabel = parsedPayload?.requestId ? ` (requestId: ${parsedPayload.requestId})` : '';
   throw new Error(`Parser response did not include replay data${requestIdLabel}`);
-};
-
-/**
- * Fetches and parses the skill database YAML from the public assets folder.
- *
- * The YAML file is loaded from `{BASE_PATH}yaml/skill_db.yml` and converted
- * to a JavaScript object using `js-yaml`. Only the `Body` array is returned.
- *
- * @param controller - AbortController used to cancel the fetch request.
- * @returns A promise resolving to an array of {@link ISkill} entries.
- */
-export const fetchSkillDb = async (controller: AbortController) => {
-  const skillDbYML = await fetch(`${BASE_PATH}yaml/skill_db.yml`, {
-    signal: controller.signal,
-  }).then((res) => res.text());
-  const skillDb = (yaml.load(skillDbYML) as { Body: ISkill[] }).Body;
-
-  return skillDb;
-};
-
-/**
- * Fetches and parses the mob database YAML from the public assets folder.
- *
- * The YAML file is loaded from `{BASE_PATH}yaml/mob_db.yml` and converted
- * to a JavaScript object using `js-yaml`. Only the `Body` array is returned.
- *
- * @param controller - AbortController used to cancel the fetch request.
- * @returns A promise resolving to an array of {@link IMob} entries.
- */
-export const fetchMobDb = async (controller: AbortController) => {
-  const mobDbYML = await fetch(`${BASE_PATH}yaml/mob_db.yml`, { signal: controller.signal }).then(
-    (res) => res.text()
-  );
-  const mobDb = (yaml.load(mobDbYML) as { Body: IMob[] }).Body;
-
-  return mobDb;
-};
-
-/**
- * Fetches and parses the item database YAML from the public assets folder.
- *
- * The YAML file is loaded from `{BASE_PATH}yaml/item_db.yml` and converted
- * to a JavaScript object using `js-yaml`. Only the `Body` array is returned.
- *
- * @param controller - AbortController used to cancel the fetch request.
- * @returns A promise resolving to an array of {@link IItem} entries.
- */
-export const fetchItemDb = async (controller: AbortController) => {
-  const itemDbYML = await fetch(`${BASE_PATH}yaml/item_db.yml`, {
-    signal: controller.signal,
-  }).then((res) => res.text());
-  const itemDb = (yaml.load(itemDbYML) as { Body: IItem[] }).Body;
-  return itemDb;
 };

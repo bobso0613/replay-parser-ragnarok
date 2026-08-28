@@ -4,7 +4,7 @@ import {
   SKILL_IMAGE_URL,
   TEXT_IMAGE_VARIANTS,
   TOOLTIP_POSITION,
-} from '@/constants';
+} from '@/constants/index.ts';
 import type { TextImageProps } from '@/types';
 import React from 'react';
 import Tooltip from './Tooltip';

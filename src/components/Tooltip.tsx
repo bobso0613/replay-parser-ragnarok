@@ -1,4 +1,4 @@
-import { TOOLTIP_POSITION } from '@/constants';
+import { TOOLTIP_POSITION } from '@/constants/index.ts';
 import type { TooltipProps } from '@/types';
 import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';

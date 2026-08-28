@@ -1,14 +1,8 @@
 import type { RouteObject } from 'react-router-dom';
 import type { IReplayData } from './replay-api';
-import type { ISkill } from './skill-db';
-import type { IMob } from './mob-db';
-import type { IItem } from './item-db';
 import type { ReactNode } from 'react';
 
 export * from './replay-api';
-export * from './skill-db';
-export * from './mob-db';
-export * from './item-db';
 export * from './parsed-replay';
 /** Maps a numeric job ID to its display name. */
 export interface JobListType {
@@ -117,16 +111,11 @@ export type SectionLoadingProps = {
  * Props for the {@link ReplayBreakdown} component.
  *
  * @property apiResponse - Raw replay data as returned by the parser API.
- * @property skillDb - Parsed skill database used to resolve skill names; `null` while loading.
- * @property mobDb - Parsed mob database used to resolve monster names and MVP flags; `null` while loading.
  * @property fileName - Original replay filename shown in the UI header.
  * @property outputId - Server-side output ID used to generate the shareable link.
  */
 export type ReplayBreakdownProps = {
   apiResponse: IReplayData;
-  skillDb: ISkill[] | null;
-  mobDb: IMob[] | null;
-  itemDb?: IItem[] | null;
   fileName?: string;
   outputId?: string;
 };

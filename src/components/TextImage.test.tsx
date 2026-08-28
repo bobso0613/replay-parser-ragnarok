@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from 'vitest';
 import React from 'react';
 import { render } from '@testing-library/react';
 import TextImage from './TextImage';
-import { TEXT_IMAGE_VARIANTS } from '@/constants';
+import { TEXT_IMAGE_VARIANTS } from '@/constants/index.ts';
 
 // Mock the Tooltip component
 vi.mock('./Tooltip', () => ({

@@ -2,7 +2,7 @@ import type { InputUploadProps } from '@/types';
 import FileUploadIcon from '@/assets/svg/FileUpload.svg';
 import React from 'react';
 import Tooltip from './Tooltip';
-import { TOOLTIP_POSITION } from '@/constants';
+import { TOOLTIP_POSITION } from '@/constants/index.ts';
 
 /**
  * Styled file input with drag-and-drop support and a selected-file preview.
