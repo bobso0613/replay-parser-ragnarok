@@ -1,6 +1,16 @@
 import type { PageLoadingProps } from '@/types';
 import React from 'react';
 
+/**
+ * Full-screen loading overlay shown while an async page chunk or critical
+ * resource is being fetched.
+ *
+ * Renders a semi-transparent backdrop with a centred animated spinner and
+ * an optional status message. Uses `z-50` so it appears above all other
+ * page content.
+ *
+ * @param props - {@link PageLoadingProps}
+ */
 const PageLoading: React.FC<PageLoadingProps> = ({ message = 'Loading...' }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-white/50 dark:bg-gray-900/50">

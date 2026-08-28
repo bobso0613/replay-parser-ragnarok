@@ -1,12 +1,24 @@
 import { NavLink } from 'react-router-dom';
 import type { FC } from 'react';
 import type { HeaderProps } from '@/types';
-import { ENV } from '@/constants';
+import { ENV } from '@/constants/index.ts';
 import React from 'react';
 
 const linkClass = ({ isActive }: { isActive: boolean }) =>
   `transition-colors ${isActive ? 'text-blue-600 font-semibold' : 'text-gray-700 hover:text-gray-900'}`;
 
+/**
+ * Sticky top navigation header with a logo/brand name and route links.
+ *
+ * Generates `<NavLink>` elements from the supplied route objects, filtering
+ * out catch-all (`'*'`) routes. The active link is highlighted with a blue
+ * colour and bold weight via React Router's `isActive` class helper.
+ *
+ * Memoised with `React.memo` so it only re-renders when `routes` or
+ * `logoText` changes.
+ *
+ * @param props - {@link HeaderProps}
+ */
 const Header: FC<HeaderProps> = ({ logoText = ENV.APPLICATION_NAME, routes }) => {
   const navItems = routes
     .filter((route) => typeof route.path === 'string' && route.path !== '*')

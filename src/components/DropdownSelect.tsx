@@ -1,6 +1,15 @@
 import type { DropdownOption, DropdownSelectProps } from '@/types';
 import React from 'react';
 
+/**
+ * Controlled `<select>` element backed by an array of {@link DropdownOption} items.
+ *
+ * Renders a styled native select with a disabled placeholder option.
+ * The component is memoised with `React.memo` to avoid re-renders when the
+ * parent re-renders without changing props.
+ *
+ * @param props - {@link DropdownSelectProps}
+ */
 const DropdownSelect: React.FC<DropdownSelectProps> = ({
   id,
   key,

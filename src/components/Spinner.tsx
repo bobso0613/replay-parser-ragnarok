@@ -1,6 +1,18 @@
 import React from 'react';
 
 // Spinner component (intended to be moved to src/assets/svg/Spinner.tsx)
+/**
+ * SVG-based circular spinner with configurable size.
+ *
+ * Renders two concentric circles: a faint background track and a coloured
+ * arc rotated by a CSS `animate-spin` class. Stroke width is proportional
+ * to the diameter so the spinner scales correctly at any size.
+ *
+ * Memoised with `React.memo` to avoid unnecessary SVG re-renders.
+ *
+ * @param props.size - Diameter of the spinner in pixels (default: 40).
+ * @param props.className - Additional CSS class names applied to the wrapper `<div>`.
+ */
 const Spinner: React.FC<{ size?: number; className?: string }> = ({
   size = 40,
   className = '',
