@@ -140,6 +140,7 @@ const Table: React.FC<TableProps> = ({
   enableVirtualization = false,
   virtualRowHeight = DEFAULT_VIRTUAL_ROW_HEIGHT,
   virtualTableHeight = DEFAULT_VIRTUAL_TABLE_HEIGHT,
+  fitViewport = true,
   virtualOverscan = DEFAULT_VIRTUAL_OVERSCAN,
   virtualColumnWeights,
 }) => {
@@ -238,7 +239,7 @@ const Table: React.FC<TableProps> = ({
   }, [shouldVirtualize, maxCols, listViewportWidth, virtualColumnWeights]);
 
   useEffect(() => {
-    if (!shouldVirtualize) {
+    if (!shouldVirtualize || !fitViewport) {
       return () => {};
     }
 
@@ -284,7 +285,7 @@ const Table: React.FC<TableProps> = ({
       resizeObserver.disconnect();
       window.removeEventListener('resize', updateViewportHeight);
     };
-  }, [shouldVirtualize, virtualTableHeight]);
+  }, [shouldVirtualize, fitViewport, virtualTableHeight]);
 
   useEffect(() => {
     if (!shouldVirtualize) {

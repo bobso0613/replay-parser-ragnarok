@@ -4,6 +4,7 @@ import PlaceholderDetails from '@/components/PlaceholderDetails';
 import ReplayBreakdown from '@/components/ReplayBreakdown';
 import SectionLoading from '@/components/SectionLoading';
 import { PARSER_URL } from '@/constants/index.ts';
+import { ModalProvider } from '@/contexts/ModalContext';
 import { fetchReplay, fetchReplayApi } from '@/services';
 import type { IReplayData } from '@/types';
 import React, { useEffect } from 'react';
@@ -115,7 +116,7 @@ export const Home = () => {
   }, [selectedFiles, replayOutputId]);
 
   return (
-    <>
+    <ModalProvider>
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1">
         <InputUpload
           onChange={handleFileUpload}
@@ -137,7 +138,7 @@ export const Home = () => {
         <ErrorDetails retryOnClick={handleClick} />
       )}
       {!!!parsedReplay && !replayIsParsing && !isError && <PlaceholderDetails />}
-    </>
+    </ModalProvider>
   );
 };
 

@@ -1,3 +1,5 @@
+import type { PlayerDetailContentProps } from '@/components/PlayerDetailContent';
+
 /** Highest single-hit damage record for a skill. */
 export interface IHighestDamage {
   skillId: string;
@@ -62,6 +64,7 @@ export interface IPlayerSkillDamage {
  * @property totalDamageDealthMvps - Subset of `totalDamageDealt` directed at MVP monsters.
  * @property highestDamage - The single best hit this player landed, with monster context.
  * @property skillDamages - Per-skill breakdown of damage, hit counts, and highest-hit info.
+ * @property playerDetails - Detail-content props for the player modal.
  */
 export interface IPlayerBreakdown {
   playerId: string;
@@ -72,6 +75,7 @@ export interface IPlayerBreakdown {
   totalDamageDealthMvps: number;
   highestDamage: IPlayerHighestDamage;
   skillDamages: IPlayerSkillDamage[];
+  playerDetails: PlayerDetailContentProps;
 }
 
 /** Per-player damage contribution for a single skill. */

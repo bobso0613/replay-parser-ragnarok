@@ -1,12 +1,19 @@
 import { describe, it, expect, vi } from 'vitest';
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
+import PlayerDetailContent, { type PlayerDetailContentProps } from './PlayerDetailContent';
 import ReplayBreakdown from './ReplayBreakdown';
+
+const openModal = vi.hoisted(() => vi.fn());
+
+vi.mock('@/contexts/ModalContext', () => ({
+  useModal: () => ({ closeModal: vi.fn(), openModal }),
+}));
 
 // Mock HorizontalTabs
 vi.mock('./HorizontalTabs', () => ({
-  default: vi.fn(() => {
-    return React.createElement('div', { 'data-testid': 'tabs' }, 'Tabs');
+  default: vi.fn(({ tabs }) => {
+    return React.createElement('div', { 'data-testid': 'tabs' }, tabs[0]?.content);
   }),
 }));
 
@@ -22,6 +29,69 @@ describe('ReplayBreakdown', () => {
     mobDb: null,
     fileName: 'test.replay',
   };
+
+  it('opens the modal from a player name in the summary', async () => {
+    openModal.mockClear();
+    const playerName = 'Modal Player';
+    const { findAllByRole } = render(
+      React.createElement(ReplayBreakdown, {
+        ...defaultProps,
+        apiResponse: {
+          ...defaultProps.apiResponse,
+          players: [
+            {
+              AID: 'player-1',
+              name: playerName,
+              jobId: 0,
+              totalDamageDealt: 1000,
+              totalDamageTaken: 0,
+              totalSkillUsageCount: 0,
+              totalItemUsageCount: 0,
+              MVPCount: 0,
+              deathCount: 0,
+              skillInfo: {
+                offensive: [
+                  {
+                    skillId: '1',
+                    skillName: 'Strike',
+                    skillDamageDealt: 1000,
+                    skillUsageCount: 1,
+                    maxDamageDealt: 1000,
+                    maxDamageMonsterId: 'monster-1',
+                    maxDamageMonsterName: 'Poring',
+                  },
+                ],
+                support: [],
+              },
+              itemInfo: [],
+            },
+          ],
+        },
+      })
+    );
+
+    const [playerLabel] = await findAllByRole('button', { name: playerName });
+    fireEvent.click(playerLabel);
+
+    const modalRequest = openModal.mock.calls[0]?.[0];
+    const modalTitle = modalRequest?.title as React.ReactElement<{
+      className: string;
+      children: React.ReactNode[];
+    }>;
+    const detailContent = modalRequest?.content as React.ReactElement<PlayerDetailContentProps>;
+
+    expect(modalTitle.props.className).toContain('flex');
+    expect(modalTitle.props.children[0]).toHaveProperty('props.children', 'Details of ');
+    expect(modalTitle.props.children[1]).toMatchObject({
+      props: { keyId: 0, keyInfo: playerName, title: '' },
+    });
+    expect(detailContent.type).toBe(PlayerDetailContent);
+    expect(detailContent.props.playerId).toBe('player-1');
+    expect(detailContent.props.statistics).toHaveLength(8);
+    expect(detailContent.props.offensiveSkills).toEqual([
+      { skillId: '1', name: 'Strike', totalDamage: 1000, hitCount: 1, highestDamage: 1000 },
+    ]);
+  });
 
   it('should render without crashing', () => {
     const { container } = render(React.createElement(ReplayBreakdown, defaultProps));

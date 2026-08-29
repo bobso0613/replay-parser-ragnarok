@@ -1,13 +1,13 @@
 import { describe, it, expect, vi } from 'vitest';
 import React from 'react';
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import TextImage from './TextImage';
 import { TEXT_IMAGE_VARIANTS } from '@/constants/index.ts';
 
 // Mock the Tooltip component
 vi.mock('./Tooltip', () => ({
-  default: vi.fn(({ children, content, className }) => {
-    return React.createElement('div', { className, 'data-tooltip': content }, children);
+  default: vi.fn(({ children, content, className, onClick }) => {
+    return React.createElement('div', { className, 'data-tooltip': content, onClick }, children);
   }),
 }));
 
@@ -38,6 +38,37 @@ describe('TextImage', () => {
     const { container } = render(React.createElement(TextImage, defaultProps));
     const span = container.querySelector('.sort-value');
     expect(span?.textContent).toBe('Sample Info');
+  });
+
+  it('should invoke onTextClick when the label is clicked or activated by keyboard', () => {
+    const onTextClick = vi.fn();
+    const { getByRole } = render(React.createElement(TextImage, { ...defaultProps, onTextClick }));
+    const label = getByRole('button', { name: 'Sample Info' });
+
+    fireEvent.click(label);
+    fireEvent.keyDown(label, { key: 'Enter' });
+    fireEvent.keyDown(label, { key: ' ' });
+
+    expect(onTextClick).toHaveBeenCalledTimes(3);
+  });
+
+  it('should invoke onTextClick when the tooltip trigger is clicked', () => {
+    const onTextClick = vi.fn();
+    const { container } = render(React.createElement(TextImage, { ...defaultProps, onTextClick }));
+
+    fireEvent.click(container.querySelector('[data-tooltip]')!);
+
+    expect(onTextClick).toHaveBeenCalledTimes(1);
+  });
+
+  it('should style interactive labels with a pointer cursor and hover underline', () => {
+    const { container } = render(
+      React.createElement(TextImage, { ...defaultProps, onTextClick: vi.fn() })
+    );
+    const label = container.querySelector('.sort-value');
+
+    expect(label?.className).toContain('cursor-pointer');
+    expect(label?.className).toContain('hover:underline');
   });
 
   it('should render flex container', () => {

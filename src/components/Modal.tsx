@@ -64,7 +64,7 @@ export const Modal = ({
       onMouseDown={disableOutsideClick ? undefined : onClose}
     >
       <section
-        className="flex h-[95vh] w-[70vw] max-h-[95vh] max-w-[95vw] flex-col overflow-hidden rounded-lg border border-gray-700 bg-gray-900 text-gray-100 shadow-[0_0_28px_rgba(229,231,235,0.2),0_24px_48px_rgba(0,0,0,0.45)] max-sm:h-[98vh] max-sm:w-[98vw] max-sm:max-h-[98vh] max-sm:max-w-[98vw]"
+        className="flex h-[95vh] w-[75vw] max-h-[95vh] max-w-[95vw] flex-col overflow-hidden rounded-lg border border-gray-700 bg-gray-900 text-gray-100 shadow-[0_0_28px_rgba(229,231,235,0.2),0_24px_48px_rgba(0,0,0,0.45)] max-sm:h-[98vh] max-sm:w-[98vw] max-sm:max-h-[98vh] max-sm:max-w-[98vw]"
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}

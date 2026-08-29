@@ -25,6 +25,7 @@ const TextImage: React.FC<TextImageProps> = ({
   keyInfo,
   textBefore,
   title,
+  onTextClick,
 }) => {
   const skillUrl: Record<string, string> = {
     skill: SKILL_IMAGE_URL.replace('PLACEHOLDER_TEXT', keyId.toString()),
@@ -40,6 +41,7 @@ const TextImage: React.FC<TextImageProps> = ({
           content={title ?? keyInfo}
           placement={TOOLTIP_POSITION.BOTTOM}
           className="w-6.25 h-6.25"
+          onClick={onTextClick}
         >
           <img
             src={`${skillUrl[variant || 'skill']}`}
@@ -50,7 +52,20 @@ const TextImage: React.FC<TextImageProps> = ({
           />
         </Tooltip>
       </div>
-      <span className="sort-value">{keyInfo}</span>
+      <span
+        className={`sort-value${onTextClick ? ' cursor-pointer hover:underline' : ''}`}
+        role={onTextClick ? 'button' : undefined}
+        tabIndex={onTextClick ? 0 : undefined}
+        onClick={onTextClick}
+        onKeyDown={(event) => {
+          if (onTextClick && (event.key === 'Enter' || event.key === ' ')) {
+            event.preventDefault();
+            onTextClick();
+          }
+        }}
+      >
+        {keyInfo}
+      </span>
     </div>
   );
 };

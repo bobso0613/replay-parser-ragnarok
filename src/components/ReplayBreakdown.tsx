@@ -7,9 +7,11 @@ import commaNumber from 'comma-number';
 import prettyMilliseconds from 'pretty-ms';
 import DropdownSelect from './DropdownSelect';
 import HorizontalTabs from './HorizontalTabs';
+import PlayerDetailContent from './PlayerDetailContent';
 import StickyButton from './StickyButton';
 import TextImage from './TextImage';
 import { MONSTER_IMAGE_URL, TEXT_IMAGE_VARIANTS } from '@/constants/index.ts';
+import { useModal } from '@/contexts/ModalContext';
 
 type TabContentWithStickyProps = {
   children: React.ReactNode;
@@ -84,10 +86,13 @@ const TabContentWithSticky: React.FC<TabContentWithStickyProps> = ({ children })
  * 6. **Skill Breakdown** — total skill casts per player across all skill types.
  *
  * Data transformation from raw API output is performed by {@link parseReplayOutput}.
+ * Player labels and their job-icon tooltip triggers open the shared modal with
+ * the selected player's detail content.
  *
  * @param props - {@link ReplayBreakdownProps}
  */
 const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, fileName = '' }) => {
+  const { openModal } = useModal();
   const [isParsingDone, setIsParsingDone] = React.useState<boolean>(false);
   const [isLinkCopied, setIsLinkCopied] = React.useState<boolean>(false);
   const [replayToDisplay, setReplayToDisplay] = React.useState<IParsedReplay | null>(null);
@@ -113,6 +118,31 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
     } catch {
       setIsLinkCopied(false);
     }
+  };
+
+  const handleOpenModal = (playerId: string) => {
+    const player = replayToDisplay?.breakdownPerPlayer.find(
+      (breakdownPlayer) => breakdownPlayer.playerId === playerId
+    );
+
+    if (!player) {
+      return;
+    }
+
+    openModal({
+      title: (
+        <div className="flex items-center gap-3 whitespace-nowrap">
+          <span>Details of </span>
+          <TextImage
+            variant={TEXT_IMAGE_VARIANTS.JOB}
+            keyId={player.jobId}
+            keyInfo={player.playerName}
+            title={player.jobName}
+          />
+        </div>
+      ),
+      content: <PlayerDetailContent {...player.playerDetails} />,
+    });
   };
 
   useEffect(() => {
@@ -188,6 +218,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                           keyId={player.jobId}
                           keyInfo={player.playerName}
                           title={player.jobName}
+                          onTextClick={() => handleOpenModal(player.playerId)}
                         />,
                         player.highestDamage.damage ? commaNumber(player.totalDamageDealt) : 'N/A',
                         player.highestDamage.damage
@@ -215,6 +246,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                           keyId={player.jobId}
                           keyInfo={player.playerName}
                           title={player.jobName}
+                          onTextClick={() => handleOpenModal(player.playerId)}
                         />,
                         commaNumber(player.mvpCount),
                       ])}
@@ -238,6 +270,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                           keyId={player.jobId}
                           keyInfo={player.playerName}
                           title={player.jobName}
+                          onTextClick={() => handleOpenModal(player.playerId)}
                         />,
                         commaNumber(player.deathCount),
                       ])}
@@ -259,6 +292,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                           keyId={player.jobId}
                           keyInfo={player.playerName}
                           title={player.jobName}
+                          onTextClick={() => handleOpenModal(player.playerId)}
                         />,
                         commaNumber(player.skillUsageCount),
                       ])}
@@ -305,6 +339,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                       keyId={player.jobId}
                       keyInfo={player.playerName}
                       title={player.jobName}
+                      onTextClick={() => handleOpenModal(player.playerId)}
                     />,
                     player.highestDamage.damage ? commaNumber(player.totalDamageDealt) : 'N/A',
                     player.highestDamage.damage ? commaNumber(player.totalDamageDealthMvps) : 'N/A',
@@ -448,6 +483,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                             keyId={monster.highestDamage.jobId}
                             keyInfo={monster.highestDamage.playerName}
                             title={monster.highestDamage.jobName}
+                            onTextClick={() => handleOpenModal(monster.highestDamage.playerId)}
                           />
                           <TextImage
                             textBefore={<i>using</i>}
@@ -469,6 +505,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                               keyId={player.jobId}
                               keyInfo={player.playerName}
                               title={player.jobName}
+                              onTextClick={() => handleOpenModal(player.playerId)}
                             />,
                             commaNumber(player.damage),
                             commaNumber(player.noOfHitsUnique),
@@ -556,6 +593,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                           ? `${skill.highestSkillUsagePlayerName} (${commaNumber(skill.highestSkillUsageCount)}x)`
                           : 'N/A'
                       }
+                      onTextClick={() => handleOpenModal(skill.highestSkillUsagePlayerId)}
                       title={skill.highestSkillUsagePlayerJobName}
                     />,
 
@@ -569,6 +607,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                             keyInfo={playerSkill.playerName}
                             variant={TEXT_IMAGE_VARIANTS.JOB}
                             title={playerSkill.jobName}
+                            onTextClick={() => handleOpenModal(playerSkill.playerId)}
                           />,
                           commaNumber(playerSkill.skillUsageCount),
                         ])}
@@ -628,6 +667,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                             keyInfo={playerUsage.playerName}
                             variant={TEXT_IMAGE_VARIANTS.JOB}
                             title={playerUsage.jobName}
+                            onTextClick={() => handleOpenModal(playerUsage.playerId)}
                           />,
                           commaNumber(playerUsage.itemUsageCount),
                         ])}

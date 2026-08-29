@@ -134,6 +134,7 @@ export type ReplayBreakdownProps = {
  * @property enableVirtualization - Activates react-window virtualisation for large row counts.
  * @property virtualRowHeight - Estimated row height in pixels used for virtual list calculations.
  * @property virtualTableHeight - Maximum height in pixels of the virtual scroll container.
+ * @property fitViewport - Whether a virtualized table should constrain its height to the remaining viewport. Defaults to `true`.
  * @property virtualOverscan - Number of rows rendered outside the visible window for smoother scrolling.
  * @property virtualColumnWeights - Relative weight ratios used to distribute column widths in virtualised mode.
  */
@@ -150,6 +151,7 @@ export type TableProps = {
   enableVirtualization?: boolean;
   virtualRowHeight?: number;
   virtualTableHeight?: number;
+  fitViewport?: boolean;
   virtualOverscan?: number;
   virtualColumnWeights?: number[];
 };
@@ -191,6 +193,7 @@ export interface HorizontalTabsProps {
  * @property keyId - Numeric or string ID used to build the image URL (skill ID or job ID).
  * @property keyInfo - Short label text rendered next to the icon and used as the `<img>` alt text.
  * @property title - Tooltip title; falls back to `keyInfo` when omitted.
+ * @property onTextClick - Optional callback invoked when the text label is clicked or activated by keyboard.
  */
 export interface TextImageProps {
   textBefore?: ReactNode;
@@ -198,6 +201,7 @@ export interface TextImageProps {
   keyId: number | string;
   keyInfo: string;
   title?: string;
+  onTextClick?: () => void;
 }
 
 /**
@@ -208,10 +212,12 @@ export interface TextImageProps {
  * @property className - Additional CSS class names applied to the trigger wrapper.
  * @property placement - Preferred position relative to the trigger; one of `TOOLTIP_POSITION` values.
  *   Defaults to `'top'`.
+ * @property onClick - Optional callback invoked when the tooltip trigger is clicked.
  */
 export type TooltipProps = {
   content: React.ReactNode;
   children: React.ReactNode;
   className?: string;
   placement?: string;
+  onClick?: () => void;
 };

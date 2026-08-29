@@ -63,6 +63,19 @@ npm run test:coverage && npm run build && npm run docs
 
 The coverage command enforces a minimum of 80% for global statements, branches, functions, and lines. A failed check stops the commit.
 
+## Player Details Modal
+
+`Home` mounts a shared `ModalProvider` that makes modal controls available to replay breakdown content through `useModal`. Player names and their job-icon tooltip triggers in `ReplayBreakdown` are keyboard-accessible and open the shared modal. The current integration displays placeholder title and body content until player-detail content is added.
+
+```tsx
+const { openModal } = useModal();
+
+openModal({
+  title: 'Player details',
+  content: <PlayerDetails player={player} />,
+});
+```
+
 ## 📚 API Documentation
 
 JSDoc-style HTML documentation is generated from TypeScript source files using [TypeDoc](https://typedoc.org/).

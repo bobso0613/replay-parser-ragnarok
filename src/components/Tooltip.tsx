@@ -19,6 +19,7 @@ const Tooltip = ({
   children,
   className = '',
   placement = TOOLTIP_POSITION.TOP,
+  onClick,
 }: TooltipProps) => {
   const triggerRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
@@ -94,6 +95,7 @@ const Tooltip = ({
       className={`inline-flex ${className}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
     >
       <div className="cursor-help">{children}</div>
       {isVisible &&
