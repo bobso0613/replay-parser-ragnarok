@@ -53,6 +53,16 @@ npm run preview
 npm run lint
 ```
 
+## Git Hooks
+
+[Husky](https://typicode.github.io/husky/) is installed automatically by `npm install` through the `prepare` script. Before Git completes a commit, `.husky/pre-commit` runs:
+
+```bash
+npm run test:coverage && npm run build && npm run docs
+```
+
+The coverage command enforces a minimum of 80% for global statements, branches, functions, and lines. A failed check stops the commit.
+
 ## 📚 API Documentation
 
 JSDoc-style HTML documentation is generated from TypeScript source files using [TypeDoc](https://typedoc.org/).
@@ -87,9 +97,6 @@ npm test -- --run
 
 # Run tests with coverage report
 npm run test:coverage
-
-# Run tests with coverage (CI mode)
-npm run test:coverage -- --run
 ```
 
 ### Test Structure
@@ -105,14 +112,14 @@ npm run test:coverage -- --run
 
 ### Coverage
 
-Current test coverage (from `npm run test:coverage`):
+The coverage command enforces an 80% global minimum for statements, branches, functions, and lines. Current test coverage (from `npm run test:coverage`):
 
-- **Lines**: 90.11% (647/718)
-- **Statements**: 89.08% (669/751)
-- **Branches**: 80.75% (491/608)
-- **Functions**: 84.36% (178/211)
+- **Lines**: 90.3% (661/732)
+- **Statements**: 89.29% (684/766)
+- **Branches**: 81.21% (506/623)
+- **Functions**: 84.72% (183/216)
 
-The test suite includes 727 passing tests across 34 test files, focusing on:
+The test suite includes 734 passing tests across 35 test files, focusing on:
 
 - Component rendering and lifecycle
 - User interactions (clicks, form submissions, drag-drop detection)

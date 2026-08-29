@@ -29,6 +29,12 @@ export default defineConfig(({ mode }) => {
         provider: 'v8',
         reporter: ['text', 'html', 'json'],
         exclude: ['node_modules/', 'src/**/*.test.ts', 'src/**/*.test.tsx'],
+        thresholds: {
+          branches: 80,
+          functions: 80,
+          lines: 80,
+          statements: 80,
+        },
       },
     },
   };

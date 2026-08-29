@@ -10,8 +10,9 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest --coverage",
-    "docs": "typedoc --options jsdoc.config.json"
+    "test:coverage": "vitest --coverage --run",
+    "docs": "typedoc --options jsdoc.config.json",
+    "prepare": "husky"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.1",
@@ -49,6 +50,7 @@
     "eslint-plugin-sonarjs": "^3.0.5",
     "eslint-plugin-unused-imports": "^4.2.0",
     "globals": "^16.3.0",
+    "husky": "^9.1.7",
     "jsdoc": "^4.0.5",
     "jsdom": "^29.1.1",
     "prettier": "^3.8.5",
