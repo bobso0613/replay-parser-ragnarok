@@ -139,6 +139,7 @@ This separation enables high-coverage testing while respecting jsdom limitations
   - 📈 `ReplayBreakdown.tsx` - main replay data display component
   - 📊 `Table.tsx` - data table component for structured data display
   - 📝 `DropdownSelect.tsx` - dropdown selection component
+  - 🪟 `Modal.tsx` - responsive dialog with a scrollable body and optional footer
   - 📤 `InputUpload.tsx` - file upload component for replay JSON files
   - ⏳ `Spinner.tsx`, `Spinner.tsx`, `SectionLoading.tsx`, `PageLoading.tsx` - loading state components
   - 🦴 `SkeletonLoader.tsx` - skeleton loader for content placeholders
