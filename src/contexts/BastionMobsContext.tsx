@@ -45,7 +45,7 @@ export const BastionMobsProvider = ({ children }: BastionMobsProviderProps) => {
     setIsLoading(true);
     setHasError(false);
 
-    fetch('/bastion_mobs.json', { signal: controller.signal })
+    fetch('./bastion_mobs.json', { signal: controller.signal })
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Request failed with status ${response.status}`);

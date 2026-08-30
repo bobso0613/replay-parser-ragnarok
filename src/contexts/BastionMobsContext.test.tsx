@@ -72,7 +72,7 @@ describe('BastionMobsContext', () => {
     );
 
     await waitFor(() => expect(screen.getByText('Wave 1')).toBeInTheDocument());
-    expect(fetch).toHaveBeenCalledWith('/bastion_mobs.json', expect.any(Object));
+    expect(fetch).toHaveBeenCalledWith('./bastion_mobs.json', expect.any(Object));
   });
 
   it('shows an error state when the response is not ok', async () => {
