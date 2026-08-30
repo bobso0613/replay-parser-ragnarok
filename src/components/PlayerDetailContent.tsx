@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import type { ReactNode } from 'react';
-import { MONSTER_IMAGE_URL, TEXT_IMAGE_VARIANTS } from '@/constants/index.ts';
+import { MONSTER_IMAGE_URL, TEXT_IMAGE_VARIANTS, TOOLTIP_POSITION } from '@/constants/index.ts';
 import type { IPlayerHighestDamage } from '@/types';
 import { getMonsterName } from '@/utils';
 import commaNumber from 'comma-number';
 import DropdownSelect from './DropdownSelect';
 import Table from './Table';
 import TextImage from './TextImage';
+import Tooltip from './Tooltip';
 
 type PlayerDetailStat = {
   label: string;
@@ -223,11 +224,12 @@ const PlayerDetailContent = ({
           onChange={(event) => setMonsterMode(Number(event.target.value))}
         />
         <Table
+          compact
           headers={[
             '',
             'Monster Name',
             'Total Damage',
-            'Highest Burst Damage',
+            'Highest Burst',
             <div key="skill-breakdown-header">
               <div className="mb-1 text-center">Breakdown per Skill</div>
               <NestedHeader
@@ -249,20 +251,34 @@ const PlayerDetailContent = ({
             monster.highestBurst.damage,
           ])}
           rowClassNames={[
-            'align-middle',
+            'align-middle text-center',
             'align-middle',
             'align-middle',
             'align-middle',
             'align-top',
           ]}
           rows={filteredMonsters.map((monster) => [
-            <img
-              src={MONSTER_IMAGE_URL.replace('PLACEHOLDER_TEXT', monster.monsterId)}
-              alt={monster.name}
-              className="mx-auto max-w-24 h-auto"
-              loading="lazy"
-              referrerPolicy="no-referrer"
-            />,
+            <Tooltip
+              content={
+                <img
+                  src={MONSTER_IMAGE_URL.replace('PLACEHOLDER_TEXT', monster.monsterId)}
+                  alt={monster.name}
+                  className="w-auto"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              }
+              placement={TOOLTIP_POSITION.BOTTOM}
+              className="mx-auto flex h-full max-w-6 items-center justify-center"
+            >
+              <img
+                src={MONSTER_IMAGE_URL.replace('PLACEHOLDER_TEXT', monster.monsterId)}
+                alt={monster.name}
+                className="mx-auto max-w-6 h-auto"
+                loading="lazy"
+                referrerPolicy="no-referrer"
+              />
+            </Tooltip>,
             `${getMonsterName(monster.name, monster.isMvp)} x ${formatCount(monster.amount)}`,
             formatDamage(monster.damage),
             monster.highestBurst.damage > 0 ? (
@@ -280,6 +296,7 @@ const PlayerDetailContent = ({
             ),
             monster.skillBreakdown.length > 0 ? (
               <Table
+                compact
                 headers={[]}
                 columnWidths={['50%', '30%', '20%']}
                 rows={monster.skillBreakdown.map((skill) => [

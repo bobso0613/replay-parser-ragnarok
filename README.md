@@ -76,6 +76,14 @@ openModal({
 });
 ```
 
+## Bastion Guide
+
+`BastionGuide` (route: `/bastion-guide`) shows the Bastion instance's monster waves next to a meteor timer iframe. Wave/monster data is fetched once from `public/bastion_mobs.json` by a shared `BastionMobsProvider`, which exposes `waves`, `isLoading`, `hasError`, and a `reload` retry callback through `useBastionMobs`. The page renders the data in a compact, virtualised `Table` with `Wave` and `Monster` columns, and sizes itself on mount/resize to fill the viewport down to the site footer.
+
+```tsx
+const { waves, isLoading, hasError, reload } = useBastionMobs();
+```
+
 ## 📚 API Documentation
 
 JSDoc-style HTML documentation is generated from TypeScript source files using [TypeDoc](https://typedoc.org/).
@@ -165,7 +173,10 @@ This separation enables high-coverage testing while respecting jsdom limitations
   - 🦴 `SkeletonLoader.tsx` - skeleton loader for content placeholders
   - 🚫 `PlaceholderDetails.tsx` - placeholder component for empty states
 - 🎨 `src/layouts/` - shared page/layout structures (`BaseLayout.tsx`)
-- 📄 `src/pages/` - route-level pages (`Home.tsx`)
+- 📄 `src/pages/` - route-level pages (`Home.tsx`, `BastionGuide.tsx`)
+- 🧵 `src/contexts/` - shared React context providers:
+  - 🪟 `ModalContext.tsx` - application-level modal controls (`ModalProvider`, `useModal`)
+  - 👹 `BastionMobsContext.tsx` - fetches and shares Bastion wave/monster data (`BastionMobsProvider`, `useBastionMobs`)
 - 🗺️ `src/routes/` - router configuration and route entry points
 - 🎣 `src/hooks/` - custom React hooks
 - 🔌 `src/services/` - API or data service logic

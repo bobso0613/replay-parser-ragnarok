@@ -121,4 +121,14 @@ describe('PlayerDetailContent', () => {
     expect(screen.getByText('MVP Poring (MVP) x 1')).toBeInTheDocument();
     expect(screen.queryByText('Poring x 1')).toBeNull();
   });
+
+  it('shows an enlarged tooltip image when hovering a monster thumbnail', () => {
+    render(<PlayerDetailContent {...props} />);
+
+    expect(screen.getAllByAltText('Poring')).toHaveLength(1);
+
+    fireEvent.mouseEnter(screen.getByAltText('Poring').closest('div')!.parentElement!);
+
+    expect(screen.getAllByAltText('Poring')).toHaveLength(2);
+  });
 });

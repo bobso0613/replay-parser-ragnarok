@@ -10,6 +10,30 @@ export interface JobListType {
 }
 
 /**
+ * A single monster entry within a Bastion wave.
+ *
+ * @property monsterId - The monster's numeric ID, or `null` for unresolved/placeholder entries.
+ * @property monsterName - The monster's display name.
+ * @property isMvp - Whether this monster is flagged as an MVP in the mob database.
+ */
+export type BastionMonster = {
+  monsterId: number | null;
+  monsterName: string;
+  isMvp: boolean;
+};
+
+/**
+ * A single wave entry from `bastion_mobs.json`.
+ *
+ * @property wave - The wave number.
+ * @property monsters - Monsters that spawn during this wave.
+ */
+export type BastionWave = {
+  wave: number;
+  monsters: BastionMonster[];
+};
+
+/**
  * A single option entry for the DropdownSelect component.
  *
  * @property id - Unique numeric key used as the React list key.
@@ -137,6 +161,7 @@ export type ReplayBreakdownProps = {
  * @property fitViewport - Whether a virtualized table should constrain its height to the remaining viewport. Defaults to `true`.
  * @property virtualOverscan - Number of rows rendered outside the visible window for smoother scrolling.
  * @property virtualColumnWeights - Relative weight ratios used to distribute column widths in virtualised mode.
+ * @property compact - Renders cells with reduced `px-1 py-1` padding instead of the default `px-4 py-3`.
  */
 export type TableProps = {
   headers?: string[] | Array<React.ReactNode>;
@@ -154,6 +179,7 @@ export type TableProps = {
   fitViewport?: boolean;
   virtualOverscan?: number;
   virtualColumnWeights?: number[];
+  compact?: boolean;
 };
 
 /**

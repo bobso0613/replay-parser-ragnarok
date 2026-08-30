@@ -10,8 +10,9 @@ import HorizontalTabs from './HorizontalTabs';
 import PlayerDetailContent from './PlayerDetailContent';
 import StickyButton from './StickyButton';
 import TextImage from './TextImage';
-import { MONSTER_IMAGE_URL, TEXT_IMAGE_VARIANTS } from '@/constants/index.ts';
+import { MONSTER_IMAGE_URL, TEXT_IMAGE_VARIANTS, TOOLTIP_POSITION } from '@/constants/index.ts';
 import { useModal } from '@/contexts/ModalContext';
+import Tooltip from './Tooltip';
 
 type TabContentWithStickyProps = {
   children: React.ReactNode;
@@ -366,6 +367,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                       <Table
                         headers={[]}
                         columnWidths={['30%', '25%', '15%', '30%']}
+                        compact
                         rows={player.skillDamages.map((skill) => [
                           <TextImage
                             keyId={skill.skillId}
@@ -410,7 +412,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                   headers={[
                     '',
                     'Monster Name',
-                    'Highest Burst Damage',
+                    'Highest Burst',
                     <div key="breakdown-player-header">
                       <div className="text-center mb-1">Breakdown per player</div>
                       <NestedHeader
@@ -437,25 +439,40 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                     monster.highestDamage.damage,
                   ])}
                   rowClassNames={[
-                    'align-middle',
+                    'align-middle text-center',
                     'align-middle',
                     'align-middle',
                     'align-top',
                     'align-top',
                   ]}
+                  compact
                   rows={replayToDisplay.breakdownPerMonsterUnique
                     .filter((monster) => {
                       if (mobMode === 0) return true;
                       return monster.isMvp === (mobMode === 1 ? true : false);
                     })
                     .map((monster) => [
-                      <img
-                        src={MONSTER_IMAGE_URL.replace('PLACEHOLDER_TEXT', monster.monsterId)}
-                        alt={monster.name}
-                        className="mx-auto max-w-24 h-auto"
-                        loading="lazy"
-                        referrerPolicy="no-referrer"
-                      />,
+                      <Tooltip
+                        content={
+                          <img
+                            src={MONSTER_IMAGE_URL.replace('PLACEHOLDER_TEXT', monster.monsterId)}
+                            alt={monster.name}
+                            className="w-auto"
+                            loading="lazy"
+                            referrerPolicy="no-referrer"
+                          />
+                        }
+                        placement={TOOLTIP_POSITION.BOTTOM}
+                        className="mx-auto max-w-6 h-auto"
+                      >
+                        <img
+                          src={MONSTER_IMAGE_URL.replace('PLACEHOLDER_TEXT', monster.monsterId)}
+                          alt={monster.name}
+                          className="mx-auto max-w-10 h-auto"
+                          loading="lazy"
+                          referrerPolicy="no-referrer"
+                        />
+                      </Tooltip>,
                       <div>
                         <strong>{getMonsterName(monster.name, monster.isMvp)}</strong>
                         {` x ${monster.amount}`}
@@ -520,6 +537,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                             </div>,
                           ])}
                           className="my-0"
+                          compact
                         />
                       ) : (
                         'N/A'
@@ -538,6 +556,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                             commaNumber(skill.noOfHitsUnique),
                           ])}
                           className="my-0"
+                          compact
                         />
                       ) : (
                         'N/A'
@@ -612,6 +631,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                           commaNumber(playerSkill.skillUsageCount),
                         ])}
                         className="w-full"
+                        compact
                       />
                     ) : (
                       'N/A'
@@ -672,6 +692,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                           commaNumber(playerUsage.itemUsageCount),
                         ])}
                         className="w-full"
+                        compact
                       />
                     ) : (
                       'N/A'

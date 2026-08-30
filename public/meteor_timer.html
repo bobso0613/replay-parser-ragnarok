@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FSN Meteor Timer</title>
+    <style>
+      :root {
+        --bg-idle: #000000;
+        --bg-alert: #b30000;
+        --text: #ffffff;
+        --button-bg: #ffffff;
+        --button-text: #000000;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-idle);
+        color: var(--text);
+        font-family: 'Segoe UI', Arial, sans-serif;
+        transition: background-color 0.25s ease;
+      }
+      body.alert {
+        background: var(--bg-alert);
+      }
+      .app {
+        width: min(90vw, 520px);
+        text-align: center;
+        padding: 32px 24px;
+      }
+      .title {
+        margin: 0 0 14px;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        font-weight: 700;
+        letter-spacing: 0.06em;
+      }
+      .time {
+        margin: 0 0 16px;
+        font-size: clamp(3rem, 12vw, 5rem);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        position: relative;
+        display: inline-block;
+        line-height: 1;
+      }
+      .time-main {
+        display: block;
+        line-height: 1;
+      }
+      .time-ms {
+        position: absolute;
+        left: calc(100% + 8px);
+        bottom: 0.35em;
+        min-width: 2ch;
+        font-size: clamp(1rem, 3vw, 1.6rem);
+        line-height: 1.1;
+        letter-spacing: 0.04em;
+        opacity: 0.78;
+        text-align: left;
+      }
+      .slider-settings {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 0 0 22px;
+      }
+      .slider-field {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .slider-label {
+        width: 64px;
+        flex: 0 0 64px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.88);
+        text-align: left;
+      }
+      .slider-track {
+        flex: 1;
+        accent-color: #ffffff;
+        cursor: grab;
+      }
+      .slider-track:active {
+        cursor: grabbing;
+      }
+      .slider-input {
+        width: 78px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 12px;
+        padding: 12px 14px;
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--text);
+        font-size: 1rem;
+        text-align: center;
+      }
+      .slider-input:focus {
+        outline: 2px solid rgba(255, 255, 255, 0.32);
+        outline-offset: 1px;
+      }
+      .description {
+        margin: 0 0 24px;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.82);
+      }
+      .mode-options {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin: 0 0 24px;
+      }
+      .mode-option {
+        position: relative;
+      }
+      .mode-option input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+      .mode-option span {
+        display: block;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 14px;
+        padding: 14px 12px;
+        background: rgba(255, 255, 255, 0.06);
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 0.96rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition:
+          border-color 0.2s ease,
+          background-color 0.2s ease,
+          color 0.2s ease;
+      }
+      .mode-option input:checked + span {
+        border-color: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.18);
+        color: #ffffff;
+      }
+      .controls {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+      }
+      .control {
+        border: 0;
+        border-radius: 999px;
+        padding: 14px 36px;
+        font-size: 1.05rem;
+        font-weight: 700;
+        background: var(--button-bg);
+        color: var(--button-text);
+        cursor: pointer;
+      }
+      .control:hover {
+        opacity: 0.92;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app">
+      <p class="title">FSN Meteor Timer</p>
+      <div class="time">
+        <span class="time-main" id="timeMain">63</span> <span class="time-ms" id="timeMs">00</span>
+      </div>
+      <div class="slider-settings">
+        <div class="slider-field">
+          <label class="slider-label" for="intervalSlider">Interval</label>
+          <input
+            class="slider-track"
+            id="intervalSlider"
+            type="range"
+            min="0"
+            max="67"
+            step="1"
+            value="63"
+          />
+          <input
+            class="slider-input"
+            id="intervalInput"
+            type="number"
+            min="0"
+            max="67"
+            step="1"
+            value="63"
+          />
+        </div>
+        <div class="slider-field">
+          <label class="slider-label" for="windowSlider">Window</label>
+          <input
+            class="slider-track"
+            id="windowSlider"
+            type="range"
+            min="1"
+            max="10"
+            step="1"
+            value="5"
+          />
+          <input
+            class="slider-input"
+            id="windowInput"
+            type="number"
+            min="1"
+            max="10"
+            step="1"
+            value="5"
+          />
+        </div>
+      </div>
+      <p class="description" id="description">
+        The background color changes during the selected 5-second window.<br />Click at the start of
+        wave 81 (after Vesper).
+      </p>
+      <div class="mode-options" role="radiogroup" aria-label="Timer mode">
+        <label class="mode-option">
+          <input type="radio" name="timerMode" value="once" checked /> <span>Only Once</span>
+        </label>
+        <label class="mode-option">
+          <input type="radio" name="timerMode" value="repeat" /> <span>Repeat</span>
+        </label>
+      </div>
+      <div class="controls">
+        <button class="control" id="toggleButton" type="button">Start</button>
+        <button class="control" id="resetButton" type="button">Reset</button>
+      </div>
+    </main>
+    <script>
+      const maxCount = 67;
+      const timeMainElement = document.getElementById('timeMain');
+      const timeMsElement = document.getElementById('timeMs');
+      const descriptionElement = document.getElementById('description');
+      const toggleButton = document.getElementById('toggleButton');
+      const resetButton = document.getElementById('resetButton');
+      const intervalSlider = document.getElementById('intervalSlider');
+      const intervalInput = document.getElementById('intervalInput');
+      const windowSlider = document.getElementById('windowSlider');
+      const windowInput = document.getElementById('windowInput');
+      const modeInputs = document.querySelectorAll('input[name="timerMode"]');
+      const body = document.body;
+      let count = 0;
+      let timerId = null;
+      let isRunning = false;
+      let startedAt = 0;
+      let pausedElapsedMs = 0;
+      function clampValue(value, min, max) {
+        const parsed = Number.parseInt(value, 10);
+        if (Number.isNaN(parsed)) {
+          return min;
+        }
+        return Math.max(min, Math.min(max, parsed));
+      }
+      function syncInputs() {
+        const interval = clampValue(intervalInput.value, 0, maxCount);
+        const windowSize = clampValue(windowInput.value, 1, 10);
+        intervalSlider.value = interval;
+        intervalInput.value = interval;
+        windowSlider.value = windowSize;
+        windowInput.value = windowSize;
+      }
+      function getSettings() {
+        const end = clampValue(intervalInput.value, 0, maxCount);
+        const windowSize = clampValue(windowInput.value, 1, 10);
+        const start = Math.max(0, end - windowSize);
+        return { start, end, windowSize };
+      }
+      function getSelectedMode() {
+        const selected = document.querySelector('input[name="timerMode"]:checked');
+        return selected ? selected.value : 'repeat';
+      }
+      function formatTime(value) {
+        return String(value).padStart(2, '0');
+      }
+      function getElapsedMs() {
+        if (!isRunning) {
+          return pausedElapsedMs;
+        }
+        return Date.now() - startedAt;
+      }
+      function updateDescription() {
+        const { start, end } = getSettings();
+        descriptionElement.innerHTML = `The background color changes during the selected ${windowSize}-second window.<br>Click at the start of wave 81 (after Vesper).`;
+      }
+      function getDisplayCount() {
+        const { end } = getSettings();
+        const remainingMs = Math.max(0, end * 1000 - getElapsedMs());
+        return Math.floor(remainingMs / 1000);
+      }
+      function getDisplayMilliseconds(elapsedMs) {
+        const { end } = getSettings();
+        const remainingMs = Math.max(0, end * 1000 - elapsedMs);
+        return Math.floor((remainingMs % 1000) / 10);
+      }
+      function render() {
+        const { start, end } = getSettings();
+        const elapsedMs = getElapsedMs();
+        count = Math.floor(elapsedMs / 1000);
+        timeMainElement.textContent = formatTime(getDisplayCount());
+        timeMsElement.textContent = String(getDisplayMilliseconds(elapsedMs)).padStart(2, '0');
+        body.classList.toggle('alert', count >= start && count <= end);
+      }
+      function resetTimer() {
+        clearInterval(timerId);
+        timerId = null;
+        isRunning = false;
+        count = 0;
+        startedAt = 0;
+        pausedElapsedMs = 0;
+        toggleButton.textContent = 'Start';
+        render();
+      }
+      function pauseTimer() {
+        pausedElapsedMs = getElapsedMs();
+        clearInterval(timerId);
+        timerId = null;
+        isRunning = false;
+        toggleButton.textContent = 'Start';
+        render();
+      }
+      function startTimer() {
+        clearInterval(timerId);
+        startedAt = Date.now() - pausedElapsedMs;
+        timerId = window.setInterval(tick, 10);
+        isRunning = true;
+        toggleButton.textContent = 'Pause';
+        render();
+      }
+      function tick() {
+        const { end } = getSettings();
+        const elapsedSeconds = Math.floor(getElapsedMs() / 1000);
+        if (elapsedSeconds > end) {
+          if (getSelectedMode() === 'once') {
+            resetTimer();
+            return;
+          }
+          pausedElapsedMs = 0;
+          startedAt = Date.now();
+        }
+        render();
+      }
+      toggleButton.addEventListener('click', () => {
+        if (isRunning) {
+          pauseTimer();
+          return;
+        }
+        startTimer();
+      });
+      resetButton.addEventListener('click', () => {
+        resetTimer();
+      });
+      intervalSlider.addEventListener('input', () => {
+        intervalInput.value = intervalSlider.value;
+        updateDescription();
+        render();
+      });
+      intervalInput.addEventListener('input', () => {
+        syncInputs();
+        updateDescription();
+        render();
+      });
+      windowSlider.addEventListener('input', () => {
+        windowInput.value = windowSlider.value;
+        updateDescription();
+        render();
+      });
+      windowInput.addEventListener('input', () => {
+        syncInputs();
+        updateDescription();
+        render();
+      });
+      modeInputs.forEach((input) => {
+        input.addEventListener('change', () => {
+          render();
+        });
+      });
+      syncInputs();
+      updateDescription();
+      render();
+    </script>
+  </body>
+</html>

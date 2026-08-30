@@ -1340,4 +1340,23 @@ describe('Table', () => {
 
     expect(true).toBe(true);
   });
+
+  it('should use reduced padding on cells when compact is enabled', () => {
+    const { container } = render(
+      React.createElement(Table, {
+        ...defaultProps,
+        compact: true,
+      })
+    );
+
+    expect(container.querySelector('td.px-1.py-1')).not.toBeNull();
+    expect(container.querySelector('td.px-4.py-3')).toBeNull();
+  });
+
+  it('should use default padding on cells when compact is not set', () => {
+    const { container } = render(React.createElement(Table, defaultProps));
+
+    expect(container.querySelector('td.px-4.py-3')).not.toBeNull();
+    expect(container.querySelector('td.px-1.py-1')).toBeNull();
+  });
 });

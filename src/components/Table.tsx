@@ -32,6 +32,7 @@ type VirtualRowProps = {
   columnWidths: number[];
   tableWidth: number;
   dynamicRowHeight: DynamicRowHeight;
+  compact: boolean;
 };
 
 /** Renders a single virtualised row inside the react-window `List`, syncing
@@ -46,10 +47,12 @@ const VirtualTableRow = ({
   columnWidths,
   tableWidth,
   dynamicRowHeight,
+  compact,
   ariaAttributes,
 }: RowComponentProps<VirtualRowProps>) => {
   const row = rows[index] ?? [];
   const rowRef = useRef<HTMLDivElement>(null);
+  const cellPadding = compact ? 'px-1 py-1' : 'px-4 py-3';
 
   useEffect(() => {
     const rowElement = rowRef.current;
@@ -95,12 +98,12 @@ const VirtualTableRow = ({
         <tbody>
           <tr className="text-slate-50 hover:bg-slate-50/20">
             {row.map((cell, cellIndex) => (
-              <td key={cellIndex} className={`${rowClassNames[cellIndex] ?? ''} px-4 py-3`}>
+              <td key={cellIndex} className={`${rowClassNames[cellIndex] ?? ''} ${cellPadding}`}>
                 {cell}
               </td>
             ))}
             {Array.from({ length: maxCols - row.length }).map((_, padIndex) => (
-              <td key={`pad-${padIndex}`} className="px-4 py-3" />
+              <td key={`pad-${padIndex}`} className={cellPadding} />
             ))}
           </tr>
         </tbody>
@@ -125,6 +128,8 @@ const VirtualTableRow = ({
  * **Column widths** can be set explicitly via `columnWidths` (non-virtual mode)
  * or via weight ratios via `virtualColumnWeights` (virtual mode).
  *
+ * **Compact mode** (`compact`) reduces cell padding from `px-4 py-3` to `px-1 py-1`.
+ *
  * @param props - {@link TableProps}
  */
 const Table: React.FC<TableProps> = ({
@@ -143,7 +148,9 @@ const Table: React.FC<TableProps> = ({
   fitViewport = true,
   virtualOverscan = DEFAULT_VIRTUAL_OVERSCAN,
   virtualColumnWeights,
+  compact = false,
 }) => {
+  const cellPadding = compact ? 'px-1 py-1' : 'px-4 py-3';
   const [sortConfig, setSortConfig] = useState<{
     column: number;
     direction: 'asc' | 'desc';
@@ -370,7 +377,7 @@ const Table: React.FC<TableProps> = ({
                   <th
                     key={index}
                     onClick={() => handleHeaderClick(index)}
-                    className={`px-4 py-3 text-left font-bold uppercase tracking-wide text-slate-200 ${
+                    className={`${cellPadding} text-left font-bold uppercase tracking-wide text-slate-200 ${
                       hasComplexHeader ? '' : 'whitespace-nowrap '
                     }${isSortable ? 'cursor-pointer hover:bg-slate-50/10' : ''}`}
                   >
@@ -396,7 +403,7 @@ const Table: React.FC<TableProps> = ({
                 );
               })}
               {Array.from({ length: Math.max(0, maxCols - headers.length) }).map((_, index) => {
-                return <th key={`empty-${index}`} className="px-4 py-3" />;
+                return <th key={`empty-${index}`} className={cellPadding} />;
               })}
             </tr>
           </thead>
@@ -413,12 +420,15 @@ const Table: React.FC<TableProps> = ({
               sortedRows.map((row, rowIndex) => (
                 <tr key={rowIndex} className={`text-slate-50 hover:bg-slate-50/20`}>
                   {row.map((cell, cellIndex) => (
-                    <td key={cellIndex} className={`${rowClassNames[cellIndex] ?? ''} px-4 py-3`}>
+                    <td
+                      key={cellIndex}
+                      className={`${rowClassNames[cellIndex] ?? ''} ${cellPadding}`}
+                    >
                       {cell}
                     </td>
                   ))}
                   {Array.from({ length: maxCols - row.length }).map((_, index) => (
-                    <td key={`pad-${index}`} className="px-4 py-3" />
+                    <td key={`pad-${index}`} className={cellPadding} />
                   ))}
                 </tr>
               ))
@@ -440,6 +450,7 @@ const Table: React.FC<TableProps> = ({
             columnWidths: computedColumnWidths,
             tableWidth: listViewportWidth,
             dynamicRowHeight,
+            compact,
           }}
           overscanCount={virtualOverscan}
           style={{ height: virtualizedHeight, width: '100%' }}

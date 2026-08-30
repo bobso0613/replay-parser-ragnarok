@@ -5,7 +5,7 @@ import { ENV } from '@/constants/index.ts';
 import React from 'react';
 
 const linkClass = ({ isActive }: { isActive: boolean }) =>
-  `transition-colors ${isActive ? 'text-blue-600 font-semibold' : 'text-gray-700 hover:text-gray-900'}`;
+  `transition-colors ${isActive ? 'text-blue-300 font-semibold' : 'text-gray-400 hover:text-gray-100'}`;
 
 /**
  * Sticky top navigation header with a logo/brand name and route links.

@@ -1,0 +1,1622 @@
+[
+  {
+    "wave": 1,
+    "monsters": [
+      {
+        "monsterId": 1002,
+        "monsterName": "Poring",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 2,
+    "monsters": [
+      {
+        "monsterId": 1007,
+        "monsterName": "Fabre",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1230,
+        "monsterName": "Pupa",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 3,
+    "monsters": [
+      {
+        "monsterId": 1063,
+        "monsterName": "Lunatic",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 4,
+    "monsters": [
+      {
+        "monsterId": 1033,
+        "monsterName": "Elder Willow",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1009,
+        "monsterName": "Condor",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 5,
+    "monsters": [
+      {
+        "monsterId": 1852,
+        "monsterName": "Angeling",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1595,
+        "monsterName": "Marin",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1031,
+        "monsterName": "Poporing",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 6,
+    "monsters": [
+      {
+        "monsterId": 1014,
+        "monsterName": "Spore",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1077,
+        "monsterName": "Poison Spore",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 7,
+    "monsters": [
+      {
+        "monsterId": 1052,
+        "monsterName": "Rocker",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2290,
+        "monsterName": "Thief Bug",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 8,
+    "monsters": [
+      {
+        "monsterId": 1013,
+        "monsterName": "Wolf",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2034,
+        "monsterName": "Baby Desert Wolf",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 9,
+    "monsters": [
+      {
+        "monsterId": 1018,
+        "monsterName": "Creamy",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2291,
+        "monsterName": "Hornet",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 10,
+    "monsters": [
+      {
+        "monsterId": 1095,
+        "monsterName": "Andre",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1023,
+        "monsterName": "Orc Warrior",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 11,
+    "monsters": [
+      {
+        "monsterId": 1034,
+        "monsterName": "Thara Frog",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1012,
+        "monsterName": "Roda Frog",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 12,
+    "monsters": [
+      {
+        "monsterId": 1056,
+        "monsterName": "Smokie",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1104,
+        "monsterName": "Coco",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 13,
+    "monsters": [
+      {
+        "monsterId": 1103,
+        "monsterName": "Caramel",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1057,
+        "monsterName": "Yoyo",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 14,
+    "monsters": [
+      {
+        "monsterId": 1030,
+        "monsterName": "Anacondaq",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1025,
+        "monsterName": "Boa",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 15,
+    "monsters": [
+      {
+        "monsterId": 1814,
+        "monsterName": "Moonlight Flower",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1076,
+        "monsterName": "Skeleton",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1015,
+        "monsterName": "Zombie",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 16,
+    "monsters": [
+      {
+        "monsterId": 1042,
+        "monsterName": "Steel Chonchon",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1035,
+        "monsterName": "Hunter Fly",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 17,
+    "monsters": [
+      {
+        "monsterId": 1927,
+        "monsterName": "Whisper",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1423,
+        "monsterName": "Ghoul",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 18,
+    "monsters": [
+      {
+        "monsterId": 1469,
+        "monsterName": "Skeleton Worker",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1463,
+        "monsterName": "Orc Zombie",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 19,
+    "monsters": [
+      {
+        "monsterId": 1577,
+        "monsterName": "Goblin Archer",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1538,
+        "monsterName": "Goblin",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 20,
+    "monsters": [
+      {
+        "monsterId": 1115,
+        "monsterName": "Eddga",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1369,
+        "monsterName": "Grand Peco",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1019,
+        "monsterName": "Peco Peco",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 21,
+    "monsters": [
+      {
+        "monsterId": 1473,
+        "monsterName": "Orc Archer",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1213,
+        "monsterName": "High Orc",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 22,
+    "monsters": [
+      {
+        "monsterId": 1457,
+        "monsterName": "Mantis",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2294,
+        "monsterName": "Argiope",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 23,
+    "monsters": [
+      {
+        "monsterId": 1074,
+        "monsterName": "Shellfish",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1067,
+        "monsterName": "Cornutus",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1971,
+        "monsterName": "Vadon",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 24,
+    "monsters": [
+      {
+        "monsterId": 1856,
+        "monsterName": "Magnolia",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1058,
+        "monsterName": "Metaller",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 25,
+    "monsters": [
+      {
+        "monsterId": 2096,
+        "monsterName": "Osiris",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1461,
+        "monsterName": "Minorous",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1578,
+        "monsterName": "Horong",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 26,
+    "monsters": [
+      {
+        "monsterId": 1116,
+        "monsterName": "Eggyra",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1061,
+        "monsterName": "Nightmare",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 27,
+    "monsters": [
+      {
+        "monsterId": 1297,
+        "monsterName": "Ancient Mummy",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1393,
+        "monsterName": "Mummy",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1032,
+        "monsterName": "Verit",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 28,
+    "monsters": [
+      {
+        "monsterId": 1170,
+        "monsterName": "Sohee",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1464,
+        "monsterName": "Pasana",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 29,
+    "monsters": [
+      {
+        "monsterId": 1611,
+        "monsterName": "Bongun",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1610,
+        "monsterName": "Munak",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1512,
+        "monsterName": "Hyegun",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 30,
+    "monsters": [
+      {
+        "monsterId": 2097,
+        "monsterName": "Dracula",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1749,
+        "monsterName": "Medusa",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1459,
+        "monsterName": "Marionette",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 31,
+    "monsters": [
+      {
+        "monsterId": 1455,
+        "monsterName": "Kobold Archer",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1547,
+        "monsterName": "Kobold",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 32,
+    "monsters": [
+      {
+        "monsterId": 1488,
+        "monsterName": "Anolian",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1271,
+        "monsterName": "Alligator",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 33,
+    "monsters": [
+      {
+        "monsterId": 1528,
+        "monsterName": "Clock",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1818,
+        "monsterName": "Alarm",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 34,
+    "monsters": [
+      {
+        "monsterId": 1478,
+        "monsterName": "Rideword",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1819,
+        "monsterName": "Bathory",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1446,
+        "monsterName": "Injustice",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 35,
+    "monsters": [
+      {
+        "monsterId": 1542,
+        "monsterName": "Incantation Samurai",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1560,
+        "monsterName": "Shinobi",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1563,
+        "monsterName": "Tengu",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 36,
+    "monsters": [
+      {
+        "monsterId": 1489,
+        "monsterName": "Sting",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1165,
+        "monsterName": "Sandman",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 37,
+    "monsters": [
+      {
+        "monsterId": 1969,
+        "monsterName": "Marc",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1158,
+        "monsterName": "Phen",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1069,
+        "monsterName": "Swordfish",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 38,
+    "monsters": [
+      {
+        "monsterId": 1680,
+        "monsterName": "Hill Wind",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1253,
+        "monsterName": "Gargoyle",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1376,
+        "monsterName": "Harpy",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 39,
+    "monsters": [
+      {
+        "monsterId": 1037,
+        "monsterName": "Side Winder",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1749,
+        "monsterName": "Medusa",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1216,
+        "monsterName": "Penomena",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 40,
+    "monsters": [
+      {
+        "monsterId": 2094,
+        "monsterName": "Orc Hero",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1984,
+        "monsterName": "Orc Lady",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1023,
+        "monsterName": "Orc Warrior",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 41,
+    "monsters": [
+      {
+        "monsterId": 1453,
+        "monsterName": "Raydric Archer",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1467,
+        "monsterName": "Raydric",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 42,
+    "monsters": [
+      {
+        "monsterId": 2342,
+        "monsterName": "Diabolic",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1928,
+        "monsterName": "Deviruchi",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 43,
+    "monsters": [
+      {
+        "monsterId": 1484,
+        "monsterName": "Phendark",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1483,
+        "monsterName": "Rybio",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 44,
+    "monsters": [
+      {
+        "monsterId": 1777,
+        "monsterName": "Ice Titan",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1775,
+        "monsterName": "Snowier",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1776,
+        "monsterName": "Siroma",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 45,
+    "monsters": [
+      {
+        "monsterId": 1157,
+        "monsterName": "Pharaoh",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1098,
+        "monsterName": "Anubis",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1458,
+        "monsterName": "Marduk",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1464,
+        "monsterName": "Pasana",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 46,
+    "monsters": [
+      {
+        "monsterId": 1886,
+        "monsterName": "Mavka",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1881,
+        "monsterName": "Les",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1880,
+        "monsterName": "Wood Goblin",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 47,
+    "monsters": [
+      {
+        "monsterId": 1600,
+        "monsterName": "Heater",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1386,
+        "monsterName": "Sleeper",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1602,
+        "monsterName": "Solider",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 48,
+    "monsters": [
+      {
+        "monsterId": 1295,
+        "monsterName": "Owl Baron",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1698,
+        "monsterName": "Death Word",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1270,
+        "monsterName": "Clock Manager",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 49,
+    "monsters": [
+      {
+        "monsterId": 1974,
+        "monsterName": "Banshee Master",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1868,
+        "monsterName": "Banshee",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 50,
+    "monsters": [
+      {
+        "monsterId": 1511,
+        "monsterName": "Amon Ra",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1312,
+        "monsterName": "Turtle General",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1893,
+        "monsterName": "Abysmal Knight",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2213,
+        "monsterName": "Wanderer",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 51,
+    "monsters": [
+      {
+        "monsterId": 1633,
+        "monsterName": "Beholder",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1774,
+        "monsterName": "Seeker",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 52,
+    "monsters": [
+      {
+        "monsterId": 1977,
+        "monsterName": "Heavy Metaller",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1976,
+        "monsterName": "Cobalt Mineral",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1975,
+        "monsterName": "Beholder Master",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 53,
+    "monsters": [
+      {
+        "monsterId": 1837,
+        "monsterName": "Imp",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1836,
+        "monsterName": "Magmaring",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1838,
+        "monsterName": "Knocker",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 54,
+    "monsters": [
+      {
+        "monsterId": 2283,
+        "monsterName": "Dark Priest",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1869,
+        "monsterName": "Flame Skull",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 55,
+    "monsters": [
+      {
+        "monsterId": 1272,
+        "monsterName": "Dark Lord",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1693,
+        "monsterName": "Plasma",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 56,
+    "monsters": [
+      {
+        "monsterId": 1773,
+        "monsterName": "Hodremlin",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1632,
+        "monsterName": "Gremlin",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 57,
+    "monsters": [
+      {
+        "monsterId": 1740,
+        "monsterName": "Aliot",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1739,
+        "monsterName": "Alicel",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1937,
+        "monsterName": "Constant",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 58,
+    "monsters": [
+      {
+        "monsterId": 1997,
+        "monsterName": "Tatacho",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1999,
+        "monsterName": "Centipede Larva",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1987,
+        "monsterName": "Centipede",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 59,
+    "monsters": [
+      {
+        "monsterId": 2047,
+        "monsterName": "Naga",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1992,
+        "monsterName": "Cornus",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1988,
+        "monsterName": "Nepenthes",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 60,
+    "monsters": [
+      {
+        "monsterId": 1708,
+        "monsterName": "Thanatos",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1709,
+        "monsterName": "Odium",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1711,
+        "monsterName": "Maero",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1710,
+        "monsterName": "Despero",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1707,
+        "monsterName": "Dolor",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 61,
+    "monsters": [
+      {
+        "monsterId": 2048,
+        "monsterName": "Dark Pinguicula",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1995,
+        "monsterName": "Pinguicula",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 62,
+    "monsters": [
+      {
+        "monsterId": 2160,
+        "monsterName": "Luciola Vespa",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1988,
+        "monsterName": "Nepenthes",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 63,
+    "monsters": [
+      {
+        "monsterId": 2047,
+        "monsterName": "Naga",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1992,
+        "monsterName": "Cornus",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 64,
+    "monsters": [
+      {
+        "monsterId": 1998,
+        "monsterName": "Hillslion",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2049,
+        "monsterName": "Bradium Golem",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 65,
+    "monsters": [
+      {
+        "monsterId": 1991,
+        "monsterName": "Tendrilion",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1999,
+        "monsterName": "Centipede Larva",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 66,
+    "monsters": [
+      {
+        "monsterId": 1997,
+        "monsterName": "Tatacho",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2013,
+        "monsterName": "Draco",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2014,
+        "monsterName": "Draco Egg",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 67,
+    "monsters": [
+      {
+        "monsterId": 2049,
+        "monsterName": "Bradium Golem",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1549,
+        "monsterName": "Lava Golem",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1278,
+        "monsterName": "Stalactic Golem",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 68,
+    "monsters": [
+      {
+        "monsterId": 2281,
+        "monsterName": "Dark Shadow",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1997,
+        "monsterName": "Tatacho",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 69,
+    "monsters": [
+      {
+        "monsterId": 2021,
+        "monsterName": "Phylla",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2020,
+        "monsterName": "Rhyncho",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2016,
+        "monsterName": "Aqua Elemental",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 70,
+    "monsters": [
+      {
+        "monsterId": 1990,
+        "monsterName": "Hardrock Mammoth",
+        "isMvp": true
+      },
+      {
+        "monsterId": 2019,
+        "monsterName": "Ancient Tree",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 71,
+    "monsters": [
+      {
+        "monsterId": 2018,
+        "monsterName": "Duneyrr",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2017,
+        "monsterName": "Rata",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 72,
+    "monsters": [
+      {
+        "monsterId": 2022,
+        "monsterName": "Nidhoggr",
+        "isMvp": true
+      }
+    ]
+  },
+  {
+    "wave": 73,
+    "monsters": [
+      {
+        "monsterId": 1839,
+        "monsterName": "Byorgue",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 74,
+    "monsters": [
+      {
+        "monsterId": null,
+        "monsterName": "Biolab 3 - Green Aura",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 75,
+    "monsters": [
+      {
+        "monsterId": 1920,
+        "monsterName": "Morroc - Sadako",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1918,
+        "monsterName": "Morroc - Angel",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1921,
+        "monsterName": "Morroc - Ghost",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1919,
+        "monsterName": "Morroc - Chocolate",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 76,
+    "monsters": [
+      {
+        "monsterId": 2346,
+        "monsterName": "Ktullanux",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1777,
+        "monsterName": "Ice Titan",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1778,
+        "monsterName": "Gazeti",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 77,
+    "monsters": [
+      {
+        "monsterId": 1719,
+        "monsterName": "Detale",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1713,
+        "monsterName": "Gold Acidus",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1716,
+        "monsterName": "Blue Acidus",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 78,
+    "monsters": [
+      {
+        "monsterId": 1899,
+        "monsterName": "Sword Guardian",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1830,
+        "monsterName": "Bow Guardian",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 79,
+    "monsters": [
+      {
+        "monsterId": 2216,
+        "monsterName": "Salamander",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2215,
+        "monsterName": "Kasa",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1839,
+        "monsterName": "Byorgue",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 80,
+    "monsters": [
+      {
+        "monsterId": 1685,
+        "monsterName": "Vesper",
+        "isMvp": true
+      }
+    ]
+  },
+  {
+    "wave": 81,
+    "monsters": [
+      {
+        "monsterId": null,
+        "monsterName": "Biolab 3 - Normal Mob",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 82,
+    "monsters": [
+      {
+        "monsterId": 1638,
+        "monsterName": "Cecil Damon",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 83,
+    "monsters": [
+      {
+        "monsterId": 1635,
+        "monsterName": "Eremes Guile",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 84,
+    "monsters": [
+      {
+        "monsterId": null,
+        "monsterName": "Biolab 3 - Normal Mob",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 85,
+    "monsters": [
+      {
+        "monsterId": null,
+        "monsterName": "Biolab 3 - Green Aura",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 86,
+    "monsters": [
+      {
+        "monsterId": 2472,
+        "monsterName": "Bloody Knight",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2470,
+        "monsterName": "Corrupted Abysmal Knight",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 87,
+    "monsters": [
+      {
+        "monsterId": 2467,
+        "monsterName": "Maggot",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 88,
+    "monsters": [
+      {
+        "monsterId": 2468,
+        "monsterName": "Corrupted Palace Guard (Raydric)",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2465,
+        "monsterName": "Corrupted Monk (Wraith)",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2466,
+        "monsterName": "Grand Chamberlain in Pa",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 89,
+    "monsters": [
+      {
+        "monsterId": 20578,
+        "monsterName": "Wandering Archer (Raydric Archer)",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 90,
+    "monsters": [
+      {
+        "monsterId": 2473,
+        "monsterName": "1st Commander of Death",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2474,
+        "monsterName": "2nd Commander of Death",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 91,
+    "monsters": [
+      {
+        "monsterId": null,
+        "monsterName": "Biolab 4 - Normal Mob",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 92,
+    "monsters": [
+      {
+        "monsterId": null,
+        "monsterName": "Biolab 4 - Green Aura",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 93,
+    "monsters": [
+      {
+        "monsterId": null,
+        "monsterName": "Biolab 4 - Green Aura",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 94,
+    "monsters": [
+      {
+        "monsterId": null,
+        "monsterName": "Biolab 4 - Normal Mob",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 95,
+    "monsters": [
+      {
+        "monsterId": 2108,
+        "monsterName": "Gloom Under Night",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1774,
+        "monsterName": "Seeker",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1772,
+        "monsterName": "Isilla",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 96,
+    "monsters": [
+      {
+        "monsterId": 2202,
+        "monsterName": "Kraken",
+        "isMvp": true
+      },
+      {
+        "monsterId": 2198,
+        "monsterName": "King Dramoh",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2350,
+        "monsterName": "Sedora",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 97,
+    "monsters": [
+      {
+        "monsterId": 2109,
+        "monsterName": "Valkyrie x2",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 98,
+    "monsters": [
+      {
+        "monsterId": 2068,
+        "monsterName": "Boitata",
+        "isMvp": true
+      },
+      {
+        "monsterId": 2069,
+        "monsterName": "Iara",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2082,
+        "monsterName": "Piranha",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 99,
+    "monsters": [
+      {
+        "monsterId": 1871,
+        "monsterName": "Fallen Bishop",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1864,
+        "monsterName": "Zombie Slaughter",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1865,
+        "monsterName": "Ragged Zombie",
+        "isMvp": false
+      }
+    ]
+  },
+  {
+    "wave": 100,
+    "monsters": [
+      {
+        "monsterId": null,
+        "monsterName": "RANDOM MVP POOL",
+        "isMvp": false
+      }
+    ]
+  }
+]

@@ -12,6 +12,7 @@ import {
 
 // 1. Swap static imports for dynamic lazy imports
 const Home = lazy(() => import('@/pages/Home'));
+const BastionGuide = lazy(() => import('@/pages/BastionGuide'));
 
 /**
  * Reads the `?redirect=` search param set by the GitHub Pages 404.html fallback
@@ -42,8 +43,9 @@ const RedirectFromFallback = () => {
  *
  * Route structure:
  * - `/` → redirects to `/replay-parser`.
- * - `/replay-parser` → `Home` (file upload view).
+ * - `/replay-parser` → `Home` (Replay Parser file upload view).
  * - `/replay-parser/:outputId` → `Home` (shared-link view, loads by ID).
+ * - `/bastion-guide` → `BastionGuide`.
  *
  * All routes are wrapped in a `<Suspense>` boundary that shows
  * {@link PageLoading} while the lazy `Home` chunk is downloading.
@@ -60,6 +62,7 @@ const AppRouter = () => {
             <Route index element={<Navigate to="replay-parser" replace />} />
             <Route path="replay-parser" element={<Home />} />
             <Route path="replay-parser/:outputId" element={<Home />} />
+            <Route path="bastion-guide" element={<BastionGuide />} />
           </Route>
         </Routes>
       </Suspense>
