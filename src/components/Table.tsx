@@ -28,6 +28,7 @@ const VIEWPORT_SAFETY_BUFFER = 12;
 type VirtualRowProps = {
   rows: Array<Array<React.ReactNode>>;
   rowClassNames: string[];
+  rowBackgroundClassNames?: string[];
   maxCols: number;
   columnWidths: number[];
   tableWidth: number;
@@ -43,6 +44,7 @@ const VirtualTableRow = ({
   style,
   rows,
   rowClassNames,
+  rowBackgroundClassNames,
   maxCols,
   columnWidths,
   tableWidth,
@@ -96,7 +98,9 @@ const VirtualTableRow = ({
           ))}
         </colgroup>
         <tbody>
-          <tr className="text-slate-50 hover:bg-slate-50/20">
+          <tr
+            className={`text-slate-50 hover:bg-slate-50/20 ${rowBackgroundClassNames?.[index] ?? ''}`}
+          >
             {row.map((cell, cellIndex) => (
               <td key={cellIndex} className={`${rowClassNames[cellIndex] ?? ''} ${cellPadding}`}>
                 {cell}
@@ -130,6 +134,10 @@ const VirtualTableRow = ({
  *
  * **Compact mode** (`compact`) reduces cell padding from `px-4 py-3` to `px-1 py-1`.
  *
+ * **Row backgrounds** (`rowBackgroundClassNames`) apply a CSS class to each `<tr>`,
+ * parallel to `rows`, so a whole row's background can be styled regardless of
+ * individual cells' content width.
+ *
  * @param props - {@link TableProps}
  */
 const Table: React.FC<TableProps> = ({
@@ -149,6 +157,7 @@ const Table: React.FC<TableProps> = ({
   virtualOverscan = DEFAULT_VIRTUAL_OVERSCAN,
   virtualColumnWeights,
   compact = false,
+  rowBackgroundClassNames,
 }) => {
   const cellPadding = compact ? 'px-1 py-1' : 'px-4 py-3';
   const [sortConfig, setSortConfig] = useState<{
@@ -418,7 +427,10 @@ const Table: React.FC<TableProps> = ({
               </tr>
             ) : (
               sortedRows.map((row, rowIndex) => (
-                <tr key={rowIndex} className={`text-slate-50 hover:bg-slate-50/20`}>
+                <tr
+                  key={rowIndex}
+                  className={`text-slate-50 hover:bg-slate-50/20 ${rowBackgroundClassNames?.[rowIndex] ?? ''}`}
+                >
                   {row.map((cell, cellIndex) => (
                     <td
                       key={cellIndex}
@@ -446,6 +458,7 @@ const Table: React.FC<TableProps> = ({
           rowProps={{
             rows: sortedRows,
             rowClassNames,
+            rowBackgroundClassNames,
             maxCols,
             columnWidths: computedColumnWidths,
             tableWidth: listViewportWidth,

@@ -78,7 +78,16 @@ openModal({
 
 ## Bastion Guide
 
-`BastionGuide` (route: `/bastion-guide`) shows the Bastion instance's monster waves next to a meteor timer iframe. Wave/monster data is fetched once from `public/bastion_mobs.json` by a shared `BastionMobsProvider`, which exposes `waves`, `isLoading`, `hasError`, and a `reload` retry callback through `useBastionMobs`. The page renders the data in a compact, virtualised `Table` with `Wave` and `Monster` columns, and sizes itself on mount/resize to fill the viewport down to the site footer.
+`BastionGuide` (route: `/bastion-guide`) shows the Bastion instance's monster waves next to a meteor timer iframe. Wave/monster data is fetched once from `public/bastion_mobs.json` by a shared `BastionMobsProvider`, which exposes `waves`, `isLoading`, `hasError`, and a `reload` retry callback through `useBastionMobs`. Each wave carries `isSkippable` and a `remindersSetup` array of reminder flags (`isDangerousFloor`, `isMvpFloor`, `restockFlag`, `isStartOfStatus`, `isStartOfMeteor`, `isStashDisappear`).
+
+The page renders a **Filters** column of checkboxes next to a **Legend** column (one row per `REMINDER_NOTES` entry, showing its emoji and label), above a compact, virtualised `Table` with `Wave`, `Monster`, and `Notes` columns:
+
+- **Show only dangerous floor waves** (`showOnlyDangerousFloorWaves`) — keeps only waves flagged `isDangerousFloor`.
+- **Only show MVPs (except dangerous floors)** (`getMvpOnlyMonsters`) — shows only MVP monsters per wave, falling back to a generic "Mobs" label when a wave has monsters but no MVP; dangerous floor waves always show their full monster list.
+- **Merge skippable waves into next wave** (`mergeSkippableWaves`) — folds monsters from consecutive `isSkippable` waves into the next kept wave.
+- **Hide waves 1-55 (except dangerous floors)** (`hideNonDangerousEarlyWaves`) — hides early non-dangerous waves.
+
+Rows flagged `isMvpFloor` get a soft yellow background applied to the whole row via `Table`'s `rowBackgroundClassNames` prop, and the Notes column shows each wave's reminder emoji (from `getWaveNotes`) with a tooltip revealing its label.
 
 ```tsx
 const { waves, isLoading, hasError, reload } = useBastionMobs();

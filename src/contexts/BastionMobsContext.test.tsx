@@ -2,7 +2,14 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { BastionMobsProvider, useBastionMobs } from './BastionMobsContext';
 
-const waves = [{ wave: 1, monsters: [{ monsterId: 1, monsterName: 'Poring', isMvp: false }] }];
+const waves = [
+  {
+    wave: 1,
+    isSkippable: true,
+    remindersSetup: [],
+    monsters: [{ monsterId: 1, monsterName: 'Poring', isMvp: false }],
+  },
+];
 
 const okResponse = (body: unknown) =>
   ({ ok: true, status: 200, json: vi.fn().mockResolvedValue(body) }) as unknown as Response;

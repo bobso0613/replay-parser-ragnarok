@@ -23,13 +23,35 @@ export type BastionMonster = {
 };
 
 /**
+ * Flag names that can appear in a {@link BastionWave}'s `remindersSetup` array.
+ *
+ * - `isDangerousFloor` - Wave requires extra caution (e.g. heavy AoE, status effects).
+ * - `isMvpFloor` - Wave includes one or more MVP monsters.
+ * - `restockFlag` - Wave is a good point to restock supplies.
+ * - `isStartOfStatus` - Wave marks the start of a status-effect mechanic.
+ * - `isStartOfMeteor` - Wave marks the start of the meteor mechanic.
+ * - `isStashDisappear` - Wave marks when the storage/stash becomes unavailable.
+ */
+export type BastionWaveReminder =
+  | 'isDangerousFloor'
+  | 'isMvpFloor'
+  | 'restockFlag'
+  | 'isStartOfStatus'
+  | 'isStartOfMeteor'
+  | 'isStashDisappear';
+
+/**
  * A single wave entry from `bastion_mobs.json`.
  *
  * @property wave - The wave number.
+ * @property isSkippable - Whether this wave can be skipped.
+ * @property remindersSetup - Reminder flags that apply to this wave. See {@link BastionWaveReminder}.
  * @property monsters - Monsters that spawn during this wave.
  */
 export type BastionWave = {
   wave: number;
+  isSkippable: boolean;
+  remindersSetup: BastionWaveReminder[];
   monsters: BastionMonster[];
 };
 
@@ -162,6 +184,7 @@ export type ReplayBreakdownProps = {
  * @property virtualOverscan - Number of rows rendered outside the visible window for smoother scrolling.
  * @property virtualColumnWeights - Relative weight ratios used to distribute column widths in virtualised mode.
  * @property compact - Renders cells with reduced `px-1 py-1` padding instead of the default `px-4 py-3`.
+ * @property rowBackgroundClassNames - Per-row CSS class names applied to each `<tr>`, parallel to `rows`.
  */
 export type TableProps = {
   headers?: string[] | Array<React.ReactNode>;
@@ -180,6 +203,7 @@ export type TableProps = {
   virtualOverscan?: number;
   virtualColumnWeights?: number[];
   compact?: boolean;
+  rowBackgroundClassNames?: string[];
 };
 
 /**

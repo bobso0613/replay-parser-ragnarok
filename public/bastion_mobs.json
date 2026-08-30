@@ -1,6 +1,8 @@
 [
   {
     "wave": 1,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1002,
@@ -11,6 +13,8 @@
   },
   {
     "wave": 2,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1007,
@@ -26,6 +30,8 @@
   },
   {
     "wave": 3,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1063,
@@ -36,6 +42,8 @@
   },
   {
     "wave": 4,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1033,
@@ -51,6 +59,8 @@
   },
   {
     "wave": 5,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1852,
@@ -71,6 +81,8 @@
   },
   {
     "wave": 6,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1014,
@@ -86,6 +98,8 @@
   },
   {
     "wave": 7,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1052,
@@ -101,6 +115,8 @@
   },
   {
     "wave": 8,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1013,
@@ -116,6 +132,8 @@
   },
   {
     "wave": 9,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1018,
@@ -131,6 +149,8 @@
   },
   {
     "wave": 10,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1095,
@@ -146,6 +166,8 @@
   },
   {
     "wave": 11,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1034,
@@ -161,6 +183,8 @@
   },
   {
     "wave": 12,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1056,
@@ -176,6 +200,8 @@
   },
   {
     "wave": 13,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1103,
@@ -191,6 +217,8 @@
   },
   {
     "wave": 14,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1030,
@@ -206,6 +234,8 @@
   },
   {
     "wave": 15,
+    "isSkippable": false,
+    "remindersSetup": ["isMvpFloor"],
     "monsters": [
       {
         "monsterId": 1814,
@@ -226,6 +256,8 @@
   },
   {
     "wave": 16,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1042,
@@ -241,6 +273,8 @@
   },
   {
     "wave": 17,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1927,
@@ -256,6 +290,8 @@
   },
   {
     "wave": 18,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1469,
@@ -271,6 +307,8 @@
   },
   {
     "wave": 19,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1577,
@@ -286,6 +324,8 @@
   },
   {
     "wave": 20,
+    "isSkippable": false,
+    "remindersSetup": ["isMvpFloor"],
     "monsters": [
       {
         "monsterId": 1115,
@@ -306,6 +346,8 @@
   },
   {
     "wave": 21,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1473,
@@ -321,6 +363,8 @@
   },
   {
     "wave": 22,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1457,
@@ -336,6 +380,8 @@
   },
   {
     "wave": 23,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1074,
@@ -356,6 +402,8 @@
   },
   {
     "wave": 24,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1856,
@@ -371,6 +419,8 @@
   },
   {
     "wave": 25,
+    "isSkippable": false,
+    "remindersSetup": ["isMvpFloor"],
     "monsters": [
       {
         "monsterId": 2096,
@@ -391,6 +441,8 @@
   },
   {
     "wave": 26,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1116,
@@ -406,6 +458,8 @@
   },
   {
     "wave": 27,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1297,
@@ -426,6 +480,8 @@
   },
   {
     "wave": 28,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1170,
@@ -441,6 +497,8 @@
   },
   {
     "wave": 29,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1611,
@@ -461,6 +519,8 @@
   },
   {
     "wave": 30,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor", "isMvpFloor"],
     "monsters": [
       {
         "monsterId": 2097,
@@ -481,6 +541,8 @@
   },
   {
     "wave": 31,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1455,
@@ -496,6 +558,8 @@
   },
   {
     "wave": 32,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1488,
@@ -511,6 +575,8 @@
   },
   {
     "wave": 33,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1528,
@@ -526,6 +592,8 @@
   },
   {
     "wave": 34,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1478,
@@ -546,6 +614,8 @@
   },
   {
     "wave": 35,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor", "isMvpFloor"],
     "monsters": [
       {
         "monsterId": 1542,
@@ -566,6 +636,8 @@
   },
   {
     "wave": 36,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1489,
@@ -581,6 +653,8 @@
   },
   {
     "wave": 37,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1969,
@@ -601,6 +675,8 @@
   },
   {
     "wave": 38,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1680,
@@ -621,6 +697,8 @@
   },
   {
     "wave": 39,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1037,
@@ -641,6 +719,8 @@
   },
   {
     "wave": 40,
+    "isSkippable": false,
+    "remindersSetup": ["isMvpFloor"],
     "monsters": [
       {
         "monsterId": 2094,
@@ -661,6 +741,8 @@
   },
   {
     "wave": 41,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1453,
@@ -676,6 +758,8 @@
   },
   {
     "wave": 42,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 2342,
@@ -691,6 +775,8 @@
   },
   {
     "wave": 43,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1484,
@@ -706,6 +792,8 @@
   },
   {
     "wave": 44,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1777,
@@ -726,6 +814,8 @@
   },
   {
     "wave": 45,
+    "isSkippable": false,
+    "remindersSetup": ["isMvpFloor"],
     "monsters": [
       {
         "monsterId": 1157,
@@ -751,6 +841,8 @@
   },
   {
     "wave": 46,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1886,
@@ -771,6 +863,8 @@
   },
   {
     "wave": 47,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1600,
@@ -791,6 +885,8 @@
   },
   {
     "wave": 48,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1295,
@@ -811,6 +907,8 @@
   },
   {
     "wave": 49,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1974,
@@ -826,6 +924,8 @@
   },
   {
     "wave": 50,
+    "isSkippable": false,
+    "remindersSetup": ["isMvpFloor"],
     "monsters": [
       {
         "monsterId": 1511,
@@ -851,6 +951,8 @@
   },
   {
     "wave": 51,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1633,
@@ -866,6 +968,8 @@
   },
   {
     "wave": 52,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1977,
@@ -886,6 +990,8 @@
   },
   {
     "wave": 53,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1837,
@@ -906,6 +1012,8 @@
   },
   {
     "wave": 54,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 2283,
@@ -921,6 +1029,8 @@
   },
   {
     "wave": 55,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor", "isMvpFloor"],
     "monsters": [
       {
         "monsterId": 1272,
@@ -936,6 +1046,8 @@
   },
   {
     "wave": 56,
+    "isSkippable": true,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1773,
@@ -951,6 +1063,8 @@
   },
   {
     "wave": 57,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1740,
@@ -971,6 +1085,8 @@
   },
   {
     "wave": 58,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1997,
@@ -991,6 +1107,8 @@
   },
   {
     "wave": 59,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 2047,
@@ -1011,6 +1129,8 @@
   },
   {
     "wave": 60,
+    "isSkippable": false,
+    "remindersSetup": ["isMvpFloor"],
     "monsters": [
       {
         "monsterId": 1708,
@@ -1041,6 +1161,8 @@
   },
   {
     "wave": 61,
+    "isSkippable": false,
+    "remindersSetup": ["isStartOfStatus"],
     "monsters": [
       {
         "monsterId": 2048,
@@ -1056,6 +1178,8 @@
   },
   {
     "wave": 62,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 2160,
@@ -1071,6 +1195,8 @@
   },
   {
     "wave": 63,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 2047,
@@ -1086,6 +1212,8 @@
   },
   {
     "wave": 64,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1998,
@@ -1101,6 +1229,8 @@
   },
   {
     "wave": 65,
+    "isSkippable": false,
+    "remindersSetup": ["isMvpFloor"],
     "monsters": [
       {
         "monsterId": 1991,
@@ -1116,6 +1246,8 @@
   },
   {
     "wave": 66,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1997,
@@ -1136,6 +1268,8 @@
   },
   {
     "wave": 67,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 2049,
@@ -1156,6 +1290,8 @@
   },
   {
     "wave": 68,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 2281,
@@ -1171,6 +1307,8 @@
   },
   {
     "wave": 69,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 2021,
@@ -1191,6 +1329,8 @@
   },
   {
     "wave": 70,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor", "isMvpFloor"],
     "monsters": [
       {
         "monsterId": 1990,
@@ -1206,6 +1346,8 @@
   },
   {
     "wave": 71,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor"],
     "monsters": [
       {
         "monsterId": 2018,
@@ -1221,6 +1363,8 @@
   },
   {
     "wave": 72,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor", "isMvpFloor"],
     "monsters": [
       {
         "monsterId": 2022,
@@ -1231,6 +1375,8 @@
   },
   {
     "wave": 73,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor"],
     "monsters": [
       {
         "monsterId": 1839,
@@ -1241,16 +1387,20 @@
   },
   {
     "wave": 74,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor"],
     "monsters": [
       {
         "monsterId": null,
         "monsterName": "Biolab 3 - Green Aura",
-        "isMvp": false
+        "isMvp": true
       }
     ]
   },
   {
     "wave": 75,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor", "restockFlag"],
     "monsters": [
       {
         "monsterId": 1920,
@@ -1276,6 +1426,8 @@
   },
   {
     "wave": 76,
+    "isSkippable": false,
+    "remindersSetup": ["isMvpFloor"],
     "monsters": [
       {
         "monsterId": 2346,
@@ -1296,6 +1448,8 @@
   },
   {
     "wave": 77,
+    "isSkippable": false,
+    "remindersSetup": ["isMvpFloor"],
     "monsters": [
       {
         "monsterId": 1719,
@@ -1316,6 +1470,8 @@
   },
   {
     "wave": 78,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor"],
     "monsters": [
       {
         "monsterId": 1899,
@@ -1331,6 +1487,8 @@
   },
   {
     "wave": 79,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor", "restockFlag"],
     "monsters": [
       {
         "monsterId": 2216,
@@ -1351,6 +1509,8 @@
   },
   {
     "wave": 80,
+    "isSkippable": false,
+    "remindersSetup": ["isMvpFloor", "isStashDisappear"],
     "monsters": [
       {
         "monsterId": 1685,
@@ -1361,6 +1521,8 @@
   },
   {
     "wave": 81,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor", "isStartOfMeteor"],
     "monsters": [
       {
         "monsterId": null,
@@ -1371,6 +1533,8 @@
   },
   {
     "wave": 82,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1638,
@@ -1381,6 +1545,8 @@
   },
   {
     "wave": 83,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 1635,
@@ -1391,6 +1557,8 @@
   },
   {
     "wave": 84,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor"],
     "monsters": [
       {
         "monsterId": null,
@@ -1401,16 +1569,20 @@
   },
   {
     "wave": 85,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": null,
         "monsterName": "Biolab 3 - Green Aura",
-        "isMvp": false
+        "isMvp": true
       }
     ]
   },
   {
     "wave": 86,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 2472,
@@ -1426,6 +1598,8 @@
   },
   {
     "wave": 87,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 2467,
@@ -1436,6 +1610,8 @@
   },
   {
     "wave": 88,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 2468,
@@ -1456,6 +1632,8 @@
   },
   {
     "wave": 89,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 20578,
@@ -1466,6 +1644,8 @@
   },
   {
     "wave": 90,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": 2473,
@@ -1481,6 +1661,8 @@
   },
   {
     "wave": 91,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor"],
     "monsters": [
       {
         "monsterId": null,
@@ -1491,26 +1673,32 @@
   },
   {
     "wave": 92,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": null,
         "monsterName": "Biolab 4 - Green Aura",
-        "isMvp": false
+        "isMvp": true
       }
     ]
   },
   {
     "wave": 93,
+    "isSkippable": false,
+    "remindersSetup": [],
     "monsters": [
       {
         "monsterId": null,
         "monsterName": "Biolab 4 - Green Aura",
-        "isMvp": false
+        "isMvp": true
       }
     ]
   },
   {
     "wave": 94,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor"],
     "monsters": [
       {
         "monsterId": null,
@@ -1521,6 +1709,8 @@
   },
   {
     "wave": 95,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor", "isMvpFloor"],
     "monsters": [
       {
         "monsterId": 2108,
@@ -1541,6 +1731,8 @@
   },
   {
     "wave": 96,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor", "isMvpFloor"],
     "monsters": [
       {
         "monsterId": 2202,
@@ -1561,6 +1753,8 @@
   },
   {
     "wave": 97,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor"],
     "monsters": [
       {
         "monsterId": 2109,
@@ -1571,6 +1765,8 @@
   },
   {
     "wave": 98,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor", "isMvpFloor"],
     "monsters": [
       {
         "monsterId": 2068,
@@ -1591,6 +1787,8 @@
   },
   {
     "wave": 99,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor", "isMvpFloor"],
     "monsters": [
       {
         "monsterId": 1871,
@@ -1611,11 +1809,13 @@
   },
   {
     "wave": 100,
+    "isSkippable": false,
+    "remindersSetup": ["isDangerousFloor", "isMvpFloor"],
     "monsters": [
       {
         "monsterId": null,
         "monsterName": "RANDOM MVP POOL",
-        "isMvp": false
+        "isMvp": true
       }
     ]
   }

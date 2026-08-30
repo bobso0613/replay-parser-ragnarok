@@ -1359,4 +1359,43 @@ describe('Table', () => {
     expect(container.querySelector('td.px-4.py-3')).not.toBeNull();
     expect(container.querySelector('td.px-1.py-1')).toBeNull();
   });
+
+  it('applies rowBackgroundClassNames to the matching <tr> only', () => {
+    const { container } = render(
+      React.createElement(Table, {
+        ...defaultProps,
+        rowBackgroundClassNames: ['', 'bg-yellow-300/10', ''],
+      })
+    );
+
+    const rows = container.querySelectorAll('tbody tr');
+    expect(rows[0]).not.toHaveClass('bg-yellow-300/10');
+    expect(rows[1]).toHaveClass('bg-yellow-300/10');
+    expect(rows[2]).not.toHaveClass('bg-yellow-300/10');
+  });
+
+  it('applies rowBackgroundClassNames to the matching virtualised row only', () => {
+    const originalResizeObserver = window.ResizeObserver;
+    class TestResizeObserver {
+      observe() {}
+      disconnect() {}
+      unobserve() {}
+    }
+    window.ResizeObserver = TestResizeObserver as unknown as typeof ResizeObserver;
+
+    const { container } = render(
+      React.createElement(Table, {
+        ...defaultProps,
+        enableVirtualization: true,
+        rowBackgroundClassNames: ['', 'bg-yellow-300/10', ''],
+      })
+    );
+
+    const rows = container.querySelectorAll('tbody tr');
+    expect(rows[0]).not.toHaveClass('bg-yellow-300/10');
+    expect(rows[1]).toHaveClass('bg-yellow-300/10');
+    expect(rows[2]).not.toHaveClass('bg-yellow-300/10');
+
+    window.ResizeObserver = originalResizeObserver;
+  });
 });

@@ -6,11 +6,21 @@ import { useEffect, useRef, useState } from 'react';
 import { calculateViewportHeight, getElementHeight } from '@/utils/table-utils';
 import { MONSTER_IMAGE_URL, TOOLTIP_POSITION } from '@/constants/index.ts';
 import Tooltip from '@/components/Tooltip';
-import { getMonsterName } from '@/utils';
+import {
+  getMonsterName,
+  getMvpOnlyMonsters,
+  getWaveNotes,
+  hideNonDangerousEarlyWaves,
+  mergeSkippableWaves,
+  REMINDER_NOTES,
+  showOnlyDangerousFloorWaves,
+} from '@/utils';
 
 const VIEWPORT_BOTTOM_GAP = 24;
 const VIEWPORT_SAFETY_BUFFER = 12;
 const MIN_SECTION_HEIGHT = 320;
+/** Single source of truth for the `isMvpFloor` row highlight — change here to restyle every row. */
+const MVP_FLOOR_ROW_CLASS = 'bg-yellow-300/10';
 
 /**
  * Bastion wave/monster table, backed by {@link useBastionMobs}.
@@ -19,10 +29,24 @@ const MIN_SECTION_HEIGHT = 320;
  *
  * 1. **Loading** — {@link SectionLoading} is shown while `bastion_mobs.json` is being fetched.
  * 2. **Error** — {@link ErrorDetails} is shown with a retry button wired to `reload`.
- * 3. **Loaded** — a virtualised {@link Table} lists every wave with its monsters shown horizontally.
+ * 3. **Loaded** — a "Filters" column of four checkboxes next to a "Legend" column
+ *    (from {@link REMINDER_NOTES}), above a virtualised {@link Table}:
+ *    - Show only dangerous floor waves ({@link showOnlyDangerousFloorWaves}).
+ *    - Only show MVP monsters, falling back to a generic "Mobs" label for waves with
+ *      no MVP ({@link getMvpOnlyMonsters}); dangerous floor waves are exempt.
+ *    - Merge skippable waves' monsters into the next kept wave ({@link mergeSkippableWaves}).
+ *    - Hide non-dangerous waves 1-55 ({@link hideNonDangerousEarlyWaves}).
+ *
+ *    Rows flagged `isMvpFloor` get a soft yellow background (applied to the whole `<tr>`
+ *    via `rowBackgroundClassNames`), and a Notes column shows an emoji per reminder flag
+ *    ({@link getWaveNotes}), each with a tooltip showing its label matching the legend.
  */
 const BastionWaveTable = () => {
   const { waves, isLoading, hasError, reload } = useBastionMobs();
+  const [mergeSkippable, setMergeSkippable] = useState(false);
+  const [hideEarlyWaves, setHideEarlyWaves] = useState(false);
+  const [showOnlyDangerous, setShowOnlyDangerous] = useState(false);
+  const [onlyShowMvps, setOnlyShowMvps] = useState(false);
 
   if (isLoading) {
     return <SectionLoading label="Loading waves..." />;
@@ -32,50 +56,142 @@ const BastionWaveTable = () => {
     return <ErrorDetails retryOnClick={reload} />;
   }
 
+  let filteredWaves = mergeSkippable ? mergeSkippableWaves(waves) : waves;
+  filteredWaves = hideEarlyWaves ? hideNonDangerousEarlyWaves(filteredWaves) : filteredWaves;
+  filteredWaves = showOnlyDangerous ? showOnlyDangerousFloorWaves(filteredWaves) : filteredWaves;
+
   return (
-    <Table
-      headers={['Wave', 'Monster']}
-      enableVirtualization
-      virtualColumnWeights={[0.5, 4]}
-      virtualRowHeight={30}
-      virtualTableHeight={2000}
-      compact
-      rowClassNames={['px-3', '']}
-      rows={waves.map((wave) => [
-        wave.wave,
-        <div key={wave.wave} className="flex flex-wrap items-center gap-9">
-          {wave.monsters.map((monster) => (
-            <span key={monster.monsterId} className="flex items-center gap-2.5">
-              {monster.monsterId && (
-                <Tooltip
-                  content={
-                    <img
-                      src={MONSTER_IMAGE_URL.replace('PLACEHOLDER_TEXT', `${monster.monsterId}`)}
-                      alt={monster.monsterName}
-                      className="w-auto h-auto"
-                      loading="lazy"
-                      referrerPolicy="no-referrer"
-                    />
-                  }
-                  placement={TOOLTIP_POSITION.BOTTOM}
-                  className="mx-auto"
-                >
-                  <img
-                    src={MONSTER_IMAGE_URL.replace('PLACEHOLDER_TEXT', `${monster.monsterId}`)}
-                    alt={monster.monsterName}
-                    className="h-6 w-6"
-                    loading="lazy"
-                    referrerPolicy="no-referrer"
-                  />
-                </Tooltip>
-              )}
-              {getMonsterName(monster.monsterName, monster.isMvp)}
+    <div className="flex h-full flex-col">
+      <div className="flex flex-row gap-2">
+        <div className="w-1/2 flex flex-col gap-2 text-slate-300">
+          <strong>Filters:</strong>
+          <label className="mb-2 flex w-fit items-center gap-2 text-sm text-slate-200">
+            <input
+              type="checkbox"
+              checked={showOnlyDangerous}
+              onChange={(event) => setShowOnlyDangerous(event.target.checked)}
+            />
+            Show only dangerous floors
+          </label>
+          <label className="mb-2 flex w-fit items-center gap-2 text-sm text-slate-200">
+            <input
+              type="checkbox"
+              checked={onlyShowMvps}
+              onChange={(event) => setOnlyShowMvps(event.target.checked)}
+            />
+            Only show MVPs (except dangerous floors)
+          </label>
+          <label className="mb-2 flex w-fit items-center gap-2 text-sm text-slate-200">
+            <input
+              type="checkbox"
+              checked={mergeSkippable}
+              onChange={(event) => setMergeSkippable(event.target.checked)}
+            />
+            Merge skippable waves into next wave
+          </label>
+          <label className="mb-2 flex w-fit items-center gap-2 text-sm text-slate-200">
+            <input
+              type="checkbox"
+              checked={hideEarlyWaves}
+              onChange={(event) => setHideEarlyWaves(event.target.checked)}
+            />
+            Hide waves 1-55 (except dangerous floors)
+          </label>
+        </div>
+        <div className="w-1/2 gap-2  flex flex-col text-slate-300">
+          <strong>Legend:</strong>
+          {Object.values(REMINDER_NOTES).map(({ emoji, label }) => (
+            <span key={label} className="flex items-center text-sm gap-1.5">
+              <span className="text-2xl leading-none">{emoji}</span>
+              {label}
             </span>
           ))}
-        </div>,
-      ])}
-      className="w-full"
-    />
+        </div>
+      </div>
+      <Table
+        headers={[
+          'Wave',
+          'Monster',
+          <div key="notes-header" className="w-full text-center">
+            Notes
+          </div>,
+        ]}
+        enableVirtualization
+        virtualColumnWeights={[0.5, 4, 1]}
+        virtualRowHeight={30}
+        virtualTableHeight={2000}
+        compact
+        rowClassNames={['px-3', '', 'text-center']}
+        rowBackgroundClassNames={filteredWaves.map((wave) =>
+          wave.remindersSetup.includes('isMvpFloor') ? MVP_FLOOR_ROW_CLASS : ''
+        )}
+        rows={filteredWaves.map((wave) => {
+          const monstersToRender = onlyShowMvps ? getMvpOnlyMonsters(wave) : wave.monsters;
+          const waveNotes = getWaveNotes(wave);
+
+          return [
+            wave.wave,
+            <div className="flex flex-wrap items-center gap-x-9 gap-y-1">
+              {monstersToRender === 'GENERIC' ? (
+                <span>Mobs</span>
+              ) : (
+                monstersToRender.map((monster, monsterIndex) => (
+                  <span
+                    key={`${monster.monsterId ?? 'na'}-${monsterIndex}`}
+                    className="flex items-center gap-2.5"
+                  >
+                    {monster.monsterId && (
+                      <Tooltip
+                        content={
+                          <img
+                            src={MONSTER_IMAGE_URL.replace(
+                              'PLACEHOLDER_TEXT',
+                              `${monster.monsterId}`
+                            )}
+                            alt={monster.monsterName}
+                            className="w-auto h-auto"
+                            loading="lazy"
+                            referrerPolicy="no-referrer"
+                          />
+                        }
+                        placement={TOOLTIP_POSITION.BOTTOM}
+                        className="mx-auto"
+                      >
+                        <img
+                          src={MONSTER_IMAGE_URL.replace(
+                            'PLACEHOLDER_TEXT',
+                            `${monster.monsterId}`
+                          )}
+                          alt={monster.monsterName}
+                          className="h-6 w-6"
+                          loading="lazy"
+                          referrerPolicy="no-referrer"
+                        />
+                      </Tooltip>
+                    )}
+                    {getMonsterName(monster.monsterName, monster.isMvp)}
+                  </span>
+                ))
+              )}
+            </div>,
+            waveNotes.length > 0 ? (
+              <div className="flex items-center justify-center gap-1.5">
+                {waveNotes.map((note, noteIndex) => (
+                  <Tooltip
+                    key={`${note.label}-${noteIndex}`}
+                    content={note.label}
+                    placement={TOOLTIP_POSITION.BOTTOM}
+                  >
+                    <span className="text-2xl leading-none">{note.emoji}</span>
+                  </Tooltip>
+                ))}
+              </div>
+            ) : null,
+          ];
+        })}
+        className="w-full"
+      />
+    </div>
   );
 };
 
