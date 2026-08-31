@@ -1838,17 +1838,17 @@
       },
       {
         "monsterId": 2228,
-        "monsterName": "",
+        "monsterName": "Paladin",
         "isMvp": false
       },
       {
         "monsterId": 2229,
-        "monsterName": "",
+        "monsterName": "Creator",
         "isMvp": false
       },
       {
         "monsterId": 2230,
-        "monsterName": "",
+        "monsterName": "Scholar",
         "isMvp": false
       }
     ]
@@ -1865,22 +1865,22 @@
       },
       {
         "monsterId": 2231,
-        "monsterName": "",
+        "monsterName": "Champion",
         "isMvp": false
       },
       {
         "monsterId": 2232,
-        "monsterName": "",
+        "monsterName": "Stalker",
         "isMvp": false
       },
       {
         "monsterId": 2233,
-        "monsterName": "",
+        "monsterName": "Clown",
         "isMvp": false
       },
       {
         "monsterId": 2234,
-        "monsterName": "",
+        "monsterName": "Gypsy",
         "isMvp": false
       }
     ]
