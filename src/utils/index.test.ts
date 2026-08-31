@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import type { BastionWave } from '@/types';
 import * as utils from './index';
+import { getCurrentEntryIndex } from './index';
 
 describe('src/utils/index', () => {
   it('should export utilities correctly', () => {
@@ -199,5 +200,70 @@ describe('src/utils/index', () => {
     };
 
     expect(utils.getWaveNotes(wave)).toEqual([]);
+  });
+});
+
+describe('getCurrentEntryIndex', () => {
+  const ENTRY_COUNT = 12;
+
+  it('returns the first entry at the initial date', () => {
+    const date = new Date('2026-08-17T06:00:00Z');
+
+    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(0);
+  });
+
+  it('returns the second entry one week after the initial date', () => {
+    const date = new Date('2026-08-24T06:00:00Z');
+
+    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(1);
+  });
+
+  it('returns the third entry two weeks after the initial date', () => {
+    const date = new Date('2026-08-31T06:00:00Z');
+
+    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(2);
+  });
+
+  it('keeps the current entry until the next Monday at 06:00 GMT', () => {
+    const date = new Date('2026-08-24T05:59:59Z');
+
+    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(0);
+  });
+
+  it('changes to the next entry exactly at Monday 06:00 GMT', () => {
+    const date = new Date('2026-08-24T06:00:00Z');
+
+    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(1);
+  });
+
+  it('returns the last entry before the cycle resets', () => {
+    const date = new Date('2026-11-02T06:00:00Z');
+
+    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(11);
+  });
+
+  it('resets to the first entry after all 12 entries', () => {
+    const date = new Date('2026-11-09T06:00:00Z');
+
+    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(0);
+  });
+
+  it('starts the cycle again with the second entry', () => {
+    const date = new Date('2026-11-16T06:00:00Z');
+
+    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(1);
+  });
+
+  it('works with a different number of entries', () => {
+    const entryCount = 5;
+    const date = new Date('2026-09-14T06:00:00Z');
+
+    expect(getCurrentEntryIndex(entryCount, date)).toBe(4);
+  });
+
+  it('handles times after the scheduled start correctly', () => {
+    const date = new Date('2026-08-31T14:30:00Z');
+
+    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(2);
   });
 });

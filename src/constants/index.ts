@@ -31,3 +31,8 @@ export const TOOLTIP_POSITION = {
   LEFT: 'left',
   RIGHT: 'right',
 };
+
+/** First known entry date */
+export const FIRST_ENTRY_DATE = new Date('2026-08-17T06:00:00Z');
+/** for computation of weekly intervals */
+export const MILLISECONDS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;

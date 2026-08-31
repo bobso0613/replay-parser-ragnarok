@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import BastionGuide from './BastionGuide';
 
@@ -60,6 +60,7 @@ const waves = [
     isSkippable: false,
     remindersSetup: ['isDangerousFloor', 'restockFlag'],
     monsters: [{ monsterId: 9, monsterName: 'Morroc - Ghost', isMvp: false }],
+    randomPool: [{ monsterId: 10, monsterName: 'Satan Morocc', isMvp: true }],
   },
 ];
 
@@ -95,6 +96,21 @@ describe('BastionGuide', () => {
     const pupaRow = screen.getByText('Pupa (MVP)').closest('tr');
     expect(pupaRow?.cells[1]).toHaveTextContent('Fabre');
     expect(pupaRow?.cells[2]).toHaveTextContent('Pupa (MVP)');
+  });
+
+  it('shows the current weekly MVP from the final wave random pool', async () => {
+    vi.mocked(fetch).mockResolvedValue(okResponse(waves));
+
+    render(<BastionGuide />);
+
+    const currentMvp = (await screen.findByText('Current MVP:')).parentElement;
+    expect(currentMvp).not.toBeNull();
+    expect(within(currentMvp!).getByRole('img', { name: 'Satan Morocc' })).toHaveAttribute(
+      'src',
+      expect.stringContaining('10')
+    );
+    expect(within(currentMvp!).getByText('Satan Morocc')).toBeInTheDocument();
+    expect(within(currentMvp!).getByText('ID: 10')).toBeInTheDocument();
   });
 
   it('renders the meteor timer iframe', async () => {

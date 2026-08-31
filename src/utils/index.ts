@@ -1,3 +1,4 @@
+import { FIRST_ENTRY_DATE, MILLISECONDS_PER_WEEK } from '@/constants';
 import type { BastionMonster, BastionWave } from '@/types';
 
 /**
@@ -127,3 +128,29 @@ export const getWaveNotes = (wave: BastionWave) =>
   wave.remindersSetup
     .map((reminder) => REMINDER_NOTES[reminder])
     .filter((note): note is { emoji: string; label: string } => Boolean(note));
+
+/** * Gets the current entry index based on a weekly rotation schedule.
+ * The first entry starts on August 24, 2026 at 06:00 GMT.
+ * The active entry changes every Monday at 06:00 GMT and
+ * automatically resets to the first entry after the last entry.
+ * @param entryCount - Total number of entries in the rotation.
+ * @param now - Date/time to evaluate. Defaults to the current date/time.
+ * @returns The zero-based index of the currently active entry.
+ * @example
+ * // August 24, 2026 06:00 GMT
+ * getCurrentEntryIndex(12, new Date("2026-08-24T06:00:00Z"));
+ * // Returns 0
+ * @example
+ * // August 31, 2026 06:00 GMT
+ * getCurrentEntryIndex(12, new Date("2026-08-31T06:00:00Z"));
+ * // Returns 1
+ * @example
+ * // November 16, 2026 06:00 GMT
+ * // After all 12 entries have been shown
+ * getCurrentEntryIndex(12, new Date("2026-11-16T06:00:00Z"));
+ * // Returns 0 */
+export const getCurrentEntryIndex = (entryCount: number, now: Date = new Date()): number => {
+  const millisecondsElapsed = now.getTime() - FIRST_ENTRY_DATE.getTime();
+  const weeksElapsed = Math.floor(millisecondsElapsed / MILLISECONDS_PER_WEEK);
+  return ((weeksElapsed % entryCount) + entryCount) % entryCount;
+};

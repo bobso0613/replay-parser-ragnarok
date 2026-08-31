@@ -7,6 +7,7 @@ import { calculateViewportHeight, getElementHeight } from '@/utils/table-utils';
 import { MONSTER_IMAGE_URL, TOOLTIP_POSITION } from '@/constants/index.ts';
 import Tooltip from '@/components/Tooltip';
 import {
+  getCurrentEntryIndex,
   getMonsterName,
   getMvpOnlyMonsters,
   getWaveNotes,
@@ -29,8 +30,9 @@ const MVP_FLOOR_ROW_CLASS = 'bg-yellow-300/10';
  *
  * 1. **Loading** — {@link SectionLoading} is shown while `bastion_mobs.json` is being fetched.
  * 2. **Error** — {@link ErrorDetails} is shown with a retry button wired to `reload`.
- * 3. **Loaded** — a "Filters" column of four checkboxes next to a "Legend" column
- *    (from {@link REMINDER_NOTES}), above a virtualised {@link Table}:
+ * 3. **Loaded** — three columns above a virtualised {@link Table}: "Filters" contains four
+ *    checkboxes, "Legend" lists {@link REMINDER_NOTES}, and "Current MVP" shows the image,
+ *    name, and ID of the weekly MVP selected from the final wave's `randomPool`:
  *    - Show only dangerous floor waves ({@link showOnlyDangerousFloorWaves}).
  *    - Only show MVP monsters, falling back to a generic "Mobs" label for waves with
  *      no MVP ({@link getMvpOnlyMonsters}); dangerous floor waves are exempt.
@@ -39,7 +41,9 @@ const MVP_FLOOR_ROW_CLASS = 'bg-yellow-300/10';
  *
  *    Rows flagged `isMvpFloor` get a soft yellow background (applied to the whole `<tr>`
  *    via `rowBackgroundClassNames`), and a Notes column shows an emoji per reminder flag
- *    ({@link getWaveNotes}), each with a tooltip showing its label matching the legend.
+ *    ({@link getWaveNotes}), each with a tooltip showing its label matching the legend. A wave
+ *    with a `randomPool` also displays the MVP selected by the weekly
+ *    {@link getCurrentEntryIndex} rotation instead of its fixed MVP list.
  */
 const BastionWaveTable = () => {
   const { waves, isLoading, hasError, reload } = useBastionMobs();
@@ -60,10 +64,13 @@ const BastionWaveTable = () => {
   filteredWaves = hideEarlyWaves ? hideNonDangerousEarlyWaves(filteredWaves) : filteredWaves;
   filteredWaves = showOnlyDangerous ? showOnlyDangerousFloorWaves(filteredWaves) : filteredWaves;
 
+  const mvpPool = waves.at(-1)?.randomPool ?? [];
+  const mvpPoolDisplay = mvpPool[getCurrentEntryIndex(mvpPool.length)];
+
   return (
     <div className="flex h-full flex-col">
       <div className="flex flex-row gap-2">
-        <div className="w-1/2 flex flex-col gap-2 text-slate-300">
+        <div className="w-1/3 flex flex-col gap-2 text-slate-300">
           <strong>Filters:</strong>
           <label className="mb-2 flex w-fit items-center gap-2 text-sm text-slate-200">
             <input
@@ -98,7 +105,7 @@ const BastionWaveTable = () => {
             Hide waves 1-55 (except dangerous floors)
           </label>
         </div>
-        <div className="w-1/2 gap-2  flex flex-col text-slate-300">
+        <div className="w-1/3 gap-2  flex flex-col text-slate-300">
           <strong>Legend:</strong>
           {Object.values(REMINDER_NOTES).map(({ emoji, label }) => (
             <span key={label} className="flex items-center text-sm gap-1.5">
@@ -106,6 +113,20 @@ const BastionWaveTable = () => {
               {label}
             </span>
           ))}
+        </div>
+        <div className="w-1/3 flex flex-col gap-2 text-slate-300">
+          <strong>Current MVP:</strong>
+          <p className="flex flex-col items-center gap-1">
+            <img
+              src={MONSTER_IMAGE_URL.replace('PLACEHOLDER_TEXT', `${mvpPoolDisplay.monsterId}`)}
+              alt={mvpPoolDisplay.monsterName}
+              className="w-40 h-auto"
+              loading="lazy"
+              referrerPolicy="no-referrer"
+            />
+            <span>{mvpPoolDisplay.monsterName}</span>
+            <span>ID: {mvpPoolDisplay.monsterId}</span>
+          </p>
         </div>
       </div>
       <Table
@@ -186,10 +207,17 @@ const BastionWaveTable = () => {
             );
           };
 
+          let randomMvp = null;
+          if (wave.randomPool) {
+            randomMvp = renderMonsters([
+              wave.randomPool[getCurrentEntryIndex(wave.randomPool.length)],
+            ]);
+          }
+
           return [
             wave.wave,
             renderMonsters(mobsToRender),
-            renderMonsters(mvpsToRender),
+            randomMvp ? randomMvp : renderMonsters(mvpsToRender),
             waveNotes.length > 0 ? (
               <div className="flex items-center justify-center gap-1.5">
                 {waveNotes.map((note, noteIndex) => (

@@ -2042,6 +2042,68 @@
         "monsterName": "RANDOM MVP POOL",
         "isMvp": false
       }
+    ],
+    "randomPool": [
+      {
+        "monsterId": 1916,
+        "monsterName": "Satan Morocc",
+        "isMvp": true
+      },
+      {
+        "monsterId": 2237,
+        "monsterName": "Scholar Celia",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1917,
+        "monsterName": "Wounded Morocc",
+        "isMvp": true
+      },
+      {
+        "monsterId": 2236,
+        "monsterName": "Biochemist Flamel",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1832,
+        "monsterName": "Ifrit",
+        "isMvp": true
+      },
+      {
+        "monsterId": 2996,
+        "monsterName": "Celine Kimi",
+        "isMvp": true
+      },
+      {
+        "monsterId": 2475,
+        "monsterName": "Corrupted Soul",
+        "isMvp": true
+      },
+      {
+        "monsterId": 2235,
+        "monsterName": "Paladin Randel",
+        "isMvp": true
+      },
+      {
+        "monsterId": 2476,
+        "monsterName": "Amdarais",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1751,
+        "monsterName": "Valkyrie Randgris",
+        "isMvp": true
+      },
+      {
+        "monsterId": 2239,
+        "monsterName": "Stalker Gertie",
+        "isMvp": true
+      },
+      {
+        "monsterId": 1874,
+        "monsterName": "Beelzebub",
+        "isMvp": true
+      }
     ]
   }
 ]

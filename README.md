@@ -81,7 +81,7 @@ openModal({
 
 `BastionGuide` (route: `/bastion-guide`) shows the Bastion instance's monster waves next to a meteor timer iframe. Wave/monster data is fetched once from `public/bastion_mobs.json` by a shared `BastionMobsProvider`, which exposes `waves`, `isLoading`, `hasError`, and a `reload` retry callback through `useBastionMobs`. Each wave carries `isSkippable` and a `remindersSetup` array of reminder flags (`isDangerousFloor`, `isMvpFloor`, `restockFlag`, `isStartOfStatus`, `isStartOfMeteor`, `isStashDisappear`).
 
-The page renders a **Filters** column of checkboxes next to a **Legend** column (one row per `REMINDER_NOTES` entry, showing its emoji and label), above a compact, virtualised `Table` with `Wave`, `Mobs`, `MVPs`, and `Notes` columns.
+The page renders three columns above the wave table: **Filters** contains the four checkboxes, **Legend** shows one row per `REMINDER_NOTES` entry, and **Current MVP** shows the image, name, and ID of the active weekly MVP selected from the final wave's `randomPool` by `getCurrentEntryIndex`. Below them is a compact, virtualised `Table` with `Wave`, `Mobs`, `MVPs`, and `Notes` columns. A wave with a `randomPool` also displays that selected MVP in its MVPs cell instead of its fixed MVP list.
 
 - **Show only dangerous floor waves** (`showOnlyDangerousFloorWaves`) — keeps only waves flagged `isDangerousFloor`.
 - **Only show MVPs (except dangerous floors)** (`getMvpOnlyMonsters`) — shows only MVP monsters per wave, falling back to a generic "Mobs" label when a wave has monsters but no MVP; dangerous floor waves always show their full monster list.

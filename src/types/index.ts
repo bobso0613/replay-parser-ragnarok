@@ -47,12 +47,14 @@ export type BastionWaveReminder =
  * @property isSkippable - Whether this wave can be skipped.
  * @property remindersSetup - Reminder flags that apply to this wave. See {@link BastionWaveReminder}.
  * @property monsters - Monsters that spawn during this wave.
+ * @property randomPool - Optional pool of random MVP monsters for this wave.
  */
 export type BastionWave = {
   wave: number;
   isSkippable: boolean;
   remindersSetup: BastionWaveReminder[];
   monsters: BastionMonster[];
+  randomPool?: BastionMonster[];
 };
 
 /**
