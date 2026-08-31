@@ -11,6 +11,7 @@ Replay Parser Ragnarok is a React + Vite frontend application for exploring Ragn
 - 📁 File upload with parsing and validation for replay data
 - 🧭 Route-based navigation through the app shell
 - 🧭 Base-path aware routing for subpath deployments via `VITE_BASE_PATH`
+- 🏷️ Route-aware browser titles and header branding (`Replay Parser` and `Bastion Guide`)
 - ⚡ Lazy-loaded background images for optimized performance
 - 🔧 Keep shared logic in hooks, services, utilities, and constants
 - 🔗 Dynamic API response field mapping for flexible data handling
@@ -80,7 +81,7 @@ openModal({
 
 `BastionGuide` (route: `/bastion-guide`) shows the Bastion instance's monster waves next to a meteor timer iframe. Wave/monster data is fetched once from `public/bastion_mobs.json` by a shared `BastionMobsProvider`, which exposes `waves`, `isLoading`, `hasError`, and a `reload` retry callback through `useBastionMobs`. Each wave carries `isSkippable` and a `remindersSetup` array of reminder flags (`isDangerousFloor`, `isMvpFloor`, `restockFlag`, `isStartOfStatus`, `isStartOfMeteor`, `isStashDisappear`).
 
-The page renders a **Filters** column of checkboxes next to a **Legend** column (one row per `REMINDER_NOTES` entry, showing its emoji and label), above a compact, virtualised `Table` with `Wave`, `Monster`, and `Notes` columns:
+The page renders a **Filters** column of checkboxes next to a **Legend** column (one row per `REMINDER_NOTES` entry, showing its emoji and label), above a compact, virtualised `Table` with `Wave`, `Mobs`, `MVPs`, and `Notes` columns.
 
 - **Show only dangerous floor waves** (`showOnlyDangerousFloorWaves`) — keeps only waves flagged `isDangerousFloor`.
 - **Only show MVPs (except dangerous floors)** (`getMvpOnlyMonsters`) — shows only MVP monsters per wave, falling back to a generic "Mobs" label when a wave has monsters but no MVP; dangerous floor waves always show their full monster list.
@@ -187,7 +188,8 @@ This separation enables high-coverage testing while respecting jsdom limitations
   - 🪟 `ModalContext.tsx` - application-level modal controls (`ModalProvider`, `useModal`)
   - 👹 `BastionMobsContext.tsx` - fetches and shares Bastion wave/monster data (`BastionMobsProvider`, `useBastionMobs`)
 - 🗺️ `src/routes/` - router configuration and route entry points
-- 🎣 `src/hooks/` - custom React hooks
+- 🎣 `src/hooks/` - custom React hooks:
+  - 🏷️ `usePageTitle.ts` - synchronizes the browser title and header logo text with the active route
 - 🔌 `src/services/` - API or data service logic
 - 📚 `src/types/` - shared TypeScript type definitions:
   - 🎮 `parsed-replay.ts` - replay data types

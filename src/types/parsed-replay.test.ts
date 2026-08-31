@@ -11,6 +11,7 @@ describe('parsed-replay types', () => {
       mvpBreakdown: [],
       skillUsageBreakdown: [],
       itemBreakdown: [],
+      playerDetails: [],
     };
 
     expect(replayExample).toHaveProperty('breakdownPerMonsterUnique');
@@ -31,6 +32,7 @@ describe('parsed-replay types', () => {
       mvpBreakdown: [],
       skillUsageBreakdown: [],
       itemBreakdown: [],
+      playerDetails: [],
     };
 
     expect(Array.isArray(replay.breakdownPerMonsterUnique)).toBe(true);

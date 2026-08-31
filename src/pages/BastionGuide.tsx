@@ -111,13 +111,14 @@ const BastionWaveTable = () => {
       <Table
         headers={[
           'Wave',
-          'Monster',
+          'Mobs',
+          'MVPs',
           <div key="notes-header" className="w-full text-center">
             Notes
           </div>,
         ]}
         enableVirtualization
-        virtualColumnWeights={[0.5, 4, 1]}
+        virtualColumnWeights={[0.5, 3, 2, 1]}
         virtualRowHeight={30}
         virtualTableHeight={2000}
         compact
@@ -128,14 +129,23 @@ const BastionWaveTable = () => {
         rows={filteredWaves.map((wave) => {
           const monstersToRender = onlyShowMvps ? getMvpOnlyMonsters(wave) : wave.monsters;
           const waveNotes = getWaveNotes(wave);
+          const mobsToRender =
+            monstersToRender === 'GENERIC'
+              ? 'GENERIC'
+              : monstersToRender.filter((monster) => !monster.isMvp);
+          const mvpsToRender =
+            monstersToRender === 'GENERIC'
+              ? []
+              : monstersToRender.filter((monster) => monster.isMvp);
 
-          return [
-            wave.wave,
-            <div className="flex flex-wrap items-center gap-x-9 gap-y-1">
-              {monstersToRender === 'GENERIC' ? (
-                <span>Mobs</span>
-              ) : (
-                monstersToRender.map((monster, monsterIndex) => (
+          const renderMonsters = (monsters: typeof mvpsToRender | 'GENERIC') => {
+            if (monsters === 'GENERIC') {
+              return <span>Mobs</span>;
+            }
+
+            return (
+              <div className="flex flex-wrap items-center gap-x-9 gap-y-1">
+                {monsters.map((monster, monsterIndex) => (
                   <span
                     key={`${monster.monsterId ?? 'na'}-${monsterIndex}`}
                     className="flex items-center gap-2.5"
@@ -171,9 +181,15 @@ const BastionWaveTable = () => {
                     )}
                     {getMonsterName(monster.monsterName, monster.isMvp)}
                   </span>
-                ))
-              )}
-            </div>,
+                ))}
+              </div>
+            );
+          };
+
+          return [
+            wave.wave,
+            renderMonsters(mobsToRender),
+            renderMonsters(mvpsToRender),
             waveNotes.length > 0 ? (
               <div className="flex items-center justify-center gap-1.5">
                 {waveNotes.map((note, noteIndex) => (

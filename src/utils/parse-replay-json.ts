@@ -42,6 +42,7 @@ export const parseReplayOutput = (apiResponse: IReplayData | null) => {
     mvpBreakdown: [] as IMVPBreakdown[],
     skillUsageBreakdown: [] as IPlayerSkillUsageBreakdown[],
     itemBreakdown: [] as IItemBreakdown[],
+    playerDetails: [] as IParsedReplay['playerDetails'],
   };
 
   apiResponse?.players.forEach((player: IPlayer) => {
@@ -63,40 +64,41 @@ export const parseReplayOutput = (apiResponse: IReplayData | null) => {
       totalDamageDealthMvps: 0,
       highestDamage,
       skillDamages: [],
-      playerDetails: {
-        playerId: player.AID,
-        playerName: player.name,
-        jobId: player.jobId,
-        jobName: player.jobName ?? '',
-        statistics: [
-          { label: 'Total Damage', value: player.totalDamageDealt },
-          { label: 'Monsters Killed', value: 0 },
-          { label: 'MVP Damage', value: 0 },
-          { label: 'MVPs Killed', value: player.MVPCount },
-          { label: 'Highest Burst', value: highestDamage },
-          { label: 'Deaths', value: player.deathCount },
-          { label: 'Spam Count', value: player.totalSkillUsageCount },
-          { label: 'Items Consumed', value: player.totalItemUsageCount },
-        ],
-        offensiveSkills: player.skillInfo.offensive.map((skill) => ({
-          skillId: skill.skillId,
-          name: skill.skillName ?? '',
-          totalDamage: skill.skillDamageDealt ?? 0,
-          hitCount: skill.skillUsageCount,
-          highestDamage: skill.maxDamageDealt ?? 0,
-        })),
-        defensiveSkills: player.skillInfo.support.map((skill) => ({
-          skillId: skill.skillId,
-          name: skill.skillName ?? '',
-          totalUsage: skill.skillUsageCount,
-        })),
-        itemsUsed: player.itemInfo.map((item) => ({
-          itemId: item.itemId,
-          name: item.itemName ?? '',
-          amount: item.itemUsageCount,
-        })),
-        monstersKilled: [],
-      },
+    });
+
+    finalOutput.playerDetails.push({
+      playerId: player.AID,
+      playerName: player.name,
+      jobId: player.jobId,
+      jobName: player.jobName ?? '',
+      statistics: [
+        { label: 'Total Damage', value: player.totalDamageDealt },
+        { label: 'Monsters Killed', value: 0 },
+        { label: 'MVP Damage', value: 0 },
+        { label: 'MVPs Killed', value: player.MVPCount },
+        { label: 'Highest Burst', value: highestDamage },
+        { label: 'Deaths', value: player.deathCount },
+        { label: 'Spam Count', value: player.totalSkillUsageCount },
+        { label: 'Items Consumed', value: player.totalItemUsageCount },
+      ],
+      offensiveSkills: player.skillInfo.offensive.map((skill) => ({
+        skillId: skill.skillId,
+        name: skill.skillName ?? '',
+        totalDamage: skill.skillDamageDealt ?? 0,
+        hitCount: skill.skillUsageCount,
+        highestDamage: skill.maxDamageDealt ?? 0,
+      })),
+      defensiveSkills: player.skillInfo.support.map((skill) => ({
+        skillId: skill.skillId,
+        name: skill.skillName ?? '',
+        totalUsage: skill.skillUsageCount,
+      })),
+      itemsUsed: player.itemInfo.map((item) => ({
+        itemId: item.itemId,
+        name: item.itemName ?? '',
+        amount: item.itemUsageCount,
+      })),
+      monstersKilled: [],
     });
 
     if (player.deathCount > 0) {
@@ -156,7 +158,10 @@ export const parseReplayOutput = (apiResponse: IReplayData | null) => {
             skillName: skillUsage.skillName ?? '',
             damage: skillUsage.maxDamageDealt ?? 0,
           };
-          const highestBurstStatistic = existingPlayer.playerDetails.statistics.find(
+          const existingPlayerDetails = finalOutput.playerDetails.find(
+            (details) => details.playerId === player.AID
+          );
+          const highestBurstStatistic = existingPlayerDetails?.statistics.find(
             (statistic) => statistic.label === 'Highest Burst'
           );
           if (highestBurstStatistic) {
@@ -396,15 +401,17 @@ export const parseReplayOutput = (apiResponse: IReplayData | null) => {
         const existingPlayerFromBreakdown = finalOutput.breakdownPerPlayer.find(
           (p: IPlayerBreakdown) => p.playerId === battleInfoEntry.playerId
         );
-        if (existingPlayerFromBreakdown) {
+        const existingPlayerDetails = finalOutput.playerDetails.find(
+          (details) => details.playerId === battleInfoEntry.playerId
+        );
+        if (existingPlayerFromBreakdown && existingPlayerDetails) {
           existingPlayerFromBreakdown.totalDamageDealthMvps += mobIsMvp
             ? battleInfoEntry.damageDealt
             : 0;
 
-          const existingPlayerMonster =
-            existingPlayerFromBreakdown.playerDetails.monstersKilled.find(
-              (playerMonster) => playerMonster.monsterId === monsterId
-            );
+          const existingPlayerMonster = existingPlayerDetails.monstersKilled.find(
+            (playerMonster) => playerMonster.monsterId === monsterId
+          );
           if (existingPlayerMonster) {
             existingPlayerMonster.amount += 1;
             existingPlayerMonster.damage =
@@ -420,7 +427,7 @@ export const parseReplayOutput = (apiResponse: IReplayData | null) => {
               };
             }
           } else {
-            existingPlayerFromBreakdown.playerDetails.monstersKilled.push({
+            existingPlayerDetails.monstersKilled.push({
               monsterId,
               name: monsterName,
               isMvp: mobIsMvp,
@@ -438,7 +445,7 @@ export const parseReplayOutput = (apiResponse: IReplayData | null) => {
             });
           }
 
-          const playerMonster = existingPlayerFromBreakdown.playerDetails.monstersKilled.find(
+          const playerMonster = existingPlayerDetails.monstersKilled.find(
             (playerMonsterEntry) => playerMonsterEntry.monsterId === monsterId
           );
           if (playerMonster) {
@@ -472,14 +479,14 @@ export const parseReplayOutput = (apiResponse: IReplayData | null) => {
             });
           }
 
-          const totalMonstersStatistic = existingPlayerFromBreakdown.playerDetails.statistics.find(
+          const totalMonstersStatistic = existingPlayerDetails.statistics.find(
             (statistic) => statistic.label === 'Monsters Killed'
           );
           if (totalMonstersStatistic && typeof totalMonstersStatistic.value === 'number') {
             totalMonstersStatistic.value += 1;
           }
 
-          const mvpDamageStatistic = existingPlayerFromBreakdown.playerDetails.statistics.find(
+          const mvpDamageStatistic = existingPlayerDetails.statistics.find(
             (statistic) => statistic.label === 'MVP Damage'
           );
           if (mvpDamageStatistic) {
@@ -525,7 +532,9 @@ export const parseReplayOutput = (apiResponse: IReplayData | null) => {
   finalOutput.breakdownPerPlayer.sort((a, b) => b.totalDamageDealt - a.totalDamageDealt);
   finalOutput.breakdownPerPlayer.forEach((player) => {
     player.skillDamages.sort((a, b) => b.damage - a.damage);
-    player.playerDetails.monstersKilled.sort(
+  });
+  finalOutput.playerDetails.forEach((details) => {
+    details.monstersKilled.sort(
       (firstMonster, secondMonster) =>
         Number(secondMonster.damage) - Number(firstMonster.damage) ||
         firstMonster.name.localeCompare(secondMonster.name)

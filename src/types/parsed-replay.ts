@@ -64,7 +64,6 @@ export interface IPlayerSkillDamage {
  * @property totalDamageDealthMvps - Subset of `totalDamageDealt` directed at MVP monsters.
  * @property highestDamage - The single best hit this player landed, with monster context.
  * @property skillDamages - Per-skill breakdown of damage, hit counts, and highest-hit info.
- * @property playerDetails - Detail-content props for the player modal.
  */
 export interface IPlayerBreakdown {
   playerId: string;
@@ -75,7 +74,6 @@ export interface IPlayerBreakdown {
   totalDamageDealthMvps: number;
   highestDamage: IPlayerHighestDamage;
   skillDamages: IPlayerSkillDamage[];
-  playerDetails: PlayerDetailContentProps;
 }
 
 /** Per-player damage contribution for a single skill. */
@@ -236,6 +234,7 @@ export interface IPlayerItemUsage {
  * @property deathBreakdown - Death counts per player.
  * @property mvpBreakdown - MVP kill counts per player.
  * @property skillUsageBreakdown - Total skill usage counts per player.
+ * @property playerDetails - Detail-content props for each player's modal.
  */
 export interface IParsedReplay {
   breakdownPerMonsterUnique: IMonsterBreakdown[];
@@ -245,4 +244,5 @@ export interface IParsedReplay {
   mvpBreakdown: IMVPBreakdown[];
   skillUsageBreakdown: IPlayerSkillUsageBreakdown[];
   itemBreakdown: IItemBreakdown[];
+  playerDetails: PlayerDetailContentProps[];
 }

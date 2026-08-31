@@ -26,6 +26,7 @@ describe('parseReplayOutput', () => {
       mvpBreakdown: [],
       skillUsageBreakdown: [],
       itemBreakdown: [],
+      playerDetails: [],
     });
   });
 
@@ -58,27 +59,25 @@ describe('parseReplayOutput', () => {
     expect(result.breakdownPerPlayer[0]).toMatchObject({
       jobName: 'Swordman',
       skillDamages: [{ skillInfo: 'Strike', highestMonsterName: 'Poring', highestIsMvp: true }],
-      playerDetails: {
-        playerId: 'player-1',
-        playerName: 'Alice',
-        jobId: 1,
-        jobName: 'Swordman',
-        offensiveSkills: [
-          { skillId: '10', name: 'Strike', totalDamage: 100, hitCount: 1, highestDamage: 100 },
-        ],
-        defensiveSkills: [{ skillId: '11', name: 'Heal', totalUsage: 2 }],
-        itemsUsed: [{ itemId: '30', name: 'Potion', amount: 1 }],
-        monstersKilled: [],
-      },
+    });
+    expect(result.playerDetails[0]).toMatchObject({
+      playerId: 'player-1',
+      playerName: 'Alice',
+      jobId: 1,
+      jobName: 'Swordman',
+      offensiveSkills: [
+        { skillId: '10', name: 'Strike', totalDamage: 100, hitCount: 1, highestDamage: 100 },
+      ],
+      defensiveSkills: [{ skillId: '11', name: 'Heal', totalUsage: 2 }],
+      itemsUsed: [{ itemId: '30', name: 'Potion', amount: 1 }],
+      monstersKilled: [],
     });
     expect(result.itemBreakdown[0]).toMatchObject({ itemName: 'Potion' });
     expect(result.deathBreakdown[0]).toMatchObject({ jobName: 'Swordman' });
     expect(result.mvpBreakdown[0]).toMatchObject({ jobName: 'Swordman' });
     expect(result.skillUsage[0]).toMatchObject({ skillInfo: 'Heal' });
     expect(
-      result.breakdownPerPlayer[0]?.playerDetails.statistics.find(
-        (statistic) => statistic.label === 'Highest Burst'
-      )
+      result.playerDetails[0]?.statistics.find((statistic) => statistic.label === 'Highest Burst')
     ).toMatchObject({
       value: { skillId: '10', skillName: 'Strike', monsterName: 'Poring', damage: 100 },
     });
@@ -209,21 +208,15 @@ describe('parseReplayOutput', () => {
       highestDamage: { jobName: 'Swordman', skillName: 'Strike' },
     });
     expect(
-      result.breakdownPerPlayer[0]?.playerDetails.statistics.find(
-        (statistic) => statistic.label === 'MVP Damage'
-      )
+      result.playerDetails[0]?.statistics.find((statistic) => statistic.label === 'MVP Damage')
     ).toMatchObject({ value: 350 });
     expect(
-      result.breakdownPerPlayer[0]?.playerDetails.statistics.find(
-        (statistic) => statistic.label === 'Monsters Killed'
-      )
+      result.playerDetails[0]?.statistics.find((statistic) => statistic.label === 'Monsters Killed')
     ).toMatchObject({ value: 3 });
     expect(
-      result.breakdownPerPlayer[0]?.playerDetails.statistics.find(
-        (statistic) => statistic.label === 'MVPs Killed'
-      )
+      result.playerDetails[0]?.statistics.find((statistic) => statistic.label === 'MVPs Killed')
     ).toMatchObject({ value: 1 });
-    expect(result.breakdownPerPlayer[0]?.playerDetails.monstersKilled).toEqual([
+    expect(result.playerDetails[0]?.monstersKilled).toEqual([
       {
         monsterId: '20',
         name: 'Poring',

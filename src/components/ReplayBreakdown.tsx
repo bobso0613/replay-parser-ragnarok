@@ -122,11 +122,11 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
   };
 
   const handleOpenModal = (playerId: string) => {
-    const player = replayToDisplay?.breakdownPerPlayer.find(
-      (breakdownPlayer) => breakdownPlayer.playerId === playerId
+    const playerDetails = replayToDisplay?.playerDetails.find(
+      (details) => details.playerId === playerId
     );
 
-    if (!player) {
+    if (!playerDetails) {
       return;
     }
 
@@ -136,13 +136,13 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
           <span>Details of </span>
           <TextImage
             variant={TEXT_IMAGE_VARIANTS.JOB}
-            keyId={player.jobId}
-            keyInfo={player.playerName}
-            title={player.jobName}
+            keyId={playerDetails.jobId}
+            keyInfo={playerDetails.playerName}
+            title={playerDetails.jobName}
           />
         </div>
       ),
-      content: <PlayerDetailContent {...player.playerDetails} />,
+      content: <PlayerDetailContent {...playerDetails} />,
     });
   };
 

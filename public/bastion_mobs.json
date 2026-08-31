@@ -1392,8 +1392,38 @@
     "monsters": [
       {
         "monsterId": null,
-        "monsterName": "Biolab 3 - Green Aura",
-        "isMvp": true
+        "monsterName": "BIO 3 - GREEN AURA",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1640,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1641,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1642,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1643,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1644,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1645,
+        "monsterName": "",
+        "isMvp": false
       }
     ]
   },
@@ -1526,7 +1556,37 @@
     "monsters": [
       {
         "monsterId": null,
-        "monsterName": "Biolab 3 - Normal Mob",
+        "monsterName": "Bio 3 - Normal mobs",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1634,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1635,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1636,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1637,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1638,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1639,
+        "monsterName": "",
         "isMvp": false
       }
     ]
@@ -1562,7 +1622,37 @@
     "monsters": [
       {
         "monsterId": null,
-        "monsterName": "Biolab 3 - Normal Mob",
+        "monsterName": "Bio 3 - Normal mobs",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1634,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1635,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1636,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1637,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1638,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1639,
+        "monsterName": "",
         "isMvp": false
       }
     ]
@@ -1570,12 +1660,42 @@
   {
     "wave": 85,
     "isSkippable": false,
-    "remindersSetup": [],
+    "remindersSetup": ["isDangerousFloor"],
     "monsters": [
       {
         "monsterId": null,
-        "monsterName": "Biolab 3 - Green Aura",
-        "isMvp": true
+        "monsterName": "BIO 3 - GREEN AURA",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1640,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1641,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1642,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1643,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1644,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 1645,
+        "monsterName": "",
+        "isMvp": false
       }
     ]
   },
@@ -1668,30 +1788,100 @@
         "monsterId": null,
         "monsterName": "Biolab 4 - Normal Mob",
         "isMvp": false
+      },
+      {
+        "monsterId": 2221,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2222,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2223,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2224,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2225,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2226,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2227,
+        "monsterName": "",
+        "isMvp": false
       }
     ]
   },
   {
     "wave": 92,
     "isSkippable": false,
-    "remindersSetup": [],
+    "remindersSetup": ["isDangerousFloor"],
     "monsters": [
       {
         "monsterId": null,
         "monsterName": "Biolab 4 - Green Aura",
-        "isMvp": true
+        "isMvp": false
+      },
+      {
+        "monsterId": 2228,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2229,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2230,
+        "monsterName": "",
+        "isMvp": false
       }
     ]
   },
   {
     "wave": 93,
     "isSkippable": false,
-    "remindersSetup": [],
+    "remindersSetup": ["isDangerousFloor"],
     "monsters": [
       {
         "monsterId": null,
         "monsterName": "Biolab 4 - Green Aura",
-        "isMvp": true
+        "isMvp": false
+      },
+      {
+        "monsterId": 2231,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2232,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2233,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2234,
+        "monsterName": "",
+        "isMvp": false
       }
     ]
   },
@@ -1703,6 +1893,41 @@
       {
         "monsterId": null,
         "monsterName": "Biolab 4 - Normal Mob",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2221,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2222,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2223,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2224,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2225,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2226,
+        "monsterName": "",
+        "isMvp": false
+      },
+      {
+        "monsterId": 2227,
+        "monsterName": "",
         "isMvp": false
       }
     ]
@@ -1815,7 +2040,7 @@
       {
         "monsterId": null,
         "monsterName": "RANDOM MVP POOL",
-        "isMvp": true
+        "isMvp": false
       }
     ]
   }

@@ -86,10 +86,15 @@ describe('BastionGuide', () => {
     render(<BastionGuide />);
 
     await waitFor(() => expect(screen.getByText('Wave')).toBeInTheDocument());
-    expect(screen.getByText('Monster')).toBeInTheDocument();
+    expect(screen.getByText('Mobs')).toBeInTheDocument();
+    expect(screen.getByText('MVPs')).toBeInTheDocument();
     expect(screen.getByText('Poring')).toBeInTheDocument();
     expect(screen.getByText('Fabre')).toBeInTheDocument();
     expect(screen.getByText('Pupa (MVP)')).toBeInTheDocument();
+
+    const pupaRow = screen.getByText('Pupa (MVP)').closest('tr');
+    expect(pupaRow?.cells[1]).toHaveTextContent('Fabre');
+    expect(pupaRow?.cells[2]).toHaveTextContent('Pupa (MVP)');
   });
 
   it('renders the meteor timer iframe', async () => {

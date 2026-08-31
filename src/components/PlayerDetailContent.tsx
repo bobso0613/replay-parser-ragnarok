@@ -123,7 +123,9 @@ const PlayerDetailContent = ({
               <dd>
                 {DAMAGE_STAT_LABELS.has(statistic.label) ? (
                   formatDamage(statistic.value)
-                ) : statistic.label === 'Highest Burst' && isHighestBurst(statistic.value) ? (
+                ) : statistic.label === 'Highest Burst' &&
+                  isHighestBurst(statistic.value) &&
+                  statistic.value.damage !== 0 ? (
                   <div className="flex items-center gap-1 whitespace-nowrap">
                     {formatDamage(statistic.value.damage)}
                     <TextImage
