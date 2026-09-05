@@ -242,10 +242,7 @@ const Table: React.FC<TableProps> = ({
   const estimatedContentHeight = Math.ceil(
     sortedRows.length * dynamicRowHeight.getAverageRowHeight()
   );
-  const virtualizedHeight = Math.max(
-    MIN_VIRTUAL_TABLE_HEIGHT,
-    Math.min(viewportHeight, estimatedContentHeight)
-  );
+  const virtualizedHeight = Math.min(viewportHeight, estimatedContentHeight);
   const computedColumnWidths = useMemo(() => {
     if (!shouldVirtualize || maxCols <= 0 || listViewportWidth <= 0) {
       return [] as number[];
@@ -337,7 +334,7 @@ const Table: React.FC<TableProps> = ({
   return (
     <div
       ref={wrapperRef}
-      className={`overflow-x-auto rounded-lg border border-slate-200/50 shadow-sm ${className} my-5`}
+      className={`overflow-x-auto overflow-y-hidden rounded-lg border border-slate-200/50 shadow-sm ${className} my-5`}
     >
       <table
         ref={headerTableRef}
