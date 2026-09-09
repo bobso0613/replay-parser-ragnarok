@@ -11,7 +11,7 @@ Replay Parser Ragnarok is a React + Vite frontend application for exploring Ragn
 - 📁 File upload with parsing and validation for replay data
 - 🧭 Route-based navigation through the app shell
 - 🧭 Base-path aware routing for subpath deployments via `VITE_BASE_PATH`
-- 🏷️ Route-aware browser titles and header branding (`Replay Parser` and `Bastion Guide`)
+- 🏷️ Route-aware browser titles and header branding (`Replay Parser`, `Bastion Guide`, and `Botbito Discord`)
 - ⚡ Lazy-loaded background images for optimized performance
 - 🔧 Keep shared logic in hooks, services, utilities, and constants
 - 🔗 Dynamic API response field mapping for flexible data handling
@@ -20,9 +20,11 @@ Replay Parser Ragnarok is a React + Vite frontend application for exploring Ragn
 ## 🚀 Getting Started
 
 1. Install dependencies:
+
    ```bash
    npm install
    ```
+
 2. Create a `.env` file and set any required environment variables for your local setup.
 
 ```dotenv
@@ -35,11 +37,13 @@ VITE_MONSTER_IMAGE_URL=https://talontales.com/panel/data/monsters/PLACEHOLDER_TE
 VITE_REPLAY_URL_SHARE=/replay-parser/ID_HERE
 ```
 
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open the local Vite URL in your browser to use the app.
+1. Start the development server:
+
+```bash
+npm run dev
+```
+
+1. Open the local Vite URL in your browser to use the app.
 
 > Note: Replay parsing is handled by your API configured in `VITE_PARSER_URL`. When deploying under a subpath, set `VITE_BASE_PATH` to that path so the router and Vite asset paths stay aligned. If your host does not support SPA rewrites on refresh, the bundled `404.html` fallback will route missing deep links back into the app.
 
@@ -93,6 +97,12 @@ Rows flagged `isMvpFloor` get a soft yellow background applied to the whole row 
 ```tsx
 const { waves, isLoading, hasError, reload } = useBastionMobs();
 ```
+
+## Botbito Discord Legal Pages
+
+The Botbito Discord legal pages are available at `/botbito-discord/terms-of-service` and `/botbito-discord/privacy-policy`. Their content is loaded at runtime from [public/botbito-discord-legal.json](public/botbito-discord-legal.json), so wording can be updated without changing the React component.
+
+Each document has a `title`, `lastUpdated`, `intro`, and ordered `sections`. A section contains a `heading` and an array of `paragraphs`. Keep this structure when editing the JSON so the legal page can render the document correctly.
 
 ## 📚 API Documentation
 
@@ -183,7 +193,7 @@ This separation enables high-coverage testing while respecting jsdom limitations
   - 🦴 `SkeletonLoader.tsx` - skeleton loader for content placeholders
   - 🚫 `PlaceholderDetails.tsx` - placeholder component for empty states
 - 🎨 `src/layouts/` - shared page/layout structures (`BaseLayout.tsx`)
-- 📄 `src/pages/` - route-level pages (`Home.tsx`, `BastionGuide.tsx`)
+- 📄 `src/pages/` - route-level pages (`Home.tsx`, `BastionGuide.tsx`, `BotbitoDiscordLegalPage.tsx`)
 - 🧵 `src/contexts/` - shared React context providers:
   - 🪟 `ModalContext.tsx` - application-level modal controls (`ModalProvider`, `useModal`)
   - 👹 `BastionMobsContext.tsx` - fetches and shares Bastion wave/monster data (`BastionMobsProvider`, `useBastionMobs`)
@@ -199,6 +209,7 @@ This separation enables high-coverage testing while respecting jsdom limitations
 - ⚙️ `src/constants/` - shared constants and config values
 - 🎨 `src/assets/` - local static assets (SVG icons, etc.)
 - 📂 `public/` - public static files:
+  - 📜 `botbito-discord-legal.json` - editable Terms of Service and Privacy Policy content
 - 📖 `README.md` - project documentation
 
 ## 📖 Usage
@@ -207,13 +218,13 @@ This separation enables high-coverage testing while respecting jsdom limitations
 2. 🌐 Open the application in your browser
 3. 📤 Use the file upload component to select a replay file
 4. 📊 The application will parse the replay data and display:
-   - 📋 Structured replay breakdown with key information
-   - 📈 Formatted data tables for detailed statistics
 
+- 📋 Structured replay breakdown with key information
+- 📈 Formatted data tables for detailed statistics
 - 👹⚔️ Job, skill, item, and monster names returned with the replay data
 
-5. 🎯 Use dropdown selectors to filter or navigate through replay sections
-6. ⏳ The interface provides loading states and placeholders during data processing
+1. 🎯 Use dropdown selectors to filter or navigate through replay sections
+1. ⏳ The interface provides loading states and placeholders during data processing
 
 For development, extend the app by adding new pages, components, hooks, or services as the project grows.
 

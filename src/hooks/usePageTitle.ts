@@ -14,6 +14,14 @@ const pageMetadataByPath: Record<string, PageMetadata> = {
     logoText: 'Bastion Guide',
     title: `Bastion Guide | ${applicationName}`,
   },
+  '/botbito-discord/terms-of-service': {
+    logoText: 'Botbito Discord',
+    title: `Terms of Service | ${applicationName}`,
+  },
+  '/botbito-discord/privacy-policy': {
+    logoText: 'Botbito Discord',
+    title: `Privacy Policy | ${applicationName}`,
+  },
   '/replay-parser': {
     logoText: 'Replay Parser',
     title: `Replay Parser | ${applicationName}`,

@@ -28,6 +28,16 @@ describe('getPageMetadata', () => {
     });
   });
 
+  it.each([
+    ['/botbito-discord/terms-of-service', 'Terms of Service'],
+    ['/botbito-discord/privacy-policy', 'Privacy Policy'],
+  ])('uses Botbito Discord metadata for %s', (pathname, title) => {
+    expect(getPageMetadata(pathname)).toEqual({
+      logoText: 'Botbito Discord',
+      title: `${title} | ${applicationName}`,
+    });
+  });
+
   it('updates the document title for the active route', () => {
     render(
       React.createElement(

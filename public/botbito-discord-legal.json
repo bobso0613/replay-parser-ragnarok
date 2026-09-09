@@ -1,0 +1,119 @@
+{
+  "termsOfService": {
+    "title": "Terms of Service",
+    "lastUpdated": "2026-09-09",
+    "intro": "These Terms of Service govern your use of the Botbito Discord application (the \"Bot\"). By installing, inviting, or using the Bot, you agree to these terms.",
+    "sections": [
+      {
+        "heading": "Service",
+        "paragraphs": [
+          "The Bot provides Discord commands for payout information, guild schedules, personal schedules, and weekly cooldown summaries. Features may be changed, suspended, or removed without notice.",
+          "The Bot is provided for the communities configured by its operator. It is not affiliated with, endorsed by, or sponsored by Discord Inc."
+        ]
+      },
+      {
+        "heading": "Installation and permissions",
+        "paragraphs": [
+          "The Bot is installed to Discord servers through the Guild Install context. Installation uses the bot and applications.commands scopes.",
+          "The Bot requests permissions needed to provide its features, including viewing channels, reading message history, sending messages, embedding links, adding reactions, and using external emoji. Server administrators are responsible for reviewing the requested permissions before installation and for configuring the Bot only in servers where they have authority to do so."
+        ]
+      },
+      {
+        "heading": "Acceptable use",
+        "paragraphs": [
+          "You may use the Bot only in compliance with Discord's Terms of Service, Discord's Community Guidelines, applicable law, and your server's rules.",
+          "You must not interfere with the Bot, attempt to gain unauthorized access to its configuration or connected services, use it to harass others, or use it for unlawful activity."
+        ]
+      },
+      {
+        "heading": "Command output and visibility",
+        "paragraphs": [
+          "Some commands can post results publicly in a server channel. Where a private or ephemeral option is available, you are responsible for selecting it when your result should not be visible to other server members.",
+          "The Bot only includes schedule channels that a requesting member is permitted to access. Public schedule announcements may identify that a private run exists without linking to its restricted channel."
+        ]
+      },
+      {
+        "heading": "Payout and schedule information",
+        "paragraphs": [
+          "Payout, schedule, and cooldown outputs are informational and are based on data made available to the Bot. They may be incomplete, delayed, or inaccurate. Confirm important information with the relevant guild administrator or payout contact before relying on it.",
+          "The Bot does not process payments, hold funds, or make payout decisions."
+        ]
+      },
+      {
+        "heading": "Availability and liability",
+        "paragraphs": [
+          "The Bot is provided on an as-is and as-available basis, without warranties of any kind. The operator does not guarantee uninterrupted, secure, error-free, or accurate operation.",
+          "To the extent permitted by applicable law, the operator is not liable for indirect, incidental, special, consequential, or punitive damages arising from use of, or inability to use, the Bot."
+        ]
+      },
+      {
+        "heading": "Termination and changes",
+        "paragraphs": [
+          "The operator may limit, suspend, or terminate access to the Bot at any time. You can stop using the Bot by removing it from your server or by no longer interacting with it.",
+          "These terms may be updated from time to time. Continued use of the Bot after an update means you accept the revised terms."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          "For questions about these terms or the Bot, contact the Bot operator through the Discord server where the Bot is installed."
+        ]
+      }
+    ]
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "2026-09-09",
+    "intro": "This Privacy Policy explains how the Botbito Discord application (the \"Bot\") handles information when you install or use it.",
+    "sections": [
+      {
+        "heading": "Information the Bot accesses",
+        "paragraphs": [
+          "The Bot receives Discord interaction and server information needed to respond to commands. This may include your Discord user ID, username, display name, server ID, server name, channel context, command name, and command options.",
+          "For configured payout servers, the Bot reads payout information from a connected Google Sheet and matches it to Discord tags. For configured schedule servers, the Bot reads schedule messages and embeds from designated Discord channels, including schedule titles, times, signup and reserve entries, and character notes."
+        ]
+      },
+      {
+        "heading": "How information is used",
+        "paragraphs": [
+          "The Bot uses this information to provide payout details, payout summaries, accessible guild schedules, personal schedule DMs, cooldown summaries, help content, and automatic schedule announcements.",
+          "The Bot uses a member's Discord permissions and configured role restrictions to determine which schedule channels and entries can be included in a response."
+        ]
+      },
+      {
+        "heading": "Logs",
+        "paragraphs": [
+          "The Bot records operational logs for command and button interactions. Logs may include the command or button used, success or failure status, server ID and name, user ID and username, and supplied command parameters.",
+          "Logs are used to operate, troubleshoot, maintain, and secure the Bot."
+        ]
+      },
+      {
+        "heading": "Sharing and disclosure",
+        "paragraphs": [
+          "The Bot does not sell personal information. Information is disclosed through Discord only when needed to deliver a command response or scheduled announcement, according to the visibility selected by the command and the permissions of the requesting member.",
+          "Payout source data is accessed through the configured Google Sheets integration. Discord and Google process information under their respective terms and privacy policies."
+        ]
+      },
+      {
+        "heading": "Retention and security",
+        "paragraphs": [
+          "The Bot retains operational information only for as long as reasonably necessary to operate, troubleshoot, maintain, and secure the Bot, unless a longer period is required by law.",
+          "The operator uses reasonable measures to protect the Bot's configuration and connected-service credentials. No system can guarantee absolute security."
+        ]
+      },
+      {
+        "heading": "Your choices",
+        "paragraphs": [
+          "You can choose whether to use the Bot and, where available, whether a command response is private or public. Server administrators can remove the Bot from their server.",
+          "To ask about information related to your use of the Bot, contact the Bot operator through the Discord server where the Bot is installed. The operator may need to verify your Discord identity before responding."
+        ]
+      },
+      {
+        "heading": "Policy changes",
+        "paragraphs": [
+          "This Privacy Policy may be updated from time to time. The current version will be published at the Bot's privacy-policy URL. Continued use of the Bot after an update means you acknowledge the revised policy."
+        ]
+      }
+    ]
+  }
+}

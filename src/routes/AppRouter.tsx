@@ -13,6 +13,7 @@ import {
 // 1. Swap static imports for dynamic lazy imports
 const Home = lazy(() => import('@/pages/Home'));
 const BastionGuide = lazy(() => import('@/pages/BastionGuide'));
+const BotbitoDiscordLegalPage = lazy(() => import('@/pages/BotbitoDiscordLegalPage'));
 
 /**
  * Reads the `?redirect=` search param set by the GitHub Pages 404.html fallback
@@ -46,6 +47,8 @@ const RedirectFromFallback = () => {
  * - `/replay-parser` → `Home` (Replay Parser file upload view).
  * - `/replay-parser/:outputId` → `Home` (shared-link view, loads by ID).
  * - `/bastion-guide` → `BastionGuide`.
+ * - `/botbito-discord/terms-of-service` → Botbito Discord terms of service.
+ * - `/botbito-discord/privacy-policy` → Botbito Discord privacy policy.
  *
  * All routes are wrapped in a `<Suspense>` boundary that shows
  * {@link PageLoading} while the lazy `Home` chunk is downloading.
@@ -63,6 +66,14 @@ const AppRouter = () => {
             <Route path="replay-parser" element={<Home />} />
             <Route path="replay-parser/:outputId" element={<Home />} />
             <Route path="bastion-guide" element={<BastionGuide />} />
+            <Route
+              path="botbito-discord/terms-of-service"
+              element={<BotbitoDiscordLegalPage title="Terms of Service" />}
+            />
+            <Route
+              path="botbito-discord/privacy-policy"
+              element={<BotbitoDiscordLegalPage title="Privacy Policy" />}
+            />
           </Route>
         </Routes>
       </Suspense>
