@@ -1,13 +1,13 @@
 {
   "termsOfService": {
     "title": "Terms of Service",
-    "lastUpdated": "2026-09-09",
+    "lastUpdated": "2026-09-10",
     "intro": "These Terms of Service govern your use of the Botbito Discord application (the \"Bot\"). By installing, inviting, or using the Bot, you agree to these terms.",
     "sections": [
       {
         "heading": "Service",
         "paragraphs": [
-          "The Bot provides Discord commands for payout information, guild schedules, personal schedules, and weekly cooldown summaries. Features may be changed, suspended, or removed without notice.",
+          "The Bot provides Discord commands for payout information, guild schedules, personal schedules, weekly cooldown summaries, and channel-scoped signup sheets for organizing runs (including roster sign-ups, reserves, instance type, notes, and scheduling). Features may be changed, suspended, or removed without notice.",
           "The Bot is provided for the communities configured by its operator. It is not affiliated with, endorsed by, or sponsored by Discord Inc."
         ]
       },
@@ -63,20 +63,21 @@
   },
   "privacyPolicy": {
     "title": "Privacy Policy",
-    "lastUpdated": "2026-09-09",
+    "lastUpdated": "2026-09-10",
     "intro": "This Privacy Policy explains how the Botbito Discord application (the \"Bot\") handles information when you install or use it.",
     "sections": [
       {
         "heading": "Information the Bot accesses",
         "paragraphs": [
           "The Bot receives Discord interaction and server information needed to respond to commands. This may include your Discord user ID, username, display name, server ID, server name, channel context, command name, and command options.",
-          "For configured payout servers, the Bot reads payout information from a connected Google Sheet and matches it to Discord tags. For configured schedule servers, the Bot reads schedule messages and embeds from designated Discord channels, including schedule titles, times, signup and reserve entries, and character notes."
+          "For configured payout servers, the Bot reads payout information from a connected Google Sheet and matches it to Discord tags. For configured schedule servers, the Bot reads schedule messages and embeds from designated Discord channels, including schedule titles, times, signup and reserve entries, and character notes.",
+          "For signup sheets created with the Bot's signup commands, the Bot stores the sheet's run title, schedule, instance type, organizer, roster slots, reserves, character notes, and the Discord user ID and display name of each signed-up or reserved member. Unlike guild schedules, which are read live from Discord messages, signup sheet data is persisted by the Bot until the sheet is cleared or deleted."
         ]
       },
       {
         "heading": "How information is used",
         "paragraphs": [
-          "The Bot uses this information to provide payout details, payout summaries, accessible guild schedules, personal schedule DMs, cooldown summaries, help content, and automatic schedule announcements.",
+          "The Bot uses this information to provide payout details, payout summaries, accessible guild schedules, personal schedule DMs, cooldown summaries, help content, automatic schedule announcements, and channel-scoped signup sheets.",
           "The Bot uses a member's Discord permissions and configured role restrictions to determine which schedule channels and entries can be included in a response."
         ]
       },
@@ -98,6 +99,7 @@
         "heading": "Retention and security",
         "paragraphs": [
           "The Bot retains operational information only for as long as reasonably necessary to operate, troubleshoot, maintain, and secure the Bot, unless a longer period is required by law.",
+          "Signup sheet data (roster, reserves, character notes, and related member Discord IDs and display names) is retained until the sheet is cleared or deleted, such as through the Bot's clear or delete signup commands.",
           "The operator uses reasonable measures to protect the Bot's configuration and connected-service credentials. No system can guarantee absolute security."
         ]
       },
