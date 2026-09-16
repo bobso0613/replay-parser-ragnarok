@@ -98,7 +98,7 @@
   },
   {
     "wave": 7,
-    "isSkippable": true,
+    "isSkippable": false,
     "remindersSetup": [],
     "monsters": [
       {
@@ -115,7 +115,7 @@
   },
   {
     "wave": 8,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": [],
     "monsters": [
       {
@@ -217,7 +217,7 @@
   },
   {
     "wave": 14,
-    "isSkippable": true,
+    "isSkippable": false,
     "remindersSetup": [],
     "monsters": [
       {
@@ -234,7 +234,7 @@
   },
   {
     "wave": 15,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": ["isMvpFloor"],
     "monsters": [
       {
