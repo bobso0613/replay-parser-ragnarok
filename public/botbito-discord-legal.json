@@ -1,13 +1,14 @@
 {
   "termsOfService": {
     "title": "Terms of Service",
-    "lastUpdated": "2026-09-10",
+    "lastUpdated": "2026-09-16",
     "intro": "These Terms of Service govern your use of the Botbito Discord application (the \"Bot\"). By installing, inviting, or using the Bot, you agree to these terms.",
     "sections": [
       {
         "heading": "Service",
         "paragraphs": [
-          "The Bot provides Discord commands for payout information, guild schedules, personal schedules, weekly cooldown summaries, and channel-scoped signup sheets for organizing runs (including roster sign-ups, reserves, instance type, notes, and scheduling). Features may be changed, suspended, or removed without notice.",
+          "The Bot provides Discord commands for payout information, guild schedules, personal schedules, weekly cooldown summaries, and channel-scoped signup sheets for organizing runs. Signup sheets may include party configuration, roster sign-ups, reserves, instance type, character notes, confirmation status, notes, time zones, and scheduling. Features may be changed, suspended, or removed without notice.",
+          "Server administrators may use administrator-only guild settings commands to configure schedule categories and channels, excluded or role-restricted channels, announcement channels, guild icons, and cooldown instance types and multipliers. These settings control how the Bot reads and presents information for that server.",
           "The Bot is provided for the communities configured by its operator. It is not affiliated with, endorsed by, or sponsored by Discord Inc."
         ]
       },
@@ -15,7 +16,7 @@
         "heading": "Installation and permissions",
         "paragraphs": [
           "The Bot is installed to Discord servers through the Guild Install context. Installation uses the bot and applications.commands scopes.",
-          "The Bot requests permissions needed to provide its features, including viewing channels, reading message history, sending messages, embedding links, adding reactions, and using external emoji. Server administrators are responsible for reviewing the requested permissions before installation and for configuring the Bot only in servers where they have authority to do so."
+          "The Bot requests permissions and intents needed to provide its features, including viewing channels, reading message history and message content, sending messages, embedding links, managing or deleting its announcement messages, resolving server members, adding reactions, and using external emoji. Server administrators are responsible for reviewing the requested permissions before installation and for configuring the Bot only in servers where they have authority to do so."
         ]
       },
       {
@@ -28,8 +29,9 @@
       {
         "heading": "Command output and visibility",
         "paragraphs": [
-          "Some commands can post results publicly in a server channel. Where a private or ephemeral option is available, you are responsible for selecting it when your result should not be visible to other server members.",
-          "The Bot only includes schedule channels that a requesting member is permitted to access. Public schedule announcements may identify that a private run exists without linking to its restricted channel."
+          "Some commands can post results publicly in a server channel. Where a private or ephemeral option is available, you are responsible for selecting it when your result should not be visible to other server members. Some commands can also send results to the requesting member by direct message.",
+          "The Bot only includes schedule channels that a requesting member is permitted to access. Private schedule results are filtered by Discord channel access and configured role restrictions. Public schedule announcements may identify that a private run exists without linking to its restricted channel.",
+          "Public schedule announcements may be refreshed automatically when a configured schedule changes, is postponed, is renamed, or its source channel is renamed. The Bot may delete and repost its prior announcement messages to keep the public announcement current."
         ]
       },
       {
@@ -63,7 +65,7 @@
   },
   "privacyPolicy": {
     "title": "Privacy Policy",
-    "lastUpdated": "2026-09-10",
+    "lastUpdated": "2026-09-16",
     "intro": "This Privacy Policy explains how the Botbito Discord application (the \"Bot\") handles information when you install or use it.",
     "sections": [
       {
@@ -71,27 +73,28 @@
         "paragraphs": [
           "The Bot receives Discord interaction and server information needed to respond to commands. This may include your Discord user ID, username, display name, server ID, server name, channel context, command name, and command options.",
           "For configured payout servers, the Bot reads payout information from a connected Google Sheet and matches it to Discord tags. For configured schedule servers, the Bot reads schedule messages and embeds from designated Discord channels, including schedule titles, times, signup and reserve entries, and character notes.",
-          "For signup sheets created with the Bot's signup commands, the Bot stores the sheet's run title, schedule, instance type, organizer, roster slots, reserves, character notes, and the Discord user ID and display name of each signed-up or reserved member. Unlike guild schedules, which are read live from Discord messages, signup sheet data is persisted by the Bot until the sheet is cleared or deleted."
+          "For signup sheets created with the Bot's signup commands or interactive buttons, the Bot stores the guild and channel, run title, schedule, instance type, organizer identity and avatar, party sizes, notes, thumbnail and color settings, schedule and server time zones, roster slots, reserves, character notes, and confirmation status. It may also store the Discord user ID and display name of each signed-up or reserved member, including when an organizer manages a signup for another member. Unlike guild schedules, which are read live from Discord messages, signup sheet data is persisted by the Bot until the sheet is cleared or deleted.",
+          "The Bot also stores per-guild configuration set by administrators, which may include Discord guild, category, channel, and role IDs, configured guild icons, schedule source and announcement channels, excluded channels, role restrictions, and cooldown instance definitions."
         ]
       },
       {
         "heading": "How information is used",
         "paragraphs": [
-          "The Bot uses this information to provide payout details, payout summaries, accessible guild schedules, personal schedule DMs, cooldown summaries, help content, automatic schedule announcements, and channel-scoped signup sheets.",
-          "The Bot uses a member's Discord permissions and configured role restrictions to determine which schedule channels and entries can be included in a response."
+          "The Bot uses this information to provide payout details, payout summaries, accessible guild schedules, personal schedule DMs, cooldown summaries, help content, automatic schedule announcements, administrator guild configuration, and channel-scoped signup sheets.",
+          "The Bot uses a member's Discord permissions and configured role restrictions to determine which schedule channels and entries can be included in a response. Signup-sheet actions use the invoking member's identity and the sheet's organizer and roster information to control edits such as adding, removing, swapping, marking confirmation status, changing character notes, scheduling, and notifying participants."
         ]
       },
       {
         "heading": "Logs",
         "paragraphs": [
-          "The Bot records operational logs for command and button interactions. Logs may include the command or button used, success or failure status, server ID and name, user ID and username, and supplied command parameters.",
+          "The Bot records operational logs for command, button, automatic schedule refresh, and configuration interactions. Logs may include the command, button, or trigger used, success or failure status, server ID and name, channel context, user ID and username, trigger run or channel details, and supplied command parameters.",
           "Logs are used to operate, troubleshoot, maintain, and secure the Bot."
         ]
       },
       {
         "heading": "Sharing and disclosure",
         "paragraphs": [
-          "The Bot does not sell personal information. Information is disclosed through Discord only when needed to deliver a command response or scheduled announcement, according to the visibility selected by the command and the permissions of the requesting member.",
+          "The Bot does not sell personal information. Information is disclosed through Discord only when needed to deliver a command response, direct message, signup-sheet interaction, participant notification, or scheduled announcement, according to the visibility selected by the command and the permissions of the requesting member. Signup-sheet rosters, notes, schedules, and participant status may be visible to members who can view the signup channel and its messages.",
           "Payout source data is accessed through the configured Google Sheets integration. Discord and Google process information under their respective terms and privacy policies."
         ]
       },
@@ -99,7 +102,7 @@
         "heading": "Retention and security",
         "paragraphs": [
           "The Bot retains operational information only for as long as reasonably necessary to operate, troubleshoot, maintain, and secure the Bot, unless a longer period is required by law.",
-          "Signup sheet data (roster, reserves, character notes, and related member Discord IDs and display names) is retained until the sheet is cleared or deleted, such as through the Bot's clear or delete signup commands.",
+          "Signup sheet data (including roster, reserves, character notes, confirmation status, schedules, notes, and related member Discord IDs and display names) is retained until the sheet is cleared or deleted, such as through the Bot's clear or delete signup commands. Per-guild schedule and cooldown configuration is retained while configured for the guild and until it is changed or removed by an authorized administrator or the operator.",
           "The operator uses reasonable measures to protect the Bot's configuration and connected-service credentials. No system can guarantee absolute security."
         ]
       },
