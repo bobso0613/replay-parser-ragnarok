@@ -1,0 +1,5013 @@
+{
+  "players": [
+    {
+      "AID": "2106579",
+      "name": "Feels Bard Man",
+      "jobId": 4020,
+      "totalDamageDealt": 231,
+      "totalDamageTaken": 9838,
+      "totalSkillUsageCount": 65,
+      "totalItemUsageCount": 0,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "0",
+            "skillDamageDealt": 231,
+            "skillUsageCount": 1
+          }
+        ],
+        "support": [
+          {
+            "skillId": "321",
+            "skillUsageCount": 18
+          },
+          {
+            "skillId": "322",
+            "skillUsageCount": 13
+          },
+          {
+            "skillId": "309",
+            "skillUsageCount": 12
+          },
+          {
+            "skillId": "320",
+            "skillUsageCount": 10
+          },
+          {
+            "skillId": "305",
+            "skillUsageCount": 6
+          },
+          {
+            "skillId": "142",
+            "skillUsageCount": 3
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "75",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+      ]
+    },
+    {
+      "AID": "2110602",
+      "name": "Kandice",
+      "jobId": 4009,
+      "totalDamageDealt": 0,
+      "totalDamageTaken": 5329,
+      "totalSkillUsageCount": 50,
+      "totalItemUsageCount": 3,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+        ],
+        "support": [
+          {
+            "skillId": "34",
+            "skillUsageCount": 13
+          },
+          {
+            "skillId": "29",
+            "skillUsageCount": 12
+          },
+          {
+            "skillId": "361",
+            "skillUsageCount": 12
+          },
+          {
+            "skillId": "32",
+            "skillUsageCount": 5
+          },
+          {
+            "skillId": "28",
+            "skillUsageCount": 3
+          },
+          {
+            "skillId": "54",
+            "skillUsageCount": 2
+          },
+          {
+            "skillId": "66",
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "75",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "617",
+          "itemUsageCount": 2
+        },
+        {
+          "itemId": "644",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2117357",
+      "name": "Kerz Tinkerbell",
+      "jobId": 4009,
+      "totalDamageDealt": 733,
+      "totalDamageTaken": 62026,
+      "totalSkillUsageCount": 54,
+      "totalItemUsageCount": 3,
+      "MVPCount": 0,
+      "deathCount": 2,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "0",
+            "skillDamageDealt": 733,
+            "skillUsageCount": 8
+          }
+        ],
+        "support": [
+          {
+            "skillId": "361",
+            "skillUsageCount": 14
+          },
+          {
+            "skillId": "72",
+            "skillUsageCount": 9
+          },
+          {
+            "skillId": "29",
+            "skillUsageCount": 6
+          },
+          {
+            "skillId": "78",
+            "skillUsageCount": 5
+          },
+          {
+            "skillId": "34",
+            "skillUsageCount": 4
+          },
+          {
+            "skillId": "66",
+            "skillUsageCount": 4
+          },
+          {
+            "skillId": "24",
+            "skillUsageCount": 2
+          },
+          {
+            "skillId": "54",
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "75",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "12016",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12324",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "13995",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2124588",
+      "name": "Lhinalagos",
+      "jobId": 4012,
+      "totalDamageDealt": 15245223,
+      "totalDamageTaken": 12933,
+      "totalSkillUsageCount": 735,
+      "totalItemUsageCount": 16,
+      "MVPCount": 2,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "382",
+            "skillDamageDealt": 15131503,
+            "skillUsageCount": 704
+          },
+          {
+            "skillId": "46",
+            "skillDamageDealt": 107477,
+            "skillUsageCount": 11
+          },
+          {
+            "skillId": "0",
+            "skillDamageDealt": 6243,
+            "skillUsageCount": 3
+          }
+        ],
+        "support": [
+          {
+            "skillId": "380",
+            "skillUsageCount": 13
+          },
+          {
+            "skillId": "45",
+            "skillUsageCount": 2
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "75",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "526",
+          "itemUsageCount": 14
+        },
+        {
+          "itemId": "12014",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12016",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2136692",
+      "name": "Lodia Moonlit",
+      "jobId": 4012,
+      "totalDamageDealt": 1658011,
+      "totalDamageTaken": 23739,
+      "totalSkillUsageCount": 101,
+      "totalItemUsageCount": 1,
+      "MVPCount": 0,
+      "deathCount": 1,
+      "skillInfo": {
+        "offensive": [
+          {
+            "skillId": "382",
+            "skillDamageDealt": 1577857,
+            "skillUsageCount": 76
+          },
+          {
+            "skillId": "46",
+            "skillDamageDealt": 80152,
+            "skillUsageCount": 10
+          },
+          {
+            "skillId": "0",
+            "skillDamageDealt": 2,
+            "skillUsageCount": 1
+          }
+        ],
+        "support": [
+          {
+            "skillId": "380",
+            "skillUsageCount": 10
+          },
+          {
+            "skillId": "45",
+            "skillUsageCount": 3
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "656",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2107227",
+      "name": "Lucia Blight",
+      "jobId": 4015,
+      "totalDamageDealt": 0,
+      "totalDamageTaken": 18182,
+      "totalSkillUsageCount": 21,
+      "totalItemUsageCount": 151,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+        ],
+        "support": [
+          {
+            "skillId": "249",
+            "skillUsageCount": 11
+          },
+          {
+            "skillId": "252",
+            "skillUsageCount": 5
+          },
+          {
+            "skillId": "361",
+            "skillUsageCount": 2
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "75",
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "1002",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "579",
+          "itemUsageCount": 144
+        },
+        {
+          "itemId": "12218",
+          "itemUsageCount": 2
+        },
+        {
+          "itemId": "12459",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12461",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12462",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "12464",
+          "itemUsageCount": 1
+        },
+        {
+          "itemId": "14538",
+          "itemUsageCount": 1
+        }
+      ]
+    },
+    {
+      "AID": "2118822",
+      "name": "MimoriChan",
+      "jobId": 4021,
+      "totalDamageDealt": 0,
+      "totalDamageTaken": 9119,
+      "totalSkillUsageCount": 44,
+      "totalItemUsageCount": 0,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+        ],
+        "support": [
+          {
+            "skillId": "330",
+            "skillUsageCount": 15
+          },
+          {
+            "skillId": "309",
+            "skillUsageCount": 12
+          },
+          {
+            "skillId": "329",
+            "skillUsageCount": 12
+          },
+          {
+            "skillId": "45",
+            "skillUsageCount": 2
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "75",
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "487",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+      ]
+    },
+    {
+      "AID": "2110668",
+      "name": "Stanislav Ostrovsky",
+      "jobId": 4017,
+      "totalDamageDealt": 0,
+      "totalDamageTaken": 30408,
+      "totalSkillUsageCount": 64,
+      "totalItemUsageCount": 8,
+      "MVPCount": 0,
+      "deathCount": 0,
+      "skillInfo": {
+        "offensive": [
+        ],
+        "support": [
+          {
+            "skillId": "373",
+            "skillUsageCount": 25
+          },
+          {
+            "skillId": "289",
+            "skillUsageCount": 20
+          },
+          {
+            "skillId": "374",
+            "skillUsageCount": 13
+          },
+          {
+            "skillId": "157",
+            "skillUsageCount": 4
+          },
+          {
+            "skillId": "74",
+            "skillUsageCount": 1
+          },
+          {
+            "skillId": "75",
+            "skillUsageCount": 1
+          }
+        ]
+      },
+      "itemInfo": [
+        {
+          "itemId": "579",
+          "itemUsageCount": 7
+        },
+        {
+          "itemId": "610",
+          "itemUsageCount": 1
+        }
+      ]
+    }
+  ],
+  "monsters": [
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 147244,
+      "battleEndTime": 147621,
+      "battleDuration": 377,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18820
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18820,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18820
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 147244,
+      "battleEndTime": 147621,
+      "battleDuration": 377,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18895
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18895,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18895
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 147244,
+      "battleEndTime": 147621,
+      "battleDuration": 377,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18871
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18871,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18871
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 147244,
+      "battleEndTime": 147621,
+      "battleDuration": 377,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18923
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18923,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18923
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 148858,
+      "battleEndTime": 149237,
+      "battleDuration": 379,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18769
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18769,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18769
+            }
+          ]
+        },
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 148858,
+      "battleEndTime": 149237,
+      "battleDuration": 379,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18820
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18820,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18820
+            }
+          ]
+        },
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 149126,
+      "battleEndTime": 149687,
+      "battleDuration": 561,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18820
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18824,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 18824
+            }
+          ]
+        },
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 16782,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 16782
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 150234,
+      "battleEndTime": 150627,
+      "battleDuration": 393,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 16782
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 16782,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 16782
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 150234,
+      "battleEndTime": 150627,
+      "battleDuration": 393,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 16782
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 16782,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 16782
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 153392,
+      "battleEndTime": 153780,
+      "battleDuration": 388,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18792
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18792,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18792
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 153392,
+      "battleEndTime": 153780,
+      "battleDuration": 388,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18871
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18871,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18871
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 153392,
+      "battleEndTime": 153780,
+      "battleDuration": 388,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18741
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18741,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18741
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 150234,
+      "battleEndTime": 153780,
+      "battleDuration": 3546,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 2
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 150234,
+      "battleEndTime": 153780,
+      "battleDuration": 3546,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 2
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 166661,
+      "battleEndTime": 167037,
+      "battleDuration": 376,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18871
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18871,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18871
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 166925,
+      "battleEndTime": 167301,
+      "battleDuration": 376,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18895
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18895,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18895
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 166924,
+      "battleEndTime": 167309,
+      "battleDuration": 385,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18792
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18792,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18792
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 166925,
+      "battleEndTime": 167572,
+      "battleDuration": 647,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18769
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18773,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 18773
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 168808,
+      "battleEndTime": 169173,
+      "battleDuration": 365,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18895
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18895,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18895
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 169313,
+      "battleEndTime": 169688,
+      "battleDuration": 375,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12275
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12275,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 12275
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 169313,
+      "battleEndTime": 169688,
+      "battleDuration": 375,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12177
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12177,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 12177
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 170966,
+      "battleEndTime": 171342,
+      "battleDuration": 376,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12097
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12097,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 12097
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 170967,
+      "battleEndTime": 171616,
+      "battleDuration": 649,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12247
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12251,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 12251
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 171494,
+      "battleEndTime": 171879,
+      "battleDuration": 385,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12298
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12298,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 12298
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 171766,
+      "battleEndTime": 172144,
+      "battleDuration": 378,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12177
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12177,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 12177
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 172293,
+      "battleEndTime": 172669,
+      "battleDuration": 376,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12097
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12097,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 12097
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 173377,
+      "battleEndTime": 173763,
+      "battleDuration": 386,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18895
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18895,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18895
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 173376,
+      "battleEndTime": 173764,
+      "battleDuration": 388,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18895
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18895,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18895
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 186545,
+      "battleEndTime": 187088,
+      "battleDuration": 543,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12177
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12177,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 12177
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 186545,
+      "battleEndTime": 187229,
+      "battleDuration": 684,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12125
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12129,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 12129
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 186544,
+      "battleEndTime": 187516,
+      "battleDuration": 972,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12247
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12255,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 12255
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 186544,
+      "battleEndTime": 187773,
+      "battleDuration": 1229,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12223
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12235,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 4,
+              "damageDealt": 12235
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 188747,
+      "battleEndTime": 189120,
+      "battleDuration": 373,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18792
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18792,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18792
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 188747,
+      "battleEndTime": 189129,
+      "battleDuration": 382,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18820
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18820,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18820
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 188747,
+      "battleEndTime": 189129,
+      "battleDuration": 382,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18792
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18792,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18792
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 188747,
+      "battleEndTime": 189129,
+      "battleDuration": 382,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18923
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18923,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18923
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 190928,
+      "battleEndTime": 191313,
+      "battleDuration": 385,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18792
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18792,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18792
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 190927,
+      "battleEndTime": 191313,
+      "battleDuration": 386,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18843
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18843,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18843
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 190928,
+      "battleEndTime": 191600,
+      "battleDuration": 672,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18871
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18875,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 18875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 193196,
+      "battleEndTime": 193572,
+      "battleDuration": 376,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18820
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18820,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18820
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 196618,
+      "battleEndTime": 196999,
+      "battleDuration": 381,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18843
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18843,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18843
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 197160,
+      "battleEndTime": 197537,
+      "battleDuration": 377,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18871
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18871,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18871
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 197160,
+      "battleEndTime": 197537,
+      "battleDuration": 377,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18843
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18843,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18843
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 197160,
+      "battleEndTime": 197856,
+      "battleDuration": 696,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18792
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18796,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 18796
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 198769,
+      "battleEndTime": 199136,
+      "battleDuration": 367,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18820
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18820,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18820
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 198769,
+      "battleEndTime": 199413,
+      "battleDuration": 644,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18792
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18796,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 18796
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 199295,
+      "battleEndTime": 199681,
+      "battleDuration": 386,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18820
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18820,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18820
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 199295,
+      "battleEndTime": 199681,
+      "battleDuration": 386,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18923
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18923,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18923
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 200912,
+      "battleEndTime": 201289,
+      "battleDuration": 377,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18923
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18923,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18923
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 200912,
+      "battleEndTime": 201289,
+      "battleDuration": 377,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18769
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18769,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 18769
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 200912,
+      "battleEndTime": 201561,
+      "battleDuration": 649,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 18895
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 18899,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 18899
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 203328,
+      "battleEndTime": 203717,
+      "battleDuration": 389,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19953
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19953,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19953
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 216766,
+      "battleEndTime": 217141,
+      "battleDuration": 375,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19999
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19999,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19999
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 216766,
+      "battleEndTime": 217141,
+      "battleDuration": 375,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19999
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19999,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19999
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 217030,
+      "battleEndTime": 217411,
+      "battleDuration": 381,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19981
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19981,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19981
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 217030,
+      "battleEndTime": 217411,
+      "battleDuration": 381,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 20079
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 20079,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 20079
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 218933,
+      "battleEndTime": 219315,
+      "battleDuration": 382,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 20027
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 20027,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 20027
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 218933,
+      "battleEndTime": 219315,
+      "battleDuration": 382,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 20079
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 20079,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 20079
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 218933,
+      "battleEndTime": 219315,
+      "battleDuration": 382,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19999
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19999,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19999
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 221065,
+      "battleEndTime": 221441,
+      "battleDuration": 376,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 20079
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 20079,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 20079
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 221353,
+      "battleEndTime": 221723,
+      "battleDuration": 370,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19981
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19981,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19981
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 221353,
+      "battleEndTime": 221990,
+      "battleDuration": 637,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19930
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19934,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 19934
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 223232,
+      "battleEndTime": 223612,
+      "battleDuration": 380,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 20130
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 20130,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 20130
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 226736,
+      "battleEndTime": 227115,
+      "battleDuration": 379,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19827
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19827,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19827
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 226736,
+      "battleEndTime": 227115,
+      "battleDuration": 379,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19930
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19930,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19930
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 226736,
+      "battleEndTime": 227375,
+      "battleDuration": 639,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19953
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19957,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 19957
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 227001,
+      "battleEndTime": 227375,
+      "battleDuration": 374,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19981
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19981,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19981
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 228920,
+      "battleEndTime": 229296,
+      "battleDuration": 376,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19850
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19850,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19850
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 228920,
+      "battleEndTime": 229296,
+      "battleDuration": 376,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19902
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19902,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19902
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 228919,
+      "battleEndTime": 229569,
+      "battleDuration": 650,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19902
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19906,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 19906
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 229749,
+      "battleEndTime": 230121,
+      "battleDuration": 372,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19850
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19850,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19850
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 231423,
+      "battleEndTime": 231802,
+      "battleDuration": 379,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19953
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19953,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19953
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 231115,
+      "battleEndTime": 231802,
+      "battleDuration": 687,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19827
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19831,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 19831
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 233281,
+      "battleEndTime": 233663,
+      "battleDuration": 382,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19902
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19902,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19902
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 236746,
+      "battleEndTime": 237126,
+      "battleDuration": 380,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19902
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19902,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19902
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 236746,
+      "battleEndTime": 237126,
+      "battleDuration": 380,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19953
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19953,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19953
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 237017,
+      "battleEndTime": 237392,
+      "battleDuration": 375,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19850
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19850,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19850
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 237016,
+      "battleEndTime": 237392,
+      "battleDuration": 376,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19850
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19850,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19850
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 238934,
+      "battleEndTime": 239314,
+      "battleDuration": 380,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19981
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19981,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19981
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 238934,
+      "battleEndTime": 239315,
+      "battleDuration": 381,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19799
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19799,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19799
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 239747,
+      "battleEndTime": 240129,
+      "battleDuration": 382,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19878
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19878,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19878
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 239747,
+      "battleEndTime": 240392,
+      "battleDuration": 645,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19878
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19882,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 19882
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 241115,
+      "battleEndTime": 241494,
+      "battleDuration": 379,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19776
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19776,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19776
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 241378,
+      "battleEndTime": 241768,
+      "battleDuration": 390,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19878
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19878,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19878
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 241115,
+      "battleEndTime": 241768,
+      "battleDuration": 653,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19850
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19854,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 19854
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 256732,
+      "battleEndTime": 257113,
+      "battleDuration": 381,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19953
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19953,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19953
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 256732,
+      "battleEndTime": 257113,
+      "battleDuration": 381,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19981
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19981,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19981
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 257219,
+      "battleEndTime": 257606,
+      "battleDuration": 387,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19827
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19827,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19827
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 257219,
+      "battleEndTime": 257866,
+      "battleDuration": 647,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19827
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19831,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 19831
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 258858,
+      "battleEndTime": 259233,
+      "battleDuration": 375,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19902
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19902,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19902
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 258857,
+      "battleEndTime": 259233,
+      "battleDuration": 376,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19799
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19799,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19799
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 259135,
+      "battleEndTime": 259510,
+      "battleDuration": 375,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19981
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19981,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19981
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 258858,
+      "battleEndTime": 259510,
+      "battleDuration": 652,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19799
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19803,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 19803
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 261003,
+      "battleEndTime": 261380,
+      "battleDuration": 377,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19850
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19850,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19850
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 261003,
+      "battleEndTime": 261380,
+      "battleDuration": 377,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19827
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19827,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19827
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 261003,
+      "battleEndTime": 261643,
+      "battleDuration": 640,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19799
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19803,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 19803
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 261538,
+      "battleEndTime": 261917,
+      "battleDuration": 379,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12727
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12727,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 12727
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 263141,
+      "battleEndTime": 263774,
+      "battleDuration": 633,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12881
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12885,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 12885
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 263141,
+      "battleEndTime": 263784,
+      "battleDuration": 643,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 4
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 8,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 288554,
+      "battleEndTime": 288931,
+      "battleDuration": 377,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19850
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19850,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19850
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 292607,
+      "battleEndTime": 292928,
+      "battleDuration": 321,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12904
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12904,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 12904
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 293387,
+      "battleEndTime": 293762,
+      "battleDuration": 375,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12778
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12778,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 12778
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 293932,
+      "battleEndTime": 295580,
+      "battleDuration": 1648,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "0",
+        "damage": 2
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 305720,
+      "battleEndTime": 306095,
+      "battleDuration": 375,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19981
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19981,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19981
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 308856,
+      "battleEndTime": 309252,
+      "battleDuration": 396,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 10247
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 10247,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 10247
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 311451,
+      "battleEndTime": 311867,
+      "battleDuration": 416,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 10247
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 10247,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 10247
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 311451,
+      "battleEndTime": 311867,
+      "battleDuration": 416,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 10247
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 10247,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 10247
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 311451,
+      "battleEndTime": 312010,
+      "battleDuration": 559,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12904
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12904,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 12904
+            }
+          ]
+        },
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 2,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 313844,
+      "battleEndTime": 314693,
+      "battleDuration": 849,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12778
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12782,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 12782
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 327054,
+      "battleEndTime": 327437,
+      "battleDuration": 383,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19776
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19776,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19776
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 326364,
+      "battleEndTime": 327649,
+      "battleDuration": 1285,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 15973
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 15977,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 15977
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 327568,
+      "battleEndTime": 327948,
+      "battleDuration": 380,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 19776
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 19776,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 19776
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 330040,
+      "battleEndTime": 330859,
+      "battleDuration": 819,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 10247
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 10251,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 10251
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 333071,
+      "battleEndTime": 333698,
+      "battleDuration": 627,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12853
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12857,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 12857
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 333318,
+      "battleEndTime": 333901,
+      "battleDuration": 583,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12932
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12936,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 12936
+            }
+          ]
+        },
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 10247,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 10247
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "3038",
+      "monsterName": "#f_w_1",
+      "battleStartTime": 334852,
+      "battleEndTime": 335221,
+      "battleDuration": 369,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 12829
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 12829,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 12829
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2995",
+      "monsterName": "Abandoned Teddy bear",
+      "battleStartTime": 3137,
+      "battleEndTime": 4986,
+      "battleDuration": 1849,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 17240
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 53858,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 4,
+              "damageDealt": 53858
+            }
+          ]
+        },
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 46545,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 46545
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2995",
+      "monsterName": "Abandoned Teddy bear",
+      "battleStartTime": 3137,
+      "battleEndTime": 4986,
+      "battleDuration": 1849,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 17240
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 61288,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 4,
+              "damageDealt": 61288
+            }
+          ]
+        },
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 46545,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 46545
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2995",
+      "monsterName": "Abandoned Teddy bear",
+      "battleStartTime": 3137,
+      "battleEndTime": 4986,
+      "battleDuration": 1849,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 17240
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 53629,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 4,
+              "damageDealt": 53629
+            }
+          ]
+        },
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 46545,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 46545
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2995",
+      "monsterName": "Abandoned Teddy bear",
+      "battleStartTime": 9699,
+      "battleEndTime": 11665,
+      "battleDuration": 1966,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 17513
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 96754,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 6,
+              "damageDealt": 96754
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2995",
+      "monsterName": "Abandoned Teddy bear",
+      "battleStartTime": 16811,
+      "battleEndTime": 19778,
+      "battleDuration": 2967,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "46",
+        "damage": 9998
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 107477,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 11,
+              "damageDealt": 107477
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2995",
+      "monsterName": "Abandoned Teddy bear",
+      "battleStartTime": 32664,
+      "battleEndTime": 34517,
+      "battleDuration": 1853,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 15402
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 42398,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 42398
+            }
+          ]
+        },
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 12232,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 12232
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2988",
+      "monsterName": "Antonio",
+      "battleStartTime": 24538,
+      "battleEndTime": 0,
+      "battleDuration": 0,
+      "taker": {
+        "playerId": "2117357",
+        "playerName": "Kerz Tinkerbell"
+      },
+      "highestDamageInfo": {
+        "playerId": "2117357",
+        "playerName": "Kerz Tinkerbell",
+        "skillId": "0",
+        "damage": 152
+      },
+      "battleInfo": [
+        {
+          "playerId": "2117357",
+          "playerName": "Kerz Tinkerbell",
+          "damageDealt": 733,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 8,
+              "damageDealt": 733
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2996",
+      "monsterName": "Celine Kimi",
+      "battleStartTime": 147244,
+      "battleEndTime": 334763,
+      "battleDuration": 187519,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 15304
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 6318377,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 685,
+              "damageDealt": 6312134
+            },
+            {
+              "skillId": "0",
+              "skillCount": 3,
+              "damageDealt": 6243
+            }
+          ]
+        },
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 359757,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 58,
+              "damageDealt": 359757
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2992",
+      "monsterName": "Creepy Demon",
+      "battleStartTime": 3137,
+      "battleEndTime": 3988,
+      "battleDuration": 851,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 14369
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 28738,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 28738
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2992",
+      "monsterName": "Creepy Demon",
+      "battleStartTime": 3581,
+      "battleEndTime": 4184,
+      "battleDuration": 603,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 14369
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 15623,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 15623
+            }
+          ]
+        },
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 13575,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 13575
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2992",
+      "monsterName": "Creepy Demon",
+      "battleStartTime": 3137,
+      "battleEndTime": 4250,
+      "battleDuration": 1113,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 14369
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 30002,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 30002
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2992",
+      "monsterName": "Creepy Demon",
+      "battleStartTime": 32664,
+      "battleEndTime": 33698,
+      "battleDuration": 1034,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 14275
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 29804,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 29804
+            }
+          ]
+        },
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 1207,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 1,
+              "damageDealt": 1207
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2987",
+      "monsterName": "Decorated Evil Tree",
+      "battleStartTime": 3136,
+      "battleEndTime": 5416,
+      "battleDuration": 2280,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 15375
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 76875,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 5,
+              "damageDealt": 76875
+            }
+          ]
+        },
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 68625,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 5,
+              "damageDealt": 68625
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2987",
+      "monsterName": "Decorated Evil Tree",
+      "battleStartTime": 3136,
+      "battleEndTime": 5535,
+      "battleDuration": 2399,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 15375
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 61500,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 4,
+              "damageDealt": 61500
+            }
+          ]
+        },
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 41175,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 41175
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2987",
+      "monsterName": "Decorated Evil Tree",
+      "battleStartTime": 3137,
+      "battleEndTime": 5535,
+      "battleDuration": 2398,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 15375
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 61500,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 4,
+              "damageDealt": 61500
+            }
+          ]
+        },
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 27450,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 27450
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2987",
+      "monsterName": "Decorated Evil Tree",
+      "battleStartTime": 24089,
+      "battleEndTime": 25531,
+      "battleDuration": 1442,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 13616
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 62309,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 5,
+              "damageDealt": 62309
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2997",
+      "monsterName": "Kimi's Phantom",
+      "battleStartTime": 147243,
+      "battleEndTime": 332649,
+      "battleDuration": 185406,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 11480
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 6329193,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 677,
+              "damageDealt": 6329193
+            }
+          ]
+        },
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 340878,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 57,
+              "damageDealt": 340878
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2993",
+      "monsterName": "Malicious Baby Ghost",
+      "battleStartTime": 3136,
+      "battleEndTime": 4629,
+      "battleDuration": 1493,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 15085
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 54510,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 4,
+              "damageDealt": 54510
+            }
+          ]
+        },
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 40725,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 40725
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2993",
+      "monsterName": "Malicious Baby Ghost",
+      "battleStartTime": 3136,
+      "battleEndTime": 4654,
+      "battleDuration": 1518,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 15085
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 54900,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 4,
+              "damageDealt": 54900
+            }
+          ]
+        },
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 40725,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 40725
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2993",
+      "monsterName": "Malicious Baby Ghost",
+      "battleStartTime": 3137,
+      "battleEndTime": 4986,
+      "battleDuration": 1849,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "382",
+        "damage": 15085
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 48853,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 4,
+              "damageDealt": 48853
+            }
+          ]
+        },
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 40725,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 3,
+              "damageDealt": 40725
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2993",
+      "monsterName": "Malicious Baby Ghost",
+      "battleStartTime": 4622,
+      "battleEndTime": 8024,
+      "battleDuration": 3402,
+      "taker": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos"
+      },
+      "highestDamageInfo": {
+        "playerId": "2124588",
+        "playerName": "Lhinalagos",
+        "skillId": "382",
+        "damage": 13575
+      },
+      "battleInfo": [
+        {
+          "playerId": "2124588",
+          "playerName": "Lhinalagos",
+          "damageDealt": 67875,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 5,
+              "damageDealt": 67875
+            }
+          ]
+        },
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 19584,
+          "skills": [
+            {
+              "skillId": "382",
+              "skillCount": 2,
+              "damageDealt": 19584
+            }
+          ]
+        },
+        {
+          "playerId": "2106579",
+          "playerName": "Feels Bard Man",
+          "damageDealt": 231,
+          "skills": [
+            {
+              "skillId": "0",
+              "skillCount": 1,
+              "damageDealt": 231
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "monsterId": "2993",
+      "monsterName": "Malicious Baby Ghost",
+      "battleStartTime": 17373,
+      "battleEndTime": 20281,
+      "battleDuration": 2908,
+      "taker": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit"
+      },
+      "highestDamageInfo": {
+        "playerId": "2136692",
+        "playerName": "Lodia Moonlit",
+        "skillId": "46",
+        "damage": 8230
+      },
+      "battleInfo": [
+        {
+          "playerId": "2136692",
+          "playerName": "Lodia Moonlit",
+          "damageDealt": 80152,
+          "skills": [
+            {
+              "skillId": "46",
+              "skillCount": 10,
+              "damageDealt": 80152
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
