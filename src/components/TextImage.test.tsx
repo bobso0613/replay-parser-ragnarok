@@ -40,16 +40,24 @@ describe('TextImage', () => {
     expect(span?.textContent).toBe('Sample Info');
   });
 
-  it('should invoke onTextClick when the label is clicked or activated by keyboard', () => {
+  it('should invoke onTextClick when the label is clicked', () => {
     const onTextClick = vi.fn();
     const { getByRole } = render(React.createElement(TextImage, { ...defaultProps, onTextClick }));
     const label = getByRole('button', { name: 'Sample Info' });
 
     fireEvent.click(label);
-    fireEvent.keyDown(label, { key: 'Enter' });
-    fireEvent.keyDown(label, { key: ' ' });
 
-    expect(onTextClick).toHaveBeenCalledTimes(3);
+    expect(onTextClick).toHaveBeenCalledTimes(1);
+  });
+
+  it('should render the label as a native button for keyboard accessibility', () => {
+    const { getByRole } = render(
+      React.createElement(TextImage, { ...defaultProps, onTextClick: vi.fn() })
+    );
+    const label = getByRole('button', { name: 'Sample Info' });
+
+    expect(label.tagName).toBe('BUTTON');
+    expect(label).not.toBeDisabled();
   });
 
   it('should invoke onTextClick when the tooltip trigger is clicked', () => {

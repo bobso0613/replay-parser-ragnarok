@@ -51,29 +51,14 @@ describe('InputUpload', () => {
     expect(input?.getAttribute('accept')).toBe('.json,.csv');
   });
 
-  it('should have border styling', () => {
-    const { container } = render(React.createElement(InputUpload, defaultProps));
-    const label = container.querySelector('label');
-    expect(label?.className).toContain('border');
-  });
-
-  it('should have rounded-md styling', () => {
-    const { container } = render(React.createElement(InputUpload, defaultProps));
-    const label = container.querySelector('label');
-    expect(label?.className).toContain('rounded-md');
-  });
-
-  it('should have flex layout', () => {
-    const { container } = render(React.createElement(InputUpload, defaultProps));
-    const label = container.querySelector('label');
-    expect(label?.className).toContain('flex');
-  });
-
-  it('should be cursor-pointer', () => {
-    const { container } = render(React.createElement(InputUpload, defaultProps));
-    const label = container.querySelector('label');
-    expect(label?.className).toContain('cursor-pointer');
-  });
+  it.each(['border', 'rounded-md', 'flex', 'cursor-pointer', 'group'])(
+    'should have %s styling on the label',
+    (className) => {
+      const { container } = render(React.createElement(InputUpload, defaultProps));
+      const label = container.querySelector('label');
+      expect(label?.className).toContain(className);
+    }
+  );
 
   it('should handle drop event', () => {
     const onFilesSelected = vi.fn();
@@ -95,12 +80,6 @@ describe('InputUpload', () => {
     const { container } = render(React.createElement(InputUpload, defaultProps));
     const label = container.querySelector('label');
     expect(label).toBeDefined();
-  });
-
-  it('should have group class for hover effects', () => {
-    const { container } = render(React.createElement(InputUpload, defaultProps));
-    const label = container.querySelector('label');
-    expect(label?.className).toContain('group');
   });
 
   it('should display single file name in preview', () => {

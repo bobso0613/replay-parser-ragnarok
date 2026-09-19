@@ -25,12 +25,34 @@ const MIN_VIRTUAL_TABLE_HEIGHT = 220;
 const VIEWPORT_BOTTOM_GAP = 24;
 const VIEWPORT_SAFETY_BUFFER = 12;
 
+/** Resolves the header `<table>`'s inline width style for virtualized vs. fixed-width modes. */
+const getHeaderTableStyle = (
+  shouldVirtualize: boolean,
+  listViewportWidth: number
+): React.CSSProperties => {
+  if (!shouldVirtualize) {
+    return { minWidth: '100%' };
+  }
+
+  return listViewportWidth > 0 ? { width: `${listViewportWidth}px` } : { width: '100%' };
+};
+
+/** Resolves the sort-direction arrow (or the neutral indicator when unsorted). */
+const getSortIndicator = (isSorted: boolean, direction: 'asc' | 'desc' | undefined) => {
+  if (!isSorted) {
+    return <span className="opacity-30">⇅</span>;
+  }
+
+  return direction === 'asc' ? '↑' : '↓';
+};
+
 type VirtualRowProps = {
-  rows: Array<Array<React.ReactNode>>;
+  rows: Array<{ row: Array<React.ReactNode>; originalIndex: number }>;
   rowClassNames: string[];
   rowBackgroundClassNames?: string[];
   maxCols: number;
   columnWidths: number[];
+  columnKeys: string[];
   tableWidth: number;
   dynamicRowHeight: DynamicRowHeight;
   compact: boolean;
@@ -47,12 +69,13 @@ const VirtualTableRow = ({
   rowBackgroundClassNames,
   maxCols,
   columnWidths,
+  columnKeys,
   tableWidth,
   dynamicRowHeight,
   compact,
   ariaAttributes,
 }: RowComponentProps<VirtualRowProps>) => {
-  const row = rows[index] ?? [];
+  const { row, originalIndex } = rows[index] ?? { row: [], originalIndex: index };
   const rowRef = useRef<HTMLDivElement>(null);
   const cellPadding = compact ? 'px-1 py-1' : 'px-4 py-3';
 
@@ -92,22 +115,28 @@ const VirtualTableRow = ({
         <colgroup>
           {Array.from({ length: maxCols }).map((_, colIndex) => (
             <col
-              key={colIndex}
+              key={columnKeys[colIndex] ?? colIndex}
               style={columnWidths[colIndex] ? { width: `${columnWidths[colIndex]}px` } : undefined}
             />
           ))}
         </colgroup>
         <tbody>
           <tr
-            className={`text-slate-50 hover:bg-slate-50/20 ${rowBackgroundClassNames?.[index] ?? ''}`}
+            className={`text-slate-50 hover:bg-slate-50/20 ${rowBackgroundClassNames?.[originalIndex] ?? ''}`}
           >
             {row.map((cell, cellIndex) => (
-              <td key={cellIndex} className={`${rowClassNames[cellIndex] ?? ''} ${cellPadding}`}>
+              <td
+                key={columnKeys[cellIndex] ?? cellIndex}
+                className={`${rowClassNames[cellIndex] ?? ''} ${cellPadding}`}
+              >
                 {cell}
               </td>
             ))}
             {Array.from({ length: maxCols - row.length }).map((_, padIndex) => (
-              <td key={`pad-${padIndex}`} className={cellPadding} />
+              <td
+                key={columnKeys[row.length + padIndex] ?? `pad-${padIndex}`}
+                className={cellPadding}
+              />
             ))}
           </tr>
         </tbody>
@@ -175,6 +204,11 @@ const Table: React.FC<TableProps> = ({
     defaultRowHeight: virtualRowHeight,
     key: `${maxCols}-${rows.length}-${sortConfig?.column ?? 'none'}-${sortConfig?.direction ?? 'none'}`,
   });
+  // Stable per-column identifiers so cell/column keys don't rely on array index.
+  const columnKeys = useMemo(
+    () => Array.from({ length: maxCols }, () => crypto.randomUUID()),
+    [maxCols]
+  );
 
   const getExplicitColumnWidthStyle = (columnIndex: number): React.CSSProperties | undefined => {
     const columnWidth = columnWidths[columnIndex];
@@ -204,7 +238,9 @@ const Table: React.FC<TableProps> = ({
   };
 
   const sortedRows = useMemo(() => {
-    if (!sortConfig) return rows;
+    if (!sortConfig) {
+      return rows.map((row, originalIndex) => ({ row, originalIndex }));
+    }
 
     const { column, direction } = sortConfig;
     const indexed = rows.map((row, i) => ({ row, i }));
@@ -235,7 +271,7 @@ const Table: React.FC<TableProps> = ({
       return direction === 'asc' ? comparison : -comparison;
     });
 
-    return sorted.map(({ row }) => row);
+    return sorted.map(({ row, i }) => ({ row, originalIndex: i }));
   }, [sortConfig, rows, sortValues, sortExtractors]);
 
   const shouldVirtualize = enableVirtualization && sortedRows.length > 0;
@@ -273,10 +309,12 @@ const Table: React.FC<TableProps> = ({
         footerHeight,
         wrapperChromeHeight,
         wrapperMarginBottom,
-        VIEWPORT_BOTTOM_GAP,
-        VIEWPORT_SAFETY_BUFFER,
-        MIN_VIRTUAL_TABLE_HEIGHT,
-        virtualTableHeight
+        {
+          viewportBottomGap: VIEWPORT_BOTTOM_GAP,
+          viewportSafetyBuffer: VIEWPORT_SAFETY_BUFFER,
+          minHeight: MIN_VIRTUAL_TABLE_HEIGHT,
+          maxHeight: virtualTableHeight,
+        }
       );
 
       setViewportHeight(nextHeight);
@@ -339,19 +377,13 @@ const Table: React.FC<TableProps> = ({
       <table
         ref={headerTableRef}
         className={`${shouldVirtualize || hasExplicitColumnWidths ? 'table-fixed' : ''} ${shouldVirtualize ? 'border-collapse' : ''} divide-y divide-slate-200/50`}
-        style={
-          shouldVirtualize
-            ? listViewportWidth > 0
-              ? { width: `${listViewportWidth}px` }
-              : { width: '100%' }
-            : { minWidth: '100%' }
-        }
+        style={getHeaderTableStyle(shouldVirtualize, listViewportWidth)}
       >
         {shouldVirtualize && (
           <colgroup>
             {Array.from({ length: maxCols }).map((_, colIndex) => (
               <col
-                key={`head-col-${colIndex}`}
+                key={columnKeys[colIndex] ?? colIndex}
                 style={
                   computedColumnWidths[colIndex]
                     ? { width: `${computedColumnWidths[colIndex]}px` }
@@ -365,7 +397,7 @@ const Table: React.FC<TableProps> = ({
           <colgroup>
             {Array.from({ length: maxCols }).map((_, colIndex) => (
               <col
-                key={`head-explicit-col-${colIndex}`}
+                key={columnKeys[colIndex] ?? colIndex}
                 style={getExplicitColumnWidthStyle(colIndex)}
               />
             ))}
@@ -381,7 +413,7 @@ const Table: React.FC<TableProps> = ({
 
                 return (
                   <th
-                    key={index}
+                    key={columnKeys[index] ?? index}
                     onClick={() => handleHeaderClick(index)}
                     className={`${cellPadding} text-left font-bold uppercase tracking-wide text-slate-200 ${
                       hasComplexHeader ? '' : 'whitespace-nowrap '
@@ -391,15 +423,7 @@ const Table: React.FC<TableProps> = ({
                       <div className="flex items-center gap-2">
                         {header}
                         <span className="text-2xl">
-                          {isSorted ? (
-                            sortConfig.direction === 'asc' ? (
-                              '↑'
-                            ) : (
-                              '↓'
-                            )
-                          ) : (
-                            <span className="opacity-30">⇅</span>
-                          )}
+                          {getSortIndicator(isSorted, isSorted ? sortConfig?.direction : undefined)}
                         </span>
                       </div>
                     ) : (
@@ -409,7 +433,12 @@ const Table: React.FC<TableProps> = ({
                 );
               })}
               {Array.from({ length: Math.max(0, maxCols - headers.length) }).map((_, index) => {
-                return <th key={`empty-${index}`} className={cellPadding} />;
+                return (
+                  <th
+                    key={columnKeys[headers.length + index] ?? `empty-${index}`}
+                    className={cellPadding}
+                  />
+                );
               })}
             </tr>
           </thead>
@@ -423,21 +452,24 @@ const Table: React.FC<TableProps> = ({
                 </td>
               </tr>
             ) : (
-              sortedRows.map((row, rowIndex) => (
+              sortedRows.map(({ row, originalIndex }) => (
                 <tr
-                  key={rowIndex}
-                  className={`text-slate-50 hover:bg-slate-50/20 ${rowBackgroundClassNames?.[rowIndex] ?? ''}`}
+                  key={originalIndex}
+                  className={`text-slate-50 hover:bg-slate-50/20 ${rowBackgroundClassNames?.[originalIndex] ?? ''}`}
                 >
                   {row.map((cell, cellIndex) => (
                     <td
-                      key={cellIndex}
+                      key={columnKeys[cellIndex] ?? cellIndex}
                       className={`${rowClassNames[cellIndex] ?? ''} ${cellPadding}`}
                     >
                       {cell}
                     </td>
                   ))}
                   {Array.from({ length: maxCols - row.length }).map((_, index) => (
-                    <td key={`pad-${index}`} className={cellPadding} />
+                    <td
+                      key={columnKeys[row.length + index] ?? `pad-${index}`}
+                      className={cellPadding}
+                    />
                   ))}
                 </tr>
               ))
@@ -458,6 +490,7 @@ const Table: React.FC<TableProps> = ({
             rowBackgroundClassNames,
             maxCols,
             columnWidths: computedColumnWidths,
+            columnKeys,
             tableWidth: listViewportWidth,
             dynamicRowHeight,
             compact,

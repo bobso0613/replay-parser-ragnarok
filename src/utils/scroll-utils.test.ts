@@ -9,85 +9,28 @@ import {
 
 describe('scroll-utils', () => {
   describe('isScrollableElement', () => {
-    it('should return true for element with overflow-y auto and scrollable height', () => {
-      const element = document.createElement('div');
-      Object.defineProperty(element, 'scrollHeight', { value: 500, configurable: true });
-      Object.defineProperty(element, 'clientHeight', { value: 300, configurable: true });
+    it.each([
+      ['auto', 500, 300, true],
+      ['scroll', 500, 300, true],
+      ['auto', 300, 300, false],
+      ['hidden', 500, 300, false],
+      ['visible', 500, 300, false],
+    ])(
+      'should return %s for overflow-y=%s with scrollHeight=%i and clientHeight=%i',
+      (overflowY, scrollHeight, clientHeight, expected) => {
+        const element = document.createElement('div');
+        Object.defineProperty(element, 'scrollHeight', { value: scrollHeight, configurable: true });
+        Object.defineProperty(element, 'clientHeight', { value: clientHeight, configurable: true });
 
-      const mockGetComputedStyle = vi.spyOn(window, 'getComputedStyle');
-      mockGetComputedStyle.mockReturnValue({
-        overflowY: 'auto',
-      } as any);
+        const mockGetComputedStyle = vi.spyOn(window, 'getComputedStyle');
+        mockGetComputedStyle.mockReturnValue({ overflowY } as any);
 
-      const result = isScrollableElement(element);
+        const result = isScrollableElement(element);
 
-      expect(result).toBe(true);
-      mockGetComputedStyle.mockRestore();
-    });
-
-    it('should return true for element with overflow-y scroll and scrollable height', () => {
-      const element = document.createElement('div');
-      Object.defineProperty(element, 'scrollHeight', { value: 500, configurable: true });
-      Object.defineProperty(element, 'clientHeight', { value: 300, configurable: true });
-
-      const mockGetComputedStyle = vi.spyOn(window, 'getComputedStyle');
-      mockGetComputedStyle.mockReturnValue({
-        overflowY: 'scroll',
-      } as any);
-
-      const result = isScrollableElement(element);
-
-      expect(result).toBe(true);
-      mockGetComputedStyle.mockRestore();
-    });
-
-    it('should return false for element without scrollable height', () => {
-      const element = document.createElement('div');
-      Object.defineProperty(element, 'scrollHeight', { value: 300, configurable: true });
-      Object.defineProperty(element, 'clientHeight', { value: 300, configurable: true });
-
-      const mockGetComputedStyle = vi.spyOn(window, 'getComputedStyle');
-      mockGetComputedStyle.mockReturnValue({
-        overflowY: 'auto',
-      } as any);
-
-      const result = isScrollableElement(element);
-
-      expect(result).toBe(false);
-      mockGetComputedStyle.mockRestore();
-    });
-
-    it('should return false for element with overflow-y hidden', () => {
-      const element = document.createElement('div');
-      Object.defineProperty(element, 'scrollHeight', { value: 500, configurable: true });
-      Object.defineProperty(element, 'clientHeight', { value: 300, configurable: true });
-
-      const mockGetComputedStyle = vi.spyOn(window, 'getComputedStyle');
-      mockGetComputedStyle.mockReturnValue({
-        overflowY: 'hidden',
-      } as any);
-
-      const result = isScrollableElement(element);
-
-      expect(result).toBe(false);
-      mockGetComputedStyle.mockRestore();
-    });
-
-    it('should return false for element with overflow-y visible', () => {
-      const element = document.createElement('div');
-      Object.defineProperty(element, 'scrollHeight', { value: 500, configurable: true });
-      Object.defineProperty(element, 'clientHeight', { value: 300, configurable: true });
-
-      const mockGetComputedStyle = vi.spyOn(window, 'getComputedStyle');
-      mockGetComputedStyle.mockReturnValue({
-        overflowY: 'visible',
-      } as any);
-
-      const result = isScrollableElement(element);
-
-      expect(result).toBe(false);
-      mockGetComputedStyle.mockRestore();
-    });
+        expect(result).toBe(expected);
+        mockGetComputedStyle.mockRestore();
+      }
+    );
   });
 
   describe('resolveScrollableTarget', () => {
@@ -198,40 +141,24 @@ describe('scroll-utils', () => {
   });
 
   describe('isScrollThresholdExceeded', () => {
-    it('should return true if scrollTop exceeds threshold', () => {
-      const result = isScrollThresholdExceeded(200, 0, 180);
-
-      expect(result).toBe(true);
-    });
-
-    it('should return true if pageScrollTop exceeds threshold', () => {
-      const result = isScrollThresholdExceeded(0, 200, 180);
-
-      expect(result).toBe(true);
-    });
-
-    it('should return false if neither exceeds threshold', () => {
-      const result = isScrollThresholdExceeded(100, 0, 180);
-
-      expect(result).toBe(false);
-    });
+    it.each([
+      [200, 0, 180, true],
+      [0, 200, 180, true],
+      [100, 0, 180, false],
+      [181, 0, 180, true],
+      [180, 0, 180, false],
+    ])(
+      'should return %s when scrollTop=%i pageScrollTop=%i threshold=%i',
+      (scrollTop, pageScrollTop, threshold, expected) => {
+        const result = isScrollThresholdExceeded(scrollTop, pageScrollTop, threshold);
+        expect(result).toBe(expected);
+      }
+    );
 
     it('should use default threshold of 180', () => {
       const result = isScrollThresholdExceeded(200, 0);
 
       expect(result).toBe(true);
-    });
-
-    it('should return true if equal to max and max exceeds threshold', () => {
-      const result = isScrollThresholdExceeded(181, 0, 180);
-
-      expect(result).toBe(true);
-    });
-
-    it('should return false if equal to threshold', () => {
-      const result = isScrollThresholdExceeded(180, 0, 180);
-
-      expect(result).toBe(false);
     });
   });
 

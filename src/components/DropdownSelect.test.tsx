@@ -35,7 +35,7 @@ describe('DropdownSelect', () => {
     const { container } = render(React.createElement(DropdownSelect, defaultProps));
     const options = container.querySelectorAll('option');
     // 1 placeholder + 3 options
-    expect(options.length).toBe(4);
+    expect(options).toHaveLength(4);
   });
 
   it('should call onChange when value changes', () => {
@@ -81,48 +81,24 @@ describe('DropdownSelect', () => {
     expect(select?.getAttribute('id')).toBe('custom-id');
   });
 
-  it('should have rounded-md styling', () => {
+  it.each([
+    'rounded-md',
+    'border',
+    'shadow-sm',
+    'px-3',
+    'py-2',
+    'text-sm',
+    'outline-none',
+    'focus:border-slate-500',
+    'focus:ring-2',
+    'bg-white',
+    'transition',
+    'text-slate-700',
+    'border-slate-300',
+  ])('should have %s styling', (className) => {
     const { container } = render(React.createElement(DropdownSelect, defaultProps));
     const select = container.querySelector('select');
-    expect(select?.className).toContain('rounded-md');
-  });
-
-  it('should have border styling', () => {
-    const { container } = render(React.createElement(DropdownSelect, defaultProps));
-    const select = container.querySelector('select');
-    expect(select?.className).toContain('border');
-  });
-
-  it('should have shadow-sm styling', () => {
-    const { container } = render(React.createElement(DropdownSelect, defaultProps));
-    const select = container.querySelector('select');
-    expect(select?.className).toContain('shadow-sm');
-  });
-
-  it('should have padding', () => {
-    const { container } = render(React.createElement(DropdownSelect, defaultProps));
-    const select = container.querySelector('select');
-    expect(select?.className).toContain('px-3');
-    expect(select?.className).toContain('py-2');
-  });
-
-  it('should have text-sm', () => {
-    const { container } = render(React.createElement(DropdownSelect, defaultProps));
-    const select = container.querySelector('select');
-    expect(select?.className).toContain('text-sm');
-  });
-
-  it('should have outline-none', () => {
-    const { container } = render(React.createElement(DropdownSelect, defaultProps));
-    const select = container.querySelector('select');
-    expect(select?.className).toContain('outline-none');
-  });
-
-  it('should have focus styles', () => {
-    const { container } = render(React.createElement(DropdownSelect, defaultProps));
-    const select = container.querySelector('select');
-    expect(select?.className).toContain('focus:border-slate-500');
-    expect(select?.className).toContain('focus:ring-2');
+    expect(select?.className).toContain(className);
   });
 
   it('should have correct value', () => {
@@ -160,7 +136,7 @@ describe('DropdownSelect', () => {
     );
     const options = container.querySelectorAll('option');
     // Only placeholder
-    expect(options.length).toBe(1);
+    expect(options).toHaveLength(1);
   });
 
   it('should handle single option', () => {
@@ -171,19 +147,7 @@ describe('DropdownSelect', () => {
       })
     );
     const options = container.querySelectorAll('option');
-    expect(options.length).toBe(2);
-  });
-
-  it('should have white background', () => {
-    const { container } = render(React.createElement(DropdownSelect, defaultProps));
-    const select = container.querySelector('select');
-    expect(select?.className).toContain('bg-white');
-  });
-
-  it('should have transition class', () => {
-    const { container } = render(React.createElement(DropdownSelect, defaultProps));
-    const select = container.querySelector('select');
-    expect(select?.className).toContain('transition');
+    expect(options).toHaveLength(2);
   });
 
   it('should call onChange with correct event', () => {
@@ -207,18 +171,6 @@ describe('DropdownSelect', () => {
       const callArgs = onChange.mock.calls[0];
       expect(callArgs).toBeDefined();
     }
-  });
-
-  it('should have text-slate-700', () => {
-    const { container } = render(React.createElement(DropdownSelect, defaultProps));
-    const select = container.querySelector('select');
-    expect(select?.className).toContain('text-slate-700');
-  });
-
-  it('should have border-slate-300', () => {
-    const { container } = render(React.createElement(DropdownSelect, defaultProps));
-    const select = container.querySelector('select');
-    expect(select?.className).toContain('border-slate-300');
   });
 
   it('should handle undefined onChange gracefully', () => {

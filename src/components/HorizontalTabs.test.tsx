@@ -31,7 +31,7 @@ describe('HorizontalTabs', () => {
   it('should render all tabs', () => {
     const { container } = render(React.createElement(HorizontalTabs, defaultProps));
     const buttons = container.querySelectorAll('button');
-    expect(buttons.length).toBe(3);
+    expect(buttons).toHaveLength(3);
   });
 
   it('should display active tab content', () => {
@@ -46,7 +46,7 @@ describe('HorizontalTabs', () => {
         tabs: [],
       })
     );
-    expect(container.childNodes.length).toBe(0);
+    expect(container.childNodes).toHaveLength(0);
   });
 
   it('should render tab labels correctly', () => {
@@ -56,11 +56,14 @@ describe('HorizontalTabs', () => {
     expect(getByText('Tab 3')).toBeDefined();
   });
 
-  it('should have first tab active by default', () => {
-    const { container } = render(React.createElement(HorizontalTabs, defaultProps));
-    const buttons = container.querySelectorAll('button');
-    expect(buttons[0].className).toContain('text-white');
-  });
+  it.each(['text-white', 'border-blue-400'])(
+    'should have %s on the first active tab by default',
+    (className) => {
+      const { container } = render(React.createElement(HorizontalTabs, defaultProps));
+      const buttons = container.querySelectorAll('button');
+      expect(buttons[0].className).toContain(className);
+    }
+  );
 
   it('should set default tab when defaultTabId provided', () => {
     const { container } = render(
@@ -72,29 +75,14 @@ describe('HorizontalTabs', () => {
     expect(container).toBeDefined();
   });
 
-  it('should have border styling', () => {
-    const { container } = render(React.createElement(HorizontalTabs, defaultProps));
-    const div = container.querySelector('.space-y-4');
-    expect(div?.className).toContain('border');
-  });
-
-  it('should have rounded-md styling', () => {
-    const { container } = render(React.createElement(HorizontalTabs, defaultProps));
-    const div = container.querySelector('.space-y-4');
-    expect(div?.className).toContain('rounded-md');
-  });
-
-  it('should have padding', () => {
-    const { container } = render(React.createElement(HorizontalTabs, defaultProps));
-    const div = container.querySelector('.space-y-4');
-    expect(div?.className).toContain('p-1');
-  });
-
-  it('should have space-y-4 layout', () => {
-    const { container } = render(React.createElement(HorizontalTabs, defaultProps));
-    const div = container.querySelector('.space-y-4');
-    expect(div?.className).toContain('space-y-4');
-  });
+  it.each(['border', 'rounded-md', 'p-1', 'space-y-4', 'border-slate-700'])(
+    'should have %s on the container',
+    (className) => {
+      const { container } = render(React.createElement(HorizontalTabs, defaultProps));
+      const div = container.querySelector('.space-y-4');
+      expect(div?.className).toContain(className);
+    }
+  );
 
   it('should render flex tabs container', () => {
     const { container } = render(React.createElement(HorizontalTabs, defaultProps));
@@ -136,41 +124,19 @@ describe('HorizontalTabs', () => {
       })
     );
     const buttons = container.querySelectorAll('button');
-    expect(buttons.length).toBe(1);
+    expect(buttons).toHaveLength(1);
   });
 
-  it('should have rounded-t-md on tab buttons', () => {
-    const { container } = render(React.createElement(HorizontalTabs, defaultProps));
-    const buttons = container.querySelectorAll('button');
-    buttons.forEach((btn) => {
-      expect(btn.className).toContain('rounded-t-md');
-    });
-  });
-
-  it('should have px-4 py-2 padding on tabs', () => {
-    const { container } = render(React.createElement(HorizontalTabs, defaultProps));
-    const buttons = container.querySelectorAll('button');
-    buttons.forEach((btn) => {
-      expect(btn.className).toContain('px-4');
-      expect(btn.className).toContain('py-2');
-    });
-  });
-
-  it('should have font-semibold on tabs', () => {
-    const { container } = render(React.createElement(HorizontalTabs, defaultProps));
-    const buttons = container.querySelectorAll('button');
-    buttons.forEach((btn) => {
-      expect(btn.className).toContain('font-semibold');
-    });
-  });
-
-  it('should have border-b-2 on tabs', () => {
-    const { container } = render(React.createElement(HorizontalTabs, defaultProps));
-    const buttons = container.querySelectorAll('button');
-    buttons.forEach((btn) => {
-      expect(btn.className).toContain('border-b-2');
-    });
-  });
+  it.each(['rounded-t-md', 'px-4', 'py-2', 'font-semibold', 'border-b-2'])(
+    'should have %s on tab buttons',
+    (className) => {
+      const { container } = render(React.createElement(HorizontalTabs, defaultProps));
+      const buttons = container.querySelectorAll('button');
+      buttons.forEach((btn) => {
+        expect(btn.className).toContain(className);
+      });
+    }
+  );
 
   it('should display extra content when provided', () => {
     const extraContent = React.createElement('span', {}, 'Extra');
@@ -183,15 +149,10 @@ describe('HorizontalTabs', () => {
     expect(container.textContent?.includes('Extra')).toBe(true);
   });
 
-  it('should render tab content container', () => {
+  it('should render tab content container with padding', () => {
     const { container } = render(React.createElement(HorizontalTabs, defaultProps));
     const contentDiv = container.querySelector('.rounded-b-md');
     expect(contentDiv).toBeDefined();
-  });
-
-  it('should have p-4 padding on content', () => {
-    const { container } = render(React.createElement(HorizontalTabs, defaultProps));
-    const contentDiv = container.querySelector('.rounded-b-md');
     expect(contentDiv?.className).toContain('p-4');
   });
 
@@ -213,50 +174,20 @@ describe('HorizontalTabs', () => {
       })
     );
     const buttons = container.querySelectorAll('button');
-    expect(buttons.length).toBe(5);
+    expect(buttons).toHaveLength(5);
   });
 
-  it('should handle tab click - switch to second tab', () => {
+  it.each([
+    ['switch to second tab', [1]],
+    ['switch to third tab', [2]],
+    ['click the same tab multiple times', [0, 0, 0]],
+    ['switch through a sequence of tabs', [1, 2, 0]],
+  ])('should handle tab click - %s', (_description, clickIndexes) => {
     const { container } = render(React.createElement(HorizontalTabs, defaultProps));
     const buttons = container.querySelectorAll('button');
 
-    fireEvent.click(buttons[1]);
+    clickIndexes.forEach((index) => fireEvent.click(buttons[index]));
     expect(container).toBeDefined();
-  });
-
-  it('should handle tab click - switch to third tab', () => {
-    const { container } = render(React.createElement(HorizontalTabs, defaultProps));
-    const buttons = container.querySelectorAll('button');
-
-    fireEvent.click(buttons[2]);
-    expect(container).toBeDefined();
-  });
-
-  it('should handle clicking same tab multiple times', () => {
-    const { container } = render(React.createElement(HorizontalTabs, defaultProps));
-    const buttons = container.querySelectorAll('button');
-
-    fireEvent.click(buttons[0]);
-    fireEvent.click(buttons[0]);
-    fireEvent.click(buttons[0]);
-    expect(container).toBeDefined();
-  });
-
-  it('should handle tab switching sequence', () => {
-    const { container } = render(React.createElement(HorizontalTabs, defaultProps));
-    const buttons = container.querySelectorAll('button');
-
-    fireEvent.click(buttons[1]);
-    fireEvent.click(buttons[2]);
-    fireEvent.click(buttons[0]);
-    expect(container).toBeDefined();
-  });
-
-  it('should have correct class on first tab initially', () => {
-    const { container } = render(React.createElement(HorizontalTabs, defaultProps));
-    const buttons = container.querySelectorAll('button');
-
-    expect(buttons[0].className).toContain('border-blue-400');
   });
 
   it('should not crash with null extra content', () => {
@@ -279,26 +210,25 @@ describe('HorizontalTabs', () => {
     expect(container).toBeDefined();
   });
 
-  it('should handle tabs with numbers in id', () => {
-    const numberedTabs = [
-      { id: 'tab-1-1', label: 'Tab 1', content: React.createElement('div', {}, 'Content 1') },
-      { id: 'tab-2-2', label: 'Tab 2', content: React.createElement('div', {}, 'Content 2') },
-    ];
-
-    const { container } = render(React.createElement(HorizontalTabs, { tabs: numberedTabs }));
+  it.each([
+    [
+      'numbers in id',
+      [
+        { id: 'tab-1-1', label: 'Tab 1', content: React.createElement('div', {}, 'Content 1') },
+        { id: 'tab-2-2', label: 'Tab 2', content: React.createElement('div', {}, 'Content 2') },
+      ],
+    ],
+    [
+      'special characters',
+      [
+        { id: 'tab@1', label: 'Tab @1', content: React.createElement('div', {}, 'Content') },
+        { id: 'tab#2', label: 'Tab #2', content: React.createElement('div', {}, 'Content') },
+      ],
+    ],
+  ])('should handle tabs with %s', (_description, tabs) => {
+    const { container } = render(React.createElement(HorizontalTabs, { tabs }));
     const buttons = container.querySelectorAll('button');
-    expect(buttons.length).toBe(2);
-  });
-
-  it('should handle tabs with special characters', () => {
-    const specialTabs = [
-      { id: 'tab@1', label: 'Tab @1', content: React.createElement('div', {}, 'Content') },
-      { id: 'tab#2', label: 'Tab #2', content: React.createElement('div', {}, 'Content') },
-    ];
-
-    const { container } = render(React.createElement(HorizontalTabs, { tabs: specialTabs }));
-    const buttons = container.querySelectorAll('button');
-    expect(buttons.length).toBe(2);
+    expect(buttons).toHaveLength(2);
   });
 
   it('should handle very long tab labels', () => {

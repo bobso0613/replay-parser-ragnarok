@@ -68,18 +68,18 @@ describe('Modal', () => {
   });
 
   it('closes when the backdrop is clicked by default', () => {
-    const { onClose, container } = renderModal();
+    const { onClose, getByTestId } = renderModal();
 
-    fireEvent.mouseDown(container.firstElementChild!);
+    fireEvent.click(getByTestId('modal-backdrop'));
 
     expect(onClose).toHaveBeenCalledTimes(1);
   });
 
   it('does not close when the dialog is clicked or outside clicks are disabled', () => {
-    const { onClose, container, getByRole } = renderModal({ disableOutsideClick: true });
+    const { onClose, getByRole, getByTestId } = renderModal({ disableOutsideClick: true });
 
-    fireEvent.mouseDown(getByRole('dialog'));
-    fireEvent.mouseDown(container.firstElementChild!);
+    fireEvent.click(getByRole('dialog'));
+    fireEvent.click(getByTestId('modal-backdrop'));
 
     expect(onClose).not.toHaveBeenCalled();
   });

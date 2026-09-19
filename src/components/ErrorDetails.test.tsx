@@ -45,31 +45,18 @@ describe('ErrorDetails', () => {
     expect(button?.getAttribute('type')).toBe('button');
   });
 
-  it('should render with error styling', () => {
+  it.each([
+    'border-red-200',
+    'rounded-2xl',
+    'flex',
+    'flex-col',
+    'min-h-60',
+    'items-center',
+    'justify-center',
+  ])('should have %s on the container', (className) => {
     const { container } = render(React.createElement(ErrorDetails, defaultProps));
     const mainDiv = container.querySelector('div');
-    expect(mainDiv?.className).toContain('border-red-200');
-    expect(mainDiv?.className).toContain('rounded-2xl');
-  });
-
-  it('should have flex column layout', () => {
-    const { container } = render(React.createElement(ErrorDetails, defaultProps));
-    const mainDiv = container.querySelector('div');
-    expect(mainDiv?.className).toContain('flex');
-    expect(mainDiv?.className).toContain('flex-col');
-  });
-
-  it('should have minimum height styling', () => {
-    const { container } = render(React.createElement(ErrorDetails, defaultProps));
-    const mainDiv = container.querySelector('div');
-    expect(mainDiv?.className).toContain('min-h-60');
-  });
-
-  it('should have centered items', () => {
-    const { container } = render(React.createElement(ErrorDetails, defaultProps));
-    const mainDiv = container.querySelector('div');
-    expect(mainDiv?.className).toContain('items-center');
-    expect(mainDiv?.className).toContain('justify-center');
+    expect(mainDiv?.className).toContain(className);
   });
 
   it('should have proper cursor on button', () => {

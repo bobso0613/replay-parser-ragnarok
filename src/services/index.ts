@@ -82,37 +82,31 @@ const resolveClientIpAddress = async (controller: AbortController): Promise<stri
   }
 };
 
+/** Parsed shape of the `outputRaw`-wrapping payload returned by the parser API. */
+type ParserApiPayload = {
+  requestId?: string;
+  outputRaw?: unknown;
+  outputId?: string;
+  replayFileName?: string;
+};
+
 /**
- * Fetches a previously parsed replay by its share URL.
+ * Parses a parser-API `fetch` response into {@link IReplayData}.
  *
- * The function resolves the client IP before making the request and attaches
- * it as an `X-Client-IP` header. The response payload can be in one of three
- * shapes:
+ * Shared by {@link fetchReplay} and {@link fetchReplayApi}. The response payload
+ * can be in one of three shapes:
  *
  * - `{ outputRaw: string }` – the replay data is JSON-encoded inside a string.
  * - `{ outputRaw: object }` – the replay data is an inline object.
  * - Raw `IReplayData` – legacy format with top-level `players` and `monsters` keys.
  *
- * @param link - The full URL to the shared replay resource.
- * @param controller - AbortController used to cancel the request.
+ * @param response - The raw `fetch` response from the parser API.
  * @returns A promise resolving to the parsed {@link IReplayData}.
  * @throws {Error} When the HTTP response is not OK.
  * @throws {Error} When the response payload contains no recognisable replay data.
  * @throws {Error} When `outputRaw` is a string that cannot be parsed as JSON.
  */
-export const fetchReplay = async (
-  link: string,
-  controller: AbortController
-): Promise<IReplayData> => {
-  const clientIpAddress = await resolveClientIpAddress(controller);
-  const headers: HeadersInit = clientIpAddress ? { 'X-Client-IP': clientIpAddress } : {};
-
-  const response = await fetch(`${link}`, {
-    method: 'GET',
-    headers,
-    signal: controller.signal,
-  });
-
+const parseReplayApiResponse = async (response: Response): Promise<IReplayData> => {
   let payload: unknown = null;
 
   try {
@@ -129,99 +123,7 @@ export const fetchReplay = async (
     throw new Error(`${errorMessage}${requestIdLabel}`);
   }
 
-  const parsedPayload = payload as {
-    requestId?: string;
-    outputRaw?: unknown;
-    outputId?: string;
-    replayFileName?: string;
-  } | null;
-
-  if (typeof parsedPayload?.outputRaw === 'string') {
-    try {
-      return {
-        outputId: parsedPayload.outputId,
-        replayFileName: parsedPayload.replayFileName,
-        ...(JSON.parse(parsedPayload.outputRaw) as IReplayData),
-      };
-    } catch {
-      const requestIdLabel = parsedPayload.requestId
-        ? ` (requestId: ${parsedPayload.requestId})`
-        : '';
-
-      throw new Error(`Invalid parser outputRaw JSON${requestIdLabel}`);
-    }
-  }
-
-  if (parsedPayload?.outputRaw && typeof parsedPayload.outputRaw === 'object') {
-    return {
-      outputId: parsedPayload.outputId,
-      replayFileName: parsedPayload.replayFileName,
-      ...(parsedPayload.outputRaw as IReplayData),
-    };
-  }
-
-  if (payload && typeof payload === 'object' && 'players' in payload && 'monsters' in payload) {
-    return payload as IReplayData;
-  }
-
-  const requestIdLabel = parsedPayload?.requestId ? ` (requestId: ${parsedPayload.requestId})` : '';
-  throw new Error(`Parser response did not include replay data${requestIdLabel}`);
-};
-
-/**
- * Uploads a replay file to the parser API and returns the parsed replay data.
- *
- * The request is a `multipart/form-data` `POST` with the replay file attached
- * under the `replay` key. The client IP is resolved beforehand and forwarded
- * as an `X-Client-IP` header.
- *
- * The response handling is identical to {@link fetchReplay}: all three payload
- * shapes (`outputRaw` string, `outputRaw` object, and raw `IReplayData`) are
- * supported.
- *
- * @param formData - FormData containing the replay file under the `replay` key.
- * @param controller - AbortController used to cancel the request.
- * @returns A promise resolving to the parsed {@link IReplayData}.
- * @throws {Error} When the HTTP response is not OK.
- * @throws {Error} When the response payload contains no recognisable replay data.
- * @throws {Error} When `outputRaw` is a string that cannot be parsed as JSON.
- */
-export const fetchReplayApi = async (
-  formData: FormData,
-  controller: AbortController
-): Promise<IReplayData> => {
-  const clientIpAddress = await resolveClientIpAddress(controller);
-  const headers: HeadersInit = clientIpAddress ? { 'X-Client-IP': clientIpAddress } : {};
-
-  const response = await fetch(`${PARSER_URL}`, {
-    method: 'POST',
-    body: formData,
-    headers,
-    signal: controller.signal,
-  });
-
-  let payload: unknown = null;
-
-  try {
-    payload = await response.json();
-  } catch {
-    payload = null;
-  }
-
-  if (!response.ok) {
-    const apiError = payload as { error?: string; requestId?: string } | null;
-    const errorMessage = apiError?.error ?? `Request failed with status ${response.status}`;
-    const requestIdLabel = apiError?.requestId ? ` (requestId: ${apiError.requestId})` : '';
-
-    throw new Error(`${errorMessage}${requestIdLabel}`);
-  }
-
-  const parsedPayload = payload as {
-    requestId?: string;
-    outputRaw?: unknown;
-    outputId?: string;
-    replayFileName?: string;
-  } | null;
+  const parsedPayload = payload as ParserApiPayload | null;
 
   // New API shape: replay data is provided as a stringified JSON payload in outputRaw.
   if (typeof parsedPayload?.outputRaw === 'string') {
@@ -256,4 +158,69 @@ export const fetchReplayApi = async (
 
   const requestIdLabel = parsedPayload?.requestId ? ` (requestId: ${parsedPayload.requestId})` : '';
   throw new Error(`Parser response did not include replay data${requestIdLabel}`);
+};
+
+/**
+ * Fetches a previously parsed replay by its share URL.
+ *
+ * The function resolves the client IP before making the request and attaches
+ * it as an `X-Client-IP` header. See {@link parseReplayApiResponse} for the
+ * supported response payload shapes.
+ *
+ * @param link - The full URL to the shared replay resource.
+ * @param controller - AbortController used to cancel the request.
+ * @returns A promise resolving to the parsed {@link IReplayData}.
+ * @throws {Error} When the HTTP response is not OK.
+ * @throws {Error} When the response payload contains no recognisable replay data.
+ * @throws {Error} When `outputRaw` is a string that cannot be parsed as JSON.
+ */
+export const fetchReplay = async (
+  link: string,
+  controller: AbortController
+): Promise<IReplayData> => {
+  const clientIpAddress = await resolveClientIpAddress(controller);
+  const headers: HeadersInit = clientIpAddress ? { 'X-Client-IP': clientIpAddress } : {};
+
+  const response = await fetch(`${link}`, {
+    method: 'GET',
+    headers,
+    signal: controller.signal,
+  });
+
+  return parseReplayApiResponse(response);
+};
+
+/**
+ * Uploads a replay file to the parser API and returns the parsed replay data.
+ *
+ * The request is a `multipart/form-data` `POST` with the replay file attached
+ * under the `replay` key. The client IP is resolved beforehand and forwarded
+ * as an `X-Client-IP` header.
+ *
+ * The response handling is identical to {@link fetchReplay}: all three payload
+ * shapes (`outputRaw` string, `outputRaw` object, and raw `IReplayData`) are
+ * supported.
+ *
+ * @param formData - FormData containing the replay file under the `replay` key.
+ * @param controller - AbortController used to cancel the request.
+ * @returns A promise resolving to the parsed {@link IReplayData}.
+ * @throws {Error} When the HTTP response is not OK.
+ * @throws {Error} When the response payload contains no recognisable replay data.
+ * @throws {Error} When `outputRaw` is a string that cannot be parsed as JSON.
+ */
+export const fetchReplayApi = async (
+  formData: FormData,
+  controller: AbortController
+): Promise<IReplayData> => {
+  const clientIpAddress = await resolveClientIpAddress(controller);
+  const headers: HeadersInit = clientIpAddress ? { 'X-Client-IP': clientIpAddress } : {};
+
+  const response = await fetch(`${PARSER_URL}`, {
+    method: 'POST',
+    body: formData,
+    headers,
+    signal: controller.signal,
+  });
+
+  return parseReplayApiResponse(response);
 };

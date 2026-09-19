@@ -52,20 +52,14 @@ const TextImage: React.FC<TextImageProps> = ({
           />
         </Tooltip>
       </div>
-      <span
-        className={`sort-value${onTextClick ? ' cursor-pointer hover:underline' : ''}`}
-        role={onTextClick ? 'button' : undefined}
-        tabIndex={onTextClick ? 0 : undefined}
+      <button
+        type="button"
+        className={`sort-value appearance-none border-0 bg-transparent p-0 text-left text-inherit${onTextClick ? ' cursor-pointer hover:underline' : ' cursor-default'}`}
+        disabled={!onTextClick}
         onClick={onTextClick}
-        onKeyDown={(event) => {
-          if (onTextClick && (event.key === 'Enter' || event.key === ' ')) {
-            event.preventDefault();
-            onTextClick();
-          }
-        }}
       >
         {keyInfo}
-      </span>
+      </button>
     </div>
   );
 };

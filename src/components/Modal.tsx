@@ -58,17 +58,21 @@ export const Modal = ({
   }
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-1 sm:p-6"
-      role="presentation"
-      onMouseDown={disableOutsideClick ? undefined : onClose}
-    >
-      <section
-        className="flex h-[95vh] w-[75vw] max-h-[95vh] max-w-[95vw] flex-col overflow-hidden rounded-lg border border-gray-700 bg-gray-900 text-gray-100 shadow-[0_0_28px_rgba(229,231,235,0.2),0_24px_48px_rgba(0,0,0,0.45)] max-sm:h-[98vh] max-sm:w-[98vw] max-sm:max-h-[98vh] max-sm:max-w-[98vw]"
-        role="dialog"
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-1 sm:p-6">
+      <button
+        type="button"
+        data-testid="modal-backdrop"
+        aria-hidden="true"
+        tabIndex={-1}
+        className="fixed inset-0 z-0 cursor-default"
+        onClick={onClose}
+        disabled={disableOutsideClick}
+      />
+      <dialog
+        open
+        className="relative z-10 m-0 flex h-[95vh] w-[75vw] max-h-[95vh] max-w-[95vw] flex-col overflow-hidden rounded-lg border border-gray-700 bg-gray-900 p-0 text-gray-100 shadow-[0_0_28px_rgba(229,231,235,0.2),0_24px_48px_rgba(0,0,0,0.45)] max-sm:h-[98vh] max-sm:w-[98vw] max-sm:max-h-[98vh] max-sm:max-w-[98vw]"
         aria-modal="true"
         aria-labelledby={titleId}
-        onMouseDown={(event) => event.stopPropagation()}
       >
         <header className="flex shrink-0 items-center justify-between gap-4 border-b border-gray-500 px-5 py-4">
           <h2 id={titleId} className="m-0 translate-y-1 text-lg font-semibold text-white">
@@ -91,7 +95,7 @@ export const Modal = ({
         {footer ? (
           <footer className="shrink-0 border-t border-gray-500 px-5 py-4">{footer}</footer>
         ) : null}
-      </section>
+      </dialog>
     </div>
   );
 };

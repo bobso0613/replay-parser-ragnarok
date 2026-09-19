@@ -206,52 +206,20 @@ describe('src/utils/index', () => {
 describe('getCurrentEntryIndex', () => {
   const ENTRY_COUNT = 12;
 
-  it('returns the first entry at the initial date', () => {
-    const date = new Date('2026-08-17T06:00:00Z');
+  it.each([
+    ['returns the first entry at the initial date', '2026-08-17T06:00:00Z', 0],
+    ['returns the second entry one week after the initial date', '2026-08-24T06:00:00Z', 1],
+    ['returns the third entry two weeks after the initial date', '2026-08-31T06:00:00Z', 2],
+    ['keeps the current entry until the next Monday at 06:00 GMT', '2026-08-24T05:59:59Z', 0],
+    ['changes to the next entry exactly at Monday 06:00 GMT', '2026-08-24T06:00:00Z', 1],
+    ['returns the last entry before the cycle resets', '2026-11-02T06:00:00Z', 11],
+    ['resets to the first entry after all 12 entries', '2026-11-09T06:00:00Z', 0],
+    ['starts the cycle again with the second entry', '2026-11-16T06:00:00Z', 1],
+    ['handles times after the scheduled start correctly', '2026-08-31T14:30:00Z', 2],
+  ])('%s', (_description, isoDate, expectedIndex) => {
+    const date = new Date(isoDate);
 
-    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(0);
-  });
-
-  it('returns the second entry one week after the initial date', () => {
-    const date = new Date('2026-08-24T06:00:00Z');
-
-    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(1);
-  });
-
-  it('returns the third entry two weeks after the initial date', () => {
-    const date = new Date('2026-08-31T06:00:00Z');
-
-    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(2);
-  });
-
-  it('keeps the current entry until the next Monday at 06:00 GMT', () => {
-    const date = new Date('2026-08-24T05:59:59Z');
-
-    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(0);
-  });
-
-  it('changes to the next entry exactly at Monday 06:00 GMT', () => {
-    const date = new Date('2026-08-24T06:00:00Z');
-
-    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(1);
-  });
-
-  it('returns the last entry before the cycle resets', () => {
-    const date = new Date('2026-11-02T06:00:00Z');
-
-    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(11);
-  });
-
-  it('resets to the first entry after all 12 entries', () => {
-    const date = new Date('2026-11-09T06:00:00Z');
-
-    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(0);
-  });
-
-  it('starts the cycle again with the second entry', () => {
-    const date = new Date('2026-11-16T06:00:00Z');
-
-    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(1);
+    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(expectedIndex);
   });
 
   it('works with a different number of entries', () => {
@@ -259,11 +227,5 @@ describe('getCurrentEntryIndex', () => {
     const date = new Date('2026-09-14T06:00:00Z');
 
     expect(getCurrentEntryIndex(entryCount, date)).toBe(4);
-  });
-
-  it('handles times after the scheduled start correctly', () => {
-    const date = new Date('2026-08-31T14:30:00Z');
-
-    expect(getCurrentEntryIndex(ENTRY_COUNT, date)).toBe(2);
   });
 });

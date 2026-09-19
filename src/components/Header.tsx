@@ -26,7 +26,7 @@ const Header: FC<HeaderProps> = ({ logoText = ENV.APPLICATION_NAME, routes }) =>
       const path = route.path as string;
       const label =
         route.handle?.label ||
-        (path === '/' ? 'Home' : path.replace(/^\//, '').replace(/\//g, ' /')) ||
+        (path === '/' ? 'Home' : path.replace(/^\//, '').replaceAll('/', ' /')) ||
         'Link';
 
       return (

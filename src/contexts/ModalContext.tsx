@@ -34,17 +34,15 @@ export const ModalProvider = ({ children }: ModalProviderProps) => {
   });
   const modalControls = useRef<ModalContextValue | null>(null);
 
-  if (modalControls.current === null) {
-    modalControls.current = {
-      closeModal: () => {
-        setIsOpen(false);
-      },
-      openModal: (content: ModalContent) => {
-        setModalContent(content);
-        setIsOpen(true);
-      },
-    };
-  }
+  modalControls.current ??= {
+    closeModal: () => {
+      setIsOpen(false);
+    },
+    openModal: (content: ModalContent) => {
+      setModalContent(content);
+      setIsOpen(true);
+    },
+  };
 
   const { closeModal } = modalControls.current;
 

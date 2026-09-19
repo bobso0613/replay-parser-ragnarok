@@ -108,109 +108,53 @@ describe('ReplayBreakdown', () => {
     expect(container.innerHTML).toBeTruthy();
   });
 
-  it('should handle player data', () => {
-    const propsWithPlayers = {
+  const samplePlayer = {
+    AID: 'player1',
+    name: 'TestPlayer',
+    jobId: 0,
+    totalDamageDealt: 1000,
+    totalDamageTaken: 100,
+    totalSkillUsageCount: 10,
+    totalItemUsageCount: 0,
+    MVPCount: 1,
+    deathCount: 0,
+    skillInfo: { offensive: [], support: [] },
+    itemInfo: [],
+  };
+
+  const sampleMonster = {
+    monsterId: '1001',
+    monsterName: 'Poring',
+    battleDuration: 60,
+    battleStartTime: 0,
+    battleEndTime: 60,
+    taker: {
+      playerId: 'player1',
+      playerName: 'Warrior',
+    },
+    highestDamageInfo: {
+      playerId: 'player1',
+      playerName: 'Warrior',
+      skillId: '1',
+      damage: 500,
+    },
+    battleInfo: [],
+  };
+
+  it.each([
+    ['player data', { players: [samplePlayer] }],
+    ['monster data', { monsters: [sampleMonster] }],
+    ['both players and monsters', { players: [samplePlayer], monsters: [sampleMonster] }],
+  ])('should handle %s', (_description, apiResponseOverrides) => {
+    const propsWithData = {
       ...defaultProps,
       apiResponse: {
         ...defaultProps.apiResponse,
-        players: [
-          {
-            AID: 'player1',
-            name: 'TestPlayer',
-            jobId: 0,
-            totalDamageDealt: 1000,
-            totalDamageTaken: 100,
-            totalSkillUsageCount: 10,
-            totalItemUsageCount: 0,
-            MVPCount: 1,
-            deathCount: 0,
-            skillInfo: { offensive: [], support: [] },
-            itemInfo: [],
-          },
-        ],
+        ...apiResponseOverrides,
       },
     };
 
-    const { container } = render(React.createElement(ReplayBreakdown, propsWithPlayers));
-    expect(container).toBeDefined();
-  });
-
-  it('should handle monster data', () => {
-    const propsWithMonsters = {
-      ...defaultProps,
-      apiResponse: {
-        ...defaultProps.apiResponse,
-        monsters: [
-          {
-            monsterId: '1001',
-            monsterName: 'Poring',
-            battleDuration: 60,
-            battleStartTime: 0,
-            battleEndTime: 60,
-            taker: {
-              playerId: 'player1',
-              playerName: 'Warrior',
-            },
-            highestDamageInfo: {
-              playerId: 'player1',
-              playerName: 'Warrior',
-              skillId: '1',
-              damage: 500,
-            },
-            battleInfo: [],
-          },
-        ],
-      },
-    };
-
-    const { container } = render(React.createElement(ReplayBreakdown, propsWithMonsters));
-    expect(container).toBeDefined();
-  });
-
-  it('should handle both players and monsters', () => {
-    const complexProps = {
-      ...defaultProps,
-      apiResponse: {
-        ...defaultProps.apiResponse,
-        players: [
-          {
-            AID: 'player1',
-            name: 'Player One',
-            jobId: 1,
-            totalDamageDealt: 5000,
-            totalDamageTaken: 500,
-            totalSkillUsageCount: 50,
-            totalItemUsageCount: 10,
-            MVPCount: 2,
-            deathCount: 1,
-            skillInfo: { offensive: [], support: [] },
-            itemInfo: [],
-          },
-        ],
-        monsters: [
-          {
-            monsterId: '1002',
-            monsterName: 'Lunatic',
-            battleDuration: 120,
-            battleStartTime: 10,
-            battleEndTime: 130,
-            taker: {
-              playerId: 'player1',
-              playerName: 'Player One',
-            },
-            highestDamageInfo: {
-              playerId: 'player1',
-              playerName: 'Player One',
-              skillId: '10',
-              damage: 2000,
-            },
-            battleInfo: [],
-          },
-        ],
-      },
-    };
-
-    const { container } = render(React.createElement(ReplayBreakdown, complexProps));
+    const { container } = render(React.createElement(ReplayBreakdown, propsWithData));
     expect(container).toBeDefined();
   });
 
@@ -379,19 +323,21 @@ describe('ReplayBreakdown', () => {
     expect(container).toBeDefined();
   });
 
-  it('should update table height on window resize', () => {
-    const { container } = render(React.createElement(ReplayBreakdown, defaultProps));
+  it.each([1000, 300, 2000])(
+    'should update table height on window resize to %ipx',
+    (innerHeight) => {
+      const { container } = render(React.createElement(ReplayBreakdown, defaultProps));
 
-    // Simulate window resize
-    Object.defineProperty(window, 'innerHeight', {
-      writable: true,
-      configurable: true,
-      value: 1000,
-    });
-    window.dispatchEvent(new Event('resize'));
+      Object.defineProperty(window, 'innerHeight', {
+        writable: true,
+        configurable: true,
+        value: innerHeight,
+      });
+      window.dispatchEvent(new Event('resize'));
 
-    expect(container).toBeDefined();
-  });
+      expect(container).toBeDefined();
+    }
+  );
 
   it('should render with complete player and monster data', () => {
     const fullProps = {
@@ -1469,32 +1415,6 @@ describe('ReplayBreakdown', () => {
     expect(container).toBeDefined();
   });
 
-  it('should handle window resize with very small height', () => {
-    const { container } = render(React.createElement(ReplayBreakdown, defaultProps));
-
-    Object.defineProperty(window, 'innerHeight', {
-      writable: true,
-      configurable: true,
-      value: 300,
-    });
-    window.dispatchEvent(new Event('resize'));
-
-    expect(container).toBeDefined();
-  });
-
-  it('should handle window resize with very large height', () => {
-    const { container } = render(React.createElement(ReplayBreakdown, defaultProps));
-
-    Object.defineProperty(window, 'innerHeight', {
-      writable: true,
-      configurable: true,
-      value: 2000,
-    });
-    window.dispatchEvent(new Event('resize'));
-
-    expect(container).toBeDefined();
-  });
-
   it('should handle player with all high stats', () => {
     const propsHighStats = {
       ...defaultProps,
@@ -1710,7 +1630,7 @@ describe('ReplayBreakdown', () => {
   it('should handle nested header rendering', () => {
     const { container } = render(React.createElement(ReplayBreakdown, defaultProps));
     const headers = container.querySelectorAll('div');
-    expect(headers.length >= 0).toBe(true);
+    expect(headers.length).toBeGreaterThanOrEqual(0);
   });
 
   it('should handle column width styling', () => {

@@ -54,7 +54,7 @@ describe('Spinner', () => {
   it('should render two circles in svg', () => {
     const { container } = render(React.createElement(Spinner));
     const circles = container.querySelectorAll('circle');
-    expect(circles.length).toBe(2);
+    expect(circles).toHaveLength(2);
   });
 
   it('should render circles with correct properties', () => {
