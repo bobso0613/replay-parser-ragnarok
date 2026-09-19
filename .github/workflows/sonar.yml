@@ -12,6 +12,15 @@ permissions:
 jobs:
   sonar:
     runs-on: ubuntu-latest
+    env:
+      VITE_APPLICATION_NAME: Ragnarok Utilities
+      VITE_BASE_PATH: /
+      VITE_PARSER_URL: https://localhost:3000/parse
+      VITE_REPLAY_URL_SHARE: /replay-parser/ID_HERE
+      VITE_SKILL_IMAGE_URL: https://static.divine-pride.net/images/skill/PLACEHOLDER_TEXT.png
+      VITE_JOB_IMAGE_URL: https://static.divine-pride.net/images/jobs/icon_jobs_PLACEHOLDER_TEXT.png
+      VITE_MONSTER_IMAGE_URL: https://talontales.com/panel/data/monsters/PLACEHOLDER_TEXT.gif
+      VITE_ITEM_IMAGE_URL: https://static.divine-pride.net/images/items/item/PLACEHOLDER_TEXT.png
     steps:
       - uses: actions/checkout@v4
 
