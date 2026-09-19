@@ -7,6 +7,6 @@ describe('src/routes/index', () => {
   });
 
   it('should have exported members', () => {
-    expect(Object.keys(routes).length >= 0).toBe(true);
+    expect(Object.keys(routes).length).toBeGreaterThanOrEqual(0);
   });
 });
