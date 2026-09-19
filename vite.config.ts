@@ -27,7 +27,7 @@ export default defineConfig(({ mode }) => {
       css: true,
       coverage: {
         provider: 'v8',
-        reporter: ['text', 'html', 'json'],
+        reporter: ['text', 'html', 'json', 'lcov'],
         exclude: ['node_modules/', 'src/**/*.test.ts', 'src/**/*.test.tsx'],
         thresholds: {
           branches: 80,
