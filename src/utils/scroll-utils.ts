@@ -44,9 +44,10 @@ export const resolveScrollableTarget = (
     );
 
     if (descendants.length > 0) {
-      return descendants.sort(
+      const sortedDescendants = descendants.toSorted(
         (a, b) => b.scrollHeight - b.clientHeight - (a.scrollHeight - a.clientHeight)
-      )[0];
+      );
+      return sortedDescendants[0];
     }
 
     if (isScrollableElement(root)) {

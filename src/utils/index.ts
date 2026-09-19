@@ -52,7 +52,7 @@ export const mergeSkippableWaves = (waves: BastionWave[]) => {
   });
 
   if (pendingMonsters.length > 0 && merged.length > 0) {
-    const lastWave = merged[merged.length - 1];
+    const lastWave = merged.at(-1)!;
     merged[merged.length - 1] = {
       ...lastWave,
       monsters: [...lastWave.monsters, ...pendingMonsters],
