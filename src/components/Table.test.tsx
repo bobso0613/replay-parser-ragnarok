@@ -62,7 +62,7 @@ describe('Table', () => {
   it('should render multiple rows', () => {
     const { container } = render(React.createElement(Table, defaultProps));
     expect(container).toBeDefined();
-    expect(defaultProps.rows.length).toBe(3);
+    expect(defaultProps.rows).toHaveLength(3);
   });
 
   it('should handle large datasets', () => {
@@ -228,7 +228,7 @@ describe('Table', () => {
 
     const { container } = render(React.createElement(Table, manyRows));
     expect(container).toBeDefined();
-    expect(manyRows.rows.length).toBe(500);
+    expect(manyRows.rows).toHaveLength(500);
   });
 
   it('should handle headers as ReactNode array', () => {
@@ -297,7 +297,7 @@ describe('Table', () => {
     fireEvent.click(headers[1]);
     expect(container.textContent).toContain('Value');
 
-    render(
+    const { container: classExtractorContainer } = render(
       React.createElement(Table, {
         headers: ['Name'],
         rows: [
@@ -308,6 +308,12 @@ describe('Table', () => {
         sortExtractors: { 0: 'name' },
       })
     );
+    const classExtractorHeader = classExtractorContainer.querySelector('th');
+    fireEvent.click(classExtractorHeader!);
+    const sortedNames = Array.from(classExtractorContainer.querySelectorAll('.name')).map(
+      (node) => node.textContent
+    );
+    expect(sortedNames).toEqual(['A', 'B']);
   });
 
   it('renders virtualized rows and responds to resize observers', () => {
@@ -319,13 +325,15 @@ describe('Table', () => {
     }
     window.ResizeObserver = TestResizeObserver as unknown as typeof ResizeObserver;
 
-    render(
+    const { container } = render(
       React.createElement(Table, {
         ...defaultProps,
         enableVirtualization: true,
         virtualColumnWeights: [1, 2, 3],
       })
     );
+
+    expect(container.querySelector('table')).not.toBeNull();
 
     window.ResizeObserver = originalResizeObserver;
   });

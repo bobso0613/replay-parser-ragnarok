@@ -4,6 +4,17 @@ import React from 'react';
 import Tooltip from './Tooltip';
 import { TOOLTIP_POSITION } from '@/constants/index.ts';
 
+/** Resolves the preview label shown next to the upload icon. */
+const getPreviewText = (selectedFiles: File[]): string => {
+  if (selectedFiles.length === 0) {
+    return 'Click to upload or drag and drop';
+  }
+
+  return selectedFiles.length === 1
+    ? selectedFiles[0].name
+    : `${selectedFiles.length} files selected`;
+};
+
 /**
  * Styled file input with drag-and-drop support and a selected-file preview.
  *
@@ -76,12 +87,7 @@ const InputUpload: React.FC<InputUploadProps> = ({
     onFilesSelected?.(nextFiles);
   };
 
-  const previewText =
-    selectedFiles.length > 0
-      ? selectedFiles.length === 1
-        ? selectedFiles[0].name
-        : `${selectedFiles.length} files selected`
-      : 'Click to upload or drag and drop';
+  const previewText = getPreviewText(selectedFiles);
 
   return (
     <div className="my-5">

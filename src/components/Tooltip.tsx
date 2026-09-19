@@ -95,9 +95,18 @@ const Tooltip = ({
       className={`inline-flex ${className}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onClick={onClick}
     >
-      <div className="cursor-help">{children}</div>
+      {onClick ? (
+        <button
+          type="button"
+          className="cursor-help appearance-none border-0 bg-transparent p-0 font-inherit text-inherit"
+          onClick={onClick}
+        >
+          {children}
+        </button>
+      ) : (
+        <div className="cursor-help">{children}</div>
+      )}
       {isVisible &&
         typeof document !== 'undefined' &&
         createPortal(

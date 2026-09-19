@@ -106,24 +106,29 @@ describe('StickyButton', () => {
     expect(span?.textContent).toBe('↑');
   });
 
-  it('should have visible styling classes', () => {
+  it.each([
+    'rounded-full',
+    'absolute',
+    'bottom-6',
+    'right-6',
+    'z-50',
+    'bg-sky-500/90',
+    'hover:bg-sky-400',
+    'transition',
+    'shadow',
+    'w-12',
+    'h-12',
+    'text-white',
+  ])('should have %s styling on the button', (className) => {
     const { container } = render(React.createElement(StickyButton, defaultProps));
     const button = container.querySelector('button');
-    expect(button?.className).toContain('rounded-full');
+    expect(button?.className).toContain(className);
   });
 
   it('should be clickable button', () => {
     const { container } = render(React.createElement(StickyButton, defaultProps));
     const button = container.querySelector('button');
     expect(button?.onclick === null || typeof button?.onclick === 'function').toBe(true);
-  });
-
-  it('should have position styling', () => {
-    const { container } = render(React.createElement(StickyButton, defaultProps));
-    const button = container.querySelector('button');
-    expect(button?.className).toContain('absolute');
-    expect(button?.className).toContain('bottom-6');
-    expect(button?.className).toContain('right-6');
   });
 
   it('should handle dynamic ref changes', () => {
@@ -152,35 +157,8 @@ describe('StickyButton', () => {
     expect(span?.className).toContain('text-2xl');
   });
 
-  it('should have z-50 z-index', () => {
-    const { container } = render(React.createElement(StickyButton, defaultProps));
-    const button = container.querySelector('button');
-    expect(button?.className).toContain('z-50');
-  });
-
   it('should trigger scroll event listener on mount', () => {
     const { container } = render(React.createElement(StickyButton, defaultProps));
-    expect(container).toBeDefined();
-  });
-
-  it('should handle window scroll event', () => {
-    const { container } = render(React.createElement(StickyButton, defaultProps));
-
-    fireEvent.scroll(window, { target: { scrollY: 200 } });
-    expect(container).toBeDefined();
-  });
-
-  it('should handle document scroll event', () => {
-    const { container } = render(React.createElement(StickyButton, defaultProps));
-
-    fireEvent.scroll(document, { target: { scrollY: 200 } });
-    expect(container).toBeDefined();
-  });
-
-  it('should handle window resize event', () => {
-    const { container } = render(React.createElement(StickyButton, defaultProps));
-
-    fireEvent.resize(window);
     expect(container).toBeDefined();
   });
 
@@ -192,22 +170,30 @@ describe('StickyButton', () => {
     expect(true).toBe(true);
   });
 
-  it('should trigger scroll listener multiple times', () => {
+  it.each([
+    ['a window scroll event', () => fireEvent.scroll(window, { target: { scrollY: 200 } })],
+    ['a document scroll event', () => fireEvent.scroll(document, { target: { scrollY: 200 } })],
+    ['a window resize event', () => fireEvent.resize(window)],
+    [
+      'multiple scroll events',
+      () => {
+        fireEvent.scroll(window, { target: { scrollY: 100 } });
+        fireEvent.scroll(window, { target: { scrollY: 200 } });
+        fireEvent.scroll(window, { target: { scrollY: 300 } });
+      },
+    ],
+    [
+      'rapid resize events',
+      () => {
+        fireEvent.resize(window);
+        fireEvent.resize(window);
+        fireEvent.resize(window);
+      },
+    ],
+  ])('should handle %s', (_description, triggerEvent) => {
     const { container } = render(React.createElement(StickyButton, defaultProps));
 
-    fireEvent.scroll(window, { target: { scrollY: 100 } });
-    fireEvent.scroll(window, { target: { scrollY: 200 } });
-    fireEvent.scroll(window, { target: { scrollY: 300 } });
-
-    expect(container).toBeDefined();
-  });
-
-  it('should handle rapid resize events', () => {
-    const { container } = render(React.createElement(StickyButton, defaultProps));
-
-    fireEvent.resize(window);
-    fireEvent.resize(window);
-    fireEvent.resize(window);
+    triggerEvent();
 
     expect(container).toBeDefined();
   });
@@ -265,34 +251,6 @@ describe('StickyButton', () => {
     expect(button?.className).toContain('right-6');
   });
 
-  it('should render with proper background styling', () => {
-    const { container } = render(React.createElement(StickyButton, defaultProps));
-    const button = container.querySelector('button');
-
-    expect(button?.className).toContain('bg-sky-500/90');
-  });
-
-  it('should render with hover styling', () => {
-    const { container } = render(React.createElement(StickyButton, defaultProps));
-    const button = container.querySelector('button');
-
-    expect(button?.className).toContain('hover:bg-sky-400');
-  });
-
-  it('should have transition class', () => {
-    const { container } = render(React.createElement(StickyButton, defaultProps));
-    const button = container.querySelector('button');
-
-    expect(button?.className).toContain('transition');
-  });
-
-  it('should have shadow class', () => {
-    const { container } = render(React.createElement(StickyButton, defaultProps));
-    const button = container.querySelector('button');
-
-    expect(button?.className).toContain('shadow');
-  });
-
   it('should render with multiple refs passed', () => {
     const ref1: React.MutableRefObject<HTMLDivElement | null> = { current: null };
     const ref2: React.MutableRefObject<HTMLDivElement | null> = { current: null };
@@ -329,21 +287,6 @@ describe('StickyButton', () => {
     expect(ref.current).toBeDefined();
   });
 
-  it('should have specific width and height', () => {
-    const { container } = render(React.createElement(StickyButton, defaultProps));
-    const button = container.querySelector('button');
-
-    expect(button?.className).toContain('w-12');
-    expect(button?.className).toContain('h-12');
-  });
-
-  it('should render with text white color', () => {
-    const { container } = render(React.createElement(StickyButton, defaultProps));
-    const button = container.querySelector('button');
-
-    expect(button?.className).toContain('text-white');
-  });
-
   it('should handle multiple scroll type combinations', () => {
     const { container } = render(React.createElement(StickyButton, defaultProps));
 
@@ -352,13 +295,6 @@ describe('StickyButton', () => {
     fireEvent.resize(window);
 
     expect(container).toBeDefined();
-  });
-
-  it('should render with rounded styling', () => {
-    const { container } = render(React.createElement(StickyButton, defaultProps));
-    const button = container.querySelector('button');
-
-    expect(button?.className).toContain('rounded-full');
   });
 
   it('should handle very high scroll values', () => {

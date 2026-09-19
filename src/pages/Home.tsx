@@ -134,10 +134,8 @@ export const Home = () => {
           outputId={parsedReplay.outputId}
         />
       )}
-      {isError && !!!parsedReplay && !replayIsParsing && (
-        <ErrorDetails retryOnClick={handleClick} />
-      )}
-      {!!!parsedReplay && !replayIsParsing && !isError && <PlaceholderDetails />}
+      {isError && !parsedReplay && !replayIsParsing && <ErrorDetails retryOnClick={handleClick} />}
+      {!parsedReplay && !replayIsParsing && !isError && <PlaceholderDetails />}
     </ModalProvider>
   );
 };

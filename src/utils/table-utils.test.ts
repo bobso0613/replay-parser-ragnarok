@@ -275,7 +275,7 @@ describe('table-utils', () => {
 
     it('should distribute widths based on weights', () => {
       const result = computeColumnWidths(2, 300, [2, 1]);
-      expect(result.length).toBe(2);
+      expect(result).toHaveLength(2);
       expect(result[0] + result[1]).toBe(300);
       expect(result[0]).toBeGreaterThan(result[1]);
     });
@@ -307,26 +307,51 @@ describe('table-utils', () => {
 
     it('should return min height when available height is small', () => {
       const bounds = new DOMRect(0, 800, 800, 600); // top at 800, significantly reducing available height
-      const result = calculateViewportHeight(bounds, 0, 0, 0, 0, 24, 12, 220, 520);
+      const result = calculateViewportHeight(bounds, 0, 0, 0, 0, {
+        viewportBottomGap: 24,
+        viewportSafetyBuffer: 12,
+        minHeight: 220,
+        maxHeight: 520,
+      });
       expect(result).toBeGreaterThanOrEqual(220); // Should not go below min
     });
 
     it('should respect custom min height', () => {
       const bounds = new DOMRect(0, 0, 800, 900);
-      const result = calculateViewportHeight(bounds, 0, 0, 0, 0, 24, 12, 300, 520);
+      const result = calculateViewportHeight(bounds, 0, 0, 0, 0, {
+        viewportBottomGap: 24,
+        viewportSafetyBuffer: 12,
+        minHeight: 300,
+        maxHeight: 520,
+      });
       expect(result).toBeGreaterThanOrEqual(300);
     });
 
     it('should respect custom max height', () => {
       const bounds = new DOMRect(0, 0, 800, 100);
-      const result = calculateViewportHeight(bounds, 0, 0, 0, 0, 24, 12, 220, 400);
+      const result = calculateViewportHeight(bounds, 0, 0, 0, 0, {
+        viewportBottomGap: 24,
+        viewportSafetyBuffer: 12,
+        minHeight: 220,
+        maxHeight: 400,
+      });
       expect(result).toBeLessThanOrEqual(400);
     });
 
     it('should account for header, footer, and chrome heights', () => {
       const bounds = new DOMRect(0, 100, 800, 600);
-      const baseResult = calculateViewportHeight(bounds, 0, 0, 0, 0, 24, 12, 220, 520);
-      const withHeightResult = calculateViewportHeight(bounds, 50, 60, 10, 5, 24, 12, 220, 520);
+      const baseResult = calculateViewportHeight(bounds, 0, 0, 0, 0, {
+        viewportBottomGap: 24,
+        viewportSafetyBuffer: 12,
+        minHeight: 220,
+        maxHeight: 520,
+      });
+      const withHeightResult = calculateViewportHeight(bounds, 50, 60, 10, 5, {
+        viewportBottomGap: 24,
+        viewportSafetyBuffer: 12,
+        minHeight: 220,
+        maxHeight: 520,
+      });
       expect(withHeightResult).toBeLessThanOrEqual(baseResult);
     });
   });

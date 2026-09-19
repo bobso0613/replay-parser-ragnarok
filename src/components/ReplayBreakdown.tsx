@@ -32,6 +32,16 @@ const getColumnWidthStyle = (columnWidth: number | string): React.CSSProperties 
   return { width: columnWidth };
 };
 
+/** Resolves a share path to an absolute URL, leaving already-absolute URLs untouched. */
+const resolveAbsoluteShareLink = (path: string): string => {
+  if (path.startsWith('http://') || path.startsWith('https://')) {
+    return path;
+  }
+
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  return `${window.location.origin}${normalizedPath}`;
+};
+
 /**
  * Renders a row of column header labels with explicit widths for nested table sections.
  *
@@ -104,10 +114,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
     'ID_HERE',
     apiResponse?.outputId ?? ''
   );
-  const COPY_PASTED_LINK =
-    replaySharePath.startsWith('http://') || replaySharePath.startsWith('https://')
-      ? replaySharePath
-      : `${window.location.origin}${replaySharePath.startsWith('/') ? replaySharePath : `/${replaySharePath}`}`;
+  const COPY_PASTED_LINK = resolveAbsoluteShareLink(replaySharePath);
 
   const handleCopyOutputLink = async () => {
     try {
@@ -215,6 +222,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                       ])}
                       rows={replayToDisplay.breakdownPerPlayer.map((player) => [
                         <TextImage
+                          key={player.playerId}
                           variant={TEXT_IMAGE_VARIANTS.JOB}
                           keyId={player.jobId}
                           keyInfo={player.playerName}
@@ -243,6 +251,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                       ])}
                       rows={replayToDisplay.mvpBreakdown.map((player) => [
                         <TextImage
+                          key={player.playerId}
                           variant={TEXT_IMAGE_VARIANTS.JOB}
                           keyId={player.jobId}
                           keyInfo={player.playerName}
@@ -267,6 +276,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                       ])}
                       rows={replayToDisplay.deathBreakdown.map((player) => [
                         <TextImage
+                          key={player.playerId}
                           variant={TEXT_IMAGE_VARIANTS.JOB}
                           keyId={player.jobId}
                           keyInfo={player.playerName}
@@ -289,6 +299,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                       ])}
                       rows={replayToDisplay.skillUsageBreakdown.map((player) => [
                         <TextImage
+                          key={player.playerId}
                           variant={TEXT_IMAGE_VARIANTS.JOB}
                           keyId={player.jobId}
                           keyInfo={player.playerName}
@@ -336,6 +347,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                   ])}
                   rows={replayToDisplay.breakdownPerPlayer.map((player) => [
                     <TextImage
+                      key={player.playerId}
                       variant={TEXT_IMAGE_VARIANTS.JOB}
                       keyId={player.jobId}
                       keyInfo={player.playerName}
@@ -345,7 +357,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                     player.highestDamage.damage ? commaNumber(player.totalDamageDealt) : 'N/A',
                     player.highestDamage.damage ? commaNumber(player.totalDamageDealthMvps) : 'N/A',
                     player.highestDamage.damage ? (
-                      <div>
+                      <div key={`${player.playerId}-highest`}>
                         {commaNumber(player.highestDamage.damage)}
                         <br />
                         <TextImage
@@ -370,13 +382,14 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                         compact
                         rows={player.skillDamages.map((skill) => [
                           <TextImage
+                            key={skill.skillId}
                             keyId={skill.skillId}
                             keyInfo={skill.skillInfo}
                             variant={TEXT_IMAGE_VARIANTS.SKILL}
                           />,
                           commaNumber(skill.damage),
                           commaNumber(skill.noOfHits),
-                          <div>
+                          <div key={`${skill.skillId}-highest`}>
                             {commaNumber(skill.highestDamage)} <i>vs.</i>{' '}
                             {getMonsterName(skill.highestMonsterName, skill.highestIsMvp)}
                           </div>,
@@ -449,10 +462,11 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                   rows={replayToDisplay.breakdownPerMonsterUnique
                     .filter((monster) => {
                       if (mobMode === 0) return true;
-                      return monster.isMvp === (mobMode === 1 ? true : false);
+                      return monster.isMvp === (mobMode === 1);
                     })
                     .map((monster) => [
                       <Tooltip
+                        key={monster.monsterId}
                         content={
                           <img
                             src={MONSTER_IMAGE_URL.replace('PLACEHOLDER_TEXT', monster.monsterId)}
@@ -473,7 +487,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                           referrerPolicy="no-referrer"
                         />
                       </Tooltip>,
-                      <div>
+                      <div key={`${monster.monsterId}-info`}>
                         <strong>{getMonsterName(monster.name, monster.isMvp)}</strong>
                         {` x ${monster.amount}`}
                         <br />
@@ -481,7 +495,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                         {commaNumber(monster.damage)}
                         <br />
                         <i>killed in </i>
-                        {!isNaN(monster.fightDuration.to - monster.fightDuration.from)
+                        {!Number.isNaN(monster.fightDuration.to - monster.fightDuration.from)
                           ? prettyMilliseconds(
                               Number(monster.fightDuration.to - monster.fightDuration.from),
                               {
@@ -491,7 +505,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                           : 'N/A'}
                       </div>,
                       monster.highestDamage.damage > 0 ? (
-                        <div>
+                        <div key={`${monster.monsterId}-highest`}>
                           {commaNumber(monster.highestDamage.damage)}
                           <br />
                           <TextImage
@@ -518,6 +532,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                           columnWidths={['30%', '25%', '15%', '35%']}
                           rows={monster.playerDamages.map((player) => [
                             <TextImage
+                              key={player.playerId}
                               variant={TEXT_IMAGE_VARIANTS.JOB}
                               keyId={player.jobId}
                               keyInfo={player.playerName}
@@ -526,7 +541,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                             />,
                             commaNumber(player.damage),
                             commaNumber(player.noOfHitsUnique),
-                            <div>
+                            <div key={`${player.playerId}-highest`}>
                               {commaNumber(player.highestDamage.damage)}
                               <TextImage
                                 textBefore={<i>using</i>}
@@ -548,6 +563,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                           columnWidths={['50%', '30%', '20%']}
                           rows={monster.skillDamages.map((skill) => [
                             <TextImage
+                              key={skill.skillId}
                               keyId={skill.skillId}
                               keyInfo={skill.skillInfo}
                               variant={TEXT_IMAGE_VARIANTS.SKILL}
@@ -598,6 +614,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                   rowClassNames={['align-middle', 'align-middle', 'align-middle', 'align-top']}
                   rows={replayToDisplay.skillUsage.map((skill) => [
                     <TextImage
+                      key={skill.skillId}
                       keyId={skill.skillId}
                       keyInfo={skill.skillInfo}
                       variant={TEXT_IMAGE_VARIANTS.SKILL}
@@ -605,6 +622,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                     commaNumber(skill.skillUsageCount),
 
                     <TextImage
+                      key={`${skill.skillId}-top`}
                       variant={TEXT_IMAGE_VARIANTS.JOB}
                       keyId={skill.highestSkillUsagePlayerJobId}
                       keyInfo={
@@ -622,6 +640,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                         columnWidths={['70%', '30%']}
                         rows={skill.playerSkills.map((playerSkill) => [
                           <TextImage
+                            key={playerSkill.playerId}
                             keyId={playerSkill.jobId}
                             keyInfo={playerSkill.playerName}
                             variant={TEXT_IMAGE_VARIANTS.JOB}
@@ -672,6 +691,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                   rowClassNames={['align-middle', 'align-middle']}
                   rows={replayToDisplay.itemBreakdown.map((item) => [
                     <TextImage
+                      key={item.itemId}
                       keyId={item.itemId}
                       keyInfo={item.itemName}
                       variant={TEXT_IMAGE_VARIANTS.ITEM}
@@ -683,6 +703,7 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                         columnWidths={['50%', '30%']}
                         rows={item.playerUsages.map((playerUsage) => [
                           <TextImage
+                            key={playerUsage.playerId}
                             keyId={playerUsage.jobId}
                             keyInfo={playerUsage.playerName}
                             variant={TEXT_IMAGE_VARIANTS.JOB}
@@ -707,59 +728,36 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
       />
     </div>
   ) : (
-    <>
-      <HorizontalTabs
-        tabs={[
-          {
-            id: 'summary',
-            label: 'Summary',
-            content: (
-              <SkeletonLoader
-                rows={
-                  (apiResponse?.players?.length ?? 0) <= 10
-                    ? (apiResponse?.players?.length ?? 0)
-                    : 5
-                }
-                columns={3}
-              />
-            ),
-          },
-          {
-            id: 'players',
-            label: 'Breakdown per Player',
-            content: (
-              <SkeletonLoader
-                rows={
-                  (apiResponse?.players?.length ?? 0) <= 10
-                    ? (apiResponse?.players?.length ?? 0)
-                    : 5
-                }
-                columns={5}
-              />
-            ),
-          },
-          {
-            id: 'monsters',
-            label: 'Breakdown per Monster',
-            content: (
-              <SkeletonLoader
-                rows={
-                  (apiResponse?.monsters?.length ?? 0) <= 10
-                    ? (apiResponse?.monsters?.length ?? 0)
-                    : 10
-                }
-                columns={4}
-              />
-            ),
-          },
-          {
-            id: 'skills',
-            label: 'Skill Usage',
-            content: <SkeletonLoader rows={5} columns={4} />,
-          },
-        ]}
-      />
-    </>
+    <HorizontalTabs
+      tabs={[
+        {
+          id: 'summary',
+          label: 'Summary',
+          content: (
+            <SkeletonLoader rows={Math.min(apiResponse?.players?.length ?? 0, 5)} columns={3} />
+          ),
+        },
+        {
+          id: 'players',
+          label: 'Breakdown per Player',
+          content: (
+            <SkeletonLoader rows={Math.min(apiResponse?.players?.length ?? 0, 5)} columns={5} />
+          ),
+        },
+        {
+          id: 'monsters',
+          label: 'Breakdown per Monster',
+          content: (
+            <SkeletonLoader rows={Math.min(apiResponse?.monsters?.length ?? 0, 10)} columns={4} />
+          ),
+        },
+        {
+          id: 'skills',
+          label: 'Skill Usage',
+          content: <SkeletonLoader rows={5} columns={4} />,
+        },
+      ]}
+    />
   );
 };
 

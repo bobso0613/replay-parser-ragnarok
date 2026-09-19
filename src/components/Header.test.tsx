@@ -33,13 +33,16 @@ describe('Header', () => {
     expect(container.innerHTML).toBeTruthy();
   });
 
-  it('should have sticky positioning', () => {
-    const { container } = render(
-      React.createElement(BrowserRouter, {}, React.createElement(Header, defaultProps))
-    );
-    const header = container.querySelector('header');
-    expect(header?.className || '').toContain('sticky');
-  });
+  it.each(['sticky', 'bg-blue-900', 'shadow-sm', 'w-full', 'z-50'])(
+    'should have %s on the header',
+    (className) => {
+      const { container } = render(
+        React.createElement(BrowserRouter, {}, React.createElement(Header, defaultProps))
+      );
+      const header = container.querySelector('header');
+      expect(header?.className || '').toContain(className);
+    }
+  );
 
   it('should render with empty routes', () => {
     const { container } = render(
@@ -94,22 +97,6 @@ describe('Header', () => {
     expect(logoDiv?.className).toContain('font-bold');
   });
 
-  it('should have header background color', () => {
-    const { container } = render(
-      React.createElement(BrowserRouter, {}, React.createElement(Header, defaultProps))
-    );
-    const header = container.querySelector('header');
-    expect(header?.className).toContain('bg-blue-900');
-  });
-
-  it('should have shadow styling', () => {
-    const { container } = render(
-      React.createElement(BrowserRouter, {}, React.createElement(Header, defaultProps))
-    );
-    const header = container.querySelector('header');
-    expect(header?.className).toContain('shadow-sm');
-  });
-
   it('should render navigation element', () => {
     const { container } = render(
       React.createElement(BrowserRouter, {}, React.createElement(Header, defaultProps))
@@ -118,48 +105,17 @@ describe('Header', () => {
     expect(nav).toBeDefined();
   });
 
-  it('should have flex layout in header', () => {
-    const { container } = render(
-      React.createElement(BrowserRouter, {}, React.createElement(Header, defaultProps))
-    );
-    const header = container.querySelector('header');
-    const innerDiv = header?.querySelector('div');
-    expect(innerDiv?.className).toContain('flex');
-  });
-
-  it('should have items-center class', () => {
-    const { container } = render(
-      React.createElement(BrowserRouter, {}, React.createElement(Header, defaultProps))
-    );
-    const header = container.querySelector('header');
-    const innerDiv = header?.querySelector('div');
-    expect(innerDiv?.className).toContain('items-center');
-  });
-
-  it('should have justify-between class', () => {
-    const { container } = render(
-      React.createElement(BrowserRouter, {}, React.createElement(Header, defaultProps))
-    );
-    const header = container.querySelector('header');
-    const innerDiv = header?.querySelector('div');
-    expect(innerDiv?.className).toContain('justify-between');
-  });
-
-  it('should have full width', () => {
-    const { container } = render(
-      React.createElement(BrowserRouter, {}, React.createElement(Header, defaultProps))
-    );
-    const header = container.querySelector('header');
-    expect(header?.className).toContain('w-full');
-  });
-
-  it('should have z-index', () => {
-    const { container } = render(
-      React.createElement(BrowserRouter, {}, React.createElement(Header, defaultProps))
-    );
-    const header = container.querySelector('header');
-    expect(header?.className).toContain('z-50');
-  });
+  it.each(['flex', 'items-center', 'justify-between'])(
+    'should have %s class on the inner container',
+    (className) => {
+      const { container } = render(
+        React.createElement(BrowserRouter, {}, React.createElement(Header, defaultProps))
+      );
+      const header = container.querySelector('header');
+      const innerDiv = header?.querySelector('div');
+      expect(innerDiv?.className).toContain(className);
+    }
+  );
 
   it('should render nav items for routes with path', () => {
     const propsWithRoutes: HeaderProps = {
@@ -189,7 +145,7 @@ describe('Header', () => {
     );
     const links = container.querySelectorAll('a');
     // Should only have 1 link (home), not the wildcard
-    expect(links.length).toBe(1);
+    expect(links).toHaveLength(1);
   });
 
   it('should handle routes without handle property', () => {

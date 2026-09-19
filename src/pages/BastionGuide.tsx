@@ -16,12 +16,56 @@ import {
   REMINDER_NOTES,
   showOnlyDangerousFloorWaves,
 } from '@/utils';
+import type { BastionMonster } from '@/types';
 
 const VIEWPORT_BOTTOM_GAP = 24;
 const VIEWPORT_SAFETY_BUFFER = 12;
 const MIN_SECTION_HEIGHT = 320;
 /** Single source of truth for the `isMvpFloor` row highlight — change here to restyle every row. */
 const MVP_FLOOR_ROW_CLASS = 'bg-yellow-300/10';
+
+/** Renders a wave's mob/MVP list, or a generic "Mobs" placeholder for unresolved waves. */
+const renderMonsterList = (monsters: BastionMonster[] | 'GENERIC') => {
+  if (monsters === 'GENERIC') {
+    return <span>Mobs</span>;
+  }
+
+  return (
+    <div className="flex flex-wrap items-center gap-x-9 gap-y-1">
+      {monsters.map((monster, monsterIndex) => (
+        <span
+          key={`${monster.monsterId ?? 'na'}-${monsterIndex}`}
+          className="flex items-center gap-2.5"
+        >
+          {monster.monsterId && (
+            <Tooltip
+              content={
+                <img
+                  src={MONSTER_IMAGE_URL.replace('PLACEHOLDER_TEXT', `${monster.monsterId}`)}
+                  alt={monster.monsterName}
+                  className="w-auto h-auto"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              }
+              placement={TOOLTIP_POSITION.BOTTOM}
+              className="mx-auto"
+            >
+              <img
+                src={MONSTER_IMAGE_URL.replace('PLACEHOLDER_TEXT', `${monster.monsterId}`)}
+                alt={monster.monsterName}
+                className="h-6 w-6"
+                loading="lazy"
+                referrerPolicy="no-referrer"
+              />
+            </Tooltip>
+          )}
+          {getMonsterName(monster.monsterName, monster.isMvp)}
+        </span>
+      ))}
+    </div>
+  );
+};
 
 /**
  * Bastion wave/monster table, backed by {@link useBastionMobs}.
@@ -77,7 +121,7 @@ const BastionWaveTable = () => {
               type="checkbox"
               checked={showOnlyDangerous}
               onChange={(event) => setShowOnlyDangerous(event.target.checked)}
-            />
+            />{' '}
             Show only dangerous floors
           </label>
           <label className="mb-2 flex w-fit items-center gap-2 text-sm text-slate-200">
@@ -85,7 +129,7 @@ const BastionWaveTable = () => {
               type="checkbox"
               checked={onlyShowMvps}
               onChange={(event) => setOnlyShowMvps(event.target.checked)}
-            />
+            />{' '}
             Only show MVPs (except dangerous floors)
           </label>
           <label className="mb-2 flex w-fit items-center gap-2 text-sm text-slate-200">
@@ -93,7 +137,7 @@ const BastionWaveTable = () => {
               type="checkbox"
               checked={mergeSkippable}
               onChange={(event) => setMergeSkippable(event.target.checked)}
-            />
+            />{' '}
             Merge skippable waves into next wave
           </label>
           <label className="mb-2 flex w-fit items-center gap-2 text-sm text-slate-200">
@@ -101,7 +145,7 @@ const BastionWaveTable = () => {
               type="checkbox"
               checked={hideEarlyWaves}
               onChange={(event) => setHideEarlyWaves(event.target.checked)}
-            />
+            />{' '}
             Hide waves 1-55 (except dangerous floors)
           </label>
         </div>
@@ -159,65 +203,17 @@ const BastionWaveTable = () => {
               ? []
               : monstersToRender.filter((monster) => monster.isMvp);
 
-          const renderMonsters = (monsters: typeof mvpsToRender | 'GENERIC') => {
-            if (monsters === 'GENERIC') {
-              return <span>Mobs</span>;
-            }
-
-            return (
-              <div className="flex flex-wrap items-center gap-x-9 gap-y-1">
-                {monsters.map((monster, monsterIndex) => (
-                  <span
-                    key={`${monster.monsterId ?? 'na'}-${monsterIndex}`}
-                    className="flex items-center gap-2.5"
-                  >
-                    {monster.monsterId && (
-                      <Tooltip
-                        content={
-                          <img
-                            src={MONSTER_IMAGE_URL.replace(
-                              'PLACEHOLDER_TEXT',
-                              `${monster.monsterId}`
-                            )}
-                            alt={monster.monsterName}
-                            className="w-auto h-auto"
-                            loading="lazy"
-                            referrerPolicy="no-referrer"
-                          />
-                        }
-                        placement={TOOLTIP_POSITION.BOTTOM}
-                        className="mx-auto"
-                      >
-                        <img
-                          src={MONSTER_IMAGE_URL.replace(
-                            'PLACEHOLDER_TEXT',
-                            `${monster.monsterId}`
-                          )}
-                          alt={monster.monsterName}
-                          className="h-6 w-6"
-                          loading="lazy"
-                          referrerPolicy="no-referrer"
-                        />
-                      </Tooltip>
-                    )}
-                    {getMonsterName(monster.monsterName, monster.isMvp)}
-                  </span>
-                ))}
-              </div>
-            );
-          };
-
           let randomMvp = null;
           if (wave.randomPool) {
-            randomMvp = renderMonsters([
+            randomMvp = renderMonsterList([
               wave.randomPool[getCurrentEntryIndex(wave.randomPool.length)],
             ]);
           }
 
           return [
             wave.wave,
-            renderMonsters(mobsToRender),
-            randomMvp ? randomMvp : renderMonsters(mvpsToRender),
+            renderMonsterList(mobsToRender),
+            randomMvp ?? renderMonsterList(mvpsToRender),
             waveNotes.length > 0 ? (
               <div className="flex items-center justify-center gap-1.5">
                 {waveNotes.map((note, noteIndex) => (
@@ -265,17 +261,12 @@ export const BastionGuide = () => {
       const bounds = wrapperRef.current.getBoundingClientRect();
       const footerHeight = getElementHeight(document.querySelector('footer'));
 
-      const nextHeight = calculateViewportHeight(
-        bounds,
-        0,
-        footerHeight,
-        0,
-        0,
-        VIEWPORT_BOTTOM_GAP,
-        VIEWPORT_SAFETY_BUFFER,
-        MIN_SECTION_HEIGHT,
-        Number.MAX_SAFE_INTEGER
-      );
+      const nextHeight = calculateViewportHeight(bounds, 0, footerHeight, 0, 0, {
+        viewportBottomGap: VIEWPORT_BOTTOM_GAP,
+        viewportSafetyBuffer: VIEWPORT_SAFETY_BUFFER,
+        minHeight: MIN_SECTION_HEIGHT,
+        maxHeight: Number.MAX_SAFE_INTEGER,
+      });
 
       setSectionHeight(nextHeight);
     };

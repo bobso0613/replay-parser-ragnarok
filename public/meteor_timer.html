@@ -130,8 +130,8 @@
         border: 1px solid rgba(255, 255, 255, 0.18);
         border-radius: 14px;
         padding: 14px 12px;
-        background: rgba(255, 255, 255, 0.06);
-        color: rgba(255, 255, 255, 0.88);
+        background: #1f1f1f;
+        color: #e6e6e6;
         font-size: 0.96rem;
         font-weight: 600;
         cursor: pointer;
@@ -142,7 +142,7 @@
       }
       .mode-option input:checked + span {
         border-color: rgba(255, 255, 255, 0.9);
-        background: rgba(255, 255, 255, 0.18);
+        background: #3a3a3a;
         color: #ffffff;
       }
       .controls {
@@ -191,6 +191,7 @@
             max="67"
             step="1"
             value="63"
+            aria-label="Interval in seconds"
           />
         </div>
         <div class="slider-field">
@@ -212,6 +213,7 @@
             max="10"
             step="1"
             value="5"
+            aria-label="Window in seconds"
           />
         </div>
       </div>
@@ -285,7 +287,7 @@
         return Date.now() - startedAt;
       }
       function updateDescription() {
-        const { start, end } = getSettings();
+        const { windowSize } = getSettings();
         descriptionElement.innerHTML = `The background color changes during the selected ${windowSize}-second window.<br>Click at the start of wave 81 (after Vesper).`;
       }
       function getDisplayCount() {

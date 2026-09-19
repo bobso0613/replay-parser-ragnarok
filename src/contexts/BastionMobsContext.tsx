@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useEffect, useState } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import type { ReactNode } from 'react';
 import type { BastionWave } from '@/types';
 
@@ -69,11 +69,12 @@ export const BastionMobsProvider = ({ children }: BastionMobsProviderProps) => {
     return () => controller.abort();
   }, [reloadToken]);
 
-  return (
-    <BastionMobsContext.Provider value={{ waves, isLoading, hasError, reload }}>
-      {children}
-    </BastionMobsContext.Provider>
+  const contextValue = useMemo(
+    () => ({ waves, isLoading, hasError, reload }),
+    [waves, isLoading, hasError, reload]
   );
+
+  return <BastionMobsContext.Provider value={contextValue}>{children}</BastionMobsContext.Provider>;
 };
 
 /**

@@ -67,6 +67,35 @@ const formatCount = (value: PlayerDetailStat['value']): ReactNode => {
 const isHighestBurst = (value: PlayerDetailStat['value']): value is IPlayerHighestDamage =>
   typeof value === 'object' && value !== null && 'damage' in value;
 
+/** Renders a single statistic's value, including the special-cased "Highest Burst" layout. */
+const renderStatisticValue = (statistic: PlayerDetailStat): ReactNode => {
+  if (DAMAGE_STAT_LABELS.has(statistic.label)) {
+    return formatDamage(statistic.value);
+  }
+
+  if (
+    statistic.label === 'Highest Burst' &&
+    isHighestBurst(statistic.value) &&
+    statistic.value.damage !== 0
+  ) {
+    const highestBurst = statistic.value;
+    return (
+      <div className="flex items-center gap-1 whitespace-nowrap">
+        {formatDamage(highestBurst.damage)}
+        <TextImage
+          textBefore={<i>using</i>}
+          variant={TEXT_IMAGE_VARIANTS.SKILL}
+          keyId={highestBurst.skillId}
+          keyInfo={highestBurst.skillName}
+        />{' '}
+        <i>vs.</i> {getMonsterName(highestBurst.monsterName, highestBurst.isMvp)}
+      </div>
+    );
+  }
+
+  return formatCount(statistic.value);
+};
+
 type NestedHeaderProps = {
   headers: ReactNode[];
   columnWidths: Array<number | string>;
@@ -97,6 +126,10 @@ const NestedHeader = ({ headers, columnWidths }: NestedHeaderProps) => (
  */
 const PlayerDetailContent = ({
   playerId,
+  // Not rendered directly here; consumed by the caller for the shared modal's title.
+  playerName: _playerName,
+  jobId: _jobId,
+  jobName: _jobName,
   statistics,
   offensiveSkills,
   defensiveSkills,
@@ -120,26 +153,7 @@ const PlayerDetailContent = ({
           {statistics.map((statistic) => (
             <div key={statistic.label} className="flex gap-1">
               <dt className="font-semibold">{statistic.label}:</dt>
-              <dd>
-                {DAMAGE_STAT_LABELS.has(statistic.label) ? (
-                  formatDamage(statistic.value)
-                ) : statistic.label === 'Highest Burst' &&
-                  isHighestBurst(statistic.value) &&
-                  statistic.value.damage !== 0 ? (
-                  <div className="flex items-center gap-1 whitespace-nowrap">
-                    {formatDamage(statistic.value.damage)}
-                    <TextImage
-                      textBefore={<i>using</i>}
-                      variant={TEXT_IMAGE_VARIANTS.SKILL}
-                      keyId={statistic.value.skillId}
-                      keyInfo={statistic.value.skillName}
-                    />{' '}
-                    <i>vs.</i> {getMonsterName(statistic.value.monsterName, statistic.value.isMvp)}
-                  </div>
-                ) : (
-                  formatCount(statistic.value)
-                )}
-              </dd>
+              <dd>{renderStatisticValue(statistic)}</dd>
             </div>
           ))}
         </dl>
@@ -178,6 +192,7 @@ const PlayerDetailContent = ({
             ])}
             rows={offensiveSkills.map((skill) => [
               <TextImage
+                key={skill.skillId}
                 variant={TEXT_IMAGE_VARIANTS.SKILL}
                 keyId={skill.skillId}
                 keyInfo={skill.name}
@@ -203,6 +218,7 @@ const PlayerDetailContent = ({
             ])}
             rows={defensiveSkills.map((skill) => [
               <TextImage
+                key={skill.skillId}
                 variant={TEXT_IMAGE_VARIANTS.SKILL}
                 keyId={skill.skillId}
                 keyInfo={skill.name}
@@ -261,6 +277,7 @@ const PlayerDetailContent = ({
           ]}
           rows={filteredMonsters.map((monster) => [
             <Tooltip
+              key={monster.monsterId}
               content={
                 <img
                   src={MONSTER_IMAGE_URL.replace('PLACEHOLDER_TEXT', monster.monsterId)}
@@ -284,7 +301,7 @@ const PlayerDetailContent = ({
             `${getMonsterName(monster.name, monster.isMvp)} x ${formatCount(monster.amount)}`,
             formatDamage(monster.damage),
             monster.highestBurst.damage > 0 ? (
-              <div>
+              <div key={`${monster.monsterId}-highest`}>
                 {commaNumber(monster.highestBurst.damage)}
                 <TextImage
                   textBefore={<i>using</i>}
@@ -303,6 +320,7 @@ const PlayerDetailContent = ({
                 columnWidths={['50%', '30%', '20%']}
                 rows={monster.skillBreakdown.map((skill) => [
                   <TextImage
+                    key={skill.skillId}
                     keyId={skill.skillId}
                     keyInfo={skill.name}
                     variant={TEXT_IMAGE_VARIANTS.SKILL}

@@ -90,10 +90,10 @@ export const compareValues = (aExtracted: string | number, bExtracted: string | 
   const bText = String(bExtracted);
 
   // Try numeric comparison first
-  const aNum = parseFloat(aText.replace(/,/g, ''));
-  const bNum = parseFloat(bText.replace(/,/g, ''));
+  const aNum = Number.parseFloat(aText.replaceAll(',', ''));
+  const bNum = Number.parseFloat(bText.replaceAll(',', ''));
 
-  if (!isNaN(aNum) && !isNaN(bNum)) {
+  if (!Number.isNaN(aNum) && !Number.isNaN(bNum)) {
     return aNum - bNum;
   }
 
@@ -201,6 +201,16 @@ export const computeColumnWidths = (
 };
 
 /**
+ * Optional tuning parameters for {@link calculateViewportHeight}.
+ */
+export interface ViewportHeightOptions {
+  viewportBottomGap?: number;
+  viewportSafetyBuffer?: number;
+  minHeight?: number;
+  maxHeight?: number;
+}
+
+/**
  * Calculates the ideal height for a virtualised table container so it fills
  * the remaining viewport without causing the page to scroll.
  *
@@ -211,10 +221,8 @@ export const computeColumnWidths = (
  * @param footerHeight - Height of any footer element below the table in pixels.
  * @param wrapperChromeHeight - Combined border heights of the wrapper (see {@link getWrapperChromeHeight}).
  * @param wrapperMarginBottom - Bottom margin of the wrapper (see {@link getWrapperMarginBottom}).
- * @param viewportBottomGap - Extra gap between the table bottom and the viewport edge (default: 24 px).
- * @param viewportSafetyBuffer - Additional safety buffer subtracted from available height (default: 12 px).
- * @param minHeight - Minimum height in pixels (default: 220 px).
- * @param maxHeight - Maximum height in pixels (default: 520 px).
+ * @param options - Tuning parameters: `viewportBottomGap` (default 24), `viewportSafetyBuffer` (default 12),
+ * `minHeight` (default 220), `maxHeight` (default 520).
  * @returns The clamped available height in pixels.
  */
 export const calculateViewportHeight = (
@@ -223,11 +231,15 @@ export const calculateViewportHeight = (
   footerHeight: number,
   wrapperChromeHeight: number,
   wrapperMarginBottom: number,
-  viewportBottomGap: number = 24,
-  viewportSafetyBuffer: number = 12,
-  minHeight: number = 220,
-  maxHeight: number = 520
+  options: ViewportHeightOptions = {}
 ): number => {
+  const {
+    viewportBottomGap = 24,
+    viewportSafetyBuffer = 12,
+    minHeight = 220,
+    maxHeight = 520,
+  } = options;
+
   const availableHeight = Math.floor(
     window.innerHeight -
       wrapperBounds.top -
