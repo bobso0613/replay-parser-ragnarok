@@ -19,7 +19,7 @@ type TabContentWithStickyProps = {
 };
 
 type NestedHeaderProps = {
-  headers: React.ReactNode[];
+  headers: Array<{ key: string; label: React.ReactNode }>;
   columnWidths: Array<number | string>;
 };
 
@@ -54,11 +54,11 @@ const NestedHeader: React.FC<NestedHeaderProps> = ({ headers, columnWidths }) =>
       <div className="flex text-left font-bold uppercase tracking-wide text-slate-200">
         {headers.map((header, index) => (
           <div
-            key={`${String(header)}-${index}`}
+            key={header.key}
             className="shrink-0 px-4 last:pr-0"
             style={getColumnWidthStyle(columnWidths[index] ?? 'auto')}
           >
-            {header}
+            {header.label}
           </div>
         ))}
       </div>
@@ -330,7 +330,12 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                     <div key="skill-breakdown-header">
                       <div className="text-center mb-1">Skill Breakdown</div>
                       <NestedHeader
-                        headers={['Skill Name', 'Total Damage', 'No. of Hits', 'Highest Damage']}
+                        headers={[
+                          { key: 'skill-name', label: 'Skill Name' },
+                          { key: 'total-damage', label: 'Total Damage' },
+                          { key: 'hit-count', label: 'No. of Hits' },
+                          { key: 'highest-damage', label: 'Highest Damage' },
+                        ]}
                         columnWidths={['30%', '25%', '15%', '30%']}
                       />
                     </div>,
@@ -429,14 +434,23 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                     <div key="breakdown-player-header">
                       <div className="text-center mb-1">Breakdown per player</div>
                       <NestedHeader
-                        headers={['Player Name', 'Total Damage', 'No. of Hits', 'Highest Damage']}
+                        headers={[
+                          { key: 'player-name', label: 'Player Name' },
+                          { key: 'total-damage', label: 'Total Damage' },
+                          { key: 'hit-count', label: 'No. of Hits' },
+                          { key: 'highest-damage', label: 'Highest Damage' },
+                        ]}
                         columnWidths={['30%', '25%', '15%', '35%']}
                       />
                     </div>,
                     <div key="breakdown-skill-header">
                       <div className="text-center mb-1">Breakdown per skill</div>
                       <NestedHeader
-                        headers={['Skill Name', 'Total Damage', 'No. of Hits']}
+                        headers={[
+                          { key: 'skill-name', label: 'Skill Name' },
+                          { key: 'total-damage', label: 'Total Damage' },
+                          { key: 'hit-count', label: 'No. of Hits' },
+                        ]}
                         columnWidths={['50%', '30%', '20%']}
                       />
                     </div>,
@@ -597,7 +611,10 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                     <div key="support-breakdown-header">
                       <div className="text-center mb-1">Breakdown per Player</div>
                       <NestedHeader
-                        headers={['Player', 'Usage Count']}
+                        headers={[
+                          { key: 'player-name', label: 'Player' },
+                          { key: 'usage-count', label: 'Usage Count' },
+                        ]}
                         columnWidths={['70%', '30%']}
                       />
                     </div>,
@@ -674,7 +691,10 @@ const ReplayBreakdown: React.FC<ReplayBreakdownProps> = ({ apiResponse = null, f
                     <div key="support-breakdown-header">
                       <div className="text-center mb-1">Breakdown per Player</div>
                       <NestedHeader
-                        headers={['Player', 'Usage Count']}
+                        headers={[
+                          { key: 'player-name', label: 'Player' },
+                          { key: 'usage-count', label: 'Usage Count' },
+                        ]}
                         columnWidths={['50%', '50%']}
                       />
                     </div>,

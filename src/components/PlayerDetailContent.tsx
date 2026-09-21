@@ -56,9 +56,11 @@ const DAMAGE_STAT_LABELS = new Set(['Total Damage', 'MVP Damage']);
 const formatDamage = (value: PlayerDetailStat['value']) =>
   typeof value === 'number' && value > 0 ? commaNumber(value) : 'N/A';
 
-const formatCount = (value: PlayerDetailStat['value']): ReactNode => {
+const formatNumericCount = (value: number): string => commaNumber(value);
+
+const renderCountValue = (value: PlayerDetailStat['value']): ReactNode => {
   if (typeof value === 'number') {
-    return commaNumber(value);
+    return formatNumericCount(value);
   }
 
   return isHighestBurst(value) ? 'N/A' : value;
@@ -93,11 +95,11 @@ const renderStatisticValue = (statistic: PlayerDetailStat): ReactNode => {
     );
   }
 
-  return formatCount(statistic.value);
+  return renderCountValue(statistic.value);
 };
 
 type NestedHeaderProps = {
-  headers: ReactNode[];
+  headers: Array<{ key: string; label: ReactNode }>;
   columnWidths: Array<number | string>;
 };
 
@@ -106,11 +108,11 @@ const NestedHeader = ({ headers, columnWidths }: NestedHeaderProps) => (
     <div className="flex text-left font-bold uppercase tracking-wide text-slate-200">
       {headers.map((header, index) => (
         <div
-          key={`${String(header)}-${index}`}
+          key={header.key}
           className="shrink-0 px-4 last:pr-0"
           style={{ width: columnWidths[index] }}
         >
-          {header}
+          {header.label}
         </div>
       ))}
     </div>
@@ -169,7 +171,7 @@ const PlayerDetailContent = ({
                 keyInfo={item.name}
               />
               <span>
-                <strong>X</strong> {formatCount(item.amount)}
+                <strong>X</strong> {renderCountValue(item.amount)}
               </span>
             </div>
           ))}
@@ -198,7 +200,7 @@ const PlayerDetailContent = ({
                 keyInfo={skill.name}
               />,
               formatDamage(skill.totalDamage),
-              formatCount(skill.hitCount),
+              renderCountValue(skill.hitCount),
               formatDamage(skill.highestDamage),
             ])}
             className="w-full"
@@ -223,7 +225,7 @@ const PlayerDetailContent = ({
                 keyId={skill.skillId}
                 keyInfo={skill.name}
               />,
-              formatCount(skill.totalUsage),
+              renderCountValue(skill.totalUsage),
             ])}
             className="w-full"
           />
@@ -251,7 +253,11 @@ const PlayerDetailContent = ({
             <div key="skill-breakdown-header">
               <div className="mb-1 text-center">Breakdown per Skill</div>
               <NestedHeader
-                headers={['Skill Name', 'Total Damage', 'No. of Hits']}
+                headers={[
+                  { key: 'skill-name', label: 'Skill Name' },
+                  { key: 'total-damage', label: 'Total Damage' },
+                  { key: 'hit-count', label: 'No. of Hits' },
+                ]}
                 columnWidths={['50%', '30%', '20%']}
               />
             </div>,
@@ -298,7 +304,7 @@ const PlayerDetailContent = ({
                 referrerPolicy="no-referrer"
               />
             </Tooltip>,
-            `${getMonsterName(monster.name, monster.isMvp)} x ${formatCount(monster.amount)}`,
+            `${getMonsterName(monster.name, monster.isMvp)} x ${formatNumericCount(monster.amount)}`,
             formatDamage(monster.damage),
             monster.highestBurst.damage > 0 ? (
               <div key={`${monster.monsterId}-highest`}>
@@ -326,7 +332,7 @@ const PlayerDetailContent = ({
                     variant={TEXT_IMAGE_VARIANTS.SKILL}
                   />,
                   formatDamage(skill.totalDamage),
-                  formatCount(skill.hitCount),
+                  renderCountValue(skill.hitCount),
                 ])}
                 className="my-0"
               />

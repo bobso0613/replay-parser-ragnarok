@@ -8,8 +8,8 @@ import {
   type RowComponentProps,
 } from 'react-window';
 import {
-  extractTextByClassName,
   compareValues,
+  getSortValue,
   getNextSortDirection,
   computeColumnWidths,
   calculateViewportHeight,
@@ -260,11 +260,11 @@ const Table: React.FC<TableProps> = ({
         aExtracted = extractor(aVal);
         bExtracted = extractor(bVal);
       } else if (typeof extractor === 'string') {
-        aExtracted = extractTextByClassName(aVal, extractor);
-        bExtracted = extractTextByClassName(bVal, extractor);
+        aExtracted = getSortValue(aVal, extractor);
+        bExtracted = getSortValue(bVal, extractor);
       } else {
-        aExtracted = typeof aVal === 'string' ? aVal : String(aVal || '');
-        bExtracted = typeof bVal === 'string' ? bVal : String(bVal || '');
+        aExtracted = getSortValue(aVal);
+        bExtracted = getSortValue(bVal);
       }
 
       const comparison = compareValues(aExtracted, bExtracted);

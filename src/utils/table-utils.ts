@@ -54,7 +54,7 @@ export const extractTextByClassName = (node: React.ReactNode, targetClass: strin
  * 1. **Function extractor** – calls `extractor(cellValue)` and returns the result.
  * 2. **String extractor** – treats the string as a CSS class name and returns the
  *    text content of the first matching child element via {@link extractTextByClassName}.
- * 3. **Fallback** – converts the cell value to a string directly.
+ * 3. **Fallback** – extracts plain text from primitive values or React children.
  *
  * @param cellValue - The raw React node content of the table cell.
  * @param extractor - Optional function or CSS class-name string to customise extraction.
@@ -72,7 +72,7 @@ export const getSortValue = (
     return extractTextByClassName(cellValue, extractor);
   }
 
-  return typeof cellValue === 'string' ? cellValue : String(cellValue || '');
+  return extractAllText(cellValue);
 };
 
 /**

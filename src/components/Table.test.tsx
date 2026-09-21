@@ -3,6 +3,7 @@ import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import Table from './Table';
 import type { TableProps } from '@/types';
+import { extractAllText } from '@/utils/table-utils';
 
 describe('Table', () => {
   const defaultProps: TableProps = {
@@ -768,7 +769,7 @@ describe('Table', () => {
   it('should handle sorting with function extractor', () => {
     const sortExtractors = {
       0: (cell: React.ReactNode) => {
-        const text = String(cell || '');
+        const text = extractAllText(cell);
         return text.includes('Value') ? '100' : '1';
       },
     };
@@ -1274,7 +1275,7 @@ describe('Table', () => {
       sortableColumns: [0],
       sortExtractors: {
         0: (cell: React.ReactNode) => {
-          const text = String(cell || '');
+          const text = extractAllText(cell);
           return text.split('/')[0];
         },
       },

@@ -125,6 +125,12 @@ describe('table-utils', () => {
       expect(result).toBe('123');
     });
 
+    it('should extract text from React elements without object stringification', () => {
+      const element = React.createElement('span', {}, 'display text');
+      const result = getSortValue(element);
+      expect(result).toBe('display text');
+    });
+
     it('should use function extractor if provided', () => {
       const extractor = (val: any) => String(val).toUpperCase();
       const result = getSortValue('hello', extractor);
