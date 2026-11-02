@@ -217,7 +217,7 @@
   },
   {
     "wave": 14,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": [],
     "monsters": [
       {
@@ -234,7 +234,7 @@
   },
   {
     "wave": 15,
-    "isSkippable": true,
+    "isSkippable": false,
     "remindersSetup": ["isMvpFloor"],
     "monsters": [
       {
@@ -497,7 +497,7 @@
   },
   {
     "wave": 29,
-    "isSkippable": true,
+    "isSkippable": false,
     "remindersSetup": [],
     "monsters": [
       {
@@ -592,7 +592,7 @@
   },
   {
     "wave": 34,
-    "isSkippable": true,
+    "isSkippable": false,
     "remindersSetup": [],
     "monsters": [
       {
@@ -1063,7 +1063,7 @@
   },
   {
     "wave": 57,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": [],
     "monsters": [
       {
@@ -1085,7 +1085,7 @@
   },
   {
     "wave": 58,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": [],
     "monsters": [
       {
@@ -1161,7 +1161,7 @@
   },
   {
     "wave": 61,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": ["isStartOfStatus"],
     "monsters": [
       {
@@ -1178,7 +1178,7 @@
   },
   {
     "wave": 62,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": [],
     "monsters": [
       {
@@ -1195,7 +1195,7 @@
   },
   {
     "wave": 63,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": [],
     "monsters": [
       {
@@ -1246,7 +1246,7 @@
   },
   {
     "wave": 66,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": [],
     "monsters": [
       {
@@ -1268,7 +1268,7 @@
   },
   {
     "wave": 67,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": [],
     "monsters": [
       {
@@ -1290,7 +1290,7 @@
   },
   {
     "wave": 68,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": [],
     "monsters": [
       {
@@ -1456,7 +1456,7 @@
   },
   {
     "wave": 76,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": ["isMvpFloor"],
     "monsters": [
       {
@@ -1551,7 +1551,7 @@
   },
   {
     "wave": 81,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": ["isDangerousFloor", "isStartOfMeteor"],
     "monsters": [
       {
@@ -1605,7 +1605,7 @@
   },
   {
     "wave": 83,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": [],
     "monsters": [
       {
@@ -1701,7 +1701,7 @@
   },
   {
     "wave": 86,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": [],
     "monsters": [
       {
@@ -1718,7 +1718,7 @@
   },
   {
     "wave": 87,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": [],
     "monsters": [
       {
@@ -1730,7 +1730,7 @@
   },
   {
     "wave": 88,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": [],
     "monsters": [
       {
@@ -1951,7 +1951,7 @@
   },
   {
     "wave": 96,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": ["isDangerousFloor", "isMvpFloor"],
     "monsters": [
       {
@@ -1973,7 +1973,7 @@
   },
   {
     "wave": 97,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": ["isDangerousFloor"],
     "monsters": [
       {
@@ -1985,7 +1985,7 @@
   },
   {
     "wave": 98,
-    "isSkippable": false,
+    "isSkippable": true,
     "remindersSetup": ["isDangerousFloor", "isMvpFloor"],
     "monsters": [
       {
